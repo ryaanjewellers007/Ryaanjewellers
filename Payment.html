@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryaan Jewellers – Secure Payment</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Luxury Header */
+        .luxury-header {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+            padding: 25px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .luxury-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, white, transparent);
+        }
+
+        .luxury-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #0A0A0A;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .luxury-header p {
+            font-size: 1.1rem;
+            color: rgba(0, 0, 0, 0.8);
+            letter-spacing: 1px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .order-summary h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .order-items {
+            margin: 20px 0;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            font-size: 1.3rem;
+            font-weight: 600;
+            border-top: 2px solid rgba(212, 175, 55, 0.5);
+            margin-top: 20px;
+        }
+
+        .total-label {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .total-amount {
+            color: #D4AF37;
+        }
+
+        /* Payment Methods */
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .payment-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .payment-card:hover {
+            transform: translateY(-5px);
+            border-color: #D4AF37;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+        }
+
+        .payment-card h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: #D4AF37;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-card h3 i {
+            font-size: 1.8rem;
+        }
+
+        .payment-card p {
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        /* Payment Buttons */
+        .pay-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            width: 100%;
+            padding: 16px;
+            background: #D4AF37;
+            color: #0A0A0A;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .pay-btn:hover {
+            background: #B8941F;
+            transform: scale(1.02);
+        }
+
+        .pay-btn i {
+            font-size: 1.2rem;
+        }
+
+        .paypal-btn {
+            background: #003087;
+            color: white;
+        }
+
+        .paypal-btn:hover {
+            background: #002366;
+        }
+
+        .card-btn {
+            background: #6772e5;
+            color: white;
+        }
+
+        .card-btn:hover {
+            background: #5469d4;
+        }
+
+        /* QR Section */
+        .qr-section {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .qr-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .qr-box {
+            display: inline-block;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .qr-box img {
+            width: 250px;
+            height: 250px;
+            border-radius: 10px;
+        }
+
+        .qr-note {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Bank Transfer */
+        .bank-transfer {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .bank-transfer h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .secure-note {
+            background: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid #D4AF37;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+
+        .bank-info {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .bank-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .bank-row:last-child {
+            border-bottom: none;
+        }
+
+        .bank-label {
+            color: rgba(255, 255, 255, 0.7);
+            font-weight: 500;
+        }
+
+        .bank-value {
+            color: #D4AF37;
+            font-weight: 600;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        .contact-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+
+        .contact-email {
+            font-size: 1.2rem;
+            color: #D4AF37;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .contact-email:hover {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        /* Footer */
+        .luxury-footer {
+            text-align: center;
+            padding: 30px 0;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .luxury-header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .payment-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .qr-box img {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .bank-row {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Luxury Header -->
+    <div class="luxury-header">
+        <h1>RYAAN JEWELLERS</h1>
+        <p>Secure Payment Portal | Luxury Jewelry Maison</p>
+    </div>
+
+    <div class="container">
+        <!-- Order Summary -->
+        <div class="order-summary">
+            <h3><i class="fas fa-shopping-bag"></i> Order Summary</h3>
+            <div class="order-items" id="order-items">
+                <!-- Order items will be loaded via JavaScript -->
+            </div>
+            <div class="order-total">
+                <span class="total-label">Total Amount:</span>
+                <span class="total-amount" id="order-total">AED 0.00</span>
+            </div>
+        </div>
+
+        <!-- Payment Methods -->
+        <div class="payment-methods">
+            <!-- PayPal -->
+            <div class="payment-card">
+                <h3><i class="fab fa-paypal"></i> PayPal</h3>
+                <p>Pay securely with your PayPal account or credit/debit card through PayPal.</p>
+                <button class="pay-btn paypal-btn" onclick="processPayPalPayment()">
+                    <i class="fab fa-paypal"></i> Pay with PayPal
+                </button>
+            </div>
+
+            <!-- Credit/Debit Card -->
+            <div class="payment-card">
+                <h3><i class="far fa-credit-card"></i> Credit/Debit Card</h3>
+                <p>Secure payment via Stripe. We accept Visa, MasterCard, and American Express.</p>
+                <button class="pay-btn card-btn" onclick="showCardForm()">
+                    <i class="far fa-credit-card"></i> Pay with Card
+                </button>
+            </div>
+
+            <!-- Bank Transfer -->
+            <div class="payment-card">
+                <h3><i class="fas fa-university"></i> Bank Transfer</h3>
+                <p>Direct bank transfer. Contact us for secure banking details.</p>
+                <button class="pay-btn" onclick="showBankDetails()">
+                    <i class="fas fa-university"></i> Request Bank Details
+                </button>
+            </div>
+        </div>
+
+        <!-- QR Code Section -->
+        <div class="qr-section">
+            <h3>Scan & Pay</h3>
+            <div class="qr-box">
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://www.paypal.com/qrcodes/p2pqrc/Y5KUVSAMQHYVQ" alt="PayPal QR Code">
+            </div>
+            <p class="qr-note">Scan with your phone's camera to pay via PayPal</p>
+        </div>
+
+        <!-- Bank Transfer Section -->
+        <div class="bank-transfer" id="bankDetails" style="display: none;">
+            <h3><i class="fas fa-shield-alt"></i> Secure Bank Transfer</h3>
+            
+            <div class="secure-note">
+                <p><i class="fas fa-lock"></i> For security reasons, bank details are provided via email after verification.</p>
+            </div>
+            
+            <div class="bank-info">
+                <div class="bank-row">
+                    <span class="bank-label">Currency:</span>
+                    <span class="bank-value">AED (UAE Dirham)</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Country:</span>
+                    <span class="bank-value">United Arab Emirates</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Transfer Type:</span>
+                    <span class="bank-value">International / Local</span>
+                </div>
+            </div>
+            
+            <p style="color: rgba(255, 255, 255, 0.7); margin-top: 20px;">
+                <i class="fas fa-envelope"></i> Please email us at <strong>payments@ryaanjewellers.com</strong> with your order details to receive secure banking information.
+            </p>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h3>Need Help with Payment?</h3>
+            <p style="color: rgba(255, 255, 255, 0.7); max-width: 600px; margin: 0 auto 20px;">
+                Our team is available to assist you with payment processing, currency conversion, and order verification.
+            </p>
+            <a href="mailto:payments@ryaanjewellers.com" class="contact-email">
+                <i class="fas fa-envelope"></i> payments@ryaanjewellers.com
+            </a>
+            <p style="color: rgba(255, 255, 255, 0.5); margin-top: 20px; font-size: 0.9rem;">
+                <i class="fas fa-phone"></i> +971 4 123 4567 | Mon-Sat: 10:00 AM - 10:00 PM GST
+            </p>
+        </div>
+    </div>
+
+    <!-- Luxury Footer -->
+    <div class="luxury-footer">
+        <p>© 2025 Ryaan Jewellers – Luxury Jewelry Maison, Dubai. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">
+            <i class="fas fa-lock"></i> Secure SSL Encryption | <i class="fas fa-shield-alt"></i> PCI DSS Compliant
+        </p>
+    </div>
+
+    <script>
+        // Load cart data from localStorage
+        function loadOrderData() {
+            const cartData = JSON.parse(localStorage.getItem('ryaanPendingPayment'));
+            const orderItems = document.getElementById('order-items');
+            const orderTotal = document.getElementById('order-total');
+            
+            if (!cartData || !cartData.items || cartData.items.length === 0) {
+                orderItems.innerHTML = '<p style="color: rgba(255, 255, 255, 0.7); text-align: center;">No items in cart</p>';
+                orderTotal.textContent = 'AED 0.00';
+                return;
+            }
+            
+            let itemsHTML = '';
+            cartData.items.forEach(item => {
+                itemsHTML += `
+                    <div class="order-item">
+                        <span>${item.name} (x${item.quantity})</span>
+                        <span>AED ${(item.price * item.quantity).toLocaleString()}</span>
+                    </div>
+                `;
+            });
+            
+            orderItems.innerHTML = itemsHTML;
+            orderTotal.textContent = `AED ${cartData.total.toLocaleString()}`;
+        }
+
+        // Payment functions
+        function processPayPalPayment() {
+            const cartData = JSON.parse(localStorage.getItem('ryaanPendingPayment'));
+            if (!cartData || cartData.items.length === 0) {
+                alert('No items in cart');
+                return;
+            }
+            
+            // In production, this would integrate with PayPal API
+            // For demo, redirect to PayPal QR code
+            window.open('https://www.paypal.com/qrcodes/p2pqrc/Y5KUVSAMQHYVQ', '_blank');
+            
+            // Show success message
+            alert('Redirecting to PayPal. After payment, your order will be confirmed via email.');
+            
+            // Clear cart after successful payment (in real app, wait for confirmation)
+            localStorage.removeItem('ryaanCart');
+            localStorage.removeItem('ryaanPendingPayment');
+        }
+
+        function showCardForm() {
+            alert('Card payment gateway integration coming soon!\n\nFor now, please use PayPal or contact us for bank transfer details.');
+        }
+
+        function showBankDetails() {
+            const bankSection = document.getElementById('bankDetails');
+            bankSection.style.display = 'block';
+            
+            // Scroll to bank section
+            bankSection.scrollIntoView({ behavior: 'smooth' });
+            
+            // Show notification
+            alert('For security, full bank details are provided via email. Please contact payments@ryaanjewellers.com with your order reference.');
+        }
+
+        // Initialize on load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadOrderData();
+            
+            // Security warning
+            console.log('%c🔒 SECURE PAYMENT PORTAL', 'color: #D4AF37; font-size: 16px; font-weight: bold;');
+            console.log('%cSensitive banking information is protected and not displayed publicly.', 'color: #888;');
+        });
+    </script>
+
+</body>
+</html>
