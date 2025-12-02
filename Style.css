@@ -10,6 +10,41 @@
     --white-off: #F8F8F8;
     --silver: #E5E5E5;
     --bronze: #CD7F32;
+    /* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition-medium);
+}
+
+.logo:hover .logo-image {
+    transform: scale(1.05);
+}
+
+.logo-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+/* If logo image fails to load, show text fallback */
+.logo .fallback-text {
+    display: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 3px;
+}
     
     /* Text Colors */
     --text-primary: #FFFFFF;
