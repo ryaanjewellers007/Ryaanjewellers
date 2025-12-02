@@ -1950,7 +1950,191 @@
             </div>
         </div>
     </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment - Ryaan Jewellers</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Luxury Header -->
+    <header class="luxury-header">
+        <h1><i class="fas fa-gem"></i> RYAAN JEWELLERS</h1>
+        <p>Secure Payment Gateway</p>
+    </header>
 
+    <div class="container">
+        <!-- Order Summary -->
+        <section class="order-summary">
+            <h3><i class="fas fa-receipt"></i> Order Summary</h3>
+            <div id="order-items">
+                <!-- Items will be loaded by JavaScript -->
+                <p>Loading your order...</p>
+            </div>
+            <div class="order-total">
+                <span class="total-label">TOTAL AMOUNT:</span>
+                <span class="total-amount" id="total-amount">AED 0.00</span>
+            </div>
+        </section>
+
+        <!-- Payment Methods -->
+        <section class="payment-methods">
+            <!-- Credit/Debit Card -->
+            <div class="payment-card">
+                <h3><i class="fas fa-credit-card"></i> Credit/Debit Card</h3>
+                <p>Secure payment with Visa, MasterCard, or American Express</p>
+                <button class="pay-btn card-btn" onclick="processCardPayment()">
+                    <i class="fas fa-lock"></i> Pay with Card
+                </button>
+            </div>
+
+            <!-- PayPal -->
+            <div class="payment-card">
+                <h3><i class="fab fa-paypal"></i> PayPal</h3>
+                <p>Fast and secure payment using your PayPal account</p>
+                <button class="pay-btn paypal-btn" onclick="processPaypalPayment()">
+                    <i class="fab fa-paypal"></i> Pay with PayPal
+                </button>
+            </div>
+
+            <!-- Apple Pay -->
+            <div class="payment-card">
+                <h3><i class="fab fa-apple"></i> Apple Pay</h3>
+                <p>Quick payment using Apple Pay on compatible devices</p>
+                <button class="pay-btn" style="background: #000; color: #fff;" onclick="processApplePay()">
+                    <i class="fab fa-apple"></i> Pay with Apple Pay
+                </button>
+            </div>
+        </section>
+
+        <!-- Bank Transfer -->
+        <section class="bank-transfer">
+            <h3><i class="fas fa-university"></i> Bank Transfer</h3>
+            <div class="secure-note">
+                <p><i class="fas fa-shield-alt"></i> <strong>Secure Option:</strong> Direct bank transfer for larger orders</p>
+            </div>
+            <div class="bank-info">
+                <div class="bank-row">
+                    <span class="bank-label">Bank Name:</span>
+                    <span class="bank-value">Emirates NBD</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Account Name:</span>
+                    <span class="bank-value">Ryaan Jewellers FZCO</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">Account Number:</span>
+                    <span class="bank-value">1234 5678 9012 3456</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">IBAN:</span>
+                    <span class="bank-value">AE12 3456 7890 1234 5678 901</span>
+                </div>
+                <div class="bank-row">
+                    <span class="bank-label">SWIFT/BIC:</span>
+                    <span class="bank-value">EBILAEADXXX</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <h3><i class="fas fa-headset"></i> Need Assistance?</h3>
+            <p>Our customer support team is here to help</p>
+            <a href="mailto:support@ryaanjewellers.com" class="contact-email">
+                <i class="fas fa-envelope"></i> support@ryaanjewellers.com
+            </a>
+            <p style="margin-top: 15px;">
+                <i class="fas fa-phone"></i> +971 4 123 4567
+            </p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="luxury-footer">
+        <p><i class="fas fa-lock"></i> 256-bit SSL Encryption • Secure Payment</p>
+        <p>© 2024 Ryaan Jewellers. All rights reserved.</p>
+    </footer>
+
+    <!-- Payment Script -->
+    <script>
+        // Load order from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const orderData = JSON.parse(localStorage.getItem('ryaanPendingPayment'));
+            const orderItemsDiv = document.getElementById('order-items');
+            const totalAmountSpan = document.getElementById('total-amount');
+            
+            if (!orderData || !orderData.items || orderData.items.length === 0) {
+                orderItemsDiv.innerHTML = '<p class="empty-order">No items in cart. <a href="index.html">Continue Shopping</a></p>';
+                totalAmountSpan.textContent = 'AED 0.00';
+                return;
+            }
+            
+            let itemsHTML = '';
+            let total = 0;
+            
+            orderData.items.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                itemsHTML += `
+                    <div class="order-item">
+                        <div class="item-info">
+                            <h4>${item.name}</h4>
+                            <p>Quantity: ${item.quantity} × AED ${item.price.toLocaleString()}</p>
+                        </div>
+                        <div class="item-total">AED ${itemTotal.toLocaleString()}</div>
+                    </div>
+                `;
+            });
+            
+            orderItemsDiv.innerHTML = itemsHTML;
+            totalAmountSpan.textContent = `AED ${total.toLocaleString()}`;
+        });
+        
+        // Payment Functions
+        function processCardPayment() {
+            showPaymentMessage('Processing card payment...');
+            // In real app, integrate with Stripe/Checkout.com
+            simulatePayment();
+        }
+        
+        function processPaypalPayment() {
+            showPaymentMessage('Redirecting to PayPal...');
+            simulatePayment();
+        }
+        
+        function processApplePay() {
+            showPaymentMessage('Initializing Apple Pay...');
+            simulatePayment();
+        }
+        
+        function simulatePayment() {
+            setTimeout(() => {
+                alert('Payment Successful! Thank you for your purchase.\nOrder confirmation will be sent to your email.');
+                localStorage.removeItem('ryaanPendingPayment');
+                localStorage.removeItem('ryaanCart');
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+        
+        function showPaymentMessage(message) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'payment-message';
+            messageDiv.innerHTML = `
+                <div style="background: #D4AF37; color: #000; padding: 15px; border-radius: 10px; margin: 20px 0; text-align: center;">
+                    <i class="fas fa-spinner fa-spin"></i> ${message}
+                </div>
+            `;
+            document.querySelector('.container').prepend(messageDiv);
+        }
+    </script>
+</body>
+</html>
     <!-- ========== CART MODAL ========== -->
     <div class="cart-modal">
         <div class="cart-header">
