@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="description" content="RYAAN JEWELLERS – Luxury Gold & Diamond Boutique. Handcrafted luxury jewelry with timeless beauty.">
-    <meta name="keywords" content="jewellery, gold, diamonds, luxury, handmade, 18k,UAE">
+    <meta name="keywords" content="jewellery, gold, diamonds, luxury, handmade, 18k, 22k, Dubai">
     <title>RYAAN JEWELLERS – Luxury Gold & Diamond Boutique</title>
 
     <!-- Google Fonts -->
@@ -1004,16 +1003,16 @@
         <div class="grid" role="list">
             <!-- PRODUCT 1 -->
             <div class="product-card" role="listitem">
-                <div class="product-img" style="background-image:url(' <img src="images/Screenshot_20251129_014405_Chrome.jpg" alt="Chopard Inspired 3 Diamond Chain and Pendant">')" 
-                     role="img" aria-label="CHOPARD 3 DIAMOND"></div>
-                <h3>CHOPARD 3 DIAMOND</h3>
-                <div class="price">AED 3,900</div>
+                <div class="product-img" style="background-image:url('product1.jpg')" 
+                     role="img" aria-label="Aurelia Bridal Set"></div>
+                <h3>Aurelia Bridal Set</h3>
+                <div class="price">AED 28,900</div>
 
                 <div class="product-actions">
-                    <button class="btn-small" onclick="openQuickView('CHOPARD 3 DIAMOND,'product1.jpg','AED 3,900')">
+                    <button class="btn-small" onclick="openQuickView('Aurelia Bridal Set','product1.jpg','AED 28,900')">
                         View
                     </button>
-                    <button class="btn-small-g" onclick="addToCart('CHOPARD 3 DIAMOND',3900)">
+                    <button class="btn-small-g" onclick="addToCart('Aurelia Bridal Set',28900)">
                         Add to Cart
                     </button>
                 </div>
@@ -1027,10 +1026,10 @@
                 <div class="price">AED 12,900</div>
 
                 <div class="product-actions">
-                    <button class="btn-small" onclick="openQuickView('Celeste Solitaire Ring','product2.jpg','AED 2,900')">
+                    <button class="btn-small" onclick="openQuickView('Celeste Solitaire Ring','product2.jpg','AED 12,900')">
                         View
                     </button>
-                    <button class="btn-small-g" onclick="addToCart('Celeste Solitaire Ring',2900)">
+                    <button class="btn-small-g" onclick="addToCart('Celeste Solitaire Ring',12900)">
                         Add to Cart
                     </button>
                 </div>
@@ -1041,13 +1040,13 @@
                 <div class="product-img" style="background-image:url('product3.jpg')"
                      role="img" aria-label="Luna 18K Necklace"></div>
                 <h3>Luna 18K Necklace</h3>
-                <div class="price">AED 10,900</div>
+                <div class="price">AED 15,900</div>
 
                 <div class="product-actions">
-                    <button class="btn-small" onclick="openQuickView('Luna 18K Necklace','product3.jpg','AED 10,900')">
+                    <button class="btn-small" onclick="openQuickView('Luna 18K Necklace','product3.jpg','AED 15,900')">
                         View
                     </button>
-                    <button class="btn-small-g" onclick="addToCart('Luna 18K Necklace',10900)">
+                    <button class="btn-small-g" onclick="addToCart('Luna 18K Necklace',15900)">
                         Add to Cart
                     </button>
                 </div>
@@ -1088,7 +1087,7 @@
                 <p class="qv-description">
                     Exclusive handcrafted jewellery piece with certified materials. 
                     Each piece is meticulously crafted by our expert artisans using 
-                    only the finest 18K gold and ethically sourced diamonds.
+                    only the finest 18K or 22K gold and ethically sourced diamonds.
                 </p>
 
                 <div class="product-actions">
@@ -1238,9 +1237,9 @@
     --------------------------------------------------- -->
     <footer>
         <div class="footer-text">
-            <p>© 2024 Ryaan Jewellers — Luxury Gold & Diamond Creations</p>
+            <p>© 2025 Ryaan Jewellers — Luxury Gold & Diamond Creations</p>
             <p style="margin-top: 10px; font-size: 13px; opacity: 0.8;">
-                Dubai, UAE | Contact: +971 54 374 6476 | Email: ryaanjewellers@gmail.com
+                Dubai, UAE | Contact: +971 4 123 4567 | Email: info@ryaanjewellers.com
             </p>
         </div>
     </footer>
@@ -1297,4 +1296,327 @@
             const modalTitle = document.getElementById('qv-title');
             const modalPrice = document.getElementById('qv-price');
             const modalImage = document.getElementById('qv-image');
-            const addCartBtn = document.getElementById(
+            const addCartBtn = document.getElementById('qv-addcart');
+            
+            modalTitle.textContent = title;
+            modalPrice.textContent = price;
+            modalImage.style.backgroundImage = `url('${img}')`;
+            
+            // Extract numeric price
+            const numericPrice = parseInt(price.replace(/[^\d]/g, '')) || 0;
+            
+            // Update add to cart button
+            addCartBtn.onclick = function() {
+                addToCart(title, numericPrice);
+                closeQuickView();
+                showNotification(`${title} added to cart!`);
+            };
+            
+            // Show modal
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            
+            // Focus trap for accessibility
+            modal.focus();
+        }
+
+        function closeQuickView() {
+            const modal = document.getElementById('quickview');
+            modal.classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeQuickView();
+                closeCart();
+            }
+        });
+
+        // ------------------------------
+        // CART SYSTEM
+        // ------------------------------
+        let cart = [];
+
+        function loadCartFromStorage() {
+            try {
+                const savedCart = localStorage.getItem('ryaanCart');
+                if (savedCart) {
+                    cart = JSON.parse(savedCart);
+                    updateCart();
+                }
+            } catch (e) {
+                console.error('Error loading cart:', e);
+                cart = [];
+            }
+        }
+
+        function saveCartToStorage() {
+            try {
+                localStorage.setItem('ryaanCart', JSON.stringify(cart));
+            } catch (e) {
+                console.error('Error saving cart:', e);
+            }
+        }
+
+        function addToCart(name, price) {
+            // Check if item already exists in cart
+            const existingItem = cart.find(item => item.name === name);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    name: name,
+                    price: price,
+                    quantity: 1,
+                    id: Date.now().toString()
+                });
+            }
+            
+            updateCart();
+            saveCartToStorage();
+            showNotification(`${name} added to cart!`);
+        }
+
+        function removeFromCart(itemId) {
+            cart = cart.filter(item => item.id !== itemId);
+            updateCart();
+            saveCartToStorage();
+            showNotification('Item removed from cart');
+        }
+
+        function updateCart() {
+            const container = document.getElementById('cartItems');
+            const totalElement = document.getElementById('cartTotal');
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<div class="cart-empty">Your cart is empty</div>';
+                totalElement.textContent = 'Total: AED 0';
+                return;
+            }
+            
+            let total = 0;
+            let itemsHTML = '';
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                total += itemTotal;
+                
+                itemsHTML += `
+                    <div class="cart-item">
+                        <div class="cart-item-name">
+                            <strong>${item.name}</strong>
+                            <div style="font-size: 14px; color: var(--muted);">
+                                Qty: ${item.quantity} × AED ${item.price.toLocaleString()}
+                            </div>
+                        </div>
+                        <div class="cart-item-price">
+                            AED ${itemTotal.toLocaleString()}
+                            <button onclick="removeFromCart('${item.id}')" 
+                                    style="margin-left: 10px; color: #ff6b6b; background: none; border: none; cursor: pointer;"
+                                    aria-label="Remove ${item.name} from cart">
+                                ×
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = itemsHTML;
+            totalElement.textContent = `Total: AED ${total.toLocaleString()}`;
+        }
+
+        function openCart() {
+            document.getElementById('cartBox').classList.add('open');
+            document.getElementById('cartOverlay').classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        function closeCart() {
+            document.getElementById('cartBox').classList.remove('open');
+            document.getElementById('cartOverlay').classList.remove('active');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert('Your cart is empty. Add some items before checkout.');
+                return;
+            }
+            
+            // In a real application, this would redirect to a checkout page
+            // For now, we'll show a confirmation
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const confirmCheckout = confirm(`Proceed to checkout with total: AED ${total.toLocaleString()}?`);
+            
+            if (confirmCheckout) {
+                alert('Redirecting to secure checkout...\n\nFor demonstration: This would integrate with a payment gateway like Stripe, PayPal, or local UAE payment processors.');
+                // Here you would typically:
+                // 1. Send cart data to your server
+                // 2. Generate order ID
+                // 3. Redirect to payment page
+            }
+        }
+
+        // ------------------------------
+        // ENQUIRY FORM
+        // ------------------------------
+        function sendEnquiry(e) {
+            e.preventDefault();
+            
+            const form = document.getElementById('enquiryForm');
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const submitText = document.getElementById('submitText');
+            const submitLoading = document.getElementById('submitLoading');
+            const successMessage = document.getElementById('successMessage');
+            
+            // Get form data
+            const name = document.getElementById('enqName').value.trim();
+            const email = document.getElementById('enqEmail').value.trim();
+            const phone = document.getElementById('enqPhone').value.trim();
+            const product = document.getElementById('enqProduct').value;
+            const message = document.getElementById('enqMsg').value.trim();
+            
+            // Validate email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address.');
+                return;
+            }
+            
+            // Validate phone (UAE format example)
+            const phoneRegex = /^[0-9+\-\s]{8,15}$/;
+            if (!phoneRegex.test(phone)) {
+                alert('Please enter a valid phone number.');
+                return;
+            }
+            
+            // Show loading state
+            submitText.style.display = 'none';
+            submitLoading.style.display = 'inline-block';
+            submitBtn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                // Create WhatsApp message
+                let whatsappMessage = `New Enquiry from Ryaan Jewellers Website:\n\n`;
+                whatsappMessage += `Name: ${name}\n`;
+                whatsappMessage += `Email: ${email}\n`;
+                whatsappMessage += `Phone: ${phone}\n`;
+                if (product) {
+                    whatsappMessage += `Product Interest: ${product}\n`;
+                }
+                whatsappMessage += `Message: ${message}`;
+                
+                // Encode for URL
+                const encodedMessage = encodeURIComponent(whatsappMessage);
+                
+                // WhatsApp link (replace with your actual number)
+                const whatsappUrl = `https://wa.me/971501234567?text=${encodedMessage}`;
+                
+                // Show success message
+                successMessage.textContent = 'Thank you! Your enquiry has been sent. We will contact you shortly.';
+                successMessage.classList.add('active');
+                
+                // Reset button
+                submitText.style.display = 'inline';
+                submitLoading.style.display = 'none';
+                submitBtn.disabled = false;
+                
+                // Reset form
+                form.reset();
+                
+                // Open WhatsApp in new tab
+                window.open(whatsappUrl, '_blank');
+                
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    successMessage.classList.remove('active');
+                }, 5000);
+                
+                // You would typically send this to your server:
+                // fetch('/api/enquiry', {
+                //     method: 'POST',
+                //     headers: {'Content-Type': 'application/json'},
+                //     body: JSON.stringify({name, email, phone, product, message})
+                // })
+                
+            }, 1500);
+        }
+
+        // ------------------------------
+        // NOTIFICATION SYSTEM
+        // ------------------------------
+        function showNotification(message) {
+            // Check if notification element exists
+            let notification = document.getElementById('notification');
+            
+            if (!notification) {
+                // Create notification element
+                notification = document.createElement('div');
+                notification.id = 'notification';
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 20px;
+                    right: 20px;
+                    background: var(--gold);
+                    color: var(--black);
+                    padding: 15px 20px;
+                    border-radius: 10px;
+                    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+                    z-index: 9999;
+                    transform: translateX(150%);
+                    transition: transform 0.3s ease;
+                    font-weight: 600;
+                    max-width: 300px;
+                `;
+                document.body.appendChild(notification);
+            }
+            
+            // Update message and show
+            notification.textContent = message;
+            notification.style.transform = 'translateX(0)';
+            
+            // Hide after 3 seconds
+            setTimeout(() => {
+                notification.style.transform = 'translateX(150%)';
+            }, 3000);
+        }
+
+        // ------------------------------
+        // SMOOTH SCROLL
+        // ------------------------------
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ------------------------------
+        // IMAGE ERROR HANDLING
+        // ------------------------------
+        document.querySelectorAll('img').forEach(img => {
+            img.addEventListener('error', function() {
+                this.style.display = 'none';
+                console.warn('Image failed to load:', this.src);
+            });
+        });
+    </script>
+</body>
+</html>
