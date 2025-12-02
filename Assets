@@ -1,1 +1,485 @@
+// ========== CONFIGURATION ==========
+const CONFIG = {
+    splashScreenDuration: 4000,
+    cartStorageKey: 'ryaanCart',
+    wishlistStorageKey: 'ryaanWishlist',
+    paymentStorageKey: 'ryaanPendingPayment',
+    notificationDuration: 3000,
+    sliderInterval: 5000
+};
 
+// ========== STATE MANAGEMENT ==========
+class StateManager {
+    constructor() {
+        this.cart = this.loadFromStorage(CONFIG.cartStorageKey) || [];
+        this.wishlist = this.loadFromStorage(CONFIG.wishlistStorageKey) || [];
+        this.quickViewProduct = null;
+        this.currentTestimonial = 0;
+    }
+    
+    loadFromStorage(key) {
+        try {
+            return JSON.parse(localStorage.getItem(key)) || [];
+        } catch (error) {
+            console.error(`Error loading ${key}:`, error);
+            return [];
+        }
+    }
+    
+    saveToStorage(key, data) {
+        try {
+            localStorage.setItem(key, JSON.stringify(data));
+        } catch (error) {
+            console.error(`Error saving ${key}:`, error);
+        }
+    }
+}
+
+// ========== PRODUCTS DATABASE ==========
+const PRODUCTS = [
+    {
+        id: 1,
+        name: "Chopard Inspired 3 Diamond Chain & Pendant",
+        category: "necklaces",
+        price: 28900,
+        image: "assets/images/Screenshot_20251129_014405_Chrome.jpg",
+        description: "Exquisite Chopard-inspired necklace featuring three brilliant diamonds set in 18K white gold."
+    },
+    {
+        id: 2,
+        name: "Messika UNO Full Diamond Earrings - Yellow Gold",
+        category: "earrings",
+        price: 18900,
+        image: "assets/images/Screenshot_20251129_014443_Chrome.jpg",
+        description: "Luxurious Messika-inspired diamond earrings in 18K yellow gold."
+    },
+    {
+        id: 3,
+        name: "Messika Chain & Pendant - White Gold",
+        category: "necklaces",
+        price: 32900,
+        image: "assets/images/Screenshot_20251129_014511_Chrome.jpg",
+        description: "Sophisticated Messika-inspired chain and pendant in 18K white gold."
+    },
+    {
+        id: 4,
+        name: "Messika Diamond Ring - Rose Gold",
+        category: "rings",
+        price: 15900,
+        image: "assets/images/Screenshot_20251129_014550_Chrome.jpg",
+        description: "Elegant Messika-inspired diamond ring set in 18K rose gold."
+    },
+    {
+        id: 5,
+        name: "Messika Duo Diamond Ring - Rose Gold",
+        category: "rings",
+        price: 21900,
+        image: "assets/images/Screenshot_20251129_014553_Chrome.jpg",
+        description: "Stunning Messika-inspired duo diamond ring in 18K rose gold."
+    },
+    {
+        id: 6,
+        name: "Messika UNO 5-Motif Diamond Necklace",
+        category: "necklaces",
+        price: 45900,
+        image: "assets/images/Screenshot_20251129_014606_Chrome.jpg",
+        description: "Luxurious Messika-inspired necklace with five diamond motifs."
+    },
+    {
+        id: 7,
+        name: "Messika Tie-Band Diamond Bracelet",
+        category: "bracelets",
+        price: 27900,
+        image: "assets/images/Screenshot_20251129_014624_Chrome.jpg",
+        description: "Elegant Messika-inspired tie-band bracelet featuring brilliant diamonds."
+    },
+    {
+        id: 8,
+        name: "Messika Full-Diamond Bangle - Rose Gold",
+        category: "bracelets",
+        price: 38900,
+        image: "assets/images/Screenshot_20251129_014633_Chrome.jpg",
+        description: "Luxurious full-diamond bangle in 18K rose gold."
+    },
+    {
+        id: 9,
+        name: "Messika Diamond Ring - Rose Gold",
+        category: "rings",
+        price: 17900,
+        image: "assets/images/Screenshot_20251129_014643_Chrome.jpg",
+        description: "Beautiful Messika-inspired diamond ring in 18K rose gold."
+    }
+];
+
+// ========== MAIN APPLICATION ==========
+class RyaanJewellersApp {
+    constructor() {
+        this.state = new StateManager();
+        this.init();
+    }
+    
+    init() {
+        document.addEventListener('DOMContentLoaded', () => {
+            this.setupSplashScreen();
+            this.renderProducts();
+            this.updateCartCount();
+            this.setupEventListeners();
+            this.setupProductFilters();
+            this.setupTestimonialSlider();
+        });
+    }
+    
+    setupSplashScreen() {
+        setTimeout(() => {
+            const splashScreen = document.getElementById('splash-screen');
+            if (splashScreen) {
+                splashScreen.classList.add('hidden');
+                setTimeout(() => splashScreen.style.display = 'none', 1000);
+            }
+        }, CONFIG.splashScreenDuration);
+    }
+    
+    renderProducts(filter = 'all') {
+        const productsGrid = document.getElementById('products-grid');
+        if (!productsGrid) return;
+        
+        const filteredProducts = filter === 'all' 
+            ? PRODUCTS 
+            : PRODUCTS.filter(p => p.category === filter);
+        
+        productsGrid.innerHTML = filteredProducts.map(product => `
+            <div class="product-card fade-in">
+                <div class="product-image" style="background-image: url('${product.image}');">
+                    <div class="product-overlay">
+                        <button class="quick-view-btn" onclick="app.openQuickView(${product.id})">
+                            Quick View
+                        </button>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">${product.category.toUpperCase()}</div>
+                    <h3 class="product-name">${product.name}</h3>
+                    <p class="product-description">${product.description}</p>
+                    <div class="product-price">AED ${product.price.toLocaleString()}</div>
+                    <div class="product-actions">
+                        <button class="add-to-cart-btn" onclick="app.addToCart(${product.id})">
+                            Add to Cart
+                        </button>
+                        <button class="add-to-wishlist-btn" onclick="app.addToWishlist(${product.id})">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+    }
+    
+    setupProductFilters() {
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                this.renderProducts(e.target.dataset.filter);
+            });
+        });
+    }
+    
+    openQuickView(productId) {
+        const product = PRODUCTS.find(p => p.id === productId);
+        this.state.quickViewProduct = product;
+        
+        if (!product) return;
+        
+        const modal = document.querySelector('.quick-view-modal');
+        const image = document.getElementById('quick-view-image');
+        const category = document.getElementById('quick-view-category');
+        const title = document.getElementById('quick-view-title');
+        const price = document.getElementById('quick-view-price');
+        const description = document.getElementById('quick-view-description');
+        
+        if (image) image.style.backgroundImage = `url('${product.image}')`;
+        if (category) category.textContent = product.category.toUpperCase();
+        if (title) title.textContent = product.name;
+        if (price) price.textContent = `AED ${product.price.toLocaleString()}`;
+        if (description) description.textContent = product.description;
+        if (modal) {
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    }
+    
+    closeQuickView() {
+        const modal = document.querySelector('.quick-view-modal');
+        if (modal) {
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            this.state.quickViewProduct = null;
+        }
+    }
+    
+    addToCart(productId, quantity = 1) {
+        const product = PRODUCTS.find(p => p.id === productId);
+        if (!product) return;
+        
+        const existingItem = this.state.cart.find(item => item.id === productId);
+        
+        if (existingItem) {
+            existingItem.quantity += quantity;
+        } else {
+            this.state.cart.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image,
+                quantity: quantity
+            });
+        }
+        
+        this.state.saveToStorage(CONFIG.cartStorageKey, this.state.cart);
+        this.updateCartCount();
+        this.renderCartItems();
+        this.showNotification(`${product.name} added to cart!`);
+        
+        if (window.innerWidth <= 768) {
+            this.toggleCart();
+        }
+    }
+    
+    removeFromCart(productId) {
+        this.state.cart = this.state.cart.filter(item => item.id !== productId);
+        this.state.saveToStorage(CONFIG.cartStorageKey, this.state.cart);
+        this.updateCartCount();
+        this.renderCartItems();
+        this.showNotification('Item removed from cart');
+    }
+    
+    updateCartCount() {
+        const count = this.state.cart.reduce((total, item) => total + item.quantity, 0);
+        const cartCountElement = document.querySelector('.cart-count');
+        if (cartCountElement) {
+            cartCountElement.textContent = count;
+        }
+    }
+    
+    renderCartItems() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const totalAmountElement = document.querySelector('.cart-total-amount');
+        
+        if (!cartItemsContainer || !totalAmountElement) return;
+        
+        if (this.state.cart.length === 0) {
+            cartItemsContainer.innerHTML = `
+                <div class="cart-empty">
+                    <i class="fas fa-shopping-bag"></i>
+                    <p>Your cart is empty</p>
+                </div>
+            `;
+            totalAmountElement.textContent = 'AED 0.00';
+            return;
+        }
+        
+        let total = 0;
+        const itemsHTML = this.state.cart.map(item => {
+            const itemTotal = item.price * item.quantity;
+            total += itemTotal;
+            
+            return `
+                <div class="cart-item">
+                    <div class="cart-item-image" style="background-image: url('${item.image}');"></div>
+                    <div class="cart-item-details">
+                        <h4 class="cart-item-name">${item.name}</h4>
+                        <div class="cart-item-price">AED ${item.price.toLocaleString()}</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn" onclick="app.updateQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                            <input type="text" class="quantity-input" value="${item.quantity}" readonly>
+                            <button class="quantity-btn" onclick="app.updateQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                        </div>
+                        <button class="cart-item-remove" onclick="app.removeFromCart(${item.id})">Remove</button>
+                    </div>
+                </div>
+            `;
+        }).join('');
+        
+        cartItemsContainer.innerHTML = itemsHTML;
+        totalAmountElement.textContent = `AED ${total.toLocaleString()}`;
+    }
+    
+    updateQuantity(productId, newQuantity) {
+        if (newQuantity < 1) {
+            this.removeFromCart(productId);
+            return;
+        }
+        
+        const item = this.state.cart.find(item => item.id === productId);
+        if (item) {
+            item.quantity = newQuantity;
+            this.state.saveToStorage(CONFIG.cartStorageKey, this.state.cart);
+            this.updateCartCount();
+            this.renderCartItems();
+        }
+    }
+    
+    toggleCart() {
+        const cartModal = document.querySelector('.cart-modal');
+        if (!cartModal) return;
+        
+        cartModal.classList.toggle('active');
+        document.body.style.overflow = cartModal.classList.contains('active') ? 'hidden' : 'auto';
+        
+        if (cartModal.classList.contains('active')) {
+            this.renderCartItems();
+        }
+    }
+    
+    proceedToPayment() {
+        if (this.state.cart.length === 0) {
+            this.showNotification('Your cart is empty');
+            return;
+        }
+        
+        const total = this.state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const paymentData = {
+            items: this.state.cart,
+            total: total,
+            timestamp: new Date().toISOString()
+        };
+        
+        this.state.saveToStorage(CONFIG.paymentStorageKey, paymentData);
+        window.location.href = 'payment.html';
+    }
+    
+    addToWishlist(productId) {
+        const product = PRODUCTS.find(p => p.id === productId);
+        if (!product) return;
+        
+        if (!this.state.wishlist.find(item => item.id === productId)) {
+            this.state.wishlist.push({
+                id: product.id,
+                name: product.name,
+                price: product.price,
+                image: product.image
+            });
+            
+            this.state.saveToStorage(CONFIG.wishlistStorageKey, this.state.wishlist);
+            this.showNotification(`${product.name} added to wishlist!`);
+        } else {
+            this.showNotification(`${product.name} is already in your wishlist`);
+        }
+    }
+    
+    setupTestimonialSlider() {
+        const dots = document.querySelectorAll('.slider-dot');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        
+        if (!dots.length || !slides.length) return;
+        
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                slides.forEach(s => s.classList.remove('active'));
+                dots.forEach(d => d.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                dot.classList.add('active');
+                this.state.currentTestimonial = index;
+            });
+        });
+        
+        setInterval(() => {
+            this.state.currentTestimonial = (this.state.currentTestimonial + 1) % slides.length;
+            
+            slides.forEach(s => s.classList.remove('active'));
+            dots.forEach(d => d.classList.remove('active'));
+            
+            slides[this.state.currentTestimonial].classList.add('active');
+            dots[this.state.currentTestimonial].classList.add('active');
+        }, CONFIG.sliderInterval);
+    }
+    
+    setupEventListeners() {
+        // Mobile menu
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (mobileMenuBtn && navLinks) {
+            mobileMenuBtn.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+        
+        // Close cart on outside click
+        document.addEventListener('click', (e) => {
+            const cartModal = document.querySelector('.cart-modal');
+            const cartBtn = document.querySelector('.cart-btn');
+            
+            if (cartModal?.classList.contains('active') && 
+                !cartModal.contains(e.target) && 
+                !cartBtn?.contains(e.target)) {
+                this.toggleCart();
+            }
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = anchor.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+                    const targetPosition = targetElement.getBoundingClientRect().top + 
+                                         window.pageYOffset - headerHeight;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    if (window.innerWidth <= 768 && navLinks) {
+                        navLinks.style.display = 'none';
+                    }
+                }
+            });
+        });
+        
+        // Active nav on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    }
+    
+    showNotification(message) {
+        const notification = document.getElementById('notification');
+        if (!notification) return;
+        
+        notification.textContent = message;
+        notification.classList.add('show');
+        
+        setTimeout(() => {
+            notification.classList.remove('show');
+        }, CONFIG.notificationDuration);
+    }
+}
+
+// ========== INITIALIZE APP ==========
+const app = new RyaanJewellersApp();
+
+// Make app globally available for HTML onclick handlers
+window.app = app;
