@@ -457,7 +457,67 @@
             position: relative;
         }
 
-        .header-icon:hover {
+      <!-- PAYMENT OPTIONS -->
+<section class="payment-options">
+    <div class="container">
+        <div class="section-title">
+            <h2>Secure Checkout</h2>
+            <p>100% Secure Payment with PayPal</p>
+        </div>
+        
+        <!-- PayPal Express Checkout -->
+        <div style="max-width: 400px; margin: 40px auto;">
+            <div id="paypal-express-container"></div>
+            <p style="text-align: center; margin-top: 15px; color: var(--text-muted); font-size: 0.9rem;">
+                <i class="fas fa-lock"></i> Secure payment powered by PayPal
+            </p>
+        </div>
+        
+        <div class="payment-icons">
+            <div class="payment-icon" title="PayPal" onclick="openPayPalCheckout()" 
+                 style="cursor: pointer; background: var(--gold); color: var(--black);">
+                <i class="fab fa-paypal"></i>
+            </div>
+            <div class="payment-icon" title="Tabby">
+                <i class="fas fa-credit-card"></i>
+            </div>
+            <div class="payment-icon" title="Tamara">
+                <i class="fas fa-wallet"></i>
+            </div>
+            <div class="payment-icon" title="Credit Card">
+                <i class="fab fa-cc-visa"></i>
+            </div>
+            <div class="payment-icon" title="Apple Pay">
+                <i class="fab fa-apple-pay"></i>
+            </div>
+            <div class="payment-icon" title="Bank Transfer">
+                <i class="fas fa-university"></i>
+            </div>
+        </div>
+        
+        <div style="max-width: 600px; margin: 40px auto 0; padding: 20px; 
+                    background: var(--bg-primary); border-radius: var(--border-radius); 
+                    border: 1px solid rgba(212, 175, 55, 0.2);">
+            <h4 style="color: var(--gold); margin-bottom: 15px; text-align: center;">
+                <i class="fas fa-shield-alt"></i> Secure Shopping
+            </h4>
+            <div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <i class="fas fa-lock" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">SSL Encryption</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-credit-card" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Secure Payments</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-shipping-fast" style="color: var(--gold); font-size: 1.5rem; margin-bottom: 10px;"></i>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary);">Fast Delivery</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>.header-icon:hover {
             color: var(--gold);
             transform: translateY(-2px);
         }
@@ -487,6 +547,41 @@
             cursor: pointer;
         }
 
+       <!-- CART MODAL -->
+<div class="modal" id="cartModal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal('cartModal')">
+            <i class="fas fa-times"></i>
+        </button>
+        <div style="padding: 40px;">
+            <h3 style="margin-bottom: 30px; color: var(--gold);">
+                <i class="fas fa-shopping-bag"></i> Your Shopping Cart
+            </h3>
+            <div id="cartItems" style="margin-bottom: 30px; max-height: 300px; overflow-y: auto;">
+                <!-- Cart items will be loaded here -->
+            </div>
+            <div style="border-top: 1px solid rgba(212, 175, 55, 0.3); padding-top: 20px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <h4>Total:</h4>
+                    <h4 id="cartTotal" style="color: var(--gold);">AED 0</h4>
+                </div>
+                
+                <!-- PayPal Button Container -->
+                <div id="paypal-button-container" style="margin-bottom: 15px;"></div>
+                
+                <!-- Alternative Checkout Button -->
+                <button class="btn btn-outline" style="width: 100%; margin-top: 10px;" 
+                        onclick="showAlternativePayment()">
+                    <i class="fas fa-credit-card"></i> Other Payment Methods
+                </button>
+                
+                <p style="text-align: center; margin-top: 20px; color: var(--text-muted); font-size: 0.8rem;">
+                    <i class="fas fa-lock"></i> 100% Secure Checkout · SSL Encrypted
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
         /* ========== HERO SECTION ========== */
         .hero {
             min-height: 100vh;
