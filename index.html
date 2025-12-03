@@ -1394,7 +1394,50 @@
                 </p>
             </form>
         </div>
+      <script>header>
+        <div class="container">
+            <h1>VAN CLEEF & ARPELS</h1>
+            <p class="subtitle">Elegance Redefined - Jewelry Collection</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All Pieces</button>
+            <button class="filter-btn" data-filter="bracelet">Bracelets</button>
+            <button class="filter-btn" data-filter="pendant">Pendants</button>
+        </div>
         
+        <div class="products-grid" id="productsContainer">
+            <!-- Products will be dynamically added here -->
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <p>Van Cleef & Arpels Jewelry Collection &copy; 2024</p>
+            <p>All images are for display purposes only</p>
+        </div>
+          </footer>
+        // Product data with categorization
+        const products = [
+            // Bracelets
+            { id: 1, name: "Alhambra Vintage Bracelet", type: "bracelet", filename: "S_1.jpg", description: "Iconic Alhambra motif in yellow gold" },
+            { id: 2, name: "Magic Alhambra Bracelet", type: "bracelet", filename: "S_2.jpg", description: "Magic Alhambra collection with gemstones" },
+            { id: 3, name: "Perlée Bracelet", type: "bracelet", filename: "S_3.jpg", description: "Perlée collection with beaded edges" },
+            { id: 4, name: "Sweet Alhambra Bracelet", type: "bracelet", filename: "S_4.jpg", description: "Sweet Alhambra in rose gold" },
+            { id: 5, name: "Vintage Alhambra Bracelet", type: "bracelet", filename: "S_5.jpg", description: "Classic Vintage Alhambra design" },
+            { id: 6, name: "Magic Alhambra Hammered Gold", type: "bracelet", filename: "S_6.jpg", description: "Hammered gold Magic Alhambra piece" },
+            
+            // Pendants
+            { id: 7, name: "Alhambra Vintage Pendant", type: "pendant", filename: "S_7.jpg", description: "Iconic clover pendant in white gold" },
+            { id: 8, name: "Magic Alhambra Pendant", type: "pendant", filename: "S_8.jpg", description: "Magic Alhambra pendant with diamonds" },
+            { id: 9, name: "Sweet Alhambra Pendant", type: "pendant", filename: "S_9.jpg", description: "Delicate Sweet Alhambra pendant" },
+            { id: 10, name: "Vintage Alhambra Pendant", type: "pendant", filename: "S_10.jpg", description: "Vintage Alhambra pendant set" },
+            { id: 11, name: "Perlée Pendant", type: "pendant", filename: "S_11.jpg", description: "Perlée collection pendant" },
+            { id: 12, name: "Alhambra Mother of Pearl", type: "pendant", filename: "S_12.jpg", description: "Alhambra pendant with mother of pearl" },
+            { id: 13, name: "Magic Alhambra Long Pendant", type: "pendant", filename: "S_13.jpg", description: "Long chain Magic Alhambra pendant" }
+        ];  
         <div class="payment-icons">
             <div class="payment-icon" title="Bank Transfer" onclick="showPaymentInfo('bank')">
                 <i class="fas fa-university"></i>
