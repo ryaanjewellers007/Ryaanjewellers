@@ -340,3 +340,85 @@
     // ========== UPDATED PAYMENT SECTION HTML ==========
     // Replace your payment section with this:
 </script>
+// ========== ADDITIONAL PAYMENT FUNCTIONS ==========
+function openPayPalCheckout() {
+    if (cart.length === 0) {
+        showNotification('Please add items to cart first!');
+        scrollToSection('products');
+        return;
+    }
+    openCart();
+}
+
+function showAlternativePayment() {
+    const modal = document.createElement('div');
+    modal.className = 'modal active';
+    modal.innerHTML = `
+        <div class="modal-content" style="max-width: 500px;">
+            <button class="modal-close" onclick="this.parentElement.parentElement.remove()">
+                <i class="fas fa-times"></i>
+            </button>
+            <div style="padding: 40px;">
+                <h3 style="margin-bottom: 25px; color: var(--gold);">
+                    <i class="fas fa-credit-card"></i> Alternative Payment
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 25px;">
+                    For bank transfer or cash on delivery, please contact us:
+                </p>
+                <div style="background: var(--bg-secondary); padding: 20px; border-radius: var(--border-radius); 
+                            margin-bottom: 25px;">
+                    <p><i class="fas fa-phone"></i> <strong>Phone:</strong> +971 4 XXX XXXX</p>
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> payments@ryaanjewellers.com</p>
+                    <p><i class="fas fa-university"></i> <strong>Bank:</strong> Emirates NBD</p>
+                </div>
+                <button class="btn btn-gold" style="width: 100%;" onclick="this.parentElement.parentElement.parentElement.remove()">
+                    <i class="fas fa-check"></i> Got it
+                </button>
+            </div>
+        </div>
+    `;
+    document.body.appendChild(modal);
+}
+
+// ========== PAYPAL SANDBOX TESTING ==========
+// For testing without real PayPal account, use sandbox credentials
+function setupPayPalSandbox() {
+    // Test credentials (for development only)
+    const testProducts = [
+        {
+            id: 999,
+            name: "Test Product - Gold Ring",
+            price: 5000,
+            image: "https://via.placeholder.com/300x300/1a1a1a/D4AF37?text=Test+Product",
+            description: "Test product for PayPal integration",
+            category: "test"
+        }
+    ];
+    
+    // Add test product button for testing
+    const testButton = document.createElement('button');
+    testButton.className = 'btn btn-outline';
+    testButton.innerHTML = '<i class="fas fa-vial"></i> Test PayPal';
+    testButton.style.position = 'fixed';
+    testButton.style.bottom = '20px';
+    testButton.style.right = '20px';
+    testButton.style.zIndex = '1000';
+    testButton.onclick = function() {
+        cart = [{
+            id: 999,
+            name: "Test Gold Ring",
+            price: 5000,
+            quantity: 1,
+            sku: "TEST-001"
+        }];
+        localStorage.setItem('cart', JSON.stringify(cart));
+        updateCartCount();
+        openCart();
+        showNotification('Test product added to cart. Try PayPal checkout!');
+    };
+    
+    document.body.appendChild(testButton);
+}
+
+// Uncomment for testing:
+// setupPayPalSandbox();
