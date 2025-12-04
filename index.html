@@ -1,1264 +1,989 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RYAAN JEWELERS | Gold & Diamonds</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        :root {
-            --gold: #D4AF37;
-            --dark-gold: #B8860B;
-            --light-gold: #F5E8AA;
-            --dark-bg: #0A0A0A;
-            --light-bg: #1A1A1A;
-            --text-light: #F5F5F5;
-            --text-gray: #AAAAAA;
-            --card-bg: rgba(26, 26, 26, 0.8);
-        }
-        
-        body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: var(--dark-bg);
-            color: var(--text-light);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        
-        h1, h2, h3, h4, h5 {
-            font-family: 'Cinzel', serif;
-            font-weight: 700;
-            color: var(--gold);
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.8rem;
-            margin-bottom: 3rem;
-            position: relative;
-            letter-spacing: 2px;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-        }
-        
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-        
-        .logo {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            font-weight: bold;
-            color: var(--dark-bg);
-            border: 3px solid var(--light-gold);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-        
-        .logo-text {
-            font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
-            letter-spacing: 3px;
-            background: linear-gradient(to right, var(--gold), var(--light-gold));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 2.5rem;
-        }
-        
-        nav a {
-            color: var(--text-light);
-            text-decoration: none;
-            font-weight: 400;
-            letter-spacing: 1px;
-            font-size: 1rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        nav a:hover {
-            color: var(--gold);
-        }
-        
-        nav a:after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background-color: var(--gold);
-            transition: width 0.3s ease;
-        }
-        
-        nav a:hover:after {
-            width: 100%;
-        }
-        
-        .header-icons {
-            display: flex;
-            gap: 1.5rem;
-            font-size: 1.3rem;
-        }
-        
-        .header-icons i {
-            cursor: pointer;
-            transition: color 0.3s ease;
-        }
-        
-        .header-icons i:hover {
-            color: var(--gold);
-        }
-        
-        .cart-icon {
-            position: relative;
-        }
-        
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: var(--gold);
-            color: var(--dark-bg);
-            font-size: 0.7rem;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-        }
-        
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.9)), url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            padding: 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 4.5rem;
-            margin-bottom: 1rem;
-            letter-spacing: 4px;
-            text-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2.5rem;
-            color: var(--text-gray);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: linear-gradient(135deg, var(--gold), var(--dark-gold));
-            color: var(--dark-bg);
-            text-decoration: none;
-            font-weight: bold;
-            letter-spacing: 1px;
-            border-radius: 0;
-            border: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-        
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
-            color: var(--dark-bg);
-        }
-        
-        /* Gold Price Section */
-        .gold-price-section {
-            padding: 5rem 2rem;
-            background-color: var(--light-bg);
-        }
-        
-        .gold-price-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .gold-price-display {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .gold-card {
-            background-color: var(--card-bg);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            padding: 2rem;
-            border-radius: 5px;
-            text-align: center;
-            flex: 1;
-            min-width: 250px;
-            transition: transform 0.3s ease;
-        }
-        
-        .gold-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--gold);
-        }
-        
-        .gold-type {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .gold-price {
-            font-size: 2.2rem;
-            color: var(--gold);
-            font-weight: bold;
-        }
-        
-        .price-change {
-            margin-top: 0.5rem;
-            font-size: 0.9rem;
-        }
-        
-        .positive {
-            color: #4CAF50;
-        }
-        
-        .negative {
-            color: #F44336;
-        }
-        
-        /* Jewelry Categories */
-        .categories-section {
-            padding: 5rem 2rem;
-        }
-        
-        .categories-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-        
-        .category-card {
-            height: 300px;
-            border-radius: 5px;
-            overflow: hidden;
-            position: relative;
-            cursor: pointer;
-        }
-        
-        .category-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .category-card:hover .category-img {
-            transform: scale(1.1);
-        }
-        
-        .category-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
-            padding: 1.5rem;
-            color: white;
-        }
-        
-        .category-name {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Brands Section */
-        .brands-section {
-            padding: 5rem 2rem;
-            background-color: var(--light-bg);
-        }
-        
-        .brands-container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 2rem;
-        }
-        
-        .brand-card {
-            background-color: var(--card-bg);
-            padding: 2rem;
-            text-align: center;
-            border-radius: 5px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .brand-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-        }
-        
-        .brand-name {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-        }
-        
-        /* Instagram Gallery */
-        .gallery-section {
-            padding: 5rem 2rem;
-        }
-        
-        .gallery-container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .gallery-item {
-            height: 300px;
-            overflow: hidden;
-            border-radius: 5px;
-            position: relative;
-        }
-        
-        .gallery-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        
-        .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
-        }
-        
-        .instagram-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        
-        .gallery-item:hover .instagram-overlay {
-            opacity: 1;
-        }
-        
-        .instagram-icon {
-            color: white;
-            font-size: 2.5rem;
-        }
-        
-        /* Shopping Cart Modal */
-        .cart-modal {
-            position: fixed;
-            top: 0;
-            right: -400px;
-            width: 380px;
-            height: 100%;
-            background-color: var(--light-bg);
-            z-index: 2000;
-            transition: right 0.5s ease;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-            overflow-y: auto;
-        }
-        
-        .cart-modal.open {
-            right: 0;
-        }
-        
-        .cart-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .cart-items {
-            padding: 1.5rem;
-        }
-        
-        .cart-item {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1.5rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .cart-item-img {
-            width: 80px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 5px;
-        }
-        
-        .cart-item-details {
-            flex: 1;
-        }
-        
-        .cart-item-name {
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        
-        .cart-item-price {
-            color: var(--gold);
-            font-weight: bold;
-        }
-        
-        .cart-item-remove {
-            color: var(--text-gray);
-            cursor: pointer;
-            font-size: 0.9rem;
-        }
-        
-        .cart-item-remove:hover {
-            color: #F44336;
-        }
-        
-        .cart-total {
-            padding: 1.5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-            display: flex;
-            justify-content: space-between;
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-        
-        .cart-actions {
-            padding: 0 1.5rem 2rem;
-        }
-        
-        /* Payment Modal */
-        .payment-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 3000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .payment-modal.open {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .payment-container {
-            background-color: var(--light-bg);
-            width: 90%;
-            max-width: 500px;
-            padding: 2.5rem;
-            border-radius: 5px;
-            border: 1px solid var(--gold);
-        }
-        
-        .payment-form {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            margin-bottom: 0.5rem;
-            color: var(--text-gray);
-        }
-        
-        .form-group input {
-            padding: 0.8rem;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            border-radius: 3px;
-            color: white;
-            font-size: 1rem;
-        }
-        
-        .form-row {
-            display: flex;
-            gap: 1rem;
-        }
-        
-        .form-row .form-group {
-            flex: 1;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--dark-bg);
-            padding: 4rem 2rem 2rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
-        }
-        
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .footer-column a {
-            color: var(--text-gray);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .footer-column a:hover {
-            color: var(--gold);
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-        
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--text-light);
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icon:hover {
-            background-color: var(--gold);
-            color: var(--dark-bg);
-        }
-        
-        .copyright {
-            text-align: center;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--text-gray);
-            font-size: 0.9rem;
-        }
-        
-        /* Responsive */
-        @media (max-width: 992px) {
-            nav ul {
-                gap: 1.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 3.5rem;
-            }
-            
-            .section-title {
-                font-size: 2.2rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 1rem;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                gap: 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .cart-modal {
-                width: 100%;
-                right: -100%;
-            }
-        }
-        
-        /* Overlay for modals */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            z-index: 1500;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Ryaan Jewellers Premium</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+/* ===========================
+   GLOBAL THEME
+=========================== */
+
+:root{
+  --gold:#d4af37;
+  --bg:#0f0f0f;
+  --text:#ffffff;
+  --card:#1b1b1b;
+}
+
+[data-theme="light"]{
+  --bg:#ffffff;
+  --text:#000000;
+  --card:#f3f3f3;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial, sans-serif;
+  transition:background .4s,color .4s;
+}
+
+.container{padding:20px;}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.btn{
+  background:var(--gold);
+  color:#000;
+  padding:8px 14px;
+  border-radius:6px;
+  border:none;
+  cursor:pointer;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.btn:hover{
+  opacity:0.8;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+  position:sticky;
+  top:0;
+  background:var(--bg);
+  padding:12px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,0.1);
+  z-index:999;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+  color:var(--gold);
+  font-family:Cinzel, serif;
+}
+
+/* ===========================
+   SPLASH SCREEN
+=========================== */
+
+#splash{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:var(--bg);
+  color:var(--gold);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  font-family:Cinzel,serif;
+  animation:fadeOut 2s ease 1.5s forwards;
+  z-index:1000;
+}
+
+@keyframes fadeOut{
+  to{opacity:0;visibility:hidden;}
+}
+
+/* ===========================
+   HERO SLIDER
+=========================== */
+
+.slider{
+  width:100%;
+  height:240px;
+  overflow:hidden;
+  border-radius:12px;
+  margin-top:10px;
+  position:relative;
+}
+
+.slide-track{
+  width:300%;
+  height:100%;
+  display:flex;
+  transition:transform 0.7s ease;
+}
+
+.slide{
+  width:100%;
+  background-size:cover;
+  background-position:center;
+}
+
+/* Example images (replace with yours) */
+.s1{background-image:url('S_1.jpg');}
+.s2{background-image:url('S_2.jpg');}
+.s3{background-image:url('S_3.jpg');}
+
+/* ===========================
+   CATEGORY SLIDER
+=========================== */
+
+.cat-scroll{
+  display:flex;
+  overflow-x:auto;
+  gap:12px;
+  padding:10px 0;
+}
+
+.cat-box{
+  min-width:120px;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:.3s;
+}
+
+.cat-box:hover{
+  transform:translateY(-4px);
+}
+
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+.fade-in{animation:fadeIn .8s ease forwards;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(20px);} to{opacity:1;}}
+
+.slide-up{animation:slideUp 1s ease forwards;}
+@keyframes slideUp{from{opacity:0;transform:translateY(40px);}to{opacity:1;}}
+
+/* ===========================
+   WHATSAPP + INSTAGRAM
+=========================== */
+
+.float-btn{
+  position:fixed;
+  right:20px;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#fff;
+  font-size:28px;
+  font-weight:bold;
+  text-decoration:none;
+  box-shadow:0 0 10px rgba(0,0,0,0.3);
+  z-index:999;
+}
+
+#wa{bottom:20px;background:#25D366;}
+#ig{bottom:95px;background:#E4405F;}
+
+/* ===========================
+   THEME TOGGLE
+=========================== */
+
+#themeToggle{
+  background:none;
+  border:none;
+  font-size:22px;
+  cursor:pointer;
+  color:var(--text);
+}
+
+/* ===========================
+   AR VIEWER (Placeholder)
+=========================== */
+
+.ar-box{
+  margin-top:25px;
+  padding:20px;
+  background:var(--card);
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,0.1);
+  text-align:center;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+  margin-top:40px;
+  text-align:center;
+  padding:20px;
+  opacity:0.8;
+}
+
+</style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="logo-container">
-            <div class="logo">R</div>
-            <div class="logo-text">RYAAN JEWELERS</div>
-        </div>
-        
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#gold">Gold Prices</a></li>
-                <li><a href="#categories">Collections</a></li>
-                <li><a href="#brands">Brands</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-        
-        <div class="header-icons">
-            <div class="cart-icon" id="cartIcon">
-                <i class="fas fa-shopping-bag"></i>
-                <span class="cart-count">0</span>
-            </div>
-            <i class="fas fa-search"></i>
-            <i class="fas fa-user"></i>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1>RYAAN JEWELERS</h1>
-            <h2>GOLD & DIAMONDS</h2>
-            <p>Discover the world's most exquisite jewelry collections, meticulously crafted for those who appreciate timeless luxury and unparalleled elegance.</p>
-            <a href="#categories" class="btn">Explore Collections</a>
-        </div>
-    </section>
+<!-- ===========================
+     SPLASH SCREEN
+=========================== -->
+<div id="splash">RYAAN JEWELLERS</div>
 
-    <!-- Gold Price Section -->
-    <section class="gold-price-section" id="gold">
-        <div class="gold-price-container">
-            <h2 class="section-title">Live Gold Prices</h2>
-            <div class="gold-price-display">
-                <div class="gold-card">
-                    <h3 class="gold-type">24K Gold</h3>
-                    <div class="gold-price">$2,150.75</div>
-                    <div class="price-change positive">+12.50 (0.58%)</div>
-                    <p>Per ounce</p>
-                </div>
-                <div class="gold-card">
-                    <h3 class="gold-type">22K Gold</h3>
-                    <div class="gold-price">$1,972.25</div>
-                    <div class="price-change positive">+10.80 (0.55%)</div>
-                    <p>Per ounce</p>
-                </div>
-                <div class="gold-card">
-                    <h3 class="gold-type">18K Gold</h3>
-                    <div class="gold-price">$1,613.06</div>
-                    <div class="price-change negative">-5.25 (0.32%)</div>
-                    <p>Per ounce</p>
-                </div>
-            </div>
-            <p style="text-align: center; color: var(--text-gray); font-size: 0.9rem;">Prices update every 5 minutes. Last updated: <span id="updateTime">Just now</span></p>
-        </div>
-    </section>
+<!-- ===========================
+     HEADER
+=========================== -->
+<header>
+  <div class="logo">RYAAN JEWELLERS</div>
 
-    <!-- Jewelry Categories -->
-    <section class="categories-section" id="categories">
-        <div class="categories-container">
-            <h2 class="section-title">Jewelry Collections</h2>
-            <div class="categories-grid">
-                <div class="category-card" data-category="rings">
-                    <img src="https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rings" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Rings</h3>
-                        <p>Exquisite diamond & gold rings</p>
-                    </div>
-                </div>
-                <div class="category-card" data-category="necklaces">
-                    <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Necklaces" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Necklaces</h3>
-                        <p>Statement necklaces & pendants</p>
-                    </div>
-                </div>
-                <div class="category-card" data-category="bangles">
-                    <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bangles" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Bangles</h3>
-                        <p>Gold & diamond bangles</p>
-                    </div>
-                </div>
-                <div class="category-card" data-category="earrings">
-                    <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Earrings" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Earrings</h3>
-                        <p>Diamond studs & hoops</p>
-                    </div>
-                </div>
-                <div class="category-card" data-category="bracelets">
-                    <img src="https://images.unsplash.com/photo-162179148c5d30c7535d6d2e90e3c4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bracelets" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Bracelets</h3>
-                        <p>Luxury gold bracelets</p>
-                    </div>
-                </div>
-                <div class="category-card" data-category="chokers">
-                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Chokers" class="category-img">
-                    <div class="category-overlay">
-                        <h3 class="category-name">Chokers</h3>
-                        <p>Elegant diamond chokers</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div>
+    <button id="themeToggle">🌙</button>
+    <button class="btn" onclick="setLang('en')">EN</button>
+    <button class="btn" onclick="setLang('ar')">AR</button>
+  </div>
+</header>
 
-    <!-- Brands Section -->
-    <section class="brands-section" id="brands">
-        <div class="brands-container">
-            <h2 class="section-title">Luxury Brands</h2>
-            <div class="brands-grid">
-                <div class="brand-card" data-brand="cartier">
-                    <div style="font-size: 2.5rem; color: var(--gold);">C</div>
-                    <h3 class="brand-name">Cartier</h3>
-                </div>
-                <div class="brand-card" data-brand="messika">
-                    <div style="font-size: 2.5rem; color: var(--gold);">M</div>
-                    <h3 class="brand-name">Messika</h3>
-                </div>
-                <div class="brand-card" data-brand="boucheron">
-                    <div style="font-size: 2.5rem; color: var(--gold);">B</div>
-                    <h3 class="brand-name">Boucheron</h3>
-                </div>
-                <div class="brand-card" data-brand="chopard">
-                    <div style="font-size: 2.5rem; color: var(--gold);">C</div>
-                    <h3 class="brand-name">Chopard</h3>
-                </div>
-                <div class="brand-card" data-brand="vca">
-                    <div style="font-size: 2.5rem; color: var(--gold);">VCA</div>
-                    <h3 class="brand-name">Van Cleef & Arpels</h3>
-                </div>
-                <div class="brand-card" data-brand="marli">
-                    <div style="font-size: 2.5rem; color: var(--gold);">M</div>
-                    <h3 class="brand-name">Marli</h3>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="container">
 
-    <!-- Instagram Gallery -->
-    <section class="gallery-section" id="gallery">
-        <div class="gallery-container">
-            <h2 class="section-title">Instagram Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1594576722512-582d5577dc56?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1535448995412-2038ff6c3e7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1605100940457-0d3d1e6ca4c1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Jewelry" class="gallery-img">
-                    <div class="instagram-overlay">
-                        <i class="fab fa-instagram instagram-icon"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- ===========================
+     HERO SLIDER
+=========================== -->
+<div class="slider">
+  <div class="slide-track" id="track">
+    <div class="slide s1"></div>
+    <div class="slide s2"></div>
+    <div class="slide s3"></div>
+  </div>
+</div>
 
-    <!-- Shopping Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-header">
-            <h3>Your Shopping Bag</h3>
-            <i class="fas fa-times close-cart" id="closeCart"></i>
-        </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be added here dynamically -->
-        </div>
-        <div class="cart-total">
-            <span>Total:</span>
-            <span id="cartTotal">$0.00</span>
-        </div>
-        <div class="cart-actions">
-            <button class="btn" id="checkoutBtn" style="width: 100%;">Proceed to Checkout</button>
-        </div>
+<!-- ===========================
+     CATEGORY SLIDER
+=========================== -->
+<h2 style="color:var(--gold);margin-top:20px;" 
+    data-en="Categories" 
+    data-ar="الفئات">Categories</h2>
+
+<div class="cat-scroll">
+  <div class="cat-box fade-in" data-en="Necklaces" data-ar="قلادات">Necklaces</div>
+  <div class="cat-box fade-in" data-en="Rings" data-ar="خواتم">Rings</div>
+  <div class="cat-box fade-in" data-en="Bracelets" data-ar="أساور">Bracelets</div>
+  <div class="cat-box fade-in" data-en="Earrings" data-ar="أقراط">Earrings</div>
+</div>
+
+<!-- ===========================
+     AR VIEWER
+=========================== -->
+<div class="ar-box slide-up">
+  <h3 data-en="3D / AR Jewellery Viewer"
+      data-ar="عارض مجوهرات ثلاثي الأبعاد">3D / AR Jewellery Viewer</h3>
+  <p data-en="Upload jewellery for 360° view." 
+     data-ar="قم بتحميل المجوهرات لعرض 360 درجة.">
+     Upload jewellery for 360° view.
+  </p>
+  <button class="btn">Upload 3D Model</button>
+</div>
+
+</div>
+
+<!-- ===========================
+     FLOATING BUTTONS
+=========================== -->
+
+<a id="wa" class="float-btn" href="https://wa.me/971501234567" target="_blank">⌁</a>
+<a id="ig" class="float-btn" href="https://instagram.com/ryaanjewellers" target="_blank">✦</a>
+
+
+<!-- ===========================
+     JAVASCRIPT
+=========================== -->
+<script>
+
+/* ===========================
+   LANGUAGE SWITCH
+=========================== */
+let LANG = localStorage.getItem("ry_lang") || "en";
+
+function setLang(l){
+  LANG = l;
+  localStorage.setItem("ry_lang", l);
+  translatePage();
+}
+
+function translatePage(){
+  document.querySelectorAll("[data-en]").forEach(el=>{
+    el.innerText = LANG === "ar" ? el.getAttribute("data-ar") : el.getAttribute("data-en");
+  });
+}
+
+translatePage();
+
+/* ===========================
+   THEME TOGGLE
+=========================== */
+
+document.getElementById("themeToggle").onclick = () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  if(current === "light"){
+    document.documentElement.removeAttribute("data-theme");
+    localStorage.setItem("ry_theme","dark");
+  }else{
+    document.documentElement.setAttribute("data-theme","light");
+    localStorage.setItem("ry_theme","light");
+  }
+};
+
+/* restore theme */
+if(localStorage.getItem("ry_theme")==="light"){
+  document.documentElement.setAttribute("data-theme","light");
+}
+
+/* ===========================
+   SLIDER AUTO PLAY
+=========================== */
+let pos = 0;
+setInterval(()=>{
+  pos = (pos+1)%3;
+  document.getElementById("track").style.transform = 
+     "translateX(-"+(pos*100)+"%)";
+},3000);
+
+</script>
+
+</body>
+</html><!-- ===========================
+     SHOP SECTION (EDITABLE)
+=========================== -->
+<section id="shop" class="section">
+  <h2 style="font-family:Cinzel,serif;color:var(--gold)">Shop</h2>
+
+  <!-- Filters -->
+  <div style="display:flex;gap:12px;align-items:center;margin-top:10px;">
+    <div>
+      <label style="font-size:13px;color:var(--muted)">Category</label><br>
+      <select id="filterCat">
+        <option value="All">All</option>
+        <option value="Necklace">Necklace</option>
+        <option value="Earrings">Earrings</option>
+        <option value="Bracelet">Bracelet</option>
+      </select>
     </div>
 
-    <!-- Payment Modal -->
-    <div class="payment-modal" id="paymentModal">
-        <div class="payment-container">
-            <h2 class="section-title" style="font-size: 2rem;">Complete Your Purchase</h2>
-            <form class="payment-form" id="paymentForm">
-                <div class="form-group">
-                    <label for="cardNumber">Card Number</label>
-                    <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="expiryDate">Expiry Date</label>
-                        <input type="text" id="expiryDate" placeholder="MM/YY" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="cvv">CVV</label>
-                        <input type="text" id="cvv" placeholder="123" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="name">Cardholder Name</label>
-                    <input type="text" id="name" placeholder="John Smith" required>
-                </div>
-                <button type="submit" class="btn">Complete Payment</button>
-                <button type="button" class="btn" id="cancelPayment" style="background: transparent; border: 1px solid var(--gold); color: var(--gold); margin-top: 1rem;">Cancel</button>
-            </form>
-        </div>
+    <div>
+      <label style="font-size:13px;color:var(--muted)">Search</label><br>
+      <input id="searchBox" placeholder="Search products..." style="padding:8px;border-radius:6px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text)">
     </div>
 
-    <!-- Overlay for modals -->
-    <div class="overlay" id="overlay"></div>
+    <div>
+      <label style="font-size:13px;color:var(--muted)">Sort</label><br>
+      <select id="sortBy">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price low → high</option>
+        <option value="price-desc">Price high → low</option>
+      </select>
+    </div>
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-container">
-            <div class="footer-column">
-                <h3>RYAAN JEWELERS</h3>
-                <p>Since 1985, Ryaan Jewelers has been the epitome of luxury, offering the world's finest gold and diamond jewelry to discerning clients worldwide.</p>
-                <div class="social-icons">
-                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                    <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
-                </div>
-            </div>
-            <div class="footer-column">
-                <h3>Collections</h3>
-                <ul>
-                    <li><a href="#categories">Rings</a></li>
-                    <li><a href="#categories">Necklaces</a></li>
-                    <li><a href="#categories">Bangles</a></li>
-                    <li><a href="#categories">Earrings</a></li>
-                    <li><a href="#categories">Bracelets</a></li>
-                    <li><a href="#categories">Chokers</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Brands</h3>
-                <ul>
-                    <li><a href="#brands">Cartier</a></li>
-                    <li><a href="#brands">Messika</a></li>
-                    <li><a href="#brands">Boucheron</a></li>
-                    <li><a href="#brands">Chopard</a></li>
-                    <li><a href="#brands">Van Cleef & Arpels</a></li>
-                    <li><a href="#brands">Marli</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>Contact Us</h3>
-                <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 5th Avenue, New York, NY 10001</li>
-                    <li><i class="fas fa-phone"></i> +1 (212) 555-1234</li>
-                    <li><i class="fas fa-envelope"></i> info@ryaanjewelers.com</li>
-                    <li><i class="fas fa-clock"></i> Mon-Sat: 10AM-8PM, Sun: 12PM-6PM</li>
-                </ul>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2023 RYAAN JEWELERS. All rights reserved. | Luxury Gold & Diamond Jewelry</p>
-        </div>
-    </footer>
+    <div style="margin-left:auto;">
+      <button class="btn" onclick="renderProducts()">Apply</button>
+    </div>
+  </div>
 
-    <script>
-        // Sample jewelry products
-        const products = [
-            { id: 1, name: "Diamond Solitaire Ring", price: 12500, category: "rings", brand: "cartier", image: "https://images.unsplash.com/photo-1603561596112-0a132b757442?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-            { id: 2, name: "Emerald Necklace", price: 8500, category: "necklaces", brand: "vca", image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-            { id: 3, name: "Gold Diamond Bangles", price: 7200, category: "bangles", brand: "chopard", image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-            { id: 4, name: "Diamond Choker", price: 16500, category: "chokers", brand: "boucheron", image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-            { id: 5, name: "Pearl Earrings", price: 3500, category: "earrings", brand: "messika", image: "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" },
-            { id: 6, name: "Gold Bracelet", price: 6200, category: "bracelets", brand: "marli", image: "https://images.unsplash.com/photo-162179148c5d30c7535d6d2e90e3c4e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" }
-        ];
+  <!-- PRODUCTS GRID -->
+  <div id="productGrid" class="grid"></div>
+</section>
 
-        // Shopping cart
-        let cart = [];
-        const cartIcon = document.getElementById('cartIcon');
-        const cartModal = document.getElementById('cartModal');
-        const closeCart = document.getElementById('closeCart');
-        const cartItems = document.getElementById('cartItems');
-        const cartTotal = document.getElementById('cartTotal');
-        const cartCount = document.querySelector('.cart-count');
-        const overlay = document.getElementById('overlay');
-        const checkoutBtn = document.getElementById('checkoutBtn');
-        const paymentModal = document.getElementById('paymentModal');
-        const cancelPayment = document.getElementById('cancelPayment');
-        const paymentForm = document.getElementById('paymentForm');
-        
-        // Update time for gold prices
-        function updateGoldTime() {
-            const now = new Date();
-            const options = { hour: '2-digit', minute: '2-digit', second: '2-digit' };
-            document.getElementById('updateTime').textContent = now.toLocaleTimeString('en-US', options);
-            
-            // Randomly change gold prices to simulate live updates
-            const goldPrices = document.querySelectorAll('.gold-price');
-            goldPrices.forEach(priceEl => {
-                const currentPrice = parseFloat(priceEl.textContent.replace('$', '').replace(',', ''));
-                const change = (Math.random() - 0.5) * 10;
-                const newPrice = currentPrice + change;
-                priceEl.textContent = '$' + newPrice.toFixed(2);
-                
-                // Update change indicator
-                const changeEl = priceEl.nextElementSibling;
-                changeEl.textContent = `${change >= 0 ? '+' : ''}${change.toFixed(2)} (${(change/currentPrice*100).toFixed(2)}%)`;
-                changeEl.className = `price-change ${change >= 0 ? 'positive' : 'negative'}`;
-            });
-        }
-        
-        // Update gold prices every 30 seconds
-        setInterval(updateGoldTime, 30000);
-        
-        // Initialize gold prices time
-        updateGoldTime();
-        
-        // Cart functions
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: 1
-                });
-            }
-            
-            updateCart();
-            showNotification(`${product.name} added to cart`);
-        }
-        
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCart();
-        }
-        
-        function updateCart() {
-            // Update cart count
-            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-            cartCount.textContent = totalItems;
-            
-            // Update cart items display
-            cartItems.innerHTML = '';
-            
-            if (cart.length === 0) {
-                cartItems.innerHTML = '<p style="text-align: center; color: var(--text-gray);">Your cart is empty</p>';
-                cartTotal.textContent = '$0.00';
-                return;
-            }
-            
-            let total = 0;
-            
-            cart.forEach(item => {
-                const itemTotal = item.price * item.quantity;
-                total += itemTotal;
-                
-                const cartItemEl = document.createElement('div');
-                cartItemEl.className = 'cart-item';
-                cartItemEl.innerHTML = `
-                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <div class="cart-item-name">${item.name}</div>
-                        <div class="cart-item-price">$${item.price.toLocaleString()}</div>
-                        <div>Quantity: ${item.quantity}</div>
-                    </div>
-                    <div class="cart-item-remove" onclick="removeFromCart(${item.id})">Remove</div>
-                `;
-                
-                cartItems.appendChild(cartItemEl);
-            });
-            
-            cartTotal.textContent = '$' + total.toLocaleString();
-        }
-        
-        // Show notification
-        function showNotification(message) {
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background-color: var(--gold);
-                color: var(--dark-bg);
-                padding: 1rem 1.5rem;
-                border-radius: 5px;
-                z-index: 10000;
-                font-weight: bold;
-                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-                animation: slideIn 0.3s ease;
-            `;
-            
-            notification.textContent = message;
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-            
-            // Add CSS for animation
-            if (!document.querySelector('#notification-styles')) {
-                const style = document.createElement('style');
-                style.id = 'notification-styles';
-                style.textContent = `
-                    @keyframes slideIn {
-                        from { transform: translateX(100%); opacity: 0; }
-                        to { transform: translateX(0); opacity: 1; }
-                    }
-                    @keyframes slideOut {
-                        from { transform: translateX(0); opacity: 1; }
-                        to { transform: translateX(100%); opacity: 0; }
-                    }
-                `;
-                document.head.appendChild(style);
-            }
-        }
-        
-        // Event listeners
-        cartIcon.addEventListener('click', () => {
-            cartModal.classList.add('open');
-            overlay.classList.add('active');
-        });
-        
-        closeCart.addEventListener('click', () => {
-            cartModal.classList.remove('open');
-            overlay.classList.remove('active');
-        });
-        
-        overlay.addEventListener('click', () => {
-            cartModal.classList.remove('open');
-            overlay.classList.remove('active');
-            paymentModal.classList.remove('open');
-        });
-        
-        checkoutBtn.addEventListener('click', () => {
-            if (cart.length === 0) {
-                showNotification('Your cart is empty');
-                return;
-            }
-            
-            cartModal.classList.remove('open');
-            paymentModal.classList.add('open');
-        });
-        
-        cancelPayment.addEventListener('click', () => {
-            paymentModal.classList.remove('open');
-            overlay.classList.remove('active');
-        });
-        
-        paymentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            // In a real application, you would process the payment here
-            // For demo purposes, we'll just show a success message
-            showNotification('Payment successful! Thank you for your purchase.');
-            
-            // Clear the cart
-            cart = [];
-            updateCart();
-            
-            // Close modals
-            paymentModal.classList.remove('open');
-            overlay.classList.remove('active');
-        });
-        
-        // Add click events to category cards
-        document.querySelectorAll('.category-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const category = card.getAttribute('data-category');
-                const categoryProducts = products.filter(p => p.category === category);
-                
-                // In a real application, you would show products for this category
-                // For demo, we'll add the first product from this category to the cart
-                if (categoryProducts.length > 0) {
-                    addToCart(categoryProducts[0].id);
-                }
-            });
-        });
-        
-        // Add click events to brand cards
-        document.querySelectorAll('.brand-card').forEach(card => {
-            card.addEventListener('click', () => {
-                const brand = card.getAttribute('data-brand');
-                const brandProducts = products.filter(p => p.brand === brand);
-                
-                // In a real application, you would show products for this brand
-                // For demo, we'll add the first product from this brand to the cart
-                if (brandProducts.length > 0) {
-                    addToCart(brandProducts[0].id);
-                }
-            });
-        });
-        
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Initialize cart
-        updateCart();
-        
-        // Add some sample items to cart for demo
-        setTimeout(() => {
-            addToCart(1);
-            addToCart(4);
-        }, 1000);
+<!-- ===========================
+     PRODUCT DETAIL SECTION
+=========================== -->
+<section id="product" class="section">
+  <button onclick="show('shop')" class="small">← Back</button>
+  <div id="productDetail" style="margin-top:12px"></div>
+</section>
+
+<!-- ===========================
+     CART SECTION
+=========================== -->
+<section id="cart" class="section">
+  <h2 style="font-family:Cinzel,serif;color:var(--gold)">Your Cart</h2>
+  <div id="cartArea" style="margin-top:12px">Cart is empty</div>
+  <div style="margin-top:12px">
+    <button class="btn" onclick="checkout()">Proceed to Checkout</button>
+    <button style="margin-left:8px;border-radius:8px;padding:8px;color:var(--text);background:transparent;border:1px solid rgba(255,255,255,0.06)" onclick="clearCart()">Clear Cart</button>
+  </div>
+</section>
+
+<!-- ===========================
+     ADMIN SECTION (DEMO)
+=========================== -->
+<section id="admin" class="section">
+  <h2 style="font-family:Cinzel,serif;color:var(--gold)">Admin</h2>
+
+  <div class="admin-panel">
+    <div class="small">Demo admin: local edits only. To enable persistent admin, connect Firebase (I can help add that).</div>
+
+    <label>Passphrase (change in script)</label>
+    <input id="adminPass" type="password" placeholder="Enter admin pass">
+
+    <div style="margin-top:8px">
+      <button class="btn" onclick="adminLogin()">Login</button>
+      <button style="margin-left:8px" onclick="adminLogout()">Logout</button>
+    </div>
+
+    <div id="adminControls" style="display:none;margin-top:12px">
+      <h3>Add Product (local)</h3>
+      <label>Title</label><input id="pTitle" placeholder="e.g. Classic Necklace">
+      <label>Purity (e.g. 22K)</label><input id="pPurity" placeholder="22K">
+      <label>Weight (g)</label><input id="pWeight" type="number" placeholder="g">
+      <label>Image filename (place in same folder)</label><input id="pImage" placeholder="S_14.jpg">
+      <label>Category</label><input id="pCategory" placeholder="Necklace">
+      <div style="margin-top:8px">
+        <button class="btn" onclick="addProduct()">Add Product</button>
+      </div>
+
+      <h3 style="margin-top:14px">Local Products (edit or remove)</h3>
+      <div id="localProducts"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+<footer style="margin-top:28px;color:var(--muted);text-align:center;padding:18px 0">
+  <div style="font-weight:700;color:var(--gold)">RYAAN JEWELLERS</div>
+  <div class="small" style="margin-top:6px">Fine Gold & Diamonds — Dubai</div>
+</footer>
+
+<!-- ===========================
+     SCRIPTS (ALL LOGIC)
+=========================== -->
+<script>
+/* ===========================
+   EDITABLE PRODUCTS DATA
+   - Edit this PRODUCTS array in Notepad
+   - image filenames must exist in same folder
+=========================== */
+const PRODUCTS = [
+  {
+    id: "P100",
+    title_en: "Classic Gold Necklace",
+    title_ar: "سلسال ذهب كلاسيكي",
+    purity: "22K",
+    weight_g: 20,
+    desc_en: "Elegant 22K gold necklace, hand finished.",
+    images: ["S_1.jpg"],
+    stock: 5,
+    categories: ["Necklace"],
+    markup: 0.10
+  },
+  {
+    id: "P101",
+    title_en: "Diamond Stud Earrings",
+    title_ar: "أقراط ألماس",
+    purity: "18K",
+    weight_g: 3,
+    desc_en: "Premium diamond studs set in white gold.",
+    images: ["S_2.jpg"],
+    stock: 10,
+    categories: ["Earrings"],
+    markup: 0.12
+  },
+  {
+    id: "P102",
+    title_en: "Gold Bracelet",
+    title_ar: "سوار ذهب",
+    purity: "21K",
+    weight_g: 12,
+    desc_en: "Crafted gold bracelet with fine links.",
+    images: ["S_3.jpg"],
+    stock: 7,
+    categories: ["Bracelet"],
+    markup: 0.11
+  }
+];
+// Add more products as needed by copying objects above.
+
+/* ===========================
+   UI / Routing
+=========================== */
+function show(id){
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  const el = document.getElementById(id);
+  if(el) el.classList.add('active');
+  if(id === 'shop') renderProducts();
+  if(id === 'cart') renderCart();
+}
+
+/* ===========================
+   THEME TOGGLE
+=========================== */
+const themeBtn = document.getElementById('themeBtn');
+(function(){
+  const saved = localStorage.getItem('ry_theme') || 'dark';
+  setTheme(saved);
+})();
+themeBtn.addEventListener('click', ()=> setTheme(localStorage.getItem('ry_theme')==='light' ? 'dark' : 'light'));
+function setTheme(t){
+  if(t === 'light') document.documentElement.setAttribute('data-theme','light');
+  else document.documentElement.removeAttribute('data-theme');
+  localStorage.setItem('ry_theme', t);
+}
+
+/* ===========================
+   SLIDER CONTROLS
+=========================== */
+const slidesEl = document.getElementById('slides');
+const slideCount = slidesEl.children.length;
+let currentSlide = 0;
+function goSlide(i){
+  currentSlide = (i + slideCount) % slideCount;
+  slidesEl.style.transform = `translateX(-${currentSlide * 100}%)`;
+  document.querySelectorAll('.slider-dot').forEach((d, idx)=> d.classList.toggle('active', idx === currentSlide));
+}
+function nextSlide(){ goSlide(currentSlide + 1); }
+let autoSlide = setInterval(nextSlide, 3500);
+document.getElementById('sliderBox').addEventListener('mouseenter', ()=> clearInterval(autoSlide));
+document.getElementById('sliderBox').addEventListener('mouseleave', ()=> autoSlide = setInterval(nextSlide, 3500));
+
+/* ===========================
+   PRICE CALCULATION
+   Uses /api/gold (serverless) if available;
+   otherwise uses fallback rate.
+=========================== */
+const OUNCE_TO_GRAM = 31.1034768;
+let livePerGram = null;
+
+async function fetchLiveGold(){
+  try{
+    const res = await fetch('/api/gold', { cache: 'no-store' });
+    if(!res.ok) throw new Error('no api');
+    const data = await res.json();
+    const pricePerOunce = parseFloat(data.price);
+    livePerGram = pricePerOunce / OUNCE_TO_GRAM;
+  }catch(e){
+    console.warn('Gold API not available, using fallback');
+    livePerGram = 285.5; // fallback AED per gram
+  }
+}
+
+/* compute product price from livePerGram, weight and purity */
+function computePrice(p){
+  if(!livePerGram) return null;
+  const purityVal = (typeof p.purity === 'string' && p.purity.endsWith('K')) ? parseFloat(p.purity.replace('K','')) : (p.purity || 24);
+  const base = livePerGram * (p.weight_g || 0) * (purityVal / 24);
+  const final = base * (1 + (p.markup || 0.10));
+  return final;
+}
+
+/* ===========================
+   RENDER PRODUCTS
+=========================== */
+function renderProducts(){
+  const grid = document.getElementById('productGrid');
+  grid.innerHTML = '';
+  const cat = document.getElementById('filterCat').value;
+  const q = document.getElementById('searchBox').value.trim().toLowerCase();
+  const sortVal = document.getElementById('sortBy').value;
+
+  let list = PRODUCTS.filter(p => (cat === 'All') || (p.categories && p.categories.includes(cat)));
+  if(q) list = list.filter(p => p.title_en.toLowerCase().includes(q) || (p.title_ar && p.title_ar.includes(q)));
+
+  // compute prices now (ensure livePerGram updated)
+  // sort by price if requested (compute on the fly)
+  if(sortVal === 'price-asc' || sortVal === 'price-desc'){
+    list = list.map(p => ({...p, _price: computePrice(p) || 0}));
+    list.sort((a,b) => sortVal === 'price-asc' ? a._price - b._price : b._price - a._price);
+  }
+
+  list.forEach(p => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    const img = (p.images && p.images[0]) ? p.images[0] : 'S_1.jpg';
+    const priceVal = computePrice(p);
+    const priceHtml = priceVal ? `AED ${priceVal.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}` : 'AED —';
+    card.innerHTML = `
+      <img src="${img}" alt="${p.title_en}">
+      <h3>${p.title_en}</h3>
+      <div class="small">${p.purity} • ${p.weight_g} g</div>
+      <div style="font-weight:800;color:var(--gold);margin-top:8px">${priceHtml}</div>
+      <div style="margin-top:8px">
+         <button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button>
+         <button style="margin-left:8px;padding:8px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)" onclick="viewProduct('${p.id}')">View</button>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+/* ===========================
+   VIEW PRODUCT
+=========================== */
+function viewProduct(id){
+  const p = PRODUCTS.find(x=>x.id === id);
+  if(!p) return alert('Product not found');
+  const container = document.getElementById('productDetail');
+  const img = (p.images && p.images[0]) ? p.images[0] : 'S_1.jpg';
+  const priceVal = computePrice(p);
+  const priceHtml = priceVal ? `AED ${priceVal.toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}` : 'AED —';
+  container.innerHTML = `
+    <h2>${p.title_en}</h2>
+    <img src="${img}" style="max-width:420px;border-radius:8px">
+    <p class="small">${p.desc_en}</p>
+    <div style="font-weight:800;color:var(--gold);margin-top:8px" id="detailPrice">${priceHtml}</div>
+    <div style="margin-top:8px">
+      <button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button>
+    </div>
+  `;
+  show('product');
+}
+
+/* ===========================
+   CART (localStorage)
+=========================== */
+function getCart(){ return JSON.parse(localStorage.getItem('ry_cart') || '[]'); }
+function saveCart(c){ localStorage.setItem('ry_cart', JSON.stringify(c)); }
+function addToCart(id){
+  const cart = getCart();
+  const item = cart.find(x=>x.id === id);
+  if(item) item.qty++;
+  else cart.push({id:id, qty:1});
+  saveCart(cart);
+  updateCartUI();
+  alert('Added to cart');
+}
+function updateCartUI(){
+  const cart = getCart();
+  document.getElementById('cartCount').textContent = cart.reduce((s,i)=>s+i.qty,0);
+  if(document.getElementById('cart').classList.contains('active')) renderCart();
+}
+function renderCart(){
+  const cart = getCart();
+  const area = document.getElementById('cartArea');
+  if(cart.length === 0){ area.innerText = 'Cart is empty'; return; }
+  let html = '';
+  cart.forEach(it => {
+    const p = PRODUCTS.find(pp => pp.id === it.id);
+    const price = computePrice(p) || 0;
+    html += `<div style="margin-bottom:8px"><strong>${p.title_en}</strong> x ${it.qty} — AED ${(price*it.qty).toLocaleString(undefined,{minimumFractionDigits:2,maximumFractionDigits:2})}</div>`;
+  });
+  area.innerHTML = html;
+}
+function clearCart(){ if(confirm('Clear cart?')){ localStorage.removeItem('ry_cart'); updateCartUI(); alert('Cart cleared'); }}
+
+/* ===========================
+   CHECKOUT (DEMO)
+   Replace with real Stripe flow by calling /api/create-checkout
+=========================== */
+function checkout(){
+  const cart = getCart();
+  if(cart.length === 0) return alert('Cart empty');
+  // Demo behavior:
+  alert('Demo checkout — integrate Stripe server API for real payments.');
+}
+
+/* ===========================
+   ADMIN (local demo)
+=========================== */
+function adminLogin(){
+  const pass = document.getElementById('adminPass').value;
+  // CHANGE THIS PASSPHRASE to your preferred one
+  if(pass === 'ryaan-admin-2025'){
+    document.getElementById('adminControls').style.display = 'block';
+    alert('Admin unlocked (demo)');
+    renderLocalProducts();
+  } else {
+    alert('Wrong passphrase');
+  }
+}
+function adminLogout(){
+  document.getElementById('adminControls').style.display = 'none';
+  alert('Admin logged out (demo)');
+}
+function addProduct(){
+  const title = document.getElementById('pTitle').value || 'New Product';
+  const purity = document.getElementById('pPurity').value || '22K';
+  const weight = parseFloat(document.getElementById('pWeight').value) || 5;
+  const image = document.getElementById('pImage').value || 'S_1.jpg';
+  const category = document.getElementById('pCategory').value || 'General';
+  const id = 'P' + (100 + PRODUCTS.length + 1);
+  const p = { id, title_en: title, title_ar: title, purity, weight_g: weight, desc_en: title, images: [image], stock: 10, categories: [category], markup: 0.10 };
+  PRODUCTS.push(p);
+  renderProducts();
+  renderLocalProducts();
+  alert('Product added (local only)');
+}
+function renderLocalProducts(){
+  const cont = document.getElementById('localProducts');
+  cont.innerHTML = '';
+  PRODUCTS.forEach(p=>{
+    const div = document.createElement('div');
+    div.style.padding = '8px';
+    div.style.borderBottom = '1px solid rgba(255,255,255,0.03)';
+    div.innerHTML = `<strong>${p.title_en}</strong> — <span class="small">${p.purity} • ${p.weight_g}g</span> <button style="margin-left:8px" onclick="removeProduct('${p.id}')">Remove</button>`;
+    cont.appendChild(div);
+  });
+}
+function removeProduct(id){
+  if(!confirm('Delete product?')) return;
+  const idx = PRODUCTS.findIndex(p => p.id === id);
+  if(idx >= 0){
+    PRODUCTS.splice(idx,1);
+    renderProducts();
+    renderLocalProducts();
+  }
+}
+
+/* ===========================
+   BOOTSTRAP
+=========================== */
+document.addEventListener('DOMContentLoaded', async () => {
+  await fetchLiveGold();
+  renderProducts();
+  updateCartUI();
+  // populate category select from product data
+  const catSet = new Set();
+  PRODUCTS.forEach(p => (p.categories || []).forEach(c => catSet.add(c)));
+  const sel = document.getElementById('filterCat');
+  sel.innerHTML = '<option value="All">All</option>';
+  catSet.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = c; sel.appendChild(o); });
+
+  // quick fill admin image select if exists
+  const imgInput = document.getElementById('pImage');
+  if(imgInput){
+    const sampleImgs = ['S_1.jpg','S_2.jpg','S_3.jpg','S_4.jpg','S_5.jpg'];
+    imgInput.value = sampleImgs[0];
+  }
+});
+</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ryaan Jewellers - Premium</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- GOOGLE FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+/* -----------------------------
+   BASIC THEME COLORS
+--------------------------------*/
+:root{
+  --bg:#0a0a0a;
+  --text:#f6f6f6;
+  --gold:#D4AF37;
+  --muted:#bfbfbf;
+}
+
+:root[data-theme="light"]{
+  --bg:#ffffff;
+  --text:#111111;
+  --gold:#b8860b;
+  --muted:#444444;
+}
+
+/* -----------------------------
+   PAGE LAYOUT
+--------------------------------*/
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Montserrat,Arial,sans-serif;
+  margin:0;
+  padding:0;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:15px;
+}
+
+/* -----------------------------
+   HEADER
+--------------------------------*/
+.header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 0;
+}
+
+.header img{
+  height:55px;
+  border-radius:8px;
+}
+
+.nav a{
+  color:var(--text);
+  text-decoration:none;
+  font-weight:600;
+  margin-left:18px;
+  font-size:15px;
+}
+
+/* THEME SWITCH BUTTON */
+.btn{
+  background:var(--gold);
+  color:#111;
+  border:none;
+  padding:10px 15px;
+  border-radius:8px;
+  cursor:pointer;
+  font-weight:700;
+}
+
+/* -----------------------------
+   SECTION CONTROL
+--------------------------------*/
+.section{
+  display:none;
+  padding-top:20px;
+}
+
+.section.active{
+  display:block;
+}
+
+/* -----------------------------
+   SLIDER (HOME PAGE)
+--------------------------------*/
+#sliderBox{
+  width:100%;
+  height:260px;
+  overflow:hidden;
+  border-radius:12px;
+  margin-top:15px;
+  position:relative;
+}
+
+#slides{
+  display:flex;
+  width:100%;
+  height:100%;
+  transition:0.6s;
+}
+
+#slides img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  border-radius:12px;
+}
+
+.slider-dot{
+  display:inline-block;
+  color:var(--muted);
+  font-size:28px;
+  cursor:pointer;
+  margin-right:5px;
+}
+
+.slider-dot.active{
+  color:var(--gold);
+}
+
+/* -----------------------------
+   SHOP GRID
+--------------------------------*/
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  margin-top:25px;
+}
+
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:12px;
+  border-radius:10px;
+}
+
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:8px;
+}
+
+/* -----------------------------
+   CART BADGE
+--------------------------------*/
+.cart-badge{
+  background:red;
+  color:white;
+  padding:4px 8px;
+  border-radius:12px;
+  margin-left:5px;
+<div class="container">
+
+<!-- ===========================
+     HEADER (EDITABLE)
+=========================== -->
+<header class="header">
+  <div style="display:flex;align-items:center;gap:12px;">
+      <!-- EDIT LOGO FILE HERE -->
+      <img src="logo.png" alt="Logo">
+
+      <div>
+         <div style="font-family:Cinzel,serif;font-size:20px;color:var(--gold);font-weight:700;">
+            RYAAN JEWELLERS
+         </div>
+         <div style="font-size:12px;color:var(--muted);">
+            Gold & Diamonds - Dubai
+         </div>
+      </div>
+  </div>
+
+  <nav class="nav">
+       <a href="#" onclick="show('home')">Home</a>
+       <a href="#" onclick="show('shop')">Shop</a>
+       <a href="#" onclick="show('cart')">Cart <span id="cartCount" class="cart-badge">0</span></a>
+       <a href="#" onclick="show('admin')">Admin</a>
+
+       <button id="themeBtn" class="btn">Theme</button>
+  </nav>
+</header>
+
+<!-- ===========================
+     HOME SECTION
+=========================== -->
+<section id="home" class="section active">
+
+<h1 style="font-family:Cinzel,serif;color:var(--gold);font-size:26px;">
+   Luxury Gold & Diamonds
+</h1>
+
+<p style="color:var(--muted);font-size:14px;">
+  Experience world-class jewellery collections.
+</p>
+
+<!-- SLIDER -->
+<div id="sliderBox">
+   <div id="slides">
+      <!-- EDIT SLIDER IMAGES HERE -->
+      <img src="S_1.jpg">
+      <img src="S_2.jpg">
+      <img src="S_3.jpg">
+   </div>
+</div>
+
+<div style="margin-top:8px;text-align:center;">
+   <span class="slider-dot" onclick="goSlide(0)">•</span>
+   <span class="slider-dot" onclick="goSlide(1)">•</span>
+   <span class="slider-dot" onclick="goSlide(2)">•</span>
+
+<button class="btn" style="margin-top:20px;" onclick="show('shop')">
+  Explore Collection
+
+
     </script>
 </body>
 </html>
