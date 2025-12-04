@@ -1814,13 +1814,42 @@
         }
 
         function updateGoldPrices() {
-            // Simulate live gold price updates
-            setInterval(() => {
-                const basePrice = 275.50 + (Math.random() * 2 - 1);
-                document.getElementById('live-gold-price').textContent = `24K: AED ${basePrice.toFixed(2)}/g`;
-                document.getElementById('gold-22k').textContent = `AED ${(basePrice * 0.9167).toFixed(2)}/g`;
-                document.getElementById('gold-18k').textContent = `AED ${(basePrice * 0.75).toFixed(2)}/g`;
-            }, 30000);
+            <!-- Updated Gold Price Section -->
+<div class="top-bar">
+    <div class="top-bar-content">
+        <!-- Gold Price Display -->
+        <div class="gold-price-container">
+            <div class="gold-price">
+                <div id="live-gold-price">
+                    <!-- Loading state initially -->
+                    <div class="loading-state">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <span>Loading gold prices...</span>
+                    </div>
+                </div>
+                <div class="gold-price-details">
+                    <!-- Karat details will be populated -->
+                </div>
+                <div class="gold-timestamp">
+                    <!-- Timestamp will be populated -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- Language Switcher -->
+        <div class="language-switcher">
+            <button class="lang-btn active" onclick='switchLanguage("en")'>EN</button>
+            <button class="lang-btn" onclick='switchLanguage("ar")'>AR</button>
+        </div>
+        
+        <!-- Theme Switcher -->
+        <div class="theme-switcher">
+            <button class="theme-btn" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </div>
+</div>
         }
 
         function initScrollBehavior() {
