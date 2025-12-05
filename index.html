@@ -4,469 +4,595 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ryaan Jewellers — Luxury 18K Gold & Diamond Jewellery | Dubai</title>
-  <meta name="description" content="Ryaan Jewellers — Crafted 18K gold & diamond jewellery inspired by the top maisons. Live UAE gold rates, shop collections, custom orders. Dubai." />
-  <meta name="keywords" content="Ryaan, Ryaan Jewellers, 18K, gold, diamonds, Dubai, luxury jewellery, Cartier inspired, Van Cleef style" />
-  <meta name="author" content="Ryaan Jewellers">
-  <meta name="theme-color" content="#000000" />
-
+  <meta name="description" content="Ryaan Jewellers — Premium 18K gold & diamond jewellery inspired by top maisons. Live UAE gold rates, shop collections, custom orders. Based in Dubai." />
+  <meta name="keywords" content="Ryaan Jewellers, 18K gold, luxury jewelry, Dubai, gold rates, necklaces, rings, bracelets, earrings" />
+  <link rel="canonical" href="https://ryaanjewellers007.github.io/Ryaanjewellers007/" />
+  <meta name="robots" content="index, follow" />
   <!-- Open Graph -->
-  <meta property="og:title" content="Ryaan Jewellers — Luxury 18K Gold & Diamond Jewellery" />
-  <meta property="og:description" content="Ryaan Jewellers — Crafted 18K gold & diamond jewellery inspired by the top maisons. Dubai." />
+  <meta property="og:title" content="Ryaan Jewellers — Luxury 18K Gold & Diamonds" />
+  <meta property="og:description" content="Premium 18K master-copy jewellery. Live UAE gold prices, bespoke orders, Dubai-based." />
   <meta property="og:image" content="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png" />
-  <meta property="og:url" content="https://ryaanjewellers007.github.io/" />
+  <meta property="og:url" content="https://ryaanjewellers007.github.io/Ryaanjewellers007/" />
   <meta property="og:type" content="website" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
 
-  <!-- Structured Data (Organization) -->
+  <!-- JSON-LD Organization -->
   <script type="application/ld+json">
   {
-    "@context":"https://schema.org",
-    "@type":"Store",
-    "name":"Ryaan Jewellers",
-    "image":"https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png",
-    "description":"Premium 18K gold and diamond jewellery in Dubai. Crafted with love & precious.",
-    "url":"https://ryaanjewellers007.github.io/",
-    "telephone":"+971000000000",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Dubai",
-      "addressCountry":"AE"
-    },
-    "sameAs":["https://instagram.com/ryaanjewellers007"]
+    "@context": "https://schema.org",
+    "@type": "JewelryStore",
+    "name": "Ryaan Jewellers",
+    "url": "https://ryaanjewellers007.github.io/Ryaanjewellers007/",
+    "logo": "https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png",
+    "description": "Premium 18K gold & diamond jewellery based in Dubai. Custom orders and live gold rates.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "UAE"
+    }
   }
   </script>
 
-  <!-- Fonts -->
+  <!-- Fonts & Chart -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 
   <style>
-  :root{
-    --bg:#0b0b0b; --card:#0f0f10; --text:#f4f4f4; --muted:#bfbfbf; --gold:#D4AF37;
-  }
-  :root[data-theme="light"]{ --bg:#ffffff; --card:#f6f6f6; --text:#111111; --muted:#666666; --gold:#b8860b; }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:'Poppins',sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;transition:background .25s,color .25s}
-  a{color:inherit}
-  .container{max-width:1200px;margin:0 auto;padding:18px}
+    :root{
+      --bg-dark:#070707;
+      --card-dark:#0f0f10;
+      --text-dark:#f4f4f4;
+      --muted-dark:#bdbdbd;
+      --gold:#D4AF37;
+      --accent:#b3872a;
+      --glass: rgba(255,255,255,0.03);
+      --radius:14px;
+    }
+    :root[data-theme="light"]{
+      --bg-dark:#ffffff;
+      --card-dark:#ffffff;
+      --text-dark:#0b0b0b;
+      --muted-dark:#666666;
+      --glass: rgba(0,0,0,0.04);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg-dark);color:var(--text-dark);font-family:'Poppins',sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit}
 
-  /* header */
-  header{position:sticky;top:0;z-index:9999;background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.25));backdrop-filter:blur(6px);padding:10px;border-bottom:1px solid rgba(212,175,55,0.06)}
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto}
-  .logo{display:flex;align-items:center;gap:12px}
-  .logo img{height:84px;object-fit:contain;filter:drop-shadow(0 12px 36px rgba(212,175,55,0.18))}
-  .controls{display:flex;gap:10px;align-items:center}
-  .btn{background:var(--gold);color:#111;border:none;padding:8px 12px;border-radius:8px;cursor:pointer;font-weight:700}
-  .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--text);cursor:pointer}
+    /* Layout */
+    .container{max-width:1200px;margin:0 auto;padding:18px}
 
-  /* splash */
-  #splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;z-index:100000;transition:opacity .7s ease}
-  .splash-inner{position:relative;width:480px;height:480px;border-radius:50%;display:flex;align-items:center;justify-content:center;overflow:visible}
-  .splash-inner img{width:300px;height:auto;object-fit:contain;filter:drop-shadow(0 20px 60px rgba(212,175,55,0.25))}
-  .splash-glow{position:absolute;inset:-20%;border-radius:50%;filter:blur(40px);background:radial-gradient(circle, rgba(212,175,55,0.12), transparent 40%);animation:spin 6s linear infinite}
-  .splash-spark{position:absolute;inset:0;pointer-events:none}
-  .splash-spark span{position:absolute;border-radius:50%;width:6px;height:6px;background:radial-gradient(circle,#fff 0%, rgba(212,175,55,0.9) 30%, transparent 70%);opacity:0;filter:blur(.8px);animation:tw 2.6s infinite}
-  @keyframes tw{0%{transform:scale(.6);opacity:0}35%{opacity:1;transform:scale(1.05)}60%{opacity:.6;transform:scale(.9)}100%{opacity:0;transform:scale(.6)}}
-  @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
-  .hide-splash{opacity:0;pointer-events:none;visibility:hidden}
+    /* Header */
+    header{position:sticky;top:0;z-index:9999;background:linear-gradient(180deg,rgba(0,0,0,0.55),rgba(0,0,0,0.2));backdrop-filter:blur(6px);border-bottom:1px solid rgba(212,175,55,0.06)}
+    .nav{max-width:1200px;margin:0 auto;padding:12px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo img{height:84px;object-fit:contain;filter:drop-shadow(0 12px 40px rgba(212,175,55,0.18))}
+    .titleline{font-family:Cinzel,serif;color:var(--gold);font-size:18px;margin-left:6px}
+    .menu{display:flex;gap:14px;align-items:center}
+    .btn{background:var(--gold);color:#111;border:none;padding:8px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 10px;border-radius:8px;color:var(--text-dark);cursor:pointer}
+    .small{font-size:13px;color:var(--muted-dark)}
 
-  /* hero */
-  .hero{max-width:1200px;margin:24px auto;border-radius:12px;overflow:hidden;position:relative}
-  .hero .slide{height:420px;background-size:cover;background-position:center}
-  .hero .caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.25));padding:20px;border-radius:10px;text-align:center}
-  .hero h1{font-family:Cinzel,serif;color:var(--gold);margin:0;font-size:34px}
-  .hero p{margin:8px 0 0 0;color:var(--muted)}
+    /* Splash */
+    #splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000;z-index:100000;transition:opacity .9s,visibility .9s}
+    .splash-inner{position:relative;width:460px;height:460px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .splash-inner img{width:300px;height:auto;object-fit:contain;filter:drop-shadow(0 30px 80px rgba(212,175,55,0.25))}
+    .splash-glow{position:absolute;inset:-20%;border-radius:50%;filter:blur(36px);background:radial-gradient(circle, rgba(212,175,55,0.12), transparent 40%);animation:spin 8s linear infinite}
+    .splash-spark{position:absolute;inset:0;pointer-events:none}
+    .splash-spark span{position:absolute;border-radius:50%;width:6px;height:6px;background:radial-gradient(circle,#fff 0%,var(--gold) 40%, rgba(212,175,55,0.2) 60%, transparent 100%);opacity:0;filter:blur(.8px);animation:twinkle 2.6s infinite}
+    @keyframes twinkle{0%{transform:scale(.6);opacity:0}35%{opacity:1;transform:scale(1.1)}60%{opacity:0.6;transform:scale(.9)}100%{opacity:0;transform:scale(.6)}}
+    @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .hide-splash{opacity:0;visibility:hidden;pointer-events:none}
 
-  /* sections */
-  .section-title{font-family:Cinzel,serif;color:var(--gold);font-size:22px;text-align:center;margin:6px 0 12px 0}
-  .cats{display:flex;gap:12px;overflow:auto;padding-bottom:8px}
-  .cat{min-width:160px;background:var(--card);border-radius:10px;padding:10px;text-align:center;border:1px solid rgba(212,175,55,0.06)}
-  .cat img{width:100%;height:110px;object-fit:cover;border-radius:8px}
+    /* Hero */
+    .hero{max-width:1200px;margin:22px auto;border-radius:var(--radius);overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(0,0,0,0.6)}
+    .hero .slide{height:460px;background-size:cover;background-position:center}
+    .hero .overlay{position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,0.25), rgba(0,0,0,0.6))}
+    .hero .caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg, rgba(0,0,0,0.5), rgba(0,0,0,0.25));padding:20px;border-radius:10px;text-align:center;max-width:880px}
+    .hero h1{font-family:Cinzel,serif;color:var(--gold);margin:0;font-size:34px}
+    .hero p{margin:8px 0 0 0;color:var(--muted-dark)}
 
-  /* products */
-  .product-slider{display:flex;gap:12px;overflow:auto;padding:10px 0}
-  .product{min-width:240px;background:var(--card);border-radius:12px;padding:10px;border:1px solid rgba(255,255,255,0.04)}
-  .product img{width:100%;height:180px;object-fit:cover;border-radius:8px}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    /* Info row */
+    .info-row{display:flex;gap:12px;align-items:center;justify-content:center;margin-top:18px;flex-wrap:wrap}
+    .info-card{background:var(--card-dark);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-width:160px;text-align:center}
 
-  /* enquiry */
-  .enquiry{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(212,175,55,0.06)}
-  .enquiry input,.enquiry textarea{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#0b0b0b;color:var(--text)}
+    /* Categories */
+    .section-title{font-family:Cinzel,serif;color:var(--gold);font-size:20px;text-align:center;margin:6px 0 12px 0}
+    .cats{display:flex;gap:12px;overflow:auto;padding:12px 6px}
+    .cat{min-width:160px;background:var(--card-dark);border-radius:10px;padding:10px;text-align:center;border:1px solid rgba(212,175,55,0.06)}
+    .cat img{width:100%;height:110px;object-fit:cover;border-radius:8px}
 
-  /* footer */
-  footer{margin-top:32px;padding:30px 0;background:#000;border-top:1px solid rgba(212,175,55,0.08);text-align:center}
-  footer img{height:70px;filter:drop-shadow(0 8px 30px rgba(212,175,55,0.15))}
-  .muted{color:var(--muted);font-size:13px}
+    /* product slider & grid */
+    .product-slider{display:flex;gap:12px;overflow:auto;padding:12px 0}
+    .product{min-width:240px;background:var(--card-dark);border-radius:12px;padding:10px;border:1px solid rgba(255,255,255,0.04)}
+    .product img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
 
-  /* small screens */
-  @media(max-width:800px){
-    .logo img{height:64px}
-    .hero .slide{height:300px}
-    .splash-inner img{width:220px}
-  }
+    /* Vision / Mission */
+    .vm{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:22px}
+    .vm .card{background:var(--card-dark);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
+    .vm h4{font-family:Cinzel,serif;color:var(--gold);margin:0 0 8px 0}
+
+    /* enquiry */
+    .enquiry{background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent);padding:18px;border-radius:12px;border:1px solid rgba(212,175,55,0.06);margin-top:18px}
+    .enquiry input,.enquiry textarea{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:#0b0b0b;color:var(--text-dark)}
+
+    /* footer */
+    footer{margin-top:32px;padding:30px 18px;background:#000;border-top:1px solid rgba(212,175,55,0.08);text-align:center}
+    footer img{height:72px;filter:drop-shadow(0 10px 30px rgba(212,175,55,0.12))}
+
+    /* small screens */
+    @media(max-width:900px){
+      .logo img{height:64px}
+      .hero .slide{height:320px}
+      #splash .splash-inner img{width:220px}
+    }
   </style>
 </head>
+
 <body>
-
-<!-- SPLASH -->
-<div id="splash" role="presentation" aria-hidden="false">
-  <div class="splash-inner" role="img" aria-label="Ryaan Jewellers">
-    <div class="splash-glow" aria-hidden="true"></div>
-    <div class="splash-spark" id="splashSpark"></div>
-    <img id="splashLogo" alt="Ryaan Jewellers Logo"
-         src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
-  </div>
-</div>
-
-<!-- HEADER -->
-<header>
-  <div class="nav container" role="navigation" aria-label="Top navigation">
-    <div class="logo" role="img" aria-label="Ryaan Jewellers">
-      <img id="headerLogo" alt="Ryaan Logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
-    </div>
-
-    <div class="controls" aria-hidden="false">
-      <button id="langToggle" class="ghost" aria-pressed="false" title="Toggle language">العربية</button>
-      <button id="themeToggle" class="ghost" aria-pressed="false" title="Toggle theme">Theme</button>
-      <button class="btn" onclick="scrollToSection('products')">Shop</button>
+  <!-- SPLASH -->
+  <div id="splash" aria-hidden="false">
+    <div class="splash-inner" role="img" aria-label="Ryaan Jewellers">
+      <div class="splash-glow" aria-hidden="true"></div>
+      <div class="splash-spark" id="splashSpark"></div>
+      <img alt="Ryaan Jewellers Logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
     </div>
   </div>
-</header>
 
-<!-- HERO -->
-<section id="home" class="hero" aria-label="Hero">
-  <div class="slide" style="background-image:url('https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_1.jpg')">
-    <div class="caption">
-      <h1 data-en="Ryaan Jewellers — 18K Luxury" data-ar="ريان للمجوهرات — فخامة 18 قيراط">Ryaan Jewellers — 18K Luxury</h1>
-      <p data-en="Crafted with love & Precious" data-ar="مصنوعة بحب وقطع ثمينة">Crafted with love & Precious</p>
-    </div>
-  </div>
-</section>
-
-<main class="container" id="mainContent">
-
-  <!-- VISION / MISSION / STORY -->
-  <section id="about" style="margin-top:22px">
-    <h2 class="section-title" data-en="Our Vision & Mission" data-ar="رؤيتنا ومهمتنا">Our Vision & Mission</h2>
-
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
-      <div style="background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
-        <h3 data-en="Vision" data-ar="الرؤية">Vision</h3>
-        <p data-en="To become the leading luxury jewellery house for bespoke 18K and diamond pieces in the UAE — timeless design with exceptional craftsmanship."
-           data-ar="أن نصبح دار المجوهرات الفاخرة الرائدة لقطع 18 قيراط المخصصة والألماس في الإمارات — تصميم خالد وحرفية استثنائية.">
-          To become the leading luxury jewellery house for bespoke 18K and diamond pieces in the UAE — timeless design with exceptional craftsmanship.
-        </p>
+  <!-- NAV -->
+  <header>
+    <div class="nav">
+      <div class="logo" role="banner">
+        <img alt="Ryaan Logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
+        <div>
+          <div class="titleline" id="siteTagline_en">Ryaan Jewellers — Crafted with love & Precious</div>
+          <div class="small" id="siteTagline_ar" style="display:none;direction:rtl">ريان للمجوهرات — مصنوع بحب وقيمة</div>
+        </div>
       </div>
 
-      <div style="background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
-        <h3 data-en="Mission" data-ar="المهمة">Mission</h3>
-        <p data-en="Craft extraordinary jewellery that celebrates heritage and modern elegance, ensuring every customer enjoys premium materials and ethical sourcing."
-           data-ar="تصميم مجوهرات استثنائية تحتفل بالإرث والأناقة العصرية، مع ضمان حصول كل عميل على مواد فاخرة ومصادر أخلاقية.">
-          Craft extraordinary jewellery that celebrates heritage and modern elegance, ensuring every customer enjoys premium materials and ethical sourcing.
-        </p>
+      <div class="menu" role="navigation" aria-label="Main">
+        <button class="ghost" id="langToggle" title="Toggle Language">العربية</button>
+        <button class="ghost" id="themeToggle" title="Toggle Theme">Theme</button>
+        <a class="ghost" href="#gold" id="goldWidgetShort" style="display:flex;align-items:center;gap:8px;padding:8px 12px;border-radius:10px">
+          <span style="font-weight:800;color:var(--gold)" id="goldShort">-- AED/g</span>
+        </a>
+        <button class="btn" onclick="scrollToSection('products')">Shop</button>
       </div>
+    </div>
+  </header>
 
-      <div style="background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
-        <h3 data-en="Our Story" data-ar="قصتنا">Our Story</h3>
-        <p data-en="Ryaan Jewellers began as a passion for timeless beauty. We blend artisanal technique with modern design to create pieces you’ll treasure forever."
-           data-ar="بدأت ريان للمجوهرات بشغف للجمال الخالد. نمزج التقنية الحرفية مع التصميم الحديث لصنع قطع ستحتفظ بها إلى الأبد.">
-          Ryaan Jewellers began as a passion for timeless beauty. We blend artisanal technique with modern design to create pieces you’ll treasure forever.
-        </p>
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="slide" style="background-image:url('https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_1.jpg')">
+      <div class="overlay"></div>
+      <div class="caption">
+        <h1 id="heroTitle_en">Luxury 18K Gold & Diamond Jewellery</h1>
+        <h1 id="heroTitle_ar" style="display:none">مجوهرات فاخرة 18 قيراط و ألماس</h1>
+        <p id="heroSub_en" class="small">Premium Dubai collections — master copies inspired by top maisons</p>
+        <p id="heroSub_ar" class="small" style="display:none;direction:rtl">مجموعات دبي الراقية — نسخ ماستر مستوحاة من أرقى الدور</p>
       </div>
     </div>
   </section>
 
-  <!-- GOLD RATES -->
-  <section id="gold" style="margin-top:28px">
-    <h2 class="section-title" data-en="Live UAE Gold Rates" data-ar="أسعار الذهب في الإمارات الآن">Live UAE Gold Rates</h2>
+  <div class="container">
 
-    <div style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
-      <div style="background:linear-gradient(180deg,#0b0b0b,#0e0e0e);padding:14px;border-radius:12px;border:1px solid rgba(212,175,55,0.06);min-width:280px;text-align:center">
-        <div style="font-family:Cinzel,serif;color:var(--gold);font-size:18px" data-en="Live Rates (AED / gram)" data-ar="الأسعار (درهم / غرام)">Live Rates (AED / gram)</div>
-        <div style="margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-          <div style="min-width:90px">
-            <div class="muted">24K</div>
-            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g24">--</div>
+    <!-- INFO ROW -->
+    <div class="info-row" aria-hidden="false">
+      <div class="info-card">
+        <div class="small">24K / AED per gram</div>
+        <div style="font-weight:800;color:var(--gold);font-size:18px" id="g24">--</div>
+      </div>
+      <div class="info-card">
+        <div class="small">Secure Checkout</div>
+        <div style="font-weight:800;color:var(--gold);font-size:16px">Stripe Ready</div>
+      </div>
+      <div class="info-card">
+        <div class="small">Delivery</div>
+        <div style="font-weight:800;color:var(--gold);font-size:16px">Worldwide</div>
+      </div>
+    </div>
+
+    <!-- GOLD + CHART -->
+    <section id="gold" style="margin-top:18px;display:grid;grid-template-columns:1fr 420px;gap:16px;align-items:start">
+      <div style="background:var(--card-dark);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+        <h3 class="section-title" id="goldTitle_en">Live UAE Gold Rates (AED / gram)</h3>
+        <h3 class="section-title" id="goldTitle_ar" style="display:none;direction:rtl">أسعار الذهب في الإمارات (درهم/جرام)</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+          <div style="min-width:120px;padding:10px;background:#0b0b0b;border-radius:10px;text-align:center">
+            <div class="small">24K</div>
+            <div style="font-weight:800;color:var(--gold)" id="gold24">--</div>
           </div>
-          <div style="min-width:90px">
-            <div class="muted">22K</div>
-            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g22">--</div>
+          <div style="min-width:120px;padding:10px;background:#0b0b0b;border-radius:10px;text-align:center">
+            <div class="small">22K</div>
+            <div style="font-weight:800;color:var(--gold)" id="gold22">--</div>
           </div>
-          <div style="min-width:90px">
-            <div class="muted">18K</div>
-            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g18">--</div>
+          <div style="min-width:120px;padding:10px;background:#0b0b0b;border-radius:10px;text-align:center">
+            <div class="small">18K</div>
+            <div style="font-weight:800;color:var(--gold)" id="gold18">--</div>
           </div>
         </div>
-        <div style="margin-top:10px" class="muted">Auto-refresh every 30s</div>
+        <p class="small" style="margin-top:10px;color:var(--muted-dark)">Auto refreshes. For guaranteed live feed deploy the provided serverless `/api/gold`.</p>
       </div>
-
-      <div style="max-width:420px;background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
-        <div style="font-family:Cinzel,serif;color:var(--gold);font-size:16px" data-en="24K — Recent" data-ar="24 قيراط — الأخير">24K — Recent</div>
-        <canvas id="chart" style="width:100%;height:120px;margin-top:8px"></canvas>
+      <div style="background:var(--card-dark);padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+        <div style="font-family:Cinzel,serif;color:var(--gold);font-size:16px">24K — Recent</div>
+        <canvas id="goldChart" width="400" height="180" style="width:100%;height:160px;margin-top:8px"></canvas>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CATEGORIES -->
-  <section id="categories" style="margin-top:28px">
-    <h2 class="section-title" data-en="Shop by Category" data-ar="تسوق حسب الفئة">Shop by Category</h2>
-    <div class="cats" id="cats">
-      <div class="cat" onclick="filter('rings')" role="button" tabindex="0"><img alt="Rings" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_2.jpg"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Rings" data-ar="خواتم">Rings</div></div>
-      <div class="cat" onclick="filter('necklaces')" role="button" tabindex="0"><img alt="Necklaces" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_3.jpg"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Necklaces" data-ar="قلائد">Necklaces</div></div>
-      <div class="cat" onclick="filter('bracelets')" role="button" tabindex="0"><img alt="Bracelets" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_4.jpg"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Bracelets" data-ar="أساور">Bracelets</div></div>
-      <div class="cat" onclick="filter('earrings')" role="button" tabindex="0"><img alt="Earrings" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_5.jpg"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Earrings" data-ar="أقراط">Earrings</div></div>
-      <div class="cat" onclick="filter('pendants')" role="button" tabindex="0"><img alt="Pendants" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_6.jpg"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Pendants" data-ar="قلايد">Pendants</div></div>
-    </div>
-  </section>
-
-  <!-- PRODUCTS -->
-  <section id="products" style="margin-top:28px">
-    <h2 class="section-title" data-en="Featured Collection" data-ar="المجموعة المميزة">Featured Collection</h2>
-    <div class="product-slider" id="productSlider" aria-live="polite"></div>
-  </section>
-
-  <!-- GRID -->
-  <section style="margin-top:22px">
-    <h2 class="section-title" data-en="Shop All" data-ar="تسوق الكل">Shop All</h2>
-    <div class="grid" id="grid"></div>
-  </section>
-
-  <!-- ENQUIRY -->
-  <section style="margin-top:26px;margin-bottom:26px">
-    <h2 class="section-title" data-en="Enquiry / Custom Orders" data-ar="استفسارات / طلبات خاصة">Enquiry / Custom Orders</h2>
-    <div class="enquiry" role="form" aria-label="Enquiry form">
-      <input id="ename" placeholder="Full name" aria-label="Full name">
-      <input id="ephone" placeholder="Phone number (with country code)" aria-label="Phone">
-      <input id="eproduct" placeholder="Product name (or leave blank)" aria-label="Product">
-      <textarea id="emessage" rows="4" placeholder="Message / Requirements" aria-label="Message"></textarea>
-      <div style="display:flex;gap:10px;margin-top:10px">
-        <button class="btn" onclick="sendEnquiry()" data-en="Send via WhatsApp" data-ar="أرسل عبر واتساب">Send via WhatsApp</button>
-        <button class="ghost" onclick="triggerCheckout()" data-en="Checkout (Card)" data-ar="الدفع (بطاقة)">Checkout (Card)</button>
+    <!-- CATEGORIES -->
+    <section id="categories" style="margin-top:26px">
+      <h3 class="section-title" id="catTitle_en">Shop by Category</h3>
+      <h3 class="section-title" id="catTitle_ar" style="display:none;direction:rtl">تسوق حسب الفئة</h3>
+      <div class="cats" id="catRow" aria-label="Categories">
+        <div class="cat" onclick="filter('rings')"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_2.jpg" alt=""><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Rings" data-ar="خواتم">Rings</div></div>
+        <div class="cat" onclick="filter('necklaces')"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_3.jpg" alt=""><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Necklaces" data-ar="قلائد">Necklaces</div></div>
+        <div class="cat" onclick="filter('bracelets')"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_4.jpg" alt=""><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Bracelets" data-ar="أساور">Bracelets</div></div>
+        <div class="cat" onclick="filter('earrings')"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_5.jpg" alt=""><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Earrings" data-ar="أقراط">Earrings</div></div>
+        <div class="cat" onclick="filter('pendants')"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_6.jpg" alt=""><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Pendants" data-ar="قلادات">Pendants</div></div>
       </div>
+    </section>
+
+    <!-- VISION / MISSION / STORY -->
+    <section style="margin-top:26px">
+      <h3 class="section-title" id="vmTitle_en">Our Vision & Mission</h3>
+      <h3 class="section-title" id="vmTitle_ar" style="display:none;direction:rtl">رؤيتنا ومهمتنا</h3>
+
+      <div class="vm" role="region" aria-label="Vision Mission Story">
+        <div class="card">
+          <h4 id="visionTitle_en">Vision</h4>
+          <h4 id="visionTitle_ar" style="display:none;direction:rtl">الرؤية</h4>
+          <p id="visionText_en" class="small">To be a recognized destination for premium 18K jewellery — where craftsmanship meets timeless design.</p>
+          <p id="visionText_ar" class="small" style="display:none;direction:rtl">أن نصبح وجهة معروفة للمجوهرات الفاخرة 18 قيراط — حيث يلتقي الحرف اليدوية بالتصميم الخالد.</p>
+        </div>
+
+        <div class="card">
+          <h4 id="missionTitle_en">Mission</h4>
+          <h4 id="missionTitle_ar" style="display:none;direction:rtl">المهمة</h4>
+          <p id="missionText_en" class="small">Deliver exquisite pieces inspired by world-class maisons, ensuring premium finish and trusted service.</p>
+          <p id="missionText_ar" class="small" style="display:none;direction:rtl">تقديم قطع رائعة مستوحاة من دور عالمية، مع تشطيب فاخر وخدمة موثوقة.</p>
+        </div>
+
+        <div class="card">
+          <h4 id="storyTitle_en">Story</h4>
+          <h4 id="storyTitle_ar" style="display:none;direction:rtl">قصتنا</h4>
+          <p id="storyText_en" class="small">Founded in Dubai, Ryaan Jewellers crafts premium 18K jewellery combining modern aesthetics with traditional skill.</p>
+          <p id="storyText_ar" class="small" style="display:none;direction:rtl">تأسست في دبي، تصنع ريان للمجوهرات قطع 18 قيراط فاخرة تجمع بين الحداثة والحرفية التقليدية.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" style="margin-top:26px">
+      <h3 class="section-title" id="prodTitle_en">Featured Collection</h3>
+      <h3 class="section-title" id="prodTitle_ar" style="display:none;direction:rtl">المجموعة المميزة</h3>
+
+      <div class="product-slider" id="productSlider" aria-live="polite"></div>
+    </section>
+
+    <!-- GRID -->
+    <section style="margin-top:20px">
+      <h3 class="section-title" id="shopTitle_en">Shop All</h3>
+      <h3 class="section-title" id="shopTitle_ar" style="display:none;direction:rtl">تسوق الكل</h3>
+      <div class="grid" id="grid" role="list"></div>
+    </section>
+
+    <!-- ENQUIRY -->
+    <section style="margin-top:24px">
+      <h3 class="section-title" id="enqTitle_en">Enquiry / Custom Orders</h3>
+      <h3 class="section-title" id="enqTitle_ar" style="display:none;direction:rtl">الاستفسار / طلبات مخصصة</h3>
+      <div class="enquiry" role="form" aria-label="Enquiry form">
+        <input id="ename" placeholder="Full name / الاسم الكامل">
+        <input id="ephone" placeholder="Phone (with country code) / رقم الهاتف">
+        <input id="eprod" placeholder="Product name (optional) / اسم المنتج (اختياري)">
+        <textarea id="emsg" rows="4" placeholder="Message / requirements / رسالة"></textarea>
+        <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn" onclick="sendEnquiry()" id="sendBtn_en">Send via WhatsApp</button>
+          <button class="btn" onclick="sendEnquiry()" id="sendBtn_ar" style="display:none">أرسل عبر واتساب</button>
+          <button class="ghost" onclick="triggerCheckout()">Checkout (Card)</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section style="margin-top:28px;margin-bottom:18px;text-align:center">
+      <h3 class="section-title" id="contactTitle_en">Contact</h3>
+      <h3 class="section-title" id="contactTitle_ar" style="display:none;direction:rtl">اتصل بنا</h3>
+      <p class="small" id="contactText_en">Email: <a href="mailto:ryaanjewellers@gmail.com">ryaanjewellers@gmail.com</a> • WhatsApp: <a href="https://wa.me/971000000000" target="_blank">+971 000 0000</a></p>
+      <p class="small" id="contactText_ar" style="display:none;direction:rtl">البريد الإلكتروني: <a href="mailto:ryaanjewellers@gmail.com">ryaanjewellers@gmail.com</a> • واتساب: <a href="https://wa.me/971000000000" target="_blank">+971 000 0000</a></p>
+    </section>
+
+  </div> <!-- /container -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" style="text-align:center">
+      <img alt="Ryaan logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
+      <p class="small" style="margin-top:12px" id="footerText_en">© 2025 Ryaan Jewellers — Crafted with love & Precious</p>
+      <p class="small" style="margin-top:12px;display:none" id="footerText_ar">© 2025 ريان للمجوهرات — مصنوع بحب وقيمة</p>
     </div>
-  </section>
+  </footer>
 
-  <!-- CONTACT -->
-  <section id="contact" style="margin-top:24px;margin-bottom:24px;text-align:center">
-    <div style="display:inline-block;text-align:left;max-width:540px">
-      <h2 class="section-title" data-en="Contact" data-ar="اتصل بنا">Contact</h2>
-      <p class="muted">Email: <a href="mailto:ryaanjewellers@gmail.com">ryaanjewellers@gmail.com</a></p>
-      <p class="muted">WhatsApp: <a href="https://wa.me/971000000000" target="_blank">+971 000 0000</a></p>
-      <p class="muted">Instagram: <a href="https://instagram.com/ryaanjewellers007" target="_blank">@ryaanjewellers007</a></p>
-    </div>
-  </section>
+  <!-- SCRIPTS -->
+  <script>
+    /* ==========================
+       Config & assets (change here)
+       ========================== */
+    const RAW_BASE = "https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/";
+    const PRODUCTS = [
+      {id:'P100',title_en:'Chic Lattice - Yellow 18K',title_ar:'Chic Lattice - ذهب أصفر 18K',img:RAW_BASE+'S_1.jpg',purity:24,weight:6,cat:'rings'},
+      {id:'P101',title_en:'Maison Classic - White 18K',title_ar:'Maison Classic - أبيض 18K',img:RAW_BASE+'S_2.jpg',purity:24,weight:7,cat:'necklaces'},
+      {id:'P102',title_en:'Éclat Diamond - Rose 18K',title_ar:'Éclat الماسي - روز 18K',img:RAW_BASE+'S_3.jpg',purity:24,weight:5,cat:'bracelets'},
+      {id:'P103',title_en:'Royal Motif - Yellow 18K',title_ar:'نقوش ملكية - أصفر 18K',img:RAW_BASE+'S_4.jpg',purity:24,weight:8,cat:'earrings'},
+      {id:'P104',title_en:'Petite Étoile - White 18K',title_ar:'Petite Étoile - أبيض 18K',img:RAW_BASE+'S_5.jpg',purity:24,weight:9,cat:'rings'},
+      {id:'P105',title_en:'Aurora Braid - Rose 18K',title_ar:'Aurora Braid - روز 18K',img:RAW_BASE+'S_6.jpg',purity:24,weight:10,cat:'necklaces'},
+      {id:'P106',title_en:'Celeste Drop - Yellow 18K',title_ar:'Celeste Drop - أصفر 18K',img:RAW_BASE+'S_7.jpg',purity:24,weight:6,cat:'bracelets'},
+      {id:'P107',title_en:'Opal Curve - White 18K',title_ar:'Opal Curve - أبيض 18K',img:RAW_BASE+'S_8.jpg',purity:24,weight:11,cat:'earrings'},
+      {id:'P108',title_en:'Luna Band - Rose 18K',title_ar:'Luna Band - روز 18K',img:RAW_BASE+'S_9.jpg',purity:24,weight:12,cat:'rings'},
+      {id:'P109',title_en:'Velvet Hoop - Yellow 18K',title_ar:'Velvet Hoop - أصفر 18K',img:RAW_BASE+'S_10.jpg',purity:24,weight:7,cat:'necklaces'},
+      {id:'P110',title_en:'Regal Chain - White 18K',title_ar:'Regal Chain - أبيض 18K',img:RAW_BASE+'S_11.jpg',purity:24,weight:14,cat:'bracelets'},
+      {id:'P111',title_en:'Solitaire Muse - Rose 18K',title_ar:'Solitaire Muse - روز 18K',img:RAW_BASE+'S_12.jpg',purity:24,weight:5,cat:'earrings'},
+      {id:'P112',title_en:'Marli Twist - Yellow 18K',title_ar:'Marli Twist - أصفر 18K',img:RAW_BASE+'S_13.jpg',purity:24,weight:13,cat:'necklaces'}
+    ];
 
-</main>
+    /* ==========================
+       Splash sparkles & hide
+       ========================== */
+    (function buildSplash(){
+      const wrap = document.getElementById('splashSpark');
+      if(!wrap) return;
+      const spots = [
+        {l:'12%',t:'18%',d:0},{l:'68%',t:'22%',d:.3},{l:'36%',t:'72%',d:.7},
+        {l:'82%',t:'64%',d:1.0},{l:'22%',t:'58%',d:1.4},{l:'56%',t:'42%',d:.6}
+      ];
+      spots.forEach((s,i)=>{
+        const sp=document.createElement('span');
+        sp.style.left=s.l; sp.style.top=s.t; sp.style.position='absolute';
+        sp.style.width=(6+Math.round(Math.random()*8))+'px';
+        sp.style.height=sp.style.width;
+        sp.style.animationDelay = (s.d + (i*0.12)) + 's';
+        wrap.appendChild(sp);
+      });
+    })();
 
-<!-- FOOTER -->
-<footer>
-  <div style="max-width:1100px;margin:0 auto">
-    <img alt="Ryaan logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
-    <p class="muted" style="margin-top:12px">© 2025 Ryaan Jewellers — Crafted with love & Precious</p>
-  </div>
-</footer>
+    window.addEventListener('load', ()=> {
+      setTimeout(()=> {
+        const splash = document.getElementById('splash');
+        if(splash) splash.classList.add('hide-splash');
+      }, 1400);
+    });
 
-<!-- Chart.js for the tiny rates chart -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+    /* ==========================
+       Theme toggle (persist)
+       ========================== */
+    const themeBtn = document.getElementById('themeToggle');
+    function applyTheme(t){
+      if(t==='light'){ document.documentElement.setAttribute('data-theme','light'); localStorage.setItem('ry_theme','light'); themeBtn.innerText='Light'; }
+      else { document.documentElement.removeAttribute('data-theme'); localStorage.setItem('ry_theme','dark'); themeBtn.innerText='Dark'; }
+    }
+    // restore
+    const savedTheme = localStorage.getItem('ry_theme') || 'dark';
+    applyTheme(savedTheme);
+    themeBtn.addEventListener('click', ()=> {
+      const curr = localStorage.getItem('ry_theme') || 'dark';
+      applyTheme(curr==='dark' ? 'light' : 'dark');
+    });
 
-<script>
-/* ===========================
-   CONFIG
-   =========================== */
-const RAW_BASE = "https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/";
-const PRODUCTS = [
-  {id:'P1',title_en:'Chic Lattice - 18K',title_ar:'شبكة أنيقة - 18 ق',img:RAW_BASE+'S_1.jpg',purity:24,weight:6,cat:'rings'},
-  {id:'P2',title_en:'Maison Classic - 18K',title_ar:'مايزون كلاسيك - 18 ق',img:RAW_BASE+'S_2.jpg',purity:24,weight:7,cat:'necklaces'},
-  {id:'P3',title_en:'Éclat Diamond - 18K',title_ar:'إيكلات الماسية - 18 ق',img:RAW_BASE+'S_3.jpg',purity:24,weight:5,cat:'bracelets'},
-  {id:'P4',title_en:'Royal Motif - 18K',title_ar:'نقش ملكي - 18 ق',img:RAW_BASE+'S_4.jpg',purity:24,weight:8,cat:'earrings'},
-  {id:'P5',title_en:'Petite Étoile - 18K',title_ar:'بتيت إيتوال - 18 ق',img:RAW_BASE+'S_5.jpg',purity:24,weight:9,cat:'rings'},
-  {id:'P6',title_en:'Aurora Braid - 18K',title_ar:'ضفيرة أورورا - 18 ق',img:RAW_BASE+'S_6.jpg',purity:24,weight:10,cat:'necklaces'},
-  {id:'P7',title_en:'Celeste Drop - 18K',title_ar:'سيلست دروب - 18 ق',img:RAW_BASE+'S_7.jpg',purity:24,weight:6,cat:'bracelets'},
-  {id:'P8',title_en:'Opal Curve - 18K',title_ar:'قوس أوبال - 18 ق',img:RAW_BASE+'S_8.jpg',purity:24,weight:11,cat:'earrings'},
-  {id:'P9',title_en:'Luna Band - 18K',title_ar:'حلقة لونا - 18 ق',img:RAW_BASE+'S_9.jpg',purity:24,weight:12,cat:'rings'},
-  {id:'P10',title_en:'Velvet Hoop - 18K',title_ar:'طوق المخملي - 18 ق',img:RAW_BASE+'S_10.jpg',purity:24,weight:7,cat:'necklaces'},
-  {id:'P11',title_en:'Regal Chain - 18K',title_ar:'سلسلة ريجال - 18 ق',img:RAW_BASE+'S_11.jpg',purity:24,weight:14,cat:'bracelets'},
-  {id:'P12',title_en:'Solitaire Muse - 18K',title_ar:'سوليتير موز - 18 ق',img:RAW_BASE+'S_12.jpg',purity:24,weight:5,cat:'earrings'},
-  {id:'P13',title_en:'Marli Twist - 18K',title_ar:'مارلي تويست - 18 ق',img:RAW_BASE+'S_13.jpg',purity:24,weight:13,cat:'necklaces'}
-];
+    /* ==========================
+       Language toggle (EN/AR) persist
+       ========================== */
+    const langToggle = document.getElementById('langToggle');
+    function setLanguage(lang){
+      // lang = 'en' or 'ar'
+      localStorage.setItem('ry_lang', lang);
+      // elements switching
+      const show = (id,o)=>{ const el=document.getElementById(id); if(!el) return; el.style.display = o ? '' : 'none'; };
+      // list of pairs: [enId, arId]
+      const pairs = [
+        ['heroTitle_en','heroTitle_ar'],
+        ['heroSub_en','heroSub_ar'],
+        ['goldTitle_en','goldTitle_ar'],
+        ['catTitle_en','catTitle_ar'],
+        ['vmTitle_en','vmTitle_ar'],
+        ['visionTitle_en','visionTitle_ar'],
+        ['visionText_en','visionText_ar'],
+        ['missionTitle_en','missionTitle_ar'],
+        ['missionText_en','missionText_ar'],
+        ['storyTitle_en','storyTitle_ar'],
+        ['storyText_en','storyText_ar'],
+        ['prodTitle_en','prodTitle_ar'],
+        ['shopTitle_en','shopTitle_ar'],
+        ['enqTitle_en','enqTitle_ar'],
+        ['contactTitle_en','contactTitle_ar'],
+        ['contactText_en','contactText_ar'],
+        ['siteTagline_en','siteTagline_ar'],
+        ['footerText_en','footerText_ar'],
+        ['sendBtn_en','sendBtn_ar']
+      ];
+      if(lang==='ar'){
+        document.documentElement.lang='ar'; document.documentElement.dir='rtl';
+        langToggle.innerText = 'EN';
+        pairs.forEach(p=>{ show(p[0], false); show(p[1], true); });
+        // translate category names in place
+        document.querySelectorAll('[data-en]').forEach(el=>{
+          el.innerText = el.getAttribute('data-ar') || el.getAttribute('data-en');
+        });
+      } else {
+        document.documentElement.lang='en'; document.documentElement.dir='ltr';
+        langToggle.innerText = 'العربية';
+        pairs.forEach(p=>{ show(p[0], true); show(p[1], false); });
+        document.querySelectorAll('[data-en]').forEach(el=>{
+          el.innerText = el.getAttribute('data-en');
+        });
+      }
+    }
+    // restore language
+    const savedLang = localStorage.getItem('ry_lang') || 'en';
+    setLanguage(savedLang);
+    langToggle.addEventListener('click', ()=> {
+      const cur = localStorage.getItem('ry_lang') || 'en';
+      setLanguage(cur==='en' ? 'ar' : 'en');
+    });
 
-/* ===========================
-   THEME & LANGUAGE PERSISTENCE
-   =========================== */
-// Theme
-const THEME_KEY = 'ry_theme';
-function applyTheme(theme){
-  if(theme==='light') document.documentElement.setAttribute('data-theme','light');
-  else document.documentElement.removeAttribute('data-theme');
-  localStorage.setItem(THEME_KEY, theme);
-}
-document.getElementById('themeToggle').addEventListener('click', ()=>{
-  const current = localStorage.getItem(THEME_KEY) || 'dark';
-  const next = current === 'light' ? 'dark' : 'light';
-  applyTheme(next);
-});
-if(localStorage.getItem(THEME_KEY) === 'light') applyTheme('light');
+    /* ==========================
+       Gold price engine (fallback) + chart
+       - This uses a safe client-side fallback base24.
+       - For guaranteed market feed, deploy /api/gold on Vercel and point BASE_API.
+       ========================== */
+    let base24 = 500.00;
+    const chartEl = document.getElementById('goldChart');
+    const ctx = chartEl.getContext('2d');
+    let chartData = { labels:[], datasets:[{label:'24K AED/g', data:[], borderColor: '#D4AF37', backgroundColor:'rgba(212,175,55,0.08)', tension:0.3}] };
+    const goldChart = new Chart(ctx,{type:'line',data:chartData,options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{display:true},y:{display:true}}}});
 
-// Language
-const LANG_KEY = 'ry_lang';
-function applyLang(lang){
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  // all elements with data-en / data-ar
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    el.innerText = (lang === 'ar') ? el.getAttribute('data-ar') : el.getAttribute('data-en');
-  });
-  // buttons that show English/Arabic toggle label
-  const langBtn = document.getElementById('langToggle');
-  langBtn.innerText = (lang === 'ar') ? 'EN' : 'العربية';
-  langBtn.setAttribute('aria-pressed', lang === 'ar' ? 'true' : 'false');
-  localStorage.setItem(LANG_KEY, lang);
-}
-document.getElementById('langToggle').addEventListener('click', ()=>{
-  const current = localStorage.getItem(LANG_KEY) || 'en';
-  const next = current === 'en' ? 'ar' : 'en';
-  applyLang(next);
-});
-// initial
-applyLang(localStorage.getItem(LANG_KEY) || 'en');
+    function pushGoldPoint(v){
+      const t = new Date().toLocaleTimeString();
+      chartData.labels.push(t);
+      chartData.datasets[0].data.push(Number(v.toFixed(2)));
+      if(chartData.labels.length>24){ chartData.labels.shift(); chartData.datasets[0].data.shift(); }
+      goldChart.update();
+    }
 
-/* ===========================
-   SPLASH: sparkle build + hide
-   =========================== */
-(function buildSplash(){
-  const wrap = document.getElementById('splashSpark');
-  if(!wrap) return;
-  const coords = [
-    {l:'12%', t:'18%', d:0}, {l:'72%', t:'22%', d:.3},
-    {l:'36%', t:'72%', d:.7}, {l:'82%', t:'64%', d:1.0},
-    {l:'22%', t:'58%', d:1.4}, {l:'56%', t:'42%', d:.6}
-  ];
-  coords.forEach((c,i)=>{
-    const s = document.createElement('span');
-    s.style.left = c.l; s.style.top = c.t; s.style.position = 'absolute';
-    s.style.width = (6 + Math.round(Math.random()*6)) + 'px';
-    s.style.height = s.style.width;
-    s.style.animationDelay = (c.d + (i*0.12)) + 's';
-    wrap.appendChild(s);
-  });
-})();
-window.addEventListener('load', ()=> {
-  setTimeout(()=> {
-    const s = document.getElementById('splash');
-    if(s) s.classList.add('hide-splash');
-  }, 1400);
-});
+    function updateGoldUI(v){
+      const p24 = v;
+      const p22 = p24 * (22/24);
+      const p18 = p24 * (18/24);
+      document.getElementById('g24').innerText = p24.toFixed(2);
+      document.getElementById('g22').innerText = p22.toFixed(2);
+      document.getElementById('g18').innerText = p18.toFixed(2);
+      document.getElementById('goldShort').innerText = p24.toFixed(2) + ' AED/g';
+      pushGoldPoint(p24);
+    }
 
-/* ===========================
-   GOLD PRICE: base + chart
-   Robust fallback for GitHub Pages (no CORS issues)
-   =========================== */
-let base24 = 500.00; // default AED/g — update later or connect serverless
-let chart, chartData = {labels:[],datasets:[{label:'24K AED/g',data:[],borderColor:'#D4AF37',backgroundColor:'rgba(212,175,55,0.08)',tension:0.3}]};
+    // Try to fetch public gold sources (best-effort) then fallback to base24
+    async function fetchLiveGold(){
+      try {
+        // try goldprice.org
+        let ounceUSD = null;
+        try {
+          const r = await fetch('https://data-asg.goldprice.org/dbXRates/USD');
+          if(r.ok){ const j = await r.json(); if(j && j.items && j.items[0]) ounceUSD = Number(j.items[0].xauPrice || j.items[0].price); }
+        } catch(e){}
+        // fallback metals.live
+        if(!ounceUSD){
+          try {
+            const r2 = await fetch('https://api.metals.live/v1/spot/gold');
+            if(r2.ok){ const j2 = await r2.json(); if(Array.isArray(j2) && j2.length) ounceUSD = Number(j2[0].price || j2[0]); }
+          } catch(e){}
+        }
+        if(ounceUSD){
+          // convert USD -> AED using exchangerate.host
+          try {
+            const fx = await fetch('https://api.exchangerate.host/convert?from=USD&to=AED');
+            if(fx.ok){ const jf = await fx.json(); const rate = Number(jf.result || jf.info?.rate || (jf.rates && jf.rates.AED)); const ounceAED = ounceUSD * rate; const perGram = ounceAED / 31.1034768; base24 = perGram; updateGoldUI(base24); return; }
+          } catch(e){}
+        }
+      } catch(e){}
+      // final fallback
+      updateGoldUI(base24);
+    }
 
-function updateGoldDisplays(){
-  const p24 = base24;
-  const p22 = p24 * (22/24);
-  const p18 = p24 * (18/24);
-  document.getElementById('g24').innerText = p24.toFixed(2);
-  document.getElementById('g22').innerText = p22.toFixed(2);
-  document.getElementById('g18').innerText = p18.toFixed(2);
-  pushChartPoint(p24);
-}
+    // Initial fetch + periodic
+    fetchLiveGold();
+    setInterval(fetchLiveGold, 30000);
 
-function pushChartPoint(v){
-  const t = new Date().toLocaleTimeString();
-  chartData.labels.push(t);
-  chartData.datasets[0].data.push(Number(v.toFixed(2)));
-  if(chartData.labels.length>24){ chartData.labels.shift(); chartData.datasets[0].data.shift(); }
-  if(chart) chart.update();
-}
+    /* ==========================
+       Products rendering
+       ========================== */
+    function buildProducts(){
+      const slider = document.getElementById('productSlider');
+      const grid = document.getElementById('grid');
+      slider.innerHTML = ''; grid.innerHTML = '';
+      PRODUCTS.forEach(p=>{
+        // Slider card
+        const s = document.createElement('div'); s.className='product';
+        s.innerHTML = `<img src="${p.img}" alt="${p.title_en}"><div style="margin-top:8px;font-weight:700;color:var(--gold)"><span data-en="${p.title_en}" data-ar="${p.title_ar}">${p.title_en}</span></div><div class="small">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px"><button class="btn" onclick="addToCart('${p.id}')">Add</button></div>`;
+        slider.appendChild(s);
+        // Grid card
+        const g = document.createElement('div'); g.className='product';
+        g.innerHTML = `<div style="background:linear-gradient(180deg,#0c0c0c,#0f0f0f);padding:10px;border-radius:8px"><img src="${p.img}" alt="${p.title_en}" style="height:160px;object-fit:cover;border-radius:8px"></div><div style="margin-top:8px;font-weight:700;color:var(--gold)"><span data-en="${p.title_en}" data-ar="${p.title_ar}">${p.title_en}</span></div><div class="small">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px;display:flex;gap:8px"><button style="flex:1" class="btn" onclick="addToCart('${p.id}')">Add</button><button style="flex:1" class="ghost" onclick="viewProduct('${p.id}')">View</button></div>`;
+        grid.appendChild(g);
+      });
+      // apply language to product titles
+      applyLanguageToProducts();
+    }
 
-function createChart(){
-  const ctx = document.getElementById('chart').getContext('2d');
-  chart = new Chart(ctx,{type:'line',data:chartData,options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{display:true},y:{display:true}}}});
-}
-createChart(); updateGoldDisplays();
-setInterval(()=>{ base24 = base24*(1 + (Math.random()-0.5)*0.002); updateGoldDisplays(); },30000);
+    function applyLanguageToProducts(){
+      const lang = localStorage.getItem('ry_lang') || 'en';
+      document.querySelectorAll('[data-en]').forEach(el=>{
+        el.innerText = (lang==='ar' ? el.getAttribute('data-ar') : el.getAttribute('data-en'));
+      });
+    }
 
-/* ===========================
-   PRODUCTS: render slider + grid
-   =========================== */
-function buildProductSlider(){
-  const out = document.getElementById('productSlider'); out.innerHTML='';
-  PRODUCTS.forEach(p=>{
-    const d = document.createElement('div'); d.className='product';
-    const title = (localStorage.getItem(LANG_KEY)||'en') === 'ar' ? p.title_ar || p.title_en : p.title_en;
-    d.innerHTML = `<img src="${p.img}" alt="${title}" loading="lazy"><div style="margin-top:8px;font-weight:700;color:var(--gold)">${title}</div><div class="muted">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px"><button style="width:100%;padding:10px;border-radius:8px;border:none;background:var(--gold);color:#000;font-weight:700;cursor:pointer" onclick="addToCart('${p.id}')">${(localStorage.getItem(LANG_KEY)||'en')==='ar'?'أضف':'Add'}</button></div>`;
-    out.appendChild(d);
-  });
-}
-function buildGrid(list){
-  const grid = document.getElementById('grid'); grid.innerHTML='';
-  (list || PRODUCTS).forEach(p=>{
-    const title = (localStorage.getItem(LANG_KEY)||'en') === 'ar' ? p.title_ar || p.title_en : p.title_en;
-    const el = document.createElement('div'); el.className='product';
-    el.innerHTML = `<div style="background:linear-gradient(180deg,#0c0c0c,#0f0f0f);padding:10px;border-radius:8px"><img src="${p.img}" alt="${title}" style="height:160px;object-fit:cover;border-radius:8px"></div><div style="margin-top:8px;font-weight:700;color:var(--gold)">${title}</div><div class="muted">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px;display:flex;gap:8px"><button style="flex:1;background:var(--gold);border:none;padding:8px;border-radius:8px;font-weight:700;cursor:pointer" onclick="addToCart('${p.id}')">${(localStorage.getItem(LANG_KEY)||'en')==='ar'?'أضف':'Add'}</button><button style="flex:1;border:1px solid rgba(255,255,255,0.06);background:transparent;padding:8px;border-radius:8px;color:var(--muted);cursor:pointer" onclick="viewProduct('${p.id}')">${(localStorage.getItem(LANG_KEY)||'en')==='ar'?'عرض':'View'}</button></div>`;
-    grid.appendChild(el);
-  });
-}
-function filter(cat){
-  const filtered = PRODUCTS.filter(p=>p.cat===cat);
-  if(filtered.length) buildGrid(filtered); else buildGrid(PRODUCTS);
-}
-document.addEventListener('DOMContentLoaded', ()=>{ buildProductSlider(); buildGrid(); });
+    buildProducts();
 
-/* ===========================
-   CART simple (localStorage)
-   =========================== */
-function getCart(){ return JSON.parse(localStorage.getItem('ry_cart')||'[]') }
-function saveCart(c){ localStorage.setItem('ry_cart',JSON.stringify(c)) }
-function addToCart(pid){
-  const p = PRODUCTS.find(x=>x.id===pid); if(!p) return alert('Product not found');
-  const cart = getCart(); const it = cart.find(x=>x.id===pid);
-  if(it) it.qty += 1; else cart.push({id:pid,qty:1});
-  saveCart(cart);
-  alert((localStorage.getItem(LANG_KEY)||'en')==='ar'?'تمت الإضافة إلى السلة':'Added to cart: '+p.title_en);
-}
-function viewProduct(pid){ const p = PRODUCTS.find(x=>x.id===pid); if(!p) return; const title = (localStorage.getItem(LANG_KEY)||'en')==='ar' ? p.title_ar || p.title_en : p.title_en; alert(title + "\\n" + p.purity + "K • " + p.weight + "g"); }
+    /* ==========================
+       Cart (localStorage)
+       ========================== */
+    function getCart(){ return JSON.parse(localStorage.getItem('ry_cart')||'[]') }
+    function saveCart(c){ localStorage.setItem('ry_cart', JSON.stringify(c)) }
+    function addToCart(pid){
+      const p = PRODUCTS.find(x=>x.id===pid); if(!p) return alert('Product not found');
+      const cart = getCart(); const it = cart.find(x=>x.id===pid);
+      if(it) it.qty += 1; else cart.push({id:pid,qty:1});
+      saveCart(cart);
+      alert((localStorage.getItem('ry_lang') === 'ar') ? 'تمت الإضافة إلى السلة' : 'Added to cart: ' + p.title_en);
+    }
+    function viewProduct(pid){ const p = PRODUCTS.find(x=>x.id===pid); if(!p) return; alert((localStorage.getItem('ry_lang')==='ar') ? p.title_ar : p.title_en); }
 
-/* ===========================
-   ENQUIRY -> WhatsApp
-   =========================== */
-function sendEnquiry(){
-  const name = encodeURIComponent(document.getElementById('ename').value || '');
-  const phone = encodeURIComponent(document.getElementById('ephone').value || '');
-  const product = encodeURIComponent(document.getElementById('eproduct').value || '');
-  const message = encodeURIComponent(document.getElementById('emessage').value || '');
-  const body = `Name: ${name}%0aPhone: ${phone}%0aProduct: ${product}%0aMessage: ${message}`;
-  // Replace number with your WhatsApp
-  window.open('https://wa.me/971000000000?text=' + body,'_blank');
-}
+    /* ==========================
+       Enquiry -> WhatsApp
+       ========================== */
+    function sendEnquiry(){
+      const name = encodeURIComponent(document.getElementById('ename').value || '');
+      const phone = encodeURIComponent(document.getElementById('ephone').value || '');
+      const prod = encodeURIComponent(document.getElementById('eprod').value || '');
+      const msg = encodeURIComponent(document.getElementById('emsg').value || '');
+      const body = `Name: ${name}%0aPhone: ${phone}%0aProduct: ${prod}%0aMessage: ${msg}`;
+      // replace with your WhatsApp number
+      window.open('https://wa.me/971000000000?text=' + body,'_blank');
+    }
 
-/* ===========================
-   Checkout placeholder
-   =========================== */
-function triggerCheckout(){
-  alert((localStorage.getItem(LANG_KEY)||'en')==='ar' ? 'بوابة الدفع قيد الإعداد. سأزودك بخطوات الربط.' : 'Payment checkout needs serverless setup. I can provide it.');
-}
+    /* ==========================
+       Checkout placeholder (Stripe)
+       ========================== */
+    function triggerCheckout(){
+      alert((localStorage.getItem('ry_lang')==='ar') ? 'بوابة الدفع (ستتم إضافتها).' : 'Checkout placeholder — deploy serverless Stripe API to enable.');
+    }
 
-/* ===========================
-   Utility: smooth scroll
-   =========================== */
-function scrollToSection(id){
-  const el = document.getElementById(id);
-  if(el) el.scrollIntoView({behavior:'smooth'});
-}
+    /* ==========================
+       Helpers
+       ========================== */
+    function scrollToSection(id){ const el = document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'}); }
 
-/* ===========================
-   SEO: small ping to set page title when language changes
-   =========================== */
-function updateTitle(){
-  if((localStorage.getItem(LANG_KEY)||'en')==='ar') document.title = 'ريان للمجوهرات — فخامة 18 قيراط';
-  else document.title = 'Ryaan Jewellers — Luxury 18K Gold & Diamond Jewellery';
-}
-applyLang(localStorage.getItem(LANG_KEY) || 'en');
-updateTitle();
-document.getElementById('langToggle').addEventListener('click', updateTitle);
+    /* Apply language on load to UI texts */
+    function setLanguageOnLoad(){
+      const lang = localStorage.getItem('ry_lang') || 'en';
+      setTimeout(()=>{ // small delay to ensure DOM ready
+        if(lang==='ar') document.getElementById('langToggle').click();
+      }, 200);
+    }
 
-</script>
+    // Apply language to product titles on language change
+    const observer = new MutationObserver(()=>applyLanguageToProducts());
+    observer.observe(document.getElementById('grid'), {childList:true, subtree:true});
+
+    // Set initial lang if not set
+    if(!localStorage.getItem('ry_lang')) localStorage.setItem('ry_lang','en');
+    setLanguageOnLoad();
+
+  </script>
+
+  <!-- SEO & Performance tips (visible to site admin) -->
+  <!--
+    SEO Recommendations:
+    1) Create a blog with posts about collections and local events — helps rank for long-tail queries.
+    2) Acquire backlinks: Instagram, Instagram Shop, Google Business Profile (GMB) listing with correct NAP.
+    3) Use Google Search Console and submit sitemap.xml (GitHub Pages supports static sitemaps).
+    4) Use descriptive alt text on product images and structured product pages (for each product).
+    5) Deploy serverless gold API and Stripe Checkout (I can generate those files) to improve trust and enable payments.
+  -->
 
 </body>
 </html>
