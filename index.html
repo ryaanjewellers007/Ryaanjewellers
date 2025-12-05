@@ -4,503 +4,622 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Ryaan Jewellers — Luxury 18K Gold & Diamonds</title>
-  <meta name="description" content="Ryaan Jewellers — Premium 18K gold & diamond jewellery in Dubai. Live UAE gold rates, shop collections, Arabic/English site.">
-  <meta name="keywords" content="Ryaan, jewelry, gold, 18K, Dubai, luxury, rings, necklaces, diamonds">
-  <link rel="canonical" href="https://ryaanjewellers007.github.io/Ryaanjewellers007/">
+  <meta name="description" content="Ryaan Jewellers — Premium 18K gold & Diamond Jewellery. Live UAE gold rates, shop collections.">
   <meta name="theme-color" content="#000000">
 
-  <!-- JSON-LD Organization (basic for SEO) -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Ryaan Jewellers",
-    "url":"https://ryaanjewellers007.github.io/Ryaanjewellers007/",
-    "logo":"https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png",
-    "sameAs":["https://instagram.com/ryaanjewellers007"]
-  }
-  </script>
-
-  <!-- Fonts -->
+  <!-- Fonts & Chart -->
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
 
-  <!-- Inline Styles (single-file) -->
   <style>
     :root{
-      --bg-dark:#0b0b0b; --card-dark:#0f0f10; --text-light:#f4f4f4; --muted:#bdbdbd; --gold:#d4af37;
-      --bg-light:#ffffff; --card-light:#f8f8f8; --text-dark:#0b0b0b;
+      --bg-dark:#0b0b0b; --bg-light:#ffffff;
+      --card-dark:#0f0f10; --card-light:#f6f6f6;
+      --text-dark:#f4f4f4; --text-light:#111111;
+      --gold:#D4AF37; --muted:#bdbdbd;
     }
-    html[data-theme="dark"]{ background:var(--bg-dark); color:var(--text-light); }
-    html[data-theme="light"]{ background:var(--bg-light); color:var(--text-dark); }
-    body{ margin:0; font-family:'Poppins',sans-serif; -webkit-font-smoothing:antialiased; transition:background .25s,color .25s; min-height:100vh }
-    a{ color:inherit; text-decoration:none }
+    :root[data-theme="light"]{
+      --bg:var(--bg-light); --card:var(--card-light); --text:var(--text-light); --muted:#666;
+    }
+    :root:not([data-theme="light"]){
+      --bg:var(--bg-dark); --card:var(--card-dark); --text:var(--text-dark);
+    }
 
-    /* Container */
-    .container{ max-width:1200px; margin:0 auto; padding:16px; }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;padding:0;font-family:"Poppins",system-ui,Arial;background:var(--bg);color:var(--text);
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    }
+    a{color:inherit}
+    .container{max-width:1200px;margin:0 auto;padding:16px}
 
     /* Header */
-    header{ position:sticky; top:0; z-index:9999; backdrop-filter: blur(6px); background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.25)); border-bottom:1px solid rgba(212,175,55,0.06)}
-    .nav{ display:flex; align-items:center; justify-content:space-between; gap:12px; max-width:1200px; margin:0 auto; padding:12px }
-    .logo img{ height:84px; object-fit:contain; display:block }
-    .actions{ display:flex; gap:10px; align-items:center }
-    .btn{ background:var(--gold); color:#111; border:none; padding:8px 12px; border-radius:8px; font-weight:700; cursor:pointer }
-    .small-btn{ padding:8px 10px; background:transparent; border:1px solid rgba(255,255,255,0.06); border-radius:8px; cursor:pointer; color:inherit }
+    header{position:sticky;top:0;z-index:999;background:linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.15));backdrop-filter:blur(6px);border-bottom:1px solid rgba(212,175,55,0.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:1200px;margin:0 auto;padding:12px}
+    .logo {display:flex;align-items:center;gap:12px}
+    .logo img{height:84px;object-fit:contain;border-radius:6px;filter:drop-shadow(0 12px 40px rgba(212,175,55,0.18))}
+    .navlinks{display:flex;gap:14px;align-items:center}
+    .navlinks a{padding:8px 10px;border-radius:8px;font-weight:600;cursor:pointer}
+    .navlinks a:hover{color:var(--gold);}
 
     /* Splash */
-    #splash{ position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:#000; z-index:100000; transition:opacity .7s ease, visibility .7s; }
-    #splash.hidden{ opacity:0; visibility:hidden; pointer-events:none }
-    .splash-inner{ position:relative; width:460px; height:460px; border-radius:50%; display:flex; align-items:center; justify-content:center; }
-    .splash-inner img{ width:300px; height:auto; display:block; filter: drop-shadow(0 18px 60px rgba(212,175,55,0.25)); border-radius:6px; }
-    .splash-glow{ position:absolute; inset:-20%; border-radius:50%; filter:blur(40px); background: radial-gradient(circle, rgba(212,175,55,0.12), transparent 50%); animation:spin 6s linear infinite }
-    .splash-spark{ position:absolute; inset:0; pointer-events:none; mix-blend-mode:screen }
-    .splash-spark span{ position:absolute; border-radius:50%; background: radial-gradient(circle, #fff 0%, rgba(212,175,55,0.95) 30%, transparent 70%); width:6px; height:6px; opacity:0; filter:blur(.6px); animation:twinkle 2.8s infinite ease-in-out; }
-    @keyframes spin{ from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-    @keyframes twinkle{ 0%{transform:scale(.6);opacity:0} 35%{opacity:1;transform:scale(1.1)} 60%{opacity:.6;transform:scale(.9)} 100%{opacity:0;transform:scale(.6)} }
+    #splash{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:transparent;z-index:100000;transition:opacity .7s,visibility .7s}
+    .splash-inner{position:relative;width:460px;height:460px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+    .splash-inner .glow{position:absolute;inset:-20%;border-radius:50%;filter:blur(40px);background:radial-gradient(circle, rgba(212,175,55,0.11), transparent 40%);animation:spin 8s linear infinite}
+    .splash-inner img{width:300px;height:auto;object-fit:contain;z-index:4}
+    .splash-sparkles{position:absolute;inset:0;pointer-events:none;z-index:5}
+    .splash-sparkles span{position:absolute;border-radius:50%;width:6px;height:6px;background:radial-gradient(circle,#fff 0%, #D4AF37 40%, transparent 70%);filter:blur(.6px);opacity:0;animation:twinkle 2.8s infinite}
+    @keyframes twinkle{0%{opacity:0;transform:scale(.6)}35%{opacity:1;transform:scale(1.1)}60%{opacity:.6;transform:scale(.9)}100%{opacity:0;transform:scale(.6)}}
+    @keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+    .hide-splash{opacity:0;visibility:hidden;pointer-events:none}
 
     /* Hero */
-    .hero{ max-width:1200px; margin:28px auto; border-radius:14px; overflow:hidden; position:relative }
-    .hero .slide{ height:420px; background-size:cover; background-position:center; display:flex; align-items:center; justify-content:center }
-    .hero .caption{ background: linear-gradient(90deg, rgba(0,0,0,0.62), rgba(0,0,0,0.25)); padding:18px 26px; border-radius:10px; text-align:center; max-width:85% }
-    .hero h1{ font-family:Cinzel,serif; color:var(--gold); margin:0; font-size:32px }
-    .hero p{ margin:8px 0 0 0; color:var(--muted) }
+    .hero{max-width:1200px;margin:22px auto;border-radius:12px;overflow:hidden;position:relative}
+    .hero .slide{height:460px;background-size:cover;background-position:center}
+    .hero .caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,rgba(0,0,0,0.6),rgba(0,0,0,0.3));padding:22px;border-radius:10px;text-align:center}
+    .hero h1{font-family:Cinzel,serif;color:var(--gold);margin:0;font-size:34px}
+    .muted{color:var(--muted)}
 
-    /* Gold widget & chart */
-    .gold-wrap{ display:flex; gap:12px; align-items:center; justify-content:center; flex-wrap:wrap }
-    .gold-box{ background:linear-gradient(180deg,var(--card-dark),#0e0e0e); padding:14px; border-radius:12px; min-width:240px; text-align:center; border:1px solid rgba(212,175,55,0.06) }
-    .gold-box h4{ margin:0 0 8px 0; font-family:Cinzel,serif; color:var(--gold) }
+    /* sections */
+    .section{margin-top:28px;margin-bottom:18px}
+    .section-title{font-family:Cinzel,serif;color:var(--gold);font-size:22px;text-align:center;margin-bottom:12px}
 
-    /* Categories */
-    .section-title{ font-family:Cinzel,serif; color:var(--gold); text-align:center; font-size:22px; margin:12px 0 }
-    .cats{ display:flex; gap:12px; overflow:auto; padding:10px 2px; margin-top:6px }
-    .cat{ min-width:170px; background:var(--card-dark); border-radius:10px; padding:10px; text-align:center; border:1px solid rgba(212,175,55,0.06) }
-    .cat img{ width:100%; height:110px; object-fit:cover; border-radius:8px }
+    /* categories */
+    .cats{display:flex;gap:12px;overflow:auto;padding-bottom:8px}
+    .cat{min-width:170px;background:var(--card);border-radius:10px;padding:10px;text-align:center;border:1px solid rgba(212,175,55,0.06)}
+    .cat img{width:100%;height:110px;object-fit:cover;border-radius:8px}
 
-    /* Product slider & grid */
-    .product-slider{ display:flex; gap:12px; overflow:auto; padding:12px 0 }
-    .product{ min-width:240px; background:var(--card-dark); padding:10px; border-radius:12px; border:1px solid rgba(255,255,255,0.04) }
-    .product img{ width:100%; height:180px; object-fit:cover; border-radius:8px }
-    .grid{ display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:18px }
+    /* product slider */
+    .product-slider{display:flex;gap:12px;overflow:auto;padding:10px 0}
+    .product{min-width:240px;background:var(--card);border-radius:12px;padding:10px;border:1px solid rgba(255,255,255,0.04)}
+    .product img{width:100%;height:200px;object-fit:cover;border-radius:8px}
+
+    /* grid */
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
 
     /* enquiry */
-    .enquiry{ background:var(--card-dark); padding:18px; border-radius:12px; border:1px solid rgba(212,175,55,0.06); max-width:820px; margin:18px auto }
-    .enquiry input,.enquiry textarea{ width:100%; padding:10px; margin-top:8px; border-radius:8px; border:1px solid rgba(255,255,255,0.04); background:#0b0b0b; color:inherit }
+    .enquiry{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(212,175,55,0.06)}
+    .enquiry input,.enquiry textarea{width:100%;padding:10px;margin-top:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
 
     /* footer */
-    footer{ margin-top:30px; background:#000; padding:30px 0; text-align:center; border-top:1px solid rgba(212,175,55,0.06) }
-    footer img{ height:70px }
+    footer{margin-top:32px;padding:28px 0;background:transparent;border-top:1px solid rgba(212,175,55,0.06);text-align:center}
+    footer img{height:72px;filter:drop-shadow(0 8px 30px rgba(212,175,55,0.12))}
 
-    /* language & theme floating buttons */
-    .float-btns{ position:fixed; right:16px; bottom:16px; display:flex; flex-direction:column; gap:10px; z-index:20000 }
-    .float-btn{ background:var(--gold); color:#111; border-radius:999px; padding:10px 12px; cursor:pointer; font-weight:800 }
+    /* floating WhatsApp & Insta */
+    .float-wa{position:fixed;right:18px;bottom:18px;background:#25D366;color:#fff;padding:12px;border-radius:50%;z-index:99999;box-shadow:0 8px 30px rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center}
+    .float-insta{position:fixed;right:18px;bottom:88px;background:linear-gradient(45deg,#feda75,#d62976);color:#fff;padding:10px;border-radius:50%;z-index:99999;box-shadow:0 8px 30px rgba(0,0,0,0.4);display:flex;align-items:center;justify-content:center}
+
+    /* language & theme toggles */
+    .toggles{display:flex;gap:8px;align-items:center}
+    .btn{background:var(--gold);color:#000;padding:8px 12px;border-radius:8px;border:none;cursor:pointer;font-weight:700}
+    .small-btn{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);padding:8px 10px;border-radius:8px;cursor:pointer}
 
     /* responsive */
-    @media(max-width:820px){
-      .logo img{ height:64px }
-      .hero .slide{ height:320px }
-      #splash img{ width:220px }
+    @media(max-width:900px){
+      .logo img{height:64px}
+      .hero .slide{height:320px}
+      .product img{height:160px}
+      #splash .splash-inner img{width:220px}
     }
   </style>
 </head>
-<body data-theme="dark">
+<body>
 
-<!-- SPLASH -->
-<div id="splash" aria-hidden="false" role="dialog" aria-label="Loading Ryaan Jewellers">
-  <div class="splash-inner" aria-hidden="true">
-    <div class="splash-glow" aria-hidden="true"></div>
-    <!-- splash logo: use encoded URL and fallback handler -->
-    <img id="splashLogo" alt="Ryaan Jewellers" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png"
-         onerror="this.onerror=null; this.style.display='none'; showTextLogo(this.parentElement)">
-    <div class="splash-spark" id="splashSpark" aria-hidden="true"></div>
+<!-- Splash -->
+<div id="splash" aria-hidden="false">
+  <div class="splash-inner" role="img" aria-label="Ryaan Jewellers">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="splash-sparkles" id="splashSparkles" aria-hidden="true"></div>
+
+    <!-- logo image (encoded %20 to handle spaces). We will also try alternate repo paths in JS fallback if this fails) -->
+    <img id="mainSplashLogo" alt="Ryaan Jewellers Logo"
+         src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
   </div>
 </div>
 
-<script>
-  // create sparkles
-  (function(){
-    const wrap = document.getElementById('splashSpark');
-    if(!wrap) return;
-    const coords = [
-      {left:'10%', top:'20%', d:0}, {left:'70%', top:'22%', d:.3},
-      {left:'38%', top:'72%', d:.7}, {left:'82%', top:'64%', d:1.0},
-      {left:'22%', top:'58%', d:1.4}, {left:'56%', top:'42%', d:.6}
-    ];
-    coords.forEach((c,i)=>{
-      const sp = document.createElement('span');
-      sp.style.left = c.left; sp.style.top = c.top; sp.style.position = 'absolute';
-      sp.style.width = (6 + Math.round(Math.random()*8)) + 'px'; sp.style.height = sp.style.width;
-      sp.style.animationDelay = (c.d + (i*0.12)) + 's';
-      wrap.appendChild(sp);
-    });
-  })();
-
-  // fallback: if image fails, show a simple inline SVG text logo
-  function showTextLogo(parent){
-    const svgNS = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(svgNS,'svg');
-    svg.setAttribute('width','260'); svg.setAttribute('height','120');
-    svg.setAttribute('viewBox','0 0 520 240');
-    svg.innerHTML = `<rect width="100%" height="100%" fill="transparent"/><text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-family="Cinzel,serif" font-size="42" fill="#D4AF37">Ryaan Jewellers</text><text x="50%" y="74%" alignment-baseline="middle" text-anchor="middle" font-family="Poppins, sans-serif" font-size="18" fill="#fff">Crafted with love & Precious</text>`;
-    parent.appendChild(svg);
-  }
-
-  // hide splash reliably: onload or fallback timeout
-  function hideSplash(){
-    const s = document.getElementById('splash');
-    if(!s) return;
-    s.classList.add('hidden');
-    setTimeout(()=>{ if(s && s.parentNode) s.parentNode.removeChild(s); }, 900);
-  }
-
-  // hide when full load: also ensure fallback timeout of 3s
-  window.addEventListener('load', ()=>{ setTimeout(hideSplash, 350); });
-  setTimeout(()=>{ hideSplash(); }, 3500);
-</script>
-
-<!-- HEADER -->
+<!-- Header -->
 <header>
-  <div class="nav container" role="navigation" aria-label="Top navigation">
+  <div class="nav">
     <div class="logo">
-      <img alt="Ryaan Logo" id="headerLogo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png"
-           onerror="this.onerror=null; this.style.display='none'; document.querySelector('.logo').appendChild(makeTextLogoSmall())">
+      <img id="headerLogo" alt="Ryaan logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
+      <div style="display:flex;flex-direction:column">
+        <strong data-en="Ryaan Jewellers" data-ar="ريان للمجوهرات">Ryaan Jewellers</strong>
+        <small class="muted" data-en="Crafted with love & Precious" data-ar="صُنع بحب وثمينة">Crafted with love & Precious</small>
+      </div>
     </div>
 
-    <div class="actions" aria-hidden="false">
-      <div class="navlinks" aria-label="Links">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div class="toggles" aria-hidden="false">
+        <button id="langToggle" class="small-btn" aria-label="Toggle language">العربية</button>
+        <button id="themeToggle" class="small-btn" aria-label="Toggle theme">Theme</button>
+      </div>
+      <nav class="navlinks" aria-label="Main navigation">
         <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
-        <a href="#categories" data-en="Categories" data-ar="الفئات">Categories</a>
+        <a href="#categories" data-en="Categories" data-ar="التصنيفات">Categories</a>
         <a href="#products" data-en="Products" data-ar="المنتجات">Products</a>
         <a href="#gold" data-en="Gold Rates" data-ar="أسعار الذهب">Gold Rates</a>
         <a href="#contact" data-en="Contact" data-ar="اتصل">Contact</a>
-      </div>
+      </nav>
     </div>
   </div>
 </header>
 
-<script>
-  function makeTextLogoSmall(){
-    const el = document.createElement('div');
-    el.innerHTML = `<div style="font-family:Cinzel,serif;color:#D4AF37;font-weight:700;font-size:20px">Ryaan Jewellers</div><div style="font-size:12px;color:var(--muted)">Crafted with love & Precious</div>`;
-    return el;
-  }
-</script>
-
-<!-- HERO -->
-<section id="home" class="hero" aria-label="Hero section">
+<!-- Hero -->
+<section id="home" class="hero" aria-labelledby="hero-title">
   <div class="slide" style="background-image:url('https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_1.jpg')">
     <div class="caption">
-      <h1 data-en="Ryaan Jewellers — 18K Luxury" data-ar="ريان للمجوهرات — فخامة 18K">Ryaan Jewellers — 18K Luxury</h1>
-      <p data-en="Premium 18K gold & diamond pieces • Master-copy luxury designs"
-         data-ar="قطع ذهبية 18 قيراط وماسة — تصاميم فاخرة مستوحاة من الدور العالمية">Premium 18K gold & diamond pieces • Master-copy luxury designs</p>
+      <h1 id="hero-title" data-en="Luxury 18K Gold & Diamond Jewellery" data-ar="مجوهرات فاخرة 18 قيراط">Luxury 18K Gold & Diamond Jewellery</h1>
+      <p class="muted" data-en="Premium Dubai collection – master-copy designs" data-ar="مجموعة دبي الفاخرة - تصاميم ماستر">Premium Dubai collection – master-copy designs</p>
     </div>
   </div>
 </section>
 
-<!-- MAIN -->
-<main class="container" id="main">
+<div class="container">
 
-  <!-- GOLD RATES -->
-  <section id="gold" style="margin-top:18px">
-    <div class="gold-wrap" role="region" aria-label="Gold rates">
-      <div class="gold-box">
-        <h4 data-en="Live UAE Gold Rates" data-ar="أسعار الذهب في الإمارات">Live UAE Gold Rates</h4>
-        <div style="display:flex;gap:12px;justify-content:center;margin-top:8px">
-          <div><div class="muted">24K</div><div style="font-weight:800;color:var(--gold)" id="g24">--</div></div>
-          <div><div class="muted">22K</div><div style="font-weight:800;color:var(--gold)" id="g22">--</div></div>
-          <div><div class="muted">18K</div><div style="font-weight:800;color:var(--gold)" id="g18">--</div></div>
+  <!-- Gold rates + chart -->
+  <section id="gold" class="section" aria-labelledby="gold-title">
+    <h2 id="gold-title" class="section-title" data-en="Live UAE Gold Rates (AED/g)" data-ar="أسعار الذهب في الإمارات (درهم/غرام)">Live UAE Gold Rates (AED/g)</h2>
+
+    <div style="display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap">
+      <div style="background:linear-gradient(180deg,#0b0b0b,#0e0e0e);padding:14px;border-radius:10px;border:1px solid rgba(212,175,55,0.06);min-width:260px;text-align:center">
+        <div style="font-family:Cinzel,serif;color:var(--gold);font-size:18px" data-en="Live Gold Rates" data-ar="أسعار الذهب">Live Gold Rates</div>
+        <div style="margin-top:8px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
+          <div style="min-width:90px">
+            <div class="muted" data-en="24K" data-ar="24 ق">24K</div>
+            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g24">--</div>
+          </div>
+          <div style="min-width:90px">
+            <div class="muted" data-en="22K" data-ar="22 ق">22K</div>
+            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g22">--</div>
+          </div>
+          <div style="min-width:90px">
+            <div class="muted" data-en="18K" data-ar="18 ق">18K</div>
+            <div style="font-weight:800;color:var(--gold);font-size:18px" id="g18">--</div>
+          </div>
         </div>
-        <div style="margin-top:8px" class="muted" data-en="Prices shown in AED per gram" data-ar="الأسعار بالدرهم الإماراتي لكل غرام">Prices shown in AED per gram</div>
+        <div style="margin-top:10px" class="muted" data-en="Prices in AED / gram — auto-refresh" data-ar="الأسعار بالدرهم/غ — تحدّث تلقائي">Prices in AED / gram — auto-refresh</div>
       </div>
 
-      <div style="max-width:420px; min-width:260px; background:var(--card-dark); padding:14px; border-radius:12px; border:1px solid rgba(255,255,255,0.03)">
-        <div style="font-family:Cinzel,serif;color:var(--gold);">24K — Recent</div>
-        <canvas id="goldChart" width="400" height="120" style="width:100%;height:120px;margin-top:8px"></canvas>
+      <div style="max-width:420px;background:var(--card);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+        <div style="font-family:Cinzel,serif;color:var(--gold);font-size:16px" data-en="24K — Recent" data-ar="24ق — آخر أسعار">24K — Recent</div>
+        <canvas id="goldChart" style="width:100%;height:120px;margin-top:8px"></canvas>
       </div>
     </div>
   </section>
 
-  <!-- VISION & MISSION -->
-  <section id="about" style="margin-top:22px">
-    <h2 class="section-title" data-en="Our Story / Vision & Mission" data-ar="قصةنا / الرؤية والرسالة">Our Story / Vision & Mission</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-top:12px">
-      <div style="background:var(--card-dark);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+  <!-- Vision / Mission / Story -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <h2 id="about-title" class="section-title" data-en="Our Vision & Mission" data-ar="رؤيتنا ومهمتنا">Our Vision & Mission</h2>
+    <div style="display:flex;gap:18px;flex-wrap:wrap;justify-content:center">
+      <div style="max-width:520px;background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
         <h3 data-en="Vision" data-ar="الرؤية">Vision</h3>
-        <p data-en="To be the premier destination for luxury 18K jewellery in the UAE — crafted with precision, passion and timeless design."
-           data-ar="أن نكون الوجهة الأولى للمجوهرات الفاخرة 18 قيراط في الإمارات — مُصنعة بدقة وشغف وتصميم خالد.">To be the premier destination for luxury 18K jewellery in the UAE — crafted with precision, passion and timeless design.</p>
+        <p data-en="To be the leading boutique of premium 18K luxury jewelry offering masterful craftsmanship and timeless designs." data-ar="أن نكون الرائدين في مجال المجوهرات الفاخرة 18 قيراط، بتقديم حرفة متقنة وتصاميم خالدة.">To be the leading boutique of premium 18K luxury jewelry offering masterful craftsmanship and timeless designs.</p>
       </div>
-      <div style="background:var(--card-dark);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
+      <div style="max-width:520px;background:var(--card);padding:16px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)">
         <h3 data-en="Mission" data-ar="المهمة">Mission</h3>
-        <p data-en="Deliver exquisite, master-copy pieces inspired by the world’s finest maisons — while providing exceptional service and authenticity."
-           data-ar="تقديم قطع ماستر-كوبي رائعة مستوحاة من أرقى الدور العالمية — مع توفير خدمة استثنائية ومصداقية.">Deliver exquisite, master-copy pieces inspired by the world’s finest maisons — while providing exceptional service and authenticity.</p>
-      </div>
-      <div style="background:var(--card-dark);padding:14px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)">
-        <h3 data-en="Values" data-ar="القيم">Values</h3>
-        <p data-en="Craftsmanship • Trust • Luxury • Customer-first" data-ar="الحرفية • الثقة • الفخامة • العميل أولاً">Craftsmanship • Trust • Luxury • Customer-first</p>
+        <p data-en="Craft exquisite pieces inspired by the world’s top maisons, using quality materials and exceptional finishing." data-ar="صنع قطع فريدة مستوحاة من أرقى دور المجوهرات، باستخدام مواد عالية الجودة وتشطيبات متميزة.">Craft exquisite pieces inspired by the world’s top maisons, using quality materials and exceptional finishing.</p>
       </div>
     </div>
   </section>
 
-  <!-- CATEGORIES -->
-  <section id="categories" style="margin-top:22px">
-    <h2 class="section-title" data-en="Shop by Category" data-ar="تسوق حسب الفئة">Shop by Category</h2>
+  <!-- Categories -->
+  <section id="categories" class="section" aria-labelledby="cat-title">
+    <h2 id="cat-title" class="section-title" data-en="Shop by Category" data-ar="تسوق حسب الفئة">Shop by Category</h2>
     <div class="cats" id="cats">
-      <div class="cat" onclick="filter('rings')">
-        <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_1.jpg" alt="" onerror="imgOnError(this)">
-        <div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Rings" data-ar="خواتم">Rings</div>
-      </div>
-      <div class="cat" onclick="filter('necklaces')">
-        <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_2.jpg" alt="" onerror="imgOnError(this)">
-        <div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Necklaces" data-ar="قلائد">Necklaces</div>
-      </div>
-      <div class="cat" onclick="filter('bracelets')">
-        <img src="https://raw.githubusercontent.com/ryaanjewellers007/main/S_3.jpg" alt="" onerror="imgOnError(this)">
-        <div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Bracelets" data-ar="أساور">Bracelets</div>
-      </div>
-      <div class="cat" onclick="filter('earrings')">
-        <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_4.jpg" alt="" onerror="imgOnError(this)">
-        <div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Earrings" data-ar="أقراط">Earrings</div>
-      </div>
-      <div class="cat" onclick="filter('pendants')">
-        <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/S_5.jpg" alt="" onerror="imgOnError(this)">
-        <div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Pendants" data-ar="قلائد صغيرة">Pendants</div>
-      </div>
+      <div class="cat" onclick="filter('Rings')"><img loading="lazy" data-src="S_1.jpg" alt="Rings"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Rings" data-ar="خواتم">Rings</div></div>
+      <div class="cat" onclick="filter('Necklaces')"><img loading="lazy" data-src="S_2.jpg" alt="Necklaces"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Necklaces" data-ar="قلائد">Necklaces</div></div>
+      <div class="cat" onclick="filter('Bracelets')"><img loading="lazy" data-src="S_3.jpg" alt="Bracelets"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Bracelets" data-ar="أساور">Bracelets</div></div>
+      <div class="cat" onclick="filter('Earrings')"><img loading="lazy" data-src="S_4.jpg" alt="Earrings"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Earrings" data-ar="أقراط">Earrings</div></div>
+      <div class="cat" onclick="filter('Pendants')"><img loading="lazy" data-src="S_5.jpg" alt="Pendants"><div style="margin-top:8px;font-weight:700;color:var(--gold)" data-en="Pendants" data-ar="قلائد صغيرة">Pendants</div></div>
     </div>
   </section>
 
-  <!-- PRODUCTS SLIDER -->
-  <section id="products" style="margin-top:22px">
-    <h2 class="section-title" data-en="Featured Collection" data-ar="المجموعة المميزة">Featured Collection</h2>
-    <div class="product-slider" id="productSlider" aria-live="polite"></div>
+  <!-- Product slider -->
+  <section id="products" class="section" aria-labelledby="prod-title">
+    <h2 id="prod-title" class="section-title" data-en="Featured Collection" data-ar="المجموعة المميزة">Featured Collection</h2>
+    <div class="product-slider" id="productSlider"></div>
   </section>
 
-  <!-- GRID -->
-  <section style="margin-top:18px">
+  <!-- Grid -->
+  <section class="section">
     <h2 class="section-title" data-en="Shop All" data-ar="تسوق الكل">Shop All</h2>
-    <div class="grid" id="grid" role="list"></div>
+    <div class="grid" id="grid"></div>
   </section>
 
-  <!-- ENQUIRY -->
-  <section style="margin-top:22px">
-    <h2 class="section-title" data-en="Enquiry & Custom Orders" data-ar="الاستفسار والطلبات المخصصة">Enquiry & Custom Orders</h2>
-    <div class="enquiry" role="form" aria-label="Enquiry form">
-      <input id="ename" placeholder="Full name" aria-label="Full name">
-      <input id="ephone" placeholder="Phone (with country code)" aria-label="Phone">
-      <input id="eproduct" placeholder="Product name (optional)" aria-label="Product">
-      <textarea id="emessage" rows="4" placeholder="Message / Requirements" aria-label="Message"></textarea>
+  <!-- Instagram slider -->
+  <section class="section" aria-labelledby="insta-title">
+    <h2 id="insta-title" class="section-title" data-en="Instagram" data-ar="انستغرام">Instagram</h2>
+    <div style="display:flex;gap:12px;overflow:auto;padding:10px" id="instaSlider"></div>
+    <div style="text-align:center;margin-top:8px"><a href="https://instagram.com/ryaanjewellers007" target="_blank" class="small-btn">Open Instagram</a></div>
+  </section>
+
+  <!-- Enquiry -->
+  <section class="section" id="enquiry" aria-labelledby="enq-title">
+    <h2 id="enq-title" class="section-title" data-en="Enquiry / Custom Orders" data-ar="الاستفسار / طلبات مخصصة">Enquiry / Custom Orders</h2>
+    <div class="enquiry">
+      <input id="ename" placeholder="" data-en-placeholder="Full name" data-ar-placeholder="الاسم الكامل">
+      <input id="ephone" placeholder="" data-en-placeholder="Phone (with country code)" data-ar-placeholder="الهاتف (مع رمز الدولة)">
+      <input id="eproduct" placeholder="" data-en-placeholder="Product name (optional)" data-ar-placeholder="اسم المنتج (اختياري)">
+      <textarea id="emessage" rows="4" placeholder="" data-en-placeholder="Message / Requirements" data-ar-placeholder="الرسالة / المتطلبات"></textarea>
       <div style="display:flex;gap:10px;margin-top:10px;flex-wrap:wrap">
         <button class="btn" onclick="sendEnquiry()" data-en="Send via WhatsApp" data-ar="إرسال عبر واتساب">Send via WhatsApp</button>
-        <button class="small-btn" onclick="triggerCheckout()" data-en="Checkout (Card)" data-ar="الدفع (بطاقة)">Checkout (Card)</button>
+        <button class="small-btn" onclick="triggerCheckout()" data-en="Checkout (Card - placeholder)" data-ar="الدفع (بطاقة - تجريبي)">Checkout (Card - placeholder)</button>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" style="margin-top:22px;margin-bottom:28px">
-    <h2 class="section-title" data-en="Contact" data-ar="اتصل">Contact</h2>
-    <div style="text-align:center" aria-label="Contact details">
-      <p class="muted">📧 <a href="mailto:ryaanjewellers@gmail.com">ryaanjewellers@gmail.com</a></p>
-      <p class="muted">📞 <a href="tel:+971501234567">+971 50 123 4567</a></p>
-      <p class="muted">📸 <a href="https://instagram.com/ryaanjewellers007" target="_blank">@ryaanjewellers007</a></p>
+  <!-- Contact & Footer content -->
+  <section id="contact" class="section" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="section-title" data-en="Contact" data-ar="اتصل">Contact</h2>
+    <div style="text-align:center">
+      <p class="muted">📧 <a href="mailto:ryaanjewellers@gmail.com">ryaanjewellers@gmail.com</a> &nbsp; | &nbsp; 📞 <a href="https://wa.me/971000000000" target="_blank">+971 000 0000</a></p>
+      <p class="muted">📍 Dubai, UAE</p>
     </div>
   </section>
 
-</main>
+</div> <!-- container -->
 
-<!-- FOOTER -->
+<!-- Footer -->
 <footer>
-  <div class="container">
-    <img alt="Ryaan logo" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png" onerror="this.onerror=null;this.style.display='none'">
-    <p class="muted" style="margin-top:12px">© 2025 Ryaan Jewellers — Premium 18K Gold & Diamonds</p>
+  <div class="container" style="text-align:center">
+    <img alt="Ryaan logo small" src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/Logo%20new%20ryaan.png">
+    <p class="muted" style="margin-top:10px">&copy; 2025 <span data-en="Ryaan Jewellers" data-ar="ريان للمجوهرات">Ryaan Jewellers</span> — <span data-en="Crafted with love & Precious" data-ar="صُنع بحب وثمينة">Crafted with love & Precious</span></p>
   </div>
 </footer>
 
-<!-- Floating language + theme controls -->
-<div class="float-btns" aria-hidden="false">
-  <button id="langToggle" class="float-btn" title="Toggle language">AR</button>
-  <button id="themeToggle" class="float-btn" title="Toggle theme">☾</button>
-</div>
+<!-- Floating quick actions -->
+<a class="float-wa" href="https://wa.me/971000000000" target="_blank" title="WhatsApp">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12 0C5.37 0 0 5.37 0 12a11.9 11.9 0 0 0 1.62 6L0 24l6-1.62A11.9 11.9 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.24-6.18-3.48-8.52zM12 21.5c-1.2 0-2.37-.22-3.45-.64l-.25-.09-3.8 1.02 1.02-3.71-.09-.26C4.7 15.64 4.5 13.86 4.5 12 4.5 7.03 8.53 3 13.5 3S22.5 7.03 22.5 12 18.47 21.5 13.5 21.5H12z"></path><path d="M17.02 14.36c-.28-.14-1.66-.82-1.92-.91-.26-.09-.45-.14-.64.14-.19.28-.74.91-.9 1.1-.16.19-.32.21-.6.07-.28-.14-1.18-.43-2.25-1.39-.83-.74-1.39-1.65-1.56-1.93-.16-.28-.02-.43.12-.56.12-.12.28-.32.42-.48.14-.16.19-.28.28-.47.09-.19.04-.35-.02-.49-.07-.14-.64-1.54-.88-2.12-.23-.56-.46-.49-.64-.5l-.55-.01c-.19 0-.5.07-.76.35-.26.28-1 1-1 2.45 0 1.46 1.03 2.87 1.18 3.07.14.19 2.04 3.28 4.95 4.6 1.39.6 1.98.81 2.66.86.68.05 1.41.05 2.06-.38.65-.44 1.8-1.63 2.05-3.2.25-1.57.25-1.84.18-2.03-.07-.19-.25-.32-.53-.46z"></path></svg>
+</a>
 
-<!-- Chart.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.0/dist/chart.umd.min.js"></script>
+<a class="float-insta" href="https://instagram.com/ryaanjewellers007" target="_blank" title="Instagram">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M12 2.2c3.2 0 3.58.01 4.85.07 1.17.06 1.8.24 2.22.4.53.21.91.46 1.31.86.4.4.65.78.86 1.31.16.42.34 1.05.4 2.22.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.06 1.17-.24 1.8-.4 2.22-.21.53-.46.91-.86 1.31-.4.4-.78.65-1.31.86-.42.16-1.05.34-2.22.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.06-1.8-.24-2.22-.4-.53-.21-.91-.46-1.31-.86-.4-.4-.65-.78-.86-1.31-.16-.42-.34-1.05-.4-2.22C2.21 15.58 2.2 15.2 2.2 12s.01-3.58.07-4.85c.06-1.17.24-1.8.4-2.22.21-.53.46-.91.86-1.31.4-.4.78-.65 1.31-.86.42-.16 1.05-.34 2.22-.4C8.42 2.21 8.8 2.2 12 2.2m0-2.2C8.74 0 8.33 0 7.05.07 5.77.14 4.9.33 4.15.6 3.33.91 2.65 1.34 2.01 1.98.37 2.62-.06 3.3-.37 4.12-.64 4.87-.83 5.74-.9 7.02-.97 8.3-.98 8.71-.98 12s.01 3.7.08 4.98c.07 1.28.26 2.15.53 2.9.31.82.74 1.5 1.38 2.14.64.64 1.32 1.07 2.14 1.38.75.27 1.62.46 2.9.53 1.27.07 1.68.08 4.92.08s3.65-.01 4.92-.08c1.28-.07 2.15-.26 2.9-.53.82-.31 1.5-.74 2.14-1.38.64-.64 1.07-1.32 1.38-2.14.27-.75.46-1.62.53-2.9.07-1.28.08-1.69.08-4.92s-.01-3.65-.08-4.92c-.07-1.28-.26-2.15-.53-2.9-.31-.82-.74-1.5-1.38-2.14C20.5.74 19.82.31 19 .06c-.75-.27-1.62-.46-2.9-.53C15.65.01 15.24 0 12 0z"/><path d="M12 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 1 0 0-12.32zm0 10.16a4 4 0 1 1 0-8.01 4 4 0 0 1 0 8.01zm6.4-11.84a1.44 1.44 0 1 1 0-2.88 1.44 1.44 0 0 1 0 2.88z"/></svg>
+</a>
 
-<!-- All functionality -->
 <script>
-/* ============= CONFIG ============= */
-const RAW_BASE = "https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers007/main/";
-const PRODUCT_FILES = [
-  'S_1.jpg','S_2.jpg','S_3.jpg','S_4.jpg','S_5.jpg','S_6.jpg','S_7.jpg','S_8.jpg','S_9.jpg','S_10.jpg','S_11.jpg','S_12.jpg','S_13.jpg'
+/* ===========================
+  Robust image loader helper
+  - tries two raw repo paths: either 'ryaanjewellers007/ryaanjewellers007' OR 'ryaanjewellers007/Ryaanjewellers'
+  - converts local short names (S_1.jpg) to full raw url
+  ============================ */
+const REPO_USER = 'ryaanjewellers007';
+const REPO_PATHS = [
+  `${REPO_USER}/ryaanjewellers007`,
+  `${REPO_USER}/Ryaanjewellers`,
+  `${REPO_USER}/Ryaanjewellers007` // extra fallback
 ];
 
-/* Products list (editable) */
-const PRODUCTS = [
-  {id:'P1', title_en:'Chic Lattice - 18K', title_ar:'شبكة أنيقة - 18K', img:RAW_BASE+'S_1.jpg', purity:18, weight:6, cat:'rings'},
-  {id:'P2', title_en:'Maison Classic - 18K', title_ar:'ميسون كلاسيك - 18K', img:RAW_BASE+'S_2.jpg', purity:18, weight:7, cat:'necklaces'},
-  {id:'P3', title_en:'Éclat Diamond - 18K', title_ar:'إيكلات ماس - 18K', img:RAW_BASE+'S_3.jpg', purity:18, weight:5, cat:'bracelets'},
-  {id:'P4', title_en:'Royal Motif - 18K', title_ar:'نقش ملكي - 18K', img:RAW_BASE+'S_4.jpg', purity:18, weight:8, cat:'earrings'},
-  {id:'P5', title_en:'Petite Étoile - 18K', title_ar:'بتيت إتوال - 18K', img:RAW_BASE+'S_5.jpg', purity:18, weight:9, cat:'rings'},
-  {id:'P6', title_en:'Aurora Braid - 18K', title_ar:'ضفيرة أورورا - 18K', img:RAW_BASE+'S_6.jpg', purity:18, weight:10, cat:'necklaces'},
-  {id:'P7', title_en:'Celeste Drop - 18K', title_ar:'سيلست دروب - 18K', img:RAW_BASE+'S_7.jpg', purity:18, weight:6, cat:'bracelets'},
-  {id:'P8', title_en:'Opal Curve - 18K', title_ar:'أوبال كورف - 18K', img:RAW_BASE+'S_8.jpg', purity:18, weight:11, cat:'earrings'},
-  {id:'P9', title_en:'Luna Band - 18K', title_ar:'لونا باند - 18K', img:RAW_BASE+'S_9.jpg', purity:18, weight:12, cat:'rings'},
-  {id:'P10', title_en:'Velvet Hoop - 18K', title_ar:'فيلفيت هوب - 18K', img:RAW_BASE+'S_10.jpg', purity:18, weight:7, cat:'necklaces'},
-  {id:'P11', title_en:'Regal Chain - 18K', title_ar:'ريغال تشين - 18K', img:RAW_BASE+'S_11.jpg', purity:18, weight:14, cat:'bracelets'},
-  {id:'P12', title_en:'Solitaire Muse - 18K', title_ar:'سوليتير ميوز - 18K', img:RAW_BASE+'S_12.jpg', purity:18, weight:5, cat:'earrings'},
-  {id:'P13', title_en:'Marli Twist - 18K', title_ar:'مارلي تويست - 18K', img:RAW_BASE+'S_13.jpg', purity:18, weight:13, cat:'necklaces'}
-];
-
-/* ============= IMAGE FALLBACK ============= */
-/* If images fail to load from GitHub raw, we show an inline SVG fallback (so layout holds) */
-function imgOnError(img){
-  img.onerror = null;
-  img.style.display = 'none';
-  const parent = img.parentElement || document.body;
-  const svg = document.createElement('div');
-  svg.innerHTML = `<svg width="260" height="140" viewBox="0 0 520 240" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="#080808"/><text x="50%" y="50%" alignment-baseline="middle" text-anchor="middle" font-family="Cinzel, serif" font-size="28" fill="#D4AF37">Ryaan</text><text x="50%" y="75%" text-anchor="middle" font-size="12" fill="#fff">Preview</text></svg>`;
-  parent.appendChild(svg);
+function rawUrlFor(filename){
+  // prefer repo paths in order, but we will test load in JS
+  return REPO_PATHS.map(p => `https://raw.githubusercontent.com/${p}/main/${encodeURIComponent(filename)}`);
 }
 
-/* ============= THEME (persist) ============= */
-const themeToggle = document.getElementById('themeToggle');
-function applyTheme(theme){
-  document.documentElement.setAttribute('data-theme', theme === 'light' ? 'light' : 'dark');
-  localStorage.setItem('ry_theme', theme);
-  themeToggle.textContent = theme === 'light' ? '☼' : '☾';
+/* Helper to attempt image load, pick first that works */
+function findWorkingUrl(filename, cb){
+  const urls = rawUrlFor(filename);
+  let idx = 0;
+  function tryNext(){
+    if(idx >= urls.length){ cb(null); return; }
+    const u = urls[idx++];
+    const img = new Image();
+    img.onload = () => cb(u);
+    img.onerror = () => tryNext();
+    img.src = u + '?raw=true';
+  }
+  tryNext();
 }
-themeToggle.addEventListener('click', ()=>{
-  const cur = localStorage.getItem('ry_theme') || 'dark';
-  applyTheme(cur === 'dark' ? 'light' : 'dark');
-});
-(function(){ const saved = localStorage.getItem('ry_theme') || 'dark'; applyTheme(saved); })();
 
-/* ============= LANGUAGE (persist & full-convert) ============= */
-const langToggle = document.getElementById('langToggle');
-function applyLang(lang){
-  lang = (lang === 'ar') ? 'ar' : 'en';
-  // set dir
-  document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  // replace all elements with data-en/data-ar
-  document.querySelectorAll('[data-en]').forEach(el=>{
-    const en = el.getAttribute('data-en') || '';
-    const ar = el.getAttribute('data-ar') || en;
-    el.textContent = (lang === 'ar' ? ar : en);
+/* Apply images where elements have data-src attributes (short filename) */
+function applyRepoImages(){
+  // header logo + splash + products and category imgs
+  const logoEls = [document.getElementById('headerLogo'), document.getElementById('mainSplashLogo')];
+  logoEls.forEach(el => {
+    if(!el) return;
+    findWorkingUrl('Logo new ryaan.png', (u) => {
+      if(u) el.src = u;
+      else {
+        // fallback to text if image not found
+        el.style.display = 'none';
+        const t = document.createElement('div');
+        t.style.color = 'var(--gold)';
+        t.style.fontWeight = '800';
+        t.style.fontSize = '20px';
+        t.textContent = (localStorage.getItem('site_lang') === 'ar') ? 'ريان للمجوهرات' : 'Ryaan Jewellers';
+        el.parentNode && el.parentNode.appendChild(t);
+      }
+    });
   });
-  // update floating toggle text
-  langToggle.textContent = (lang === 'ar' ? 'EN' : 'AR');
-  localStorage.setItem('ry_lang', lang);
+
+  // category images (data-src attribute)
+  document.querySelectorAll('[data-src]').forEach(el => {
+    const filename = el.getAttribute('data-src');
+    findWorkingUrl(filename, (u) => {
+      if(u) el.src = u;
+      else {
+        // show placeholder color
+        el.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='400' height='300'><rect width='100%' height='100%' fill='#222'/><text x='50%' y='50%' fill='${encodeURIComponent('#bfbfbf')}' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='20'>Image</text></svg>`);
+      }
+    });
+  });
+
+  // product images
+  document.querySelectorAll('[data-prod]').forEach(el => {
+    const filename = el.getAttribute('data-prod');
+    findWorkingUrl(filename, (u) => {
+      if(u) el.src = u;
+      else el.src = '';
+    });
+  });
+
+  // instagram slider images
+  const instaContainer = document.getElementById('instaSlider');
+  const INSTAFILES = ['Screenshot_20251129_014621_Chrome.jpg','Screenshot_20251129_014443_Chrome.jpg','Screenshot_20251129_014656_Chrome.jpg','Screenshot_20251129_014713_Chrome.jpg','S_9.jpg'];
+  INSTAFILES.forEach(fn=>{
+    findWorkingUrl(fn, (u)=>{
+      const card = document.createElement('a'); card.target='_blank'; card.rel='noopener';
+      card.href = 'https://instagram.com/ryaanjewellers007';
+      const img = document.createElement('img');
+      img.style.width='180px'; img.style.height='140px'; img.style.objectFit='cover'; img.style.borderRadius='8px';
+      if(u) img.src = u;
+      else img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' width='180' height='140'><rect width='100%' height='100%' fill='#111'/><text x='50%' y='50%' fill='#bfbfbf' dominant-baseline='middle' text-anchor='middle' font-family='Arial' font-size='14'>Instagram</text></svg>`);
+      card.appendChild(img); instaContainer.appendChild(card);
+    });
+  });
 }
-langToggle.addEventListener('click', ()=>{
-  const cur = localStorage.getItem('ry_lang') || 'en';
-  applyLang(cur === 'en' ? 'ar' : 'en');
+
+/* Build product UI using PRODUCTS array and short filenames; uses data-prod attribute for lazy src replacement */
+const PRODUCTS = [
+  {id:'P1', title_en:'Chic Lattice - 18K', title_ar:'شبكة أنيقة - 18ق', file:'S_1.jpg', purity:18, weight:6, cat:'rings'},
+  {id:'P2', title_en:'Maison Classic - 18K', title_ar:'مايزون كلاسيك - 18ق', file:'S_2.jpg', purity:18, weight:7, cat:'necklaces'},
+  {id:'P3', title_en:'Éclat - 18K', title_ar:'إيكلات - 18ق', file:'S_3.jpg', purity:18, weight:5, cat:'bracelets'},
+  {id:'P4', title_en:'Royal Motif - 18K', title_ar:'نمط ملكي - 18ق', file:'S_4.jpg', purity:18, weight:8, cat:'earrings'},
+  {id:'P5', title_en:'Petite Étoile - 18K', title_ar:'بيتيت إتوال - 18ق', file:'S_5.jpg', purity:18, weight:9, cat:'rings'},
+  {id:'P6', title_en:'Aurora Braid - 18K', title_ar:'ضفيرة أوروڤا - 18ق', file:'S_6.jpg', purity:18, weight:10, cat:'necklaces'},
+  {id:'P7', title_en:'Celeste Drop - 18K', title_ar:'سيلست دروب - 18ق', file:'S_7.jpg', purity:18, weight:6, cat:'bracelets'},
+  {id:'P8', title_en:'Opal Curve - 18K', title_ar:'أوبال كيرف - 18ق', file:'S_8.jpg', purity:18, weight:11, cat:'earrings'},
+  {id:'P9', title_en:'Luna Band - 18K', title_ar:'لونا باند - 18ق', file:'S_9.jpg', purity:18, weight:12, cat:'rings'},
+  {id:'P10', title_en:'Velvet Hoop - 18K', title_ar:'فيلفت هوب - 18ق', file:'S_10.jpg', purity:18, weight:7, cat:'necklaces'},
+  {id:'P11', title_en:'Regal Chain - 18K', title_ar:'ريغال تشاين - 18ق', file:'S_11.jpg', purity:18, weight:14, cat:'bracelets'},
+  {id:'P12', title_en:'Solitaire Muse - 18K', title_ar:'سوليتير ميوز - 18ق', file:'S_12.jpg', purity:18, weight:5, cat:'earrings'},
+  {id:'P13', title_en:'Marli Twist - 18K', title_ar:'مارلي تويست - 18ق', file:'S_13.jpg', purity:18, weight:13, cat:'necklaces'}
+];
+
+function buildProducts(){
+  const slider = document.getElementById('productSlider');
+  slider.innerHTML = '';
+  const grid = document.getElementById('grid'); grid.innerHTML = '';
+
+  PRODUCTS.forEach(p=>{
+    // slider card
+    const card = document.createElement('div'); card.className='product';
+    const img = document.createElement('img'); img.setAttribute('data-prod', p.file); img.alt = p.title_en;
+    const title = document.createElement('div'); title.style.marginTop='8px'; title.style.fontWeight='700'; title.style.color='var(--gold)';
+    title.textContent = (getLang() === 'ar') ? p.title_ar : p.title_en;
+    const small = document.createElement('div'); small.className='muted'; small.textContent = `${p.purity}K • ${p.weight}g`;
+    const add = document.createElement('button'); add.className='btn'; add.textContent = (getLang()==='ar') ? 'أضف للسلة' : 'Add to Cart';
+    add.style.width='100%'; add.style.marginTop='10px';
+    add.onclick = ()=>{ addToCart(p.id); };
+    card.appendChild(img); card.appendChild(title); card.appendChild(small); card.appendChild(add);
+    slider.appendChild(card);
+
+    // grid card
+    const g = document.createElement('div'); g.className='product';
+    g.innerHTML = `<div style="background:linear-gradient(180deg,#0c0c0c,#0f0f0f);padding:10px;border-radius:8px"><img data-prod="${p.file}" alt="${p.title_en}" style="height:160px;object-fit:cover;border-radius:8px;width:100%"></div><div style="margin-top:8px;font-weight:700;color:var(--gold)">${(getLang()==='ar')?p.title_ar:p.title_en}</div><div class="muted">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px;display:flex;gap:8px"><button style="flex:1;background:var(--gold);border:none;padding:8px;border-radius:8px;font-weight:700;cursor:pointer" onclick="addToCart('${p.id}')">${(getLang()==='ar')?'أضف':'Add'}</button><button style="flex:1;border:1px solid rgba(255,255,255,0.06);background:transparent;padding:8px;border-radius:8px;color:var(--muted);cursor:pointer" onclick="viewProduct('${p.id}')">${(getLang()==='ar')?'عرض':'View'}</button></div>`;
+    grid.appendChild(g);
+  });
+
+  // after elements exist, apply repo images (fallback loader)
+  applyRepoImages();
+}
+
+/* --------------------------
+  Language toggle & persistence
+  --------------------------- */
+function getLang(){ return localStorage.getItem('site_lang') || 'en'; }
+function setLang(l){
+  localStorage.setItem('site_lang', l);
+  // update all elements with data-en / data-ar
+  document.querySelectorAll('[data-en]').forEach(el=>{
+    const en = el.getAttribute('data-en');
+    const ar = el.getAttribute('data-ar') || en;
+    el.textContent = (l==='ar') ? ar : en;
+  });
+  // placeholders
+  document.querySelectorAll('[data-en-placeholder]').forEach(el=>{
+    const ph_en = el.getAttribute('data-en-placeholder');
+    const ph_ar = el.getAttribute('data-ar-placeholder') || ph_en;
+    el.placeholder = (l==='ar') ? ph_ar : ph_en;
+  });
+  // rebuild products titles
+  buildProducts();
+}
+
+document.getElementById('langToggle').addEventListener('click', ()=>{
+  const current = getLang();
+  const next = (current === 'en') ? 'ar' : 'en';
+  setLang(next);
+  // adjust text direction
+  document.documentElement.dir = (next==='ar') ? 'rtl' : 'ltr';
+  // toggle button label
+  document.getElementById('langToggle').innerText = (next==='ar') ? 'EN' : 'العربية';
 });
-// initial
-(function(){ const saved = localStorage.getItem('ry_lang') || 'en'; applyLang(saved); })();
 
-/* ============= GOLD PRICES + CHART ============= */
-let base24 = 500.00; // default AED/g — replace with your serverless API later for live quotes
-const chartCtx = document.getElementById('goldChart')?.getContext('2d');
+/* --------------------------
+  Theme toggle & persistence
+  --------------------------- */
+function getTheme(){ return localStorage.getItem('site_theme') || 'dark'; }
+function setTheme(t){
+  localStorage.setItem('site_theme', t);
+  if(t==='light') document.documentElement.setAttribute('data-theme','light');
+  else document.documentElement.removeAttribute('data-theme');
+}
+document.getElementById('themeToggle').addEventListener('click', ()=>{
+  const current = getTheme() || 'dark';
+  const next = (current === 'dark') ? 'light' : 'dark';
+  setTheme(next);
+  document.getElementById('themeToggle').innerText = (next==='light') ? 'Dark' : 'Light';
+});
+
+/* initial theme/lang on load */
+document.addEventListener('DOMContentLoaded', ()=>{
+  // init theme
+  const t = getTheme(); setTheme(t);
+  document.getElementById('themeToggle').innerText = (t==='light') ? 'Dark' : 'Light';
+  // init lang
+  const L = getLang(); setLang(L);
+  document.documentElement.dir = (L==='ar') ? 'rtl' : 'ltr';
+  document.getElementById('langToggle').innerText = (L==='ar') ? 'EN' : 'العربية';
+
+  // build UI
+  buildProducts();
+  createGoldChart();
+  // create splash sparkles
+  buildSplashSparkles();
+});
+
+/* --------------------------
+  Splash logic: hide after load or if image fails
+  --------------------------- */
+function buildSplashSparkles(){
+  const wrap = document.getElementById('splashSparkles');
+  if(!wrap) return;
+  const spots = [
+    {left:'12%', top:'18%', delay:0}, {left:'72%', top:'26%', delay:0.35},
+    {left:'40%', top:'72%', delay:0.7}, {left:'82%', top:'68%', delay:1.05},
+    {left:'22%', top:'60%', delay:1.4}, {left:'56%', top:'42%', delay:0.6}
+  ];
+  wrap.innerHTML = '';
+  spots.forEach((s,i)=>{
+    const sp = document.createElement('span');
+    sp.style.left = s.left; sp.style.top = s.top; sp.style.position='absolute';
+    sp.style.width = (4 + Math.round(Math.random()*8))+'px';
+    sp.style.height = sp.style.width;
+    sp.style.animationDelay = (s.delay + (i*0.12)) + 's';
+    wrap.appendChild(sp);
+  });
+
+  // If logo doesn't load within 2.5s, still hide splash
+  const logo = document.getElementById('mainSplashLogo');
+  let hidden=false;
+  function hideSplashSoon(){ if(hidden) return; hidden=true; document.getElementById('splash').classList.add('hide-splash'); setTimeout(()=>{ const s=document.getElementById('splash'); s && s.remove(); },800); }
+  logo.addEventListener('load', ()=>{ setTimeout(hideSplashSoon, 700); });
+  logo.addEventListener('error', ()=>{ setTimeout(hideSplashSoon, 500); });
+  // fallback timeout
+  setTimeout(hideSplashSoon, 2500);
+}
+
+/* --------------------------
+  Gold price: simple public fallback + simulated micro changes
+  --------------------------- */
+let base24 = 500.00; // default (you can change it)
 let goldChart;
-const chartData = { labels:[], datasets:[{ label:'24K AED/g', data:[], borderColor:'#D4AF37', backgroundColor:'rgba(212,175,55,0.08)', tension:0.3 }] };
+let goldChartData = {labels:[],datasets:[{label:'24K AED/g',data:[],borderColor:'#D4AF37',backgroundColor:'rgba(212,175,55,0.08)',tension:0.3}]};
 
-function updateGoldDisplay(){
+function updateGoldUI(){
   const p24 = Number(base24);
-  const p22 = p24 * (22/24);
-  const p18 = p24 * (18/24);
-  const fmt = v => Number(v).toFixed(2);
-  document.getElementById('g24').textContent = fmt(p24);
-  document.getElementById('g22').textContent = fmt(p22);
-  document.getElementById('g18').textContent = fmt(p18);
+  const p22 = p24*(22/24);
+  const p18 = p24*(18/24);
+  document.getElementById('g24').innerText = p24.toFixed(2);
+  document.getElementById('g22').innerText = p22.toFixed(2);
+  document.getElementById('g18').innerText = p18.toFixed(2);
   pushGoldChart(p24);
 }
 
-function pushGoldChart(v){
-  const t = new Date().toLocaleTimeString();
-  chartData.labels.push(t); chartData.datasets[0].data.push(Number(Number(v).toFixed(2)));
-  if(chartData.labels.length > 24){ chartData.labels.shift(); chartData.datasets[0].data.shift(); }
+function pushGoldChart(val){
+  const now = new Date().toLocaleTimeString();
+  goldChartData.labels.push(now);
+  goldChartData.datasets[0].data.push(Number(val.toFixed(2)));
+  if(goldChartData.labels.length>24){goldChartData.labels.shift();goldChartData.datasets[0].data.shift();}
   if(goldChart) goldChart.update();
 }
 
 function createGoldChart(){
-  if(!chartCtx) return;
-  goldChart = new Chart(chartCtx, { type:'line', data: chartData, options:{ responsive:true, plugins:{legend:{display:false}}, scales:{x:{display:true}, y:{display:true}} } });
-}
-createGoldChart();
-updateGoldDisplay();
-// small simulation to change price slightly every 30s
-setInterval(()=>{ base24 = base24 * (1 + (Math.random()-0.5)*0.002); updateGoldDisplay(); }, 30000);
-
-/* ============= PRODUCTS rendering ============= */
-function buildProductSlider(){
-  const out = document.getElementById('productSlider');
-  out.innerHTML = '';
-  PRODUCTS.forEach(p=>{
-    const d = document.createElement('div'); d.className = 'product';
-    d.innerHTML = `<img src="${p.img}" alt="${p.title_en || p.title}" onerror="imgOnError(this)"><div style="margin-top:8px;font-weight:700;color:var(--gold)">${p.title_en}</div><div class="muted">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px"><button class="btn" onclick="addToCart('${p.id}')">Add to Cart</button></div>`;
-    out.appendChild(d);
-  });
+  const ctx = document.getElementById('goldChart').getContext('2d');
+  goldChart = new Chart(ctx, {type:'line', data: goldChartData, options:{responsive:true,plugins:{legend:{display:false}},scales:{x:{display:true},y:{display:true}}}});
+  // initial point
+  updateGoldUI();
+  // simulate small market changes
+  setInterval(()=>{ base24 = base24*(1 + (Math.random()-0.5)*0.002); updateGoldUI(); }, 30000);
 }
 
-function buildGrid(list){
-  const grid = document.getElementById('grid');
-  grid.innerHTML = '';
-  (list || PRODUCTS).forEach(p=>{
-    const el = document.createElement('div'); el.className = 'product';
-    el.innerHTML = `<div style="background:linear-gradient(180deg,#0c0c0c,#0f0f0f);padding:10px;border-radius:8px"><img src="${p.img}" alt="${p.title_en}" style="height:160px;object-fit:cover;border-radius:8px" onerror="imgOnError(this)"></div><div style="margin-top:8px;font-weight:700;color:var(--gold)">${p.title_en}</div><div class="muted">${p.purity}K • ${p.weight}g</div><div style="margin-top:8px;display:flex;gap:8px"><button style="flex:1" class="btn" onclick="addToCart('${p.id}')">Add</button><button style="flex:1" class="small-btn" onclick="viewProduct('${p.id}')">View</button></div>`;
-    grid.appendChild(el);
-  });
-}
-
-/* filtering by category */
-function filter(cat){
-  const f = PRODUCTS.filter(p=>p.cat === cat);
-  if(f && f.length) buildGrid(f); else buildGrid(PRODUCTS);
-}
-
-/* simple cart/local storage */
-function getCart(){ return JSON.parse(localStorage.getItem('ry_cart') || '[]'); }
+/* --------------------------
+  Cart (localStorage simple)
+  --------------------------- */
+function getCart(){ return JSON.parse(localStorage.getItem('ry_cart')||'[]'); }
 function saveCart(c){ localStorage.setItem('ry_cart', JSON.stringify(c)); }
-function addToCart(pid){
-  const p = PRODUCTS.find(x=>x.id===pid); if(!p) return alert('Product not found');
-  const cart = getCart(); const it = cart.find(x=>x.id===pid);
-  if(it) it.qty++; else cart.push({id:pid, qty:1});
+function addToCart(id){
+  const p = PRODUCTS.find(x=>x.id===id); if(!p) return alert((getLang()==='ar')?'المنتج غير موجود':'Product not found');
+  const cart = getCart(); const it = cart.find(x=>x.id===id);
+  if(it) it.qty += 1; else cart.push({id:id,qty:1});
   saveCart(cart);
-  alert((localStorage.getItem('ry_lang')==='ar' ? 'تمت الإضافة إلى السلة' : 'Added to cart') + ': ' + p.title_en);
-}
-function viewProduct(pid){
-  const p = PRODUCTS.find(x=>x.id===pid); if(!p) return;
-  alert(p.title_en + '\n' + p.purity + 'K • ' + p.weight + 'g');
+  alert((getLang()==='ar')?('أُضيف إلى السلة: ' + (p.title_ar||p.title_en)):('Added to cart: ' + (p.title_en||p.title_ar)));
 }
 
-/* enquiry -> whatsapp */
+/* --------------------------
+  View product quick
+  --------------------------- */
+function viewProduct(id){
+  const p = PRODUCTS.find(x=>x.id===id); if(!p) return;
+  const txt = `${(getLang()==='ar'?p.title_ar:p.title_en)}\n${p.purity}K • ${p.weight}g`;
+  alert(txt);
+}
+
+/* --------------------------
+  Enquiry -> WhatsApp
+  --------------------------- */
 function sendEnquiry(){
   const name = encodeURIComponent(document.getElementById('ename').value || '');
   const phone = encodeURIComponent(document.getElementById('ephone').value || '');
-  const prod = encodeURIComponent(document.getElementById('eproduct').value || '');
-  const msg = encodeURIComponent(document.getElementById('emessage').value || '');
-  const body = `Name: ${name}%0aPhone: ${phone}%0aProduct: ${prod}%0aMessage: ${msg}`;
-  window.open('https://wa.me/971501234567?text=' + body, '_blank');
+  const product = encodeURIComponent(document.getElementById('eproduct').value || '');
+  const message = encodeURIComponent(document.getElementById('emessage').value || '');
+  const body = `Name: ${name}%0aPhone: ${phone}%0aProduct: ${product}%0aMessage: ${message}`;
+  // replace with your number
+  window.open('https://wa.me/971 54 374 6476?text=' + body, '_blank');
 }
 
-/* placeholder checkout (Stripe integration later) */
+/* --------------------------
+  Placeholder checkout
+  --------------------------- */
 function triggerCheckout(){
-  alert((localStorage.getItem('ry_lang')==='ar' ? 'مكان الدفع - سيستدعى جلسة الشراء' : 'Checkout placeholder. Deploy serverless endpoint for Stripe to enable.') );
+  alert((getLang()==='ar')?'دفع (تجريبي) — سيتم تكوين Stripe لاحقاً':'Checkout (demo) — Stripe will be configured later');
 }
 
-/* view initial content */
+/* --------------------------
+  Helper to initialise product images after DOM ready
+  --------------------------- */
 document.addEventListener('DOMContentLoaded', ()=>{
-  buildProductSlider();
-  buildGrid();
-  // ensure UI language and theme applied (again) for dynamic items
-  applyLang(localStorage.getItem('ry_lang') || 'en');
-  applyTheme(localStorage.getItem('ry_theme') || 'dark');
+  // replace short data-src attributes with working raw urls where possible
+  // categories use data-src in their img elements
+  document.querySelectorAll('.cat img').forEach(img=>{
+    const fn = img.getAttribute('data-src') || img.getAttribute('data-file') || (img.getAttribute('src') || '').split('/').pop();
+    if(fn) {
+      findWorkingUrl(fn, (u)=>{ if(u) img.src=u; });
+    }
+  });
+
+  // product images created with data-prod will be handled by applyRepoImages() in buildProducts()
 });
 
-/* smooth anchors */
-document.querySelectorAll('a[href^="#"]').forEach(a=>{
-  a.addEventListener('click', e=>{
-    e.preventDefault();
-    const t = document.querySelector(a.getAttribute('href'));
-    if(t) t.scrollIntoView({behavior:'smooth'});
-  });
+/* ensure repo images are applied if products loaded */
+window.addEventListener('load', ()=>{
+  // small delay to let DOM and products build
+  setTimeout(()=>{ applyRepoImages(); }, 400);
 });
+
+/* --------------------------
+  Init: first-run setup
+  --------------------------- */
+(function init(){
+  // build products initially (lang/theme handlers will re-build if needed)
+  // but products are built on DOMContentLoaded earlier
+  // ensure language & theme applied
+  const t = localStorage.getItem('site_theme') || 'dark';
+  setTheme(t);
+  const L = localStorage.getItem('site_lang') || 'en';
+  setLang(L);
+})();
+
 </script>
 </body>
 </html>
