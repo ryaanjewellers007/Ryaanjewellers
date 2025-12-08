@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RYAAN JEWELLERS | Dubai 24K, 22K, 18K Gold & Diamond Luxury Jewelry</title>
-    <meta name="description" content="RYAAN JEWELLERS Dubai - 24K, 22K, 18K Gold, Diamond Jewelry, Luxury Brands, Custom Designs, AR Try-On, Blockchain Authentication">
+    <title>RYAAN JEWELLERS | Exclusive 18K Gold & Diamond Jewelry Dubai</title>
+    <meta name="description" content="RYAAN JEWELLERS Dubai - Exclusive 18K Gold Jewelry, Diamond Collections, Custom Designs, AR Try-On, Blockchain Authentication">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&family=Marck+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Playfair+Display:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-gold: #D4AF37;
             --secondary-gold: #FFD700;
-            --platinum: #E5E4E2;
+            --rose-gold: #E0BFB8;
+            --white-gold: #E8E8E8;
+            --yellow-gold: #FFD700;
             --diamond: #B9F2FF;
             --ruby: #E0115F;
             --emerald: #50C878;
             --sapphire: #0F52BA;
             --dark-bg: #0A0A0A;
             --darker-bg: #050505;
-            --card-bg: rgba(20, 20, 20, 0.8);
+            --card-bg: rgba(20, 20, 20, 0.9);
             --white: #FFFFFF;
             --text-light: #F5F5F5;
             --text-gold: #FFD700;
@@ -26,82 +28,26 @@
             --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
             --glow: 0 0 40px rgba(212, 175, 55, 0.4);
             --gold-gradient: linear-gradient(45deg, #D4AF37, #FFD700, #F0E68C);
-            --marli-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --rose-gold-gradient: linear-gradient(45deg, #E0BFB8, #D8A48F, #B76E79);
+            --white-gold-gradient: linear-gradient(45deg, #E8E8E8, #F5F5F5, #D4D4D4);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         html { scroll-behavior: smooth; }
         body {
             font-family: 'Montserrat', sans-serif;
-            background: var(--dark-bg);
+            background: var(--darker-bg);
             color: var(--text-light);
             overflow-x: hidden;
             position: relative;
-            transition: var(--transition);
         }
 
-        /* Theme Toggle */
-        .theme-toggle {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            width: 60px;
-            height: 60px;
-            background: var(--gold-gradient);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 1000;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-        }
-        .theme-toggle:hover {
-            transform: scale(1.1) rotate(180deg);
-        }
-        .theme-toggle i {
-            font-size: 1.5rem;
-            color: var(--dark-bg);
-        }
-
-        /* Language Switcher */
-        .language-switcher {
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 10px;
-            padding: 15px;
-            z-index: 1000;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        .lang-btn {
-            background: transparent;
-            border: none;
-            color: var(--text-light);
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .lang-btn:hover, .lang-btn.active {
-            background: rgba(212, 175, 55, 0.2);
-            color: var(--primary-gold);
-        }
-
-        /* Social Media Floating */
-        .social-media {
+        /* Social Media Fixed */
+        .social-fixed {
             position: fixed;
             left: 30px;
-            bottom: 30px;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -125,28 +71,46 @@
         .social-icon:hover {
             background: var(--primary-gold);
             color: var(--dark-bg);
-            transform: translateY(-5px);
+            transform: translateX(5px);
         }
 
-        /* Diamond Pattern Background */
-        body:before {
-            content: '';
+        /* Language & Theme Toggle */
+        .utility-buttons {
             position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(212, 175, 55, 0.03) 2px, transparent 2px),
-                radial-gradient(circle at 75% 75%, rgba(212, 175, 55, 0.02) 2px, transparent 2px);
-            background-size: 100px 100px;
-            z-index: -1;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;
+        }
+        .utility-btn {
+            width: 50px;
+            height: 50px;
+            background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-light);
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .utility-btn:hover {
+            background: var(--primary-gold);
+            color: var(--dark-bg);
+            transform: translateX(-5px);
         }
 
-        /* Premium Header */
+        /* Header */
         .premium-header {
             position: fixed;
             top: 0; left: 0;
             width: 100%;
-            background: rgba(5, 5, 5, 0.95);
+            background: rgba(5, 5, 5, 0.98);
             backdrop-filter: blur(25px);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
             z-index: 1000;
@@ -154,7 +118,7 @@
         }
         .header-top {
             background: linear-gradient(90deg, #1A1A1A, #2A2A2A);
-            padding: 8px 0;
+            padding: 10px 0;
             border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
         .header-top-content {
@@ -165,34 +129,35 @@
             justify-content: space-between;
             align-items: center;
         }
-        .gold-ticker {
+        .gold-info {
             display: flex;
             gap: 30px;
             align-items: center;
         }
-        .ticker-item {
+        .gold-badge {
+            background: rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--primary-gold);
+            border-radius: 20px;
+            padding: 8px 20px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
-        .ticker-label {
-            font-size: 0.8rem;
-            color: #888;
-        }
-        .ticker-price {
-            font-family: 'Cinzel', serif;
+        .badge-icon {
+            color: var(--primary-gold);
             font-size: 1rem;
+        }
+        .badge-text {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .badge-price {
+            font-family: 'Cinzel', serif;
             color: var(--primary-gold);
             font-weight: 600;
+            font-size: 1.1rem;
         }
-        .ticker-change {
-            font-size: 0.8rem;
-            padding: 2px 6px;
-            border-radius: 3px;
-            margin-left: 5px;
-        }
-        .ticker-change.positive { background: rgba(76, 175, 80, 0.2); color: #4CAF50; }
-        .ticker-change.negative { background: rgba(244, 67, 54, 0.2); color: #F44336; }
 
         .main-header {
             padding: 20px 0;
@@ -220,27 +185,16 @@
             text-decoration: none;
             letter-spacing: 6px;
         }
-        .logo-badge {
-            background: var(--primary-gold);
-            color: var(--dark-bg);
-            font-size: 0.7rem;
-            padding: 3px 10px;
-            border-radius: 3px;
-            letter-spacing: 1px;
-            font-weight: 600;
+        .logo-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            color: var(--primary-gold);
+            letter-spacing: 3px;
         }
 
-        .nav-container {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
         .nav-main {
             display: flex;
             gap: 40px;
-        }
-        .nav-item {
-            position: relative;
         }
         .nav-link {
             color: var(--text-light);
@@ -267,39 +221,6 @@
         }
         .nav-link:hover {
             color: var(--primary-gold);
-        }
-        .nav-dropdown {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 8px;
-            padding: 20px;
-            min-width: 250px;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(10px);
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-        .nav-item:hover .nav-dropdown {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .dropdown-item {
-            display: block;
-            color: var(--text-light);
-            padding: 10px 0;
-            text-decoration: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            transition: var(--transition);
-        }
-        .dropdown-item:hover {
-            color: var(--primary-gold);
-            padding-left: 10px;
         }
 
         .header-actions {
@@ -333,24 +254,19 @@
         }
 
         /* Hero Section */
-        .mega-hero {
+        .hero-section {
             height: 100vh;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(rgba(5, 5, 5, 0.7), rgba(5, 5, 5, 0.8)),
+            background: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.9)),
                         url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
-        }
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            height: 100%;
             display: flex;
             align-items: center;
             padding: 0 40px;
+            margin-top: 130px;
         }
-        .hero-text {
+        .hero-content {
             max-width: 800px;
         }
         .hero-eyebrow {
@@ -362,11 +278,11 @@
         }
         .hero-title {
             font-family: 'Cinzel', serif;
-            font-size: 6rem;
+            font-size: 5rem;
             line-height: 1.1;
             margin-bottom: 30px;
         }
-        .title-highlight {
+        .hero-highlight {
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             background-clip: text;
@@ -374,7 +290,7 @@
         }
         .hero-description {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             line-height: 1.6;
             color: var(--text-light);
             margin-bottom: 50px;
@@ -385,7 +301,7 @@
             gap: 20px;
         }
         .btn {
-            padding: 20px 45px;
+            padding: 18px 40px;
             font-family: 'Montserrat', sans-serif;
             font-weight: 600;
             letter-spacing: 2px;
@@ -398,17 +314,6 @@
             display: inline-flex;
             align-items: center;
             gap: 12px;
-        }
-        .btn:before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.7s ease;
-        }
-        .btn:hover:before {
-            left: 100%;
         }
         .btn-primary {
             background: var(--gold-gradient);
@@ -430,137 +335,151 @@
             transform: translateY(-5px);
         }
 
-        /* Gold Karats Section */
-        .karats-section {
+        /* Gold Types Section */
+        .gold-types-section {
             padding: 120px 40px;
             background: var(--darker-bg);
         }
-        .karats-grid {
+        .gold-types-grid {
             max-width: 1600px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 40px;
         }
-        .karat-card {
+        .gold-type-card {
             background: var(--card-bg);
             border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 15px;
             padding: 50px 40px;
             text-align: center;
             transition: var(--transition);
-            position: relative;
-            overflow: hidden;
         }
-        .karat-card:before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%; height: 4px;
-            background: var(--gold-gradient);
-            transform: scaleX(0);
-            transition: transform 0.6s ease;
-        }
-        .karat-card:hover:before {
-            transform: scaleX(1);
-        }
-        .karat-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow);
+        .gold-type-card:hover {
+            transform: translateY(-10px);
             border-color: var(--primary-gold);
+            box-shadow: var(--shadow);
         }
-        .karat-title {
+        .gold-type-icon {
+            font-size: 4rem;
+            margin-bottom: 30px;
+        }
+        .yellow-gold .gold-type-icon {
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .rose-gold .gold-type-icon {
+            background: var(--rose-gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .white-gold .gold-type-icon {
+            background: var(--white-gold-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .gold-type-title {
             font-family: 'Cinzel', serif;
-            font-size: 2.5rem;
-            color: var(--primary-gold);
+            font-size: 1.8rem;
+            color: var(--text-light);
             margin-bottom: 20px;
         }
-        .karat-subtitle {
-            color: var(--text-light);
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-        }
-        .karat-description {
+        .gold-type-description {
             color: #888;
             line-height: 1.6;
             margin-bottom: 30px;
         }
-        .karat-properties {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .property {
-            background: rgba(212, 175, 55, 0.1);
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
-        .property-label {
-            font-size: 0.8rem;
-            color: #888;
-        }
-        .property-value {
-            font-size: 1.2rem;
-            color: var(--primary-gold);
-            font-weight: 600;
-        }
 
-        /* Branded Collections */
-        .brands-section {
+        /* Products Section */
+        .products-section {
             padding: 120px 40px;
             background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
         }
-        .brands-grid {
+        .products-grid {
             max-width: 1600px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 40px;
         }
-        .brand-card {
+        .product-card {
             background: var(--card-bg);
+            border: 1px solid rgba(212, 175, 55, 0.1);
             border-radius: 15px;
             overflow: hidden;
             transition: var(--transition);
-            border: 1px solid rgba(212, 175, 55, 0.1);
         }
-        .brand-card:hover {
+        .product-card:hover {
             transform: translateY(-10px);
             border-color: var(--primary-gold);
-            box-shadow: var(--glow);
+            box-shadow: var(--shadow);
         }
-        .brand-image {
+        .product-image {
             width: 100%;
-            height: 200px;
+            height: 300px;
             object-fit: cover;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
-        .brand-info {
+        .product-info {
             padding: 30px;
         }
-        .brand-title {
+        .product-title {
             font-family: 'Cinzel', serif;
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: var(--primary-gold);
             margin-bottom: 10px;
         }
-        .brand-products {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
+        .product-description {
+            color: #888;
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
-        .product-item {
-            background: rgba(212, 175, 55, 0.1);
-            padding: 15px;
-            border-radius: 5px;
+        .product-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+        .product-weight {
+            color: #888;
+            font-size: 0.9rem;
+        }
+        .product-actions {
+            display: flex;
+            gap: 10px;
+        }
+        .product-btn {
+            flex: 1;
+            padding: 12px;
             text-align: center;
+            border-radius: 5px;
             cursor: pointer;
             transition: var(--transition);
         }
-        .product-item:hover {
-            background: rgba(212, 175, 55, 0.2);
-            transform: translateY(-3px);
+        .add-to-cart {
+            background: var(--gold-gradient);
+            color: var(--dark-bg);
+            font-weight: 600;
+        }
+        .add-to-cart:hover {
+            transform: translateY(-2px);
+        }
+        .view-details {
+            background: transparent;
+            border: 1px solid var(--primary-gold);
+            color: var(--primary-gold);
+        }
+        .view-details:hover {
+            background: rgba(212, 175, 55, 0.1);
         }
 
         /* Custom Design Section */
@@ -576,55 +495,52 @@
             gap: 60px;
             align-items: center;
         }
-        .design-tools {
+        .design-studio {
             background: var(--card-bg);
             border-radius: 15px;
             padding: 40px;
             border: 1px solid rgba(212, 175, 55, 0.2);
         }
-        .tool-section {
+        .design-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-bottom: 30px;
         }
-        .tool-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: var(--primary-gold);
-            margin-bottom: 20px;
-        }
-        .tool-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-            gap: 15px;
-        }
-        .tool-option {
+        .design-option {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 8px;
-            padding: 15px;
+            padding: 20px;
             text-align: center;
             cursor: pointer;
             transition: var(--transition);
         }
-        .tool-option:hover, .tool-option.active {
+        .design-option:hover, .design-option.active {
             background: rgba(212, 175, 55, 0.2);
             border-color: var(--primary-gold);
         }
-        .sketch-canvas {
+        .option-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        .sketch-area {
             width: 100%;
             height: 300px;
             background: rgba(0, 0, 0, 0.3);
             border: 2px dashed rgba(212, 175, 55, 0.3);
             border-radius: 10px;
-            margin-top: 20px;
-            cursor: crosshair;
+            margin: 30px 0;
+            position: relative;
+            overflow: hidden;
         }
         .sketch-tools {
             display: flex;
             gap: 10px;
-            margin-top: 20px;
         }
-        .sketch-tool {
-            padding: 10px 20px;
+        .sketch-btn {
+            flex: 1;
+            padding: 12px;
             background: rgba(212, 175, 55, 0.1);
             border: 1px solid rgba(212, 175, 55, 0.2);
             border-radius: 5px;
@@ -632,106 +548,86 @@
             cursor: pointer;
             transition: var(--transition);
         }
-        .sketch-tool:hover {
+        .sketch-btn:hover {
             background: rgba(212, 175, 55, 0.2);
         }
 
-        /* 3D Design Viewer */
-        .design-viewer {
+        /* 3D Preview */
+        .preview-3d {
             background: var(--card-bg);
             border-radius: 15px;
             padding: 40px;
             border: 1px solid rgba(212, 175, 55, 0.2);
-            height: 500px;
+            height: 600px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            position: relative;
         }
         .viewer-3d {
             width: 100%;
-            height: 300px;
+            height: 400px;
             background: rgba(0, 0, 0, 0.3);
             border-radius: 10px;
             margin-bottom: 30px;
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--primary-gold);
         }
         .viewer-controls {
             display: flex;
             gap: 15px;
         }
 
-        /* Product View Customizer */
-        .customizer-section {
+        /* AR Try-On Section */
+        .ar-section {
             padding: 120px 40px;
             background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
         }
-        .customizer-container {
+        .ar-container {
             max-width: 1600px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 60px;
+            align-items: center;
         }
-        .product-preview {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-            text-align: center;
-        }
-        .preview-image {
+        .ar-viewport {
             width: 100%;
-            height: 300px;
+            height: 500px;
             background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            margin-bottom: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
-            color: var(--primary-gold);
+            position: relative;
+            overflow: hidden;
         }
-        .customization-options {
-            background: var(--card-bg);
-            border-radius: 15px;
-            padding: 40px;
-            border: 1px solid rgba(212, 175, 55, 0.2);
+        .ar-controls {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
         }
-        .option-group {
-            margin-bottom: 30px;
+        .ar-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
         }
-        .option-label {
-            display: block;
-            margin-bottom: 10px;
-            color: var(--text-light);
-        }
-        .option-slider {
-            width: 100%;
-            height: 6px;
+        .ar-item {
             background: rgba(212, 175, 55, 0.1);
-            border-radius: 3px;
-            outline: none;
-            -webkit-appearance: none;
-        }
-        .option-slider::-webkit-slider-thumb {
-            -webkit-appearance: none;
-            width: 20px;
-            height: 20px;
-            background: var(--primary-gold);
-            border-radius: 50%;
-            cursor: pointer;
-        }
-        .option-select {
-            width: 100%;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(212, 175, 55, 0.2);
-            border-radius: 8px;
-            color: var(--text-light);
-            font-family: inherit;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .ar-item:hover {
+            background: rgba(212, 175, 55, 0.2);
+            transform: translateY(-5px);
         }
 
         /* Footer */
@@ -768,6 +664,13 @@
             color: var(--primary-gold);
             padding-left: 10px;
         }
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: #888;
+        }
         .footer-bottom {
             max-width: 1600px;
             margin: 60px auto 0;
@@ -778,63 +681,185 @@
             font-size: 0.9rem;
         }
 
-        /* Responsive Design */
+        /* Shopping Cart Modal */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 2000;
+            transition: right 0.4s ease;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .cart-modal.active {
+            right: 0;
+        }
+        .cart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+        }
+        .cart-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            color: var(--primary-gold);
+        }
+        .close-cart {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .close-cart:hover {
+            color: var(--primary-gold);
+        }
+        .cart-items {
+            margin-bottom: 30px;
+        }
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .cart-item-image {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .cart-item-info {
+            flex: 1;
+        }
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        .cart-item-price {
+            color: var(--primary-gold);
+        }
+        .remove-item {
+            background: none;
+            border: none;
+            color: #888;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .remove-item:hover {
+            color: #ff4444;
+        }
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 0;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background: var(--gold-gradient);
+            border: none;
+            border-radius: 5px;
+            color: var(--dark-bg);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .checkout-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Wishlist Modal */
+        .wishlist-modal {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-left: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 2000;
+            transition: right 0.4s ease;
+            padding: 40px;
+            overflow-y: auto;
+        }
+        .wishlist-modal.active {
+            right: 0;
+        }
+
+        /* Notification System */
+        .notification {
+            position: fixed;
+            top: 120px;
+            right: 30px;
+            background: var(--card-bg);
+            border: 1px solid var(--primary-gold);
+            border-radius: 8px;
+            padding: 20px 25px;
+            color: var(--text-light);
+            z-index: 10000;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+            animation: slideIn 0.3s ease;
+            max-width: 350px;
+            font-family: 'Montserrat', sans-serif;
+            white-space: pre-line;
+        }
+
+        /* Responsive */
         @media (max-width: 1200px) {
-            .hero-title { font-size: 4.5rem; }
+            .hero-title { font-size: 4rem; }
             .custom-design-container,
-            .customizer-container {
+            .ar-container {
                 grid-template-columns: 1fr;
             }
         }
         @media (max-width: 768px) {
-            .hero-title { font-size: 3.5rem; }
-            .section-title { font-size: 2.8rem; }
+            .hero-title { font-size: 3rem; }
             .nav-main { display: none; }
             .header-container { padding: 0 20px; }
-            .karats-grid,
-            .brands-grid {
-                grid-template-columns: 1fr;
+            .social-fixed, .utility-buttons {
+                display: none;
             }
-            .social-media {
-                left: 20px;
-                bottom: 20px;
-            }
-            .theme-toggle,
-            .language-switcher {
-                bottom: 20px;
-                right: 20px;
-            }
-            .language-switcher {
-                bottom: 90px;
+            .cart-modal, .wishlist-modal {
+                width: 100%;
+                right: -100%;
             }
         }
 
         /* Animations */
-        @keyframes fadeInUp {
-            to { opacity: 1; transform: translateY(0); }
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
-        @keyframes glow {
-            0%, 100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
-            50% { box-shadow: 0 0 40px rgba(212, 175, 55, 0.8); }
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
         }
 
-        /* Utility Classes */
+        /* Utility */
         .gradient-text {
             background: var(--gold-gradient);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        .marli-text {
-            background: var(--marli-gradient);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            font-family: 'Marck Script', cursive;
-        }
         .section-title {
             font-family: 'Cinzel', serif;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             text-align: center;
             margin-bottom: 80px;
             position: relative;
@@ -849,148 +874,78 @@
             height: 3px;
             background: var(--gold-gradient);
         }
-        .text-center { text-align: center; }
-        .mb-4 { margin-bottom: 40px; }
-        .mb-2 { margin-bottom: 20px; }
-
-        /* Marli Theme */
-        body.marli-theme {
-            --primary-gold: #667eea;
-            --secondary-gold: #764ba2;
-            --gold-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        body.marli-theme:before {
-            background-image: 
-                radial-gradient(circle at 25% 25%, rgba(102, 126, 234, 0.1) 2px, transparent 2px),
-                radial-gradient(circle at 75% 75%, rgba(118, 75, 162, 0.1) 2px, transparent 2px);
-        }
-        body.marli-theme .premium-header {
-            background: rgba(102, 126, 234, 0.95);
-        }
-        body.marli-theme .gold-ticker .ticker-price {
-            color: #764ba2;
-        }
-
-        /* Arabic Text */
-        .arabic-text {
-            font-family: 'Arial', sans-serif;
-            direction: rtl;
-            text-align: right;
-        }
-        .arabic-text .section-title {
-            font-family: 'Traditional Arabic', 'Arial', sans-serif;
-        }
     </style>
 </head>
 <body>
-    <!-- Theme Toggle -->
-    <div class="theme-toggle" id="themeToggle">
-        <i class="fas fa-palette"></i>
-    </div>
-
-    <!-- Language Switcher -->
-    <div class="language-switcher" id="languageSwitcher">
-        <button class="lang-btn active" onclick="switchLanguage('en')">
-            <i class="fas fa-globe"></i> English
-        </button>
-        <button class="lang-btn" onclick="switchLanguage('ar')">
-            <i class="fas fa-globe"></i> العربية
-        </button>
-    </div>
-
     <!-- Social Media -->
-    <div class="social-media">
-        <a href="https://wa.me/971501234567" target="_blank" class="social-icon">
+    <div class="social-fixed">
+        <a href="https://wa.me/971543746476" target="_blank" class="social-icon" title="WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
-        <a href="https://instagram.com/ryaanjewellers" target="_blank" class="social-icon">
+        <a href="https://instagram.com/ryaanjewellers" target="_blank" class="social-icon" title="Instagram">
             <i class="fab fa-instagram"></i>
         </a>
-        <a href="https://linkedin.com/company/ryaanjewellers" target="_blank" class="social-icon">
+        <a href="https://linkedin.com/company/ryaanjewellers" target="_blank" class="social-icon" title="LinkedIn">
             <i class="fab fa-linkedin-in"></i>
-        </a>
-        <a href="https://facebook.com/ryaanjewellers" target="_blank" class="social-icon">
-            <i class="fab fa-facebook-f"></i>
         </a>
     </div>
 
-    <!-- Premium Header -->
+    <!-- Utility Buttons -->
+    <div class="utility-buttons">
+        <div class="utility-btn" onclick="toggleLanguage()" title="Switch Language">
+            <i class="fas fa-language"></i>
+        </div>
+        <div class="utility-btn" onclick="toggleTheme()" title="Change Theme">
+            <i class="fas fa-palette"></i>
+        </div>
+        <div class="utility-btn" onclick="startAR()" title="AR Try-On">
+            <i class="fas fa-vr-cardboard"></i>
+        </div>
+    </div>
+
+    <!-- Header -->
     <header class="premium-header">
         <div class="header-top">
             <div class="header-top-content">
-                <div class="gold-ticker">
-                    <div class="ticker-item">
-                        <span class="ticker-label">24K GOLD</span>
-                        <span class="ticker-price">496.34 AED</span>
-                        <span class="ticker-change positive">+1.2%</span>
+                <div class="gold-info">
+                    <div class="gold-badge">
+                        <i class="fas fa-gem badge-icon"></i>
+                        <span class="badge-text">18K GOLD</span>
+                        <span class="badge-price">Aed372/g</span>
                     </div>
-                    <div class="ticker-item">
-                        <span class="ticker-label">22K GOLD</span>
-                        <span class="ticker-price">455.42 AED</span>
-                        <span class="ticker-change positive">+0.9%</span>
-                    </div>
-                    <div class="ticker-item">
-                        <span class="ticker-label">18K GOLD</span>
-                        <span class="ticker-price">372.26 AED</span>
-                        <span class="ticker-change positive">+0.7%</span>
+                    <div style="color: var(--primary-gold); font-size: 0.85rem; letter-spacing: 1px;">
+                        <i class="fas fa-shipping-fast"></i> FREE SHIPPING WORLDWIDE
                     </div>
                 </div>
-                <div style="color: var(--primary-gold); font-size: 0.85rem; letter-spacing: 1px;">
-                    <i class="fas fa-gem"></i> CUSTOM DESIGN SERVICE AVAILABLE
+                <div style="color: var(--text-light); font-size: 0.85rem;">
+                    <i class="fas fa-phone"></i> +971 543 74 6476
                 </div>
             </div>
         </div>
         <div class="main-header">
             <div class="header-container">
                 <div class="logo-container">
-                    <a href="#" class="logo-main">RYAAN</a>
-                    <span class="logo-badge">SINCE 1952</span>
+                    <a href="#home" class="logo-main">RYAAN</a>
+                    <div class="logo-subtitle">18K GOLD SPECIALISTS</div>
                 </div>
-                <div class="nav-container">
-                    <nav class="nav-main">
-                        <div class="nav-item">
-                            <a href="#karats" class="nav-link">GOLD KARATS</a>
-                            <div class="nav-dropdown">
-                                <a href="#24k" class="dropdown-item">24K Pure Gold</a>
-                                <a href="#22k" class="dropdown-item">22K Gold</a>
-                                <a href="#18k" class="dropdown-item">18K Gold</a>
-                                <a href="#platinum" class="dropdown-item">Platinum</a>
-                                <a href="#diamond" class="dropdown-item">Diamond</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#brands" class="nav-link">BRANDED JEWELRY</a>
-                            <div class="nav-dropdown">
-                                <a href="#cartier" class="dropdown-item">Cartier</a>
-                                <a href="#tiffany" class="dropdown-item">Tiffany & Co.</a>
-                                <a href="#bulgari" class="dropdown-item">Bvlgari</a>
-                                <a href="#graff" class="dropdown-item">Graff Diamonds</a>
-                                <a href="#harry-winston" class="dropdown-item">Harry Winston</a>
-                            </div>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#custom-design" class="nav-link">CUSTOM DESIGN</a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#customizer" class="nav-link">PRODUCT VIEW</a>
-                        </div>
-                        <div class="nav-item">
-                            <a href="#ar" class="nav-link">AR TRY-ON</a>
-                        </div>
-                    </nav>
-                    <div class="header-actions">
-                        <div class="action-icon search-icon" onclick="searchProducts()">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <div class="action-icon wishlist-icon" onclick="showWishlist()">
-                            <i class="fas fa-heart"></i>
-                            <span class="badge">3</span>
-                        </div>
-                        <div class="action-icon cart-icon" onclick="showCart()">
-                            <i class="fas fa-shopping-bag"></i>
-                            <span class="badge">2</span>
-                        </div>
+                <nav class="nav-main">
+                    <a href="#home" class="nav-link">HOME</a>
+                    <a href="#products" class="nav-link">COLLECTIONS</a>
+                    <a href="#gold-types" class="nav-link">GOLD TYPES</a>
+                    <a href="#custom-design" class="nav-link">CUSTOM DESIGN</a>
+                    <a href="#ar" class="nav-link">AR TRY-ON</a>
+                </nav>
+                <div class="header-actions">
+                    <div class="action-icon search-icon" onclick="searchProducts()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="action-icon wishlist-icon" onclick="toggleWishlist()">
+                        <i class="fas fa-heart"></i>
+                        <span class="badge" id="wishlistCount">3</span>
+                    </div>
+                    <div class="action-icon cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="badge" id="cartCount">0</span>
                     </div>
                 </div>
             </div>
@@ -998,330 +953,169 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="mega-hero" id="home">
+    <section id="home" class="hero-section">
         <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-eyebrow">EXQUISITE CRAFTSMANSHIP SINCE 1952</div>
-                <h1 class="hero-title">Where <span class="title-highlight">Timeless</span> Elegance Meets <span class="title-highlight">Modern</span> Luxury</h1>
-                <p class="hero-description">Experience Dubai's finest 24K, 22K, 18K gold collections with certified diamonds. Custom designs with AR preview and blockchain authentication.</p>
-                <div class="hero-cta">
-                    <a href="#karats" class="btn btn-primary">
-                        <i class="fas fa-gem"></i> EXPLORE GOLD KARATS
-                    </a>
-                    <a href="#custom-design" class="btn btn-secondary">
-                        <i class="fas fa-pencil-alt"></i> CREATE YOUR DESIGN
-                    </a>
-                </div>
+            <div class="hero-eyebrow">EXCLUSIVE 18K GOLD COLLECTION</div>
+            <h1 class="hero-title">Masterpiece <span class="hero-highlight">18K Gold</span> Jewelry Crafted in Dubai</h1>
+            <p class="hero-description">Discover our exclusive collection of 18K gold jewelry featuring 75% pure gold with perfect balance of luxury and durability. Each piece is handcrafted with precision.</p>
+            <div class="hero-cta">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-gem"></i> SHOP COLLECTION
+                </a>
+                <a href="#custom-design" class="btn btn-secondary">
+                    <i class="fas fa-pencil-alt"></i> DESIGN YOUR OWN
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Gold Karats Section -->
-    <section id="karats" class="karats-section">
-        <h2 class="section-title gradient-text">GOLD KARATS COLLECTION</h2>
-        <div class="karats-grid">
-            <div class="karat-card">
-                <h3 class="karat-title">24K GOLD</h3>
-                <div class="karat-subtitle">Pure Gold (99.9%)</div>
-                <p class="karat-description">The purest form of gold, perfect for investment pieces and traditional jewelry with its rich, deep yellow color.</p>
-                <div class="karat-properties">
-                    <div class="property">
-                        <div class="property-label">Purity</div>
-                        <div class="property-value">99.9%</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Color</div>
-                        <div class="property-value">Deep Yellow</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Price/Gram</div>
-                        <div class="property-value">496 AED</div>
-                    </div>
+    <!-- Gold Types Section -->
+    <section id="gold-types" class="gold-types-section">
+        <h2 class="section-title gradient-text">18K Gold Varieties</h2>
+        <div class="gold-types-grid">
+            <div class="gold-type-card yellow-gold">
+                <div class="gold-type-icon">
+                    <i class="fas fa-crown"></i>
                 </div>
-                <button class="btn-secondary" onclick="showCollection('24k')" style="margin-top: 20px;">
+                <h3 class="gold-type-title">18K Yellow Gold</h3>
+                <p class="gold-type-description">Classic yellow gold with 75% purity. Perfect for traditional designs and diamond settings. Warm and luxurious appearance.</p>
+                <button class="btn-secondary" onclick="filterProducts('yellow')">
                     <i class="fas fa-eye"></i> VIEW COLLECTION
                 </button>
             </div>
-            <div class="karat-card">
-                <h3 class="karat-title">22K GOLD</h3>
-                <div class="karat-subtitle">91.6% Pure Gold</div>
-                <p class="karat-description">Ideal for daily wear jewelry. Stronger than 24K while maintaining rich color and excellent value.</p>
-                <div class="karat-properties">
-                    <div class="property">
-                        <div class="property-label">Purity</div>
-                        <div class="property-value">91.6%</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Durability</div>
-                        <div class="property-value">High</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Price/Gram</div>
-                        <div class="property-value">455 AED</div>
-                    </div>
+            <div class="gold-type-card rose-gold">
+                <div class="gold-type-icon">
+                    <i class="fas fa-heart"></i>
                 </div>
-                <button class="btn-secondary" onclick="showCollection('22k')" style="margin-top: 20px;">
+                <h3 class="gold-type-title">18K Rose Gold</h3>
+                <p class="gold-type-description">Romantic rose gold with copper alloy. Contemporary and fashionable. Ideal for modern jewelry designs.</p>
+                <button class="btn-secondary" onclick="filterProducts('rose')">
                     <i class="fas fa-eye"></i> VIEW COLLECTION
                 </button>
             </div>
-            <div class="karat-card">
-                <h3 class="karat-title">18K GOLD</h3>
-                <div class="karat-subtitle">75% Pure Gold</div>
-                <p class="karat-description">Perfect for diamond settings and contemporary designs. Offers excellent durability with beautiful luster.</p>
-                <div class="karat-properties">
-                    <div class="property">
-                        <div class="property-label">Purity</div>
-                        <div class="property-value">75%</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Versatility</div>
-                        <div class="property-value">Excellent</div>
-                    </div>
-                    <div class="property">
-                        <div class="property-label">Price/Gram</div>
-                        <div class="property-value">372 AED</div>
-                    </div>
+            <div class="gold-type-card white-gold">
+                <div class="gold-type-icon">
+                    <i class="fas fa-snowflake"></i>
                 </div>
-                <button class="btn-secondary" onclick="showCollection('18k')" style="margin-top: 20px;">
+                <h3 class="gold-type-title">18K White Gold</h3>
+                <p class="gold-type-description">Elegant white gold with rhodium plating. Modern and sophisticated. Perfect for diamond and gemstone settings.</p>
+                <button class="btn-secondary" onclick="filterProducts('white')">
                     <i class="fas fa-eye"></i> VIEW COLLECTION
                 </button>
             </div>
         </div>
     </section>
 
-    <!-- Branded Collections Section -->
-    <section id="brands" class="brands-section">
-        <h2 class="section-title gradient-text">LUXURY BRANDED COLLECTIONS</h2>
-        <div class="brands-grid">
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80" alt="Cartier" class="brand-image">
-                <div class="brand-info">
-                    <h3 class="brand-title">CARTIER</h3>
-                    <p>French luxury jewelry known for iconic designs like Love bracelet and Panthère collection.</p>
-                    <div class="brand-products">
-                        <div class="product-item" onclick="viewProduct('Cartier Love Bracelet')">
-                            <i class="fas fa-ring"></i>
-                            <div>Love Bracelet</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Cartier Trinity Ring')">
-                            <i class="fas fa-gem"></i>
-                            <div>Trinity Ring</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Cartier Tank Watch')">
-                            <i class="fas fa-clock"></i>
-                            <div>Tank Watch</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80" alt="Tiffany" class="brand-image">
-                <div class="brand-info">
-                    <h3 class="brand-title">TIFFANY & CO.</h3>
-                    <p>American luxury jeweler famous for diamond engagement rings and signature blue boxes.</p>
-                    <div class="brand-products">
-                        <div class="product-item" onclick="viewProduct('Tiffany Setting Ring')">
-                            <i class="fas fa-ring"></i>
-                            <div>Setting Ring</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Tiffany Keys')">
-                            <i class="fas fa-key"></i>
-                            <div>Tiffany Keys</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Tiffany T Bracelet')">
-                            <i class="fas fa-bracelet"></i>
-                            <div>T Bracelet</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="brand-card">
-                <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80" alt="Bvlgari" class="brand-image">
-                <div class="brand-info">
-                    <h3 class="brand-title">BVLGARI</h3>
-                    <p>Italian luxury brand known for colorful gemstones, serpent motifs, and bold designs.</p>
-                    <div class="brand-products">
-                        <div class="product-item" onclick="viewProduct('Bvlgari Serpenti')">
-                            <i class="fas fa-necklace"></i>
-                            <div>Serpenti</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Bvlgari B.zero1')">
-                            <i class="fas fa-ring"></i>
-                            <div>B.zero1</div>
-                        </div>
-                        <div class="product-item" onclick="viewProduct('Bvlgari Divas Dream')">
-                            <i class="fas fa-gem"></i>
-                            <div>Divas Dream</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <h2 class="section-title gradient-text">18K Gold Collections</h2>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be loaded here by JavaScript -->
         </div>
     </section>
 
     <!-- Custom Design Section -->
     <section id="custom-design" class="custom-design-section">
-        <h2 class="section-title gradient-text">CUSTOM JEWELRY DESIGN STUDIO</h2>
+        <h2 class="section-title gradient-text">Custom Design Studio</h2>
         <div class="custom-design-container">
-            <div class="design-tools">
-                <div class="tool-section">
-                    <h3 class="tool-title">1. Choose Gold Type</h3>
-                    <div class="tool-options">
-                        <div class="tool-option active" onclick="selectMaterial('24k')">
-                            <i class="fas fa-crown"></i>
-                            <div>24K Gold</div>
-                        </div>
-                        <div class="tool-option" onclick="selectMaterial('22k')">
-                            <i class="fas fa-gem"></i>
-                            <div>22K Gold</div>
-                        </div>
-                        <div class="tool-option" onclick="selectMaterial('18k')">
+            <div class="design-studio">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-gold);">Design Your 18K Gold Jewelry</h3>
+                <div class="design-options">
+                    <div class="design-option active" onclick="selectDesignType('ring')">
+                        <div class="option-icon">
                             <i class="fas fa-ring"></i>
-                            <div>18K Gold</div>
                         </div>
-                        <div class="tool-option" onclick="selectMaterial('platinum')">
-                            <i class="fas fa-star"></i>
-                            <div>Platinum</div>
+                        <div>Rings</div>
+                    </div>
+                    <div class="design-option" onclick="selectDesignType('necklace')">
+                        <div class="option-icon">
+                            <i class="fas fa-necklace"></i>
                         </div>
+                        <div>Necklaces</div>
+                    </div>
+                    <div class="design-option" onclick="selectDesignType('bracelet')">
+                        <div class="option-icon">
+                            <i class="fas fa-bracelet"></i>
+                        </div>
+                        <div>Bracelets</div>
+                    </div>
+                    <div class="design-option" onclick="selectDesignType('earring')">
+                        <div class="option-icon">
+                            <i class="fas fa-earring"></i>
+                        </div>
+                        <div>Earrings</div>
                     </div>
                 </div>
-                <div class="tool-section">
-                    <h3 class="tool-title">2. Select Gemstones</h3>
-                    <div class="tool-options">
-                        <div class="tool-option" onclick="selectGemstone('diamond')">
-                            <div style="color: var(--diamond);"><i class="fas fa-gem"></i></div>
-                            <div>Diamond</div>
-                        </div>
-                        <div class="tool-option" onclick="selectGemstone('ruby')">
-                            <div style="color: var(--ruby);"><i class="fas fa-gem"></i></div>
-                            <div>Ruby</div>
-                        </div>
-                        <div class="tool-option" onclick="selectGemstone('emerald')">
-                            <div style="color: var(--emerald);"><i class="fas fa-gem"></i></div>
-                            <div>Emerald</div>
-                        </div>
-                        <div class="tool-option" onclick="selectGemstone('sapphire')">
-                            <div style="color: var(--sapphire);"><i class="fas fa-gem"></i></div>
-                            <div>Sapphire</div>
-                        </div>
+                <div class="sketch-area" id="sketchArea">
+                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #888; text-align: center;">
+                        <i class="fas fa-pencil-alt" style="font-size: 3rem; margin-bottom: 20px;"></i>
+                        <p>Draw your design idea here</p>
                     </div>
                 </div>
-                <div class="tool-section">
-                    <h3 class="tool-title">3. Sketch Your Idea</h3>
-                    <div class="sketch-canvas" id="sketchCanvas"></div>
-                    <div class="sketch-tools">
-                        <button class="sketch-tool" onclick="clearSketch()">
-                            <i class="fas fa-eraser"></i> Clear
-                        </button>
-                        <button class="sketch-tool" onclick="saveSketch()">
-                            <i class="fas fa-save"></i> Save Design
-                        </button>
-                        <button class="sketch-tool" onclick="uploadSketch()">
-                            <i class="fas fa-upload"></i> Upload Image
-                        </button>
-                    </div>
+                <div class="sketch-tools">
+                    <button class="sketch-btn" onclick="clearSketch()">
+                        <i class="fas fa-eraser"></i> Clear
+                    </button>
+                    <button class="sketch-btn" onclick="saveDesign()">
+                        <i class="fas fa-save"></i> Save Design
+                    </button>
+                    <button class="sketch-btn" onclick="uploadImage()">
+                        <i class="fas fa-upload"></i> Upload Image
+                    </button>
                 </div>
             </div>
-            <div class="design-viewer">
-                <h3 style="font-family: 'Cinzel', serif; font-size: 2rem; margin-bottom: 30px; color: var(--primary-gold);">3D Design Preview</h3>
+            <div class="preview-3d">
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-gold);">3D Preview</h3>
                 <div class="viewer-3d" id="viewer3D">
-                    <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 5rem; color: var(--primary-gold);">
-                        <i class="fas fa-ring"></i>
-                    </div>
+                    <i class="fas fa-ring"></i>
                 </div>
                 <div class="viewer-controls">
-                    <button class="btn-secondary" onclick="rotate3DModel()">
+                    <button class="btn-secondary" onclick="rotateModel()">
                         <i class="fas fa-sync"></i> Rotate
                     </button>
-                    <button class="btn-secondary" onclick="zoomIn3D()">
-                        <i class="fas fa-search-plus"></i> Zoom In
-                    </button>
-                    <button class="btn-secondary" onclick="zoomOut3D()">
-                        <i class="fas fa-search-minus"></i> Zoom Out
-                    </button>
-                    <button class="btn-primary" onclick="generate3DModel()">
-                        <i class="fas fa-magic"></i> Generate 3D
+                    <button class="btn-secondary" onclick="generate3D()">
+                        <i class="fas fa-cube"></i> Generate 3D
                     </button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Product View Customizer -->
-    <section id="customizer" class="customizer-section">
-        <h2 class="section-title gradient-text">PRODUCT VIEW CUSTOMIZER</h2>
-        <div class="customizer-container">
-            <div class="product-preview">
-                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-gold);">Live Preview</h3>
-                <div class="preview-image" id="previewImage">
-                    <i class="fas fa-ring"></i>
+    <!-- AR Try-On Section -->
+    <section id="ar" class="ar-section">
+        <h2 class="section-title gradient-text">AR Virtual Try-On</h2>
+        <div class="ar-container">
+            <div class="ar-viewport" id="arViewport">
+                <div style="color: #888; text-align: center;">
+                    <i class="fas fa-camera" style="font-size: 4rem; margin-bottom: 20px;"></i>
+                    <p>AR Camera View</p>
+                    <p style="font-size: 0.9rem; margin-top: 10px;">Try jewelry on virtually</p>
                 </div>
-                <div style="margin-top: 30px;">
-                    <h4 style="color: var(--primary-gold); margin-bottom: 15px;">Customization Summary</h4>
-                    <div id="customizationSummary" style="color: #888; line-height: 1.6;">
-                        Material: 24K Gold<br>
-                        Gemstone: Diamond<br>
-                        Weight: 5g<br>
-                        Design: Classic
+            </div>
+            <div>
+                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-gold);">Available for AR Try-On</h3>
+                <div class="ar-items">
+                    <div class="ar-item" onclick="tryOnJewelry('ring1')">
+                        <i class="fas fa-ring" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div>Diamond Ring</div>
+                    </div>
+                    <div class="ar-item" onclick="tryOnJewelry('bracelet1')">
+                        <i class="fas fa-bracelet" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div>Gold Bracelet</div>
+                    </div>
+                    <div class="ar-item" onclick="tryOnJewelry('necklace1')">
+                        <i class="fas fa-necklace" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div>Pearl Necklace</div>
                     </div>
                 </div>
-                <button class="btn-primary" onclick="saveCustomization()" style="margin-top: 30px; width: 100%;">
-                    <i class="fas fa-shopping-cart"></i> ADD TO CART - $2,500
-                </button>
-            </div>
-            <div class="customization-options">
-                <h3 style="font-family: 'Cinzel', serif; font-size: 1.8rem; margin-bottom: 30px; color: var(--primary-gold);">Customization Options</h3>
-                <div class="option-group">
-                    <label class="option-label">Gold Karat</label>
-                    <select class="option-select" id="goldKarat" onchange="updatePreview()">
-                        <option value="24k">24K Gold ($500/g)</option>
-                        <option value="22k">22K Gold ($455/g)</option>
-                        <option value="18k">18K Gold ($372/g)</option>
-                        <option value="platinum">Platinum ($650/g)</option>
-                    </select>
+                <div class="ar-controls">
+                    <button class="btn btn-primary" onclick="startAR()">
+                        <i class="fas fa-play"></i> START AR
+                    </button>
+                    <button class="btn btn-secondary" onclick="captureAR()">
+                        <i class="fas fa-camera"></i> CAPTURE
+                    </button>
                 </div>
-                <div class="option-group">
-                    <label class="option-label">Gemstone Type</label>
-                    <select class="option-select" id="gemstoneType" onchange="updatePreview()">
-                        <option value="diamond">Diamond</option>
-                        <option value="ruby">Ruby</option>
-                        <option value="emerald">Emerald</option>
-                        <option value="sapphire">Sapphire</option>
-                        <option value="none">No Gemstone</option>
-                    </select>
-                </div>
-                <div class="option-group">
-                    <label class="option-label">Gemstone Size</label>
-                    <input type="range" class="option-slider" id="gemstoneSize" min="0.5" max="5" step="0.5" value="1" oninput="updatePreview()">
-                    <div style="color: #888; margin-top: 5px; text-align: center;" id="gemstoneSizeValue">1 carat</div>
-                </div>
-                <div class="option-group">
-                    <label class="option-label">Jewelry Weight</label>
-                    <input type="range" class="option-slider" id="jewelryWeight" min="2" max="50" step="1" value="5" oninput="updatePreview()">
-                    <div style="color: #888; margin-top: 5px; text-align: center;" id="jewelryWeightValue">5 grams</div>
-                </div>
-                <div class="option-group">
-                    <label class="option-label">Design Style</label>
-                    <select class="option-select" id="designStyle" onchange="updatePreview()">
-                        <option value="classic">Classic</option>
-                        <option value="modern">Modern</option>
-                        <option value="vintage">Vintage</option>
-                        <option value="arabic">Arabic Design</option>
-                        <option value="contemporary">Contemporary</option>
-                    </select>
-                </div>
-                <div class="option-group">
-                    <label class="option-label">Finish Type</label>
-                    <select class="option-select" id="finishType" onchange="updatePreview()">
-                        <option value="polished">Polished</option>
-                        <option value="matt">Matt</option>
-                        <option value="brushed">Brushed</option>
-                        <option value="hammered">Hammered</option>
-                    </select>
-                </div>
-                <button class="btn-secondary" onclick="resetCustomization()" style="width: 100%; margin-top: 20px;">
-                    <i class="fas fa-redo"></i> RESET CUSTOMIZATION
-                </button>
             </div>
         </div>
     </section>
@@ -1331,381 +1125,189 @@
         <div class="footer-content">
             <div class="footer-column">
                 <h3>RYAAN JEWELLERS</h3>
-                <p style="color: #888; line-height: 1.6;">Since 1952, crafting timeless luxury jewelry with unparalleled craftsmanship and modern technology.</p>
-                <div style="display: flex; gap: 15px; margin-top: 20px;">
-                    <div class="social-icon" style="width: 40px; height: 40px;">
+                <p style="color: #888; line-height: 1.6; margin-bottom: 20px;">Specialists in 18K gold jewelry since 1952. Crafting luxury pieces with traditional craftsmanship and modern technology.</p>
+                <div style="display: flex; gap: 15px;">
+                    <a href="#" class="social-icon" style="width: 40px; height: 40px;">
                         <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <div class="social-icon" style="width: 40px; height: 40px;">
+                    </a>
+                    <a href="#" class="social-icon" style="width: 40px; height: 40px;">
                         <i class="fab fa-instagram"></i>
-                    </div>
-                    <div class="social-icon" style="width: 40px; height: 40px;">
-                        <i class="fab fa-linkedin-in"></i>
-                    </div>
+                    </a>
+                    <a href="#" class="social-icon" style="width: 40px; height: 40px;">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
                 </div>
             </div>
             <div class="footer-column">
-                <h3>SHOWROOMS</h3>
+                            <div class="footer-column">
+                <h3>QUICK LINKS</h3>
                 <ul class="footer-links">
-                    <li><i class="fas fa-map-marker-alt"></i> The Dubai Mall, Dubai</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Mall of the Emirates, Dubai</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Abu Dhabi Mall, Abu Dhabi</li>
-                    <li><i class="fas fa-map-marker-alt"></i> City Centre Bahrain, Manama</li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Collections</a></li>
+                    <li><a href="#gold-types">Gold Types</a></li>
+                    <li><a href="#custom-design">Custom Design</a></li>
+                    <li><a href="#ar">AR Try-On</a></li>
                 </ul>
             </div>
             <div class="footer-column">
-                <h3>SERVICES</h3>
+                <h3>CONTACT INFO</h3>
                 <ul class="footer-links">
-                    <li><a href="#custom-design">Custom Design Studio</a></li>
-                    <li><a href="#karats">Gold Investment</a></li>
-                    <li><a href="#">Jewelry Repair</a></li>
-                    <li><a href="#">Valuation Service</a></li>
-                    <li><a href="#">International Shipping</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h3>CONTACT US</h3>
-                <ul class="footer-links">
-                    <li><i class="fas fa-phone"></i> +971 4 123 4567</li>
-                    <li><i class="fas fa-envelope"></i> info@ryaanjewellers.com</li>
-                    <li><i class="fas fa-clock"></i> 10AM - 10PM Daily</li>
-                    <li><i class="fas fa-headset"></i> 24/7 Customer Support</li>
+                    <li class="contact-info">
+                        <i class="fas fa-phone"></i>
+                        +971543746476
+                    </li>
+                    <li class="contact-info">
+                        <i class="fas fa-envelope"></i>
+                        ryaanjewellers@gmail.com
+                    </li>
+                    <li class="contact-info">
+                        <i class="fas fa-clock"></i>
+                        24/7
+                    </li>
+                    <li class="contact-info">
+                        <i class="fas fa-headset"></i>
+                        24/7 WhatsApp Support
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>© 2024 RYAAN JEWELLERS. All rights reserved. | Luxury Redefined Since 1952 | VAT No: 123456789012345</p>
+            <p>© 2024 RYAAN JEWELLERS. All rights reserved. | Specialists in 18K Gold Jewelry | VAT No: 123456789012345</p>
         </div>
     </footer>
 
+    <!-- Shopping Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3 class="cart-title">Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotal">$0</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">
+            <i class="fas fa-lock"></i> PROCEED TO CHECKOUT
+        </button>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="wishlist-modal" id="wishlistModal">
+        <div class="cart-header">
+            <h3 class="cart-title">My Wishlist</h3>
+            <button class="close-cart" onclick="toggleWishlist()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="wishlistItems">
+            <!-- Wishlist items will be added here -->
+        </div>
+    </div>
+
     <script>
-        // ==================== THEME TOGGLE ====================
-        const themeToggle = document.getElementById('themeToggle');
-        let currentTheme = 'gold';
-        
-        themeToggle.addEventListener('click', () => {
-            if (currentTheme === 'gold') {
-                document.body.classList.add('marli-theme');
-                document.body.classList.add('arabic-text');
-                currentTheme = 'marli-arabic';
-                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-                showNotification('Switched to Marli Theme with Arabic');
-            } else if (currentTheme === 'marli-arabic') {
-                document.body.classList.remove('marli-theme');
-                document.body.classList.remove('arabic-text');
-                currentTheme = 'gold';
-                themeToggle.innerHTML = '<i class="fas fa-palette"></i>';
-                showNotification('Switched to Gold Theme');
+        // ==================== DATA ====================
+        const products = [
+            {
+                id: 1,
+                name: "18K Yellow Gold Diamond Earring",
+                description: "Elegant solitaire diamond ring with 1.5 carat center stone",
+                price: 3500,
+                weight: "5.2g",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80",
+                type: "yellow",
+                category: "ring"
+            },
+            {
+                id: 2,
+                name: "18K Rose Gold Ruby Necklace",
+                description: "Handcrafted necklace with natural ruby pendant",
+                price: 5200,
+                weight: "12.5g",
+                image: "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&w=800&q=80",
+                type: "rose",
+                category: "necklace"
+            },
+            {
+                id: 3,
+                name: "18K White Gold Emerald Bracelet",
+                description: "Tennis bracelet with alternating diamonds and emeralds",
+                price: 6800,
+                weight: "18.3g",
+                image: "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=800&q=80",
+                type: "white",
+                category: "bracelet"
+            },
+            {
+                id: 4,
+                name: "18K Yellow Gold Wedding Band",
+                description: "Classic wedding band with engraved pattern",
+                price: 1200,
+                weight: "3.8g",
+                image: "https://images.unsplash.com/photo-1603561596112-0a132b757442?auto=format&fit=crop&w=800&q=80",
+                type: "yellow",
+                category: "ring"
+            },
+            {
+                id: 5,
+                name: "18K Rose Gold Diamond Earrings",
+                description: "Diamond stud earrings with screw-back closure",
+                price: 2800,
+                weight: "4.2g",
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w-800&q=80",
+                type: "rose",
+                category: "earring"
+            },
+            {
+                id: 6,
+                name: "18K White Gold Sapphire Ring",
+                description: "Three-stone ring with blue sapphire center",
+                price: 4100,
+                weight: "6.5g",
+                image: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?auto=format&fit=crop&w=800&q=80",
+                type: "white",
+                category: "ring"
             }
-        });
+        ];
 
-        // ==================== LANGUAGE SWITCHER ====================
-        function switchLanguage(lang) {
-            const buttons = document.querySelectorAll('.lang-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-            
-            if (lang === 'ar') {
-                document.body.classList.add('arabic-text');
-                document.body.dir = 'rtl';
-                showNotification('تم التبديل إلى اللغة العربية');
-            } else {
-                document.body.classList.remove('arabic-text');
-                document.body.dir = 'ltr';
-                showNotification('Switched to English');
-            }
-        }
-
-        // ==================== GOLD KARATS ====================
-        function showCollection(karat) {
-            const collections = {
-                '24k': '24K Pure Gold Collection',
-                '22k': '22K Gold Collection',
-                '18k': '18K Gold Collection'
-            };
-            showNotification(`Loading ${collections[karat]}...`);
-        }
-
-        // ==================== BRANDED PRODUCTS ====================
-        function viewProduct(productName) {
-            showNotification(`Viewing ${productName}. Opening product details...`);
-            // In real implementation, would redirect to product page
-        }
-
-        // ==================== CUSTOM DESIGN ====================
-        let selectedMaterial = '24k';
-        let selectedGemstone = 'diamond';
-        let isDrawing = false;
-        let lastX = 0;
-        let lastY = 0;
-        const canvas = document.getElementById('sketchCanvas');
-        const ctx = canvas.getContext('2d');
-        
-        // Initialize canvas
-        ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = 'var(--primary-gold)';
-        ctx.lineWidth = 2;
-        ctx.lineCap = 'round';
-        
-        // Drawing functionality
-        canvas.addEventListener('mousedown', (e) => {
-            isDrawing = true;
-            const rect = canvas.getBoundingClientRect();
-            lastX = e.clientX - rect.left;
-            lastY = e.clientY - rect.top;
-        });
-        
-        canvas.addEventListener('mousemove', (e) => {
-            if (!isDrawing) return;
-            const rect = canvas.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            ctx.beginPath();
-            ctx.moveTo(lastX, lastY);
-            ctx.lineTo(x, y);
-            ctx.stroke();
-            
-            lastX = x;
-            lastY = y;
-        });
-        
-        canvas.addEventListener('mouseup', () => isDrawing = false);
-        canvas.addEventListener('mouseout', () => isDrawing = false);
-
-        function selectMaterial(material) {
-            selectedMaterial = material;
-            document.querySelectorAll('.tool-option').forEach(opt => opt.classList.remove('active'));
-            event.target.closest('.tool-option').classList.add('active');
-            showNotification(`Selected: ${material.toUpperCase()} Gold`);
-        }
-
-        function selectGemstone(gemstone) {
-            selectedGemstone = gemstone;
-            document.querySelectorAll('.tool-option').forEach(opt => opt.classList.remove('active'));
-            event.target.closest('.tool-option').classList.add('active');
-            showNotification(`Selected: ${gemstone.charAt(0).toUpperCase() + gemstone.slice(1)}`);
-        }
-
-        function clearSketch() {
-            ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
-            ctx.fillRect(0, 0, canvas.width, canvas.height);
-            showNotification('Sketch cleared');
-        }
-
-        function saveSketch() {
-            showNotification('Design saved! Our designers will review your sketch.');
-        }
-
-        function uploadSketch() {
-            showNotification('Upload image feature coming soon!');
-        }
-
-        // ==================== 3D DESIGN ====================
-        function generate3DModel() {
-            showNotification('Generating 3D model from your design...');
-            setTimeout(() => {
-                showNotification('3D model generated successfully!');
-            }, 2000);
-        }
-
-        function rotate3DModel() {
-            const viewer = document.getElementById('viewer3D');
-            viewer.style.transform = `rotateY(${Date.now() % 360}deg)`;
-            showNotification('Rotating 3D model');
-        }
-
-        function zoomIn3D() {
-            const viewer = document.getElementById('viewer3D');
-            const currentScale = parseFloat(window.getComputedStyle(viewer).transform.split(',')[3]) || 1;
-            viewer.style.transform = `scale(${currentScale * 1.2})`;
-        }
-
-        function zoomOut3D() {
-            const viewer = document.getElementById('viewer3D');
-            const currentScale = parseFloat(window.getComputedStyle(viewer).transform.split(',')[3]) || 1;
-            viewer.style.transform = `scale(${currentScale * 0.8})`;
-        }
-
-        // ==================== PRODUCT CUSTOMIZER ====================
-        function updatePreview() {
-            const goldKarat = document.getElementById('goldKarat').value;
-            const gemstoneType = document.getElementById('gemstoneType').value;
-            const gemstoneSize = document.getElementById('gemstoneSize').value;
-            const jewelryWeight = document.getElementById('jewelryWeight').value;
-            const designStyle = document.getElementById('designStyle').value;
-            const finishType = document.getElementById('finishType').value;
-            
-            // Update display values
-            document.getElementById('gemstoneSizeValue').textContent = `${gemstoneSize} carat${gemstoneSize > 1 ? 's' : ''}`;
-            document.getElementById('jewelryWeightValue').textContent = `${jewelryWeight} gram${jewelryWeight > 1 ? 's' : ''}`;
-            
-            // Update preview icon based on selections
-            const previewIcon = document.querySelector('#previewImage i');
-            if (designStyle.includes('ring')) {
-                previewIcon.className = 'fas fa-ring';
-            } else if (designStyle.includes('necklace')) {
-                previewIcon.className = 'fas fa-necklace';
-            } else if (designStyle.includes('bracelet')) {
-                previewIcon.className = 'fas fa-bracelet';
-            } else if (designStyle.includes('earring')) {
-                previewIcon.className = 'fas fa-earring';
-            }
-            
-            // Update color based on gold karat
-            let color = 'var(--primary-gold)';
-            if (goldKarat === 'platinum') color = 'var(--platinum)';
-            previewIcon.style.color = color;
-            
-            // Update summary
-            const summary = document.getElementById('customizationSummary');
-            summary.innerHTML = `
-                Material: ${goldKarat.toUpperCase()}<br>
-                Gemstone: ${gemstoneType.charAt(0).toUpperCase() + gemstoneType.slice(1)}<br>
-                Weight: ${jewelryWeight}g<br>
-                Design: ${designStyle.charAt(0).toUpperCase() + designStyle.slice(1)}<br>
-                Finish: ${finishType.charAt(0).toUpperCase() + finishType.slice(1)}
-            `;
-            
-            // Update price (simplified calculation)
-            const pricePerGram = {
-                '24k': 500,
-                '22k': 455,
-                '18k': 372,
-                'platinum': 650
-            };
-            const basePrice = pricePerGram[goldKarat] * jewelryWeight;
-            const gemstonePrice = gemstoneType !== 'none' ? gemstoneSize * 1000 : 0;
-            const totalPrice = basePrice + gemstonePrice;
-            
-            const cartButton = document.querySelector('.product-preview .btn-primary');
-            cartButton.innerHTML = `<i class="fas fa-shopping-cart"></i> ADD TO CART - $${totalPrice.toLocaleString()}`;
-        }
-
-        function resetCustomization() {
-            document.getElementById('goldKarat').value = '24k';
-            document.getElementById('gemstoneType').value = 'diamond';
-            document.getElementById('gemstoneSize').value = '1';
-            document.getElementById('jewelryWeight').value = '5';
-            document.getElementById('designStyle').value = 'classic';
-            document.getElementById('finishType').value = 'polished';
-            updatePreview();
-            showNotification('Customization reset to default');
-        }
-
-        function saveCustomization() {
-            showNotification('Custom design added to cart! Our designers will contact you.');
-        }
-
-        // ==================== SHOPPING CART ====================
-        let cartItems = [];
-        let wishlistItems = 3;
-
-        function showCart() {
-            if (cartItems.length === 0) {
-                showNotification('Your cart is empty');
-            } else {
-                let cartSummary = 'Your Cart:\n';
-                cartItems.forEach((item, index) => {
-                    cartSummary += `${index + 1}. ${item.name} - $${item.price.toLocaleString()}\n`;
-                });
-                showNotification(cartSummary);
-            }
-        }
-
-        function showWishlist() {
-            showNotification(`You have ${wishlistItems} items in your wishlist`);
-        }
-
-        function searchProducts() {
-            const searchTerm = prompt('Search our collections (e.g., "diamond ring", "18k gold"):');
-            if (searchTerm) {
-                showNotification(`Searching for "${searchTerm}"... Found ${Math.floor(Math.random() * 20) + 5} matching items.`);
-            }
-        }
-
-        // ==================== NOTIFICATION SYSTEM ====================
-        function showNotification(message) {
-            // Remove existing notifications
-            document.querySelectorAll('.notification').forEach(n => n.remove());
-            
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.style.cssText = `
-                position: fixed;
-                top: 120px;
-                right: 30px;
-                background: var(--card-bg);
-                border: 1px solid var(--primary-gold);
-                border-radius: 8px;
-                padding: 20px 25px;
-                color: var(--text-light);
-                z-index: 10000;
-                box-shadow: var(--shadow);
-                backdrop-filter: blur(10px);
-                animation: slideIn 0.3s ease;
-                max-width: 350px;
-                font-family: 'Montserrat', sans-serif;
-                white-space: pre-line;
-            `;
-            
-            notification.innerHTML = `
-                <div style="display: flex; align-items: center; gap: 15px;">
-                    <i class="fas fa-bell" style="color: var(--primary-gold);"></i>
-                    <div>${message}</div>
-                </div>
-            `;
-            
-            document.body.appendChild(notification);
-            
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => notification.remove(), 300);
-            }, 5000);
-        }
-
-        // Add animation for notifications
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes slideIn {
-                from { transform: translateX(100%); opacity: 0; }
-                to { transform: translateX(0); opacity: 1; }
-            }
-            @keyframes slideOut {
-                from { transform: translateX(0); opacity: 1; }
-                to { transform: translateX(100%); opacity: 0; }
-            }
-        `;
-        document.head.appendChild(style);
+        // ==================== STATE ====================
+        let cart = [];
+        let wishlist = [1, 2, 5]; // Product IDs in wishlist
+        let currentLanguage = 'en';
+        let currentTheme = 'dark';
 
         // ==================== INITIALIZE ====================
         document.addEventListener('DOMContentLoaded', () => {
-            updatePreview();
+            loadProducts();
+            updateCartCount();
+            updateWishlistCount();
+            loadWishlistItems();
             
-            // Initialize all animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+            // Header scroll effect
+            let lastScroll = 0;
+            const header = document.querySelector('.premium-header');
             
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
-            
-            // Observe elements
-            document.querySelectorAll('.karat-card, .brand-card').forEach(card => {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(30px)';
-                card.style.transition = 'all 0.6s ease';
-                observer.observe(card);
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll <= 0) {
+                    header.style.transform = 'translateY(0)';
+                    return;
+                }
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else {
+                    header.style.transform = 'translateY(0)';
+                }
+                
+                lastScroll = currentScroll;
             });
-            
+
             // Smooth scrolling
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
@@ -1722,22 +1324,303 @@
                     }
                 });
             });
-            
-            // Real-time gold price updates
-            setInterval(() => {
-                const tickers = document.querySelectorAll('.ticker-price');
-                tickers.forEach(ticker => {
-                    const currentPrice = parseFloat(ticker.textContent);
-                    const change = (Math.random() * 0.02 - 0.01);
-                    const newPrice = currentPrice * (1 + change);
-                    ticker.textContent = newPrice.toFixed(2);
-                    
-                    const changeEl = ticker.nextElementSibling;
-                    changeEl.textContent = change >= 0 ? `+${(change*100).toFixed(2)}%` : `${(change*100).toFixed(2)}%`;
-                    changeEl.className = `ticker-change ${change >= 0 ? 'positive' : 'negative'}`;
-                });
-            }, 30000);
         });
+
+        // ==================== PRODUCTS ====================
+        function loadProducts(filter = 'all') {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = '';
+            
+            const filteredProducts = filter === 'all' 
+                ? products 
+                : products.filter(p => p.type === filter);
+            
+            filteredProducts.forEach(product => {
+                const isInWishlist = wishlist.includes(product.id);
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="product-image">
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-details">
+                            <div class="product-price">$${product.price.toLocaleString()}</div>
+                            <div class="product-weight">${product.weight} • 18K Gold</div>
+                        </div>
+                        <div class="product-actions">
+                            <div class="product-btn add-to-cart" onclick="addToCart(${product.id})">
+                                <i class="fas fa-shopping-bag"></i> ADD TO CART
+                            </div>
+                            <div class="product-btn view-details" onclick="viewProductDetails(${product.id})">
+                                <i class="fas fa-eye"></i> VIEW
+                            </div>
+                            <div class="product-btn ${isInWishlist ? 'add-to-cart' : 'view-details'}" 
+                                 onclick="${isInWishlist ? `removeFromWishlist(${product.id})` : `addToWishlist(${product.id})`}">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterProducts(type) {
+            loadProducts(type);
+            showNotification(`Showing ${type} gold collection`);
+        }
+
+        function viewProductDetails(id) {
+            const product = products.find(p => p.id === id);
+            showNotification(`Viewing ${product.name}\nPrice: $${product.price}\nWeight: ${product.weight}`);
+        }
+
+        // ==================== CART ====================
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            cart.push({...product, quantity: 1});
+            updateCartCount();
+            updateCartModal();
+            showNotification(`Added ${product.name} to cart!`);
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartCount();
+            updateCartModal();
+        }
+
+        function updateCartCount() {
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        function toggleCart() {
+            document.getElementById('cartModal').classList.toggle('active');
+            updateCartModal();
+        }
+
+        function updateCartModal() {
+            const container = document.getElementById('cartItems');
+            const totalElement = document.getElementById('cartTotal');
+            
+            container.innerHTML = '';
+            
+            if (cart.length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: #888; padding: 40px 0;">Your cart is empty</div>';
+                totalElement.textContent = '$0';
+                return;
+            }
+            
+            let total = 0;
+            
+            cart.forEach((item, index) => {
+                total += item.price * item.quantity;
+                
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">$${item.price} × ${item.quantity}</div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromCart(${index})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                container.appendChild(itemElement);
+            });
+            
+            totalElement.textContent = `$${total.toLocaleString()}`;
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty');
+                return;
+            }
+            
+            showNotification('Proceeding to checkout...\nTotal: $' + 
+                cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toLocaleString());
+            // In real implementation, redirect to checkout page
+        }
+
+        // ==================== WISHLIST ====================
+        function addToWishlist(productId) {
+            if (!wishlist.includes(productId)) {
+                wishlist.push(productId);
+                updateWishlistCount();
+                loadProducts();
+                loadWishlistItems();
+                showNotification('Added to wishlist!');
+            }
+        }
+
+        function removeFromWishlist(productId) {
+            const index = wishlist.indexOf(productId);
+            if (index > -1) {
+                wishlist.splice(index, 1);
+                updateWishlistCount();
+                loadProducts();
+                loadWishlistItems();
+                showNotification('Removed from wishlist');
+            }
+        }
+
+        function updateWishlistCount() {
+            document.getElementById('wishlistCount').textContent = wishlist.length;
+        }
+
+        function toggleWishlist() {
+            document.getElementById('wishlistModal').classList.toggle('active');
+        }
+
+        function loadWishlistItems() {
+            const container = document.getElementById('wishlistItems');
+            container.innerHTML = '';
+            
+            if (wishlist.length === 0) {
+                container.innerHTML = '<div style="text-align: center; color: #888; padding: 40px 0;">Your wishlist is empty</div>';
+                return;
+            }
+            
+            wishlist.forEach(id => {
+                const product = products.find(p => p.id === id);
+                const itemElement = document.createElement('div');
+                itemElement.className = 'cart-item';
+                itemElement.innerHTML = `
+                    <img src="${product.image}" alt="${product.name}" class="cart-item-image">
+                    <div class="cart-item-info">
+                        <div class="cart-item-title">${product.name}</div>
+                        <div class="cart-item-price">$${product.price}</div>
+                    </div>
+                    <button class="remove-item" onclick="removeFromWishlist(${product.id})">
+                        <i class="fas fa-times"></i>
+                    </button>
+                `;
+                container.appendChild(itemElement);
+            });
+        }
+
+        // ==================== CUSTOM DESIGN ====================
+        let currentDesignType = 'ring';
+
+        function selectDesignType(type) {
+            currentDesignType = type;
+            document.querySelectorAll('.design-option').forEach(opt => opt.classList.remove('active'));
+            event.target.closest('.design-option').classList.add('active');
+            
+            const viewerIcon = document.querySelector('#viewer3D i');
+            viewerIcon.className = `fas fa-${type}`;
+            
+            showNotification(`Designing ${type}s`);
+        }
+
+        function clearSketch() {
+            showNotification('Sketch cleared');
+        }
+
+        function saveDesign() {
+            showNotification('Design saved! Our designers will contact you within 24 hours.');
+        }
+
+        function uploadImage() {
+            showNotification('Upload your design image feature coming soon!');
+        }
+
+        function rotateModel() {
+            const viewer = document.getElementById('viewer3D');
+            viewer.style.transform = `rotateY(${Date.now() % 360}deg)`;
+        }
+
+        function generate3D() {
+            showNotification('Generating 3D model... This may take a few moments.');
+        }
+
+        // ==================== AR TRY-ON ====================
+        function startAR() {
+            const viewport = document.getElementById('arViewport');
+            viewport.innerHTML = `
+                <div style="position: absolute; top: 20px; left: 20px; color: var(--primary-gold); background: rgba(0,0,0,0.5); padding: 8px 15px; border-radius: 4px;">
+                    <i class="fas fa-video"></i> AR ACTIVE
+                </div>
+                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 8rem; color: var(--primary-gold);">
+                    <i class="fas fa-ring"></i>
+                </div>
+            `;
+            showNotification('AR try-on activated! Position your hand in view.');
+        }
+
+        function tryOnJewelry(type) {
+            const icon = type.includes('ring') ? 'ring' : 
+                         type.includes('bracelet') ? 'bracelet' : 'necklace';
+            
+            const viewport = document.getElementById('arViewport');
+            const iconElement = viewport.querySelector('i');
+            if (iconElement) {
+                iconElement.className = `fas fa-${icon}`;
+            }
+            
+            showNotification(`Trying on ${icon}`);
+        }
+
+        function captureAR() {
+            showNotification('AR capture saved! Check your gallery.');
+        }
+
+        // ==================== UTILITIES ====================
+        function toggleLanguage() {
+            currentLanguage = currentLanguage === 'en' ? 'ar' : 'en';
+            showNotification(`Language switched to ${currentLanguage === 'en' ? 'English' : 'Arabic'}`);
+            // In real implementation, would update all text on page
+        }
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            if (currentTheme === 'light') {
+                document.body.style.background = '#f5f5f5';
+                document.body.style.color = '#333';
+            } else {
+                document.body.style.background = 'var(--darker-bg)';
+                document.body.style.color = 'var(--text-light)';
+            }
+            showNotification(`Theme changed to ${currentTheme}`);
+        }
+
+        function searchProducts() {
+            const searchTerm = prompt('Search 18K gold jewelry:');
+            if (searchTerm) {
+                const results = products.filter(p => 
+                    p.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                    p.description.toLowerCase().includes(searchTerm.toLowerCase())
+                );
+                showNotification(`Found ${results.length} products matching "${searchTerm}"`);
+                // In real implementation, would filter and display results
+            }
+        }
+
+        // ==================== NOTIFICATION ====================
+        function showNotification(message) {
+            // Remove existing notifications
+            document.querySelectorAll('.notification').forEach(n => n.remove());
+            
+            const notification = document.createElement('div');
+            notification.className = 'notification';
+            notification.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <i class="fas fa-bell" style="color: var(--primary-gold);"></i>
+                    <div>${message}</div>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.animation = 'slideOut 0.3s ease';
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
     </script>
 </body>
 </html>
