@@ -69,6 +69,116 @@
             box-sizing: border-box;
         }
         
+        /* ====================== */
+        /* SPLASH SCREEN STYLES */
+        /* ====================== */
+        html, body { 
+            height: 100%; 
+            margin: 0;
+            font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+            background: #000; 
+            color: #fff; 
+        }
+        
+        /* Splash container */
+        #splash {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #000;
+            z-index: 9999;
+            transition: opacity 600ms ease;
+        }
+        
+        /* Video: cover the screen */
+        #splash video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        
+        /* Overlay controls */
+        #splash .overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            pointer-events: none;
+        }
+        
+        /* Skip button */
+        .controls {
+            pointer-events: auto;
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 24px;
+            justify-content: flex-end;
+        }
+        
+        .btn-skip {
+            background: rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            color: var(--gold-light);
+            padding: 10px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            backdrop-filter: blur(4px);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .btn-skip:hover {
+            background: rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+            color: var(--gold);
+        }
+        
+        .btn-skip:focus {
+            outline: 2px solid var(--gold);
+            outline-offset: 3px;
+        }
+        
+        /* Branding */
+        .brand {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            pointer-events: none;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: rgba(0, 0, 0, 0.35);
+            padding: 8px 12px;
+            border-radius: 6px;
+            color: var(--gold);
+            font-family: 'Cinzel', serif;
+        }
+        
+        /* Hidden state for fadeout */
+        .hidden {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        
+        /* ====================== */
+        /* MAIN WEBSITE CONTENT */
+        /* ====================== */
+        #content {
+            display: none;
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        
+        #content.loaded {
+            display: block;
+            opacity: 1;
+        }
+        
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--bg-dark);
@@ -95,102 +205,6 @@
         
         .cinzel {
             font-family: 'Cinzel', serif;
-        }
-        
-        /* Splash Screen */
-        .splash-screen {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, #0A0A0A 0%, #1A1A1A 100%);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            z-index: 9999;
-            transition: opacity 1s ease, visibility 1s ease;
-        }
-        
-        .splash-screen.hidden {
-            opacity: 0;
-            visibility: hidden;
-        }
-        
-        .diamond-grid {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        
-        .diamond {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(45deg, var(--gold), var(--gold-light));
-            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-            animation: float 6s ease-in-out infinite;
-            opacity: 0.7;
-        }
-        
-        
-        .splash-content {
-            text-align: center;
-            z-index: 2;
-            position: relative;
-        }
-        
-        .splash-logo {
-            width: 180px;
-            height: 180px;
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            animation: pulse 2s infinite, rotate 20s linear infinite;
-            box-shadow: 0 0 60px rgba(212, 175, 55, 0.4);
-        }
-        
-        .splash-logo img {
-            width: 150px;
-            height: 150px;
-            border-radius: 20px;
-        }
-        
-        .splash-text h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 3.5rem;
-            color: var(--gold);
-            margin-bottom: 10px;
-            text-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
-        }
-        
-        .splash-text p {
-            color: var(--gold-light);
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-            margin-bottom: 40px;
-        }
-        
-        .loading-bar {
-            width: 300px;
-            height: 4px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 2px;
-            overflow: hidden;
-            margin: 0 auto;
-        }
-        
-        .loading-progress {
-            width: 0%;
-            height: 100%;
-            background: linear-gradient(90deg, var(--gold), var(--gold-light));
-            border-radius: 2px;
-            transition: width 3s ease;
         }
         
         /* Language Switch */
@@ -628,7 +642,7 @@
         }
         
         .user-message {
-            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark);
             color: var(--bg-dark);
             align-self: flex-end;
         }
@@ -895,7 +909,7 @@
         }
         
         /* Overlay */
-        .overlay {
+        .overlay-main {
             position: fixed;
             top: 0;
             left: 0;
@@ -906,26 +920,11 @@
             display: none;
         }
         
-        .overlay.active {
+        .overlay-main.active {
             display: block;
         }
         
         /* Animations */
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 1; }
-            50% { transform: scale(1.05); opacity: 0.9; }
-        }
-        
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        @keyframes float {
-            0%, 100% { transform: translateY(0) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
-        }
-        
         @keyframes slideUp {
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
@@ -1001,10 +1000,6 @@
                 width: calc(100vw - 40px);
                 right: 20px;
             }
-            
-            .splash-text h1 {
-                font-size: 2.5rem;
-            }
         }
         
         @media (max-width: 480px) {
@@ -1021,417 +1016,498 @@
                 padding: 20px;
             }
             
-            .splash-logo {
-                width: 150px;
-                height: 150px;
+            /* Splash screen responsive */
+            .brand {
+                display: none;
             }
             
-            .splash-logo img {
-                width: 100px;
-                height: 100px;
-            }
-            
-            .splash-text h1 {
-                font-size: 2rem;
+            .btn-skip {
+                padding: 8px 10px;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Splash Screen -->
-    <div class="splash-screen" id="splashScreen">
-        <div class="diamond-grid">
-            <div class="diamond"></div>
-            <div class="diamond"></div>
-            <div class="diamond"></div>
-            <div class="diamond"></div>
-            <div class="diamond"></div>
-            <div class="diamond"></div>
-        </div>
-        <div class="splash-content">
-            <div class="splash-logo">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" 
-                     alt="RYAAN Jewellers">
-            </div>
-            <div class="splash-text">
-                <h1 class="cinzel">RYAAN JEWELLERS</h1>
-                <p>LUXURY • GOLD • DIAMONDS</p>
-            </div>
-            <div class="loading-bar">
-                <div class="loading-progress" id="loadingProgress"></div>
-            </div>
-        </div>
-    </div>
+    <!-- ====================== -->
+    <!-- VIDEO SPLASH SCREEN -->
+    <!-- ====================== -->
+    <div id="splash" role="dialog" aria-label="Intro splash" aria-modal="true">
+        <div class="brand" aria-hidden="true">RYAAN JEWELLERS</div>
 
-    <!-- Language Switch -->
-    <div class="language-switch">
-        <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
-        <button class="lang-btn" onclick="changeLanguage('ar')">عربي</button>
-    </div>
+        <!-- Video: put the MP4 in the repo root or change the path -->
+        <video id="splashVideo" autoplay muted playsinline preload="auto">
+            <source src="grok_video_2025-12-07-23-14-22.mp4" type="video/mp4" />
+            <!-- If you host the video elsewhere, replace src with the full URL -->
+            Your browser does not support the video tag.
+        </video>
 
-    <!-- Overlay -->
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <button class="close-menu" id="closeMenu">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul>
-            <li><a href="#home" class="active">Home</a></li>
-            <li><a href="#products">Collections</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#appointment">Book Appointment</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-
-    <!-- Social Media Float -->
-    <div class="social-float">
-        <a href="https://wa.me/971543746476" target="_blank" class="social-icon whatsapp">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-        <a href="https://instagram.com/ryaanjewellers007" target="_blank" class="social-icon instagram">
-            <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://t.me/yourtelegram" target="_blank" class="social-icon telegram">
-            <i class="fab fa-telegram"></i>
-        </a>
-    </div>
-
-    <!-- Chat Bot -->
-    <div class="chat-bot">
-        <button class="chat-toggle" id="chatToggle">
-            <i class="fas fa-comment-dots"></i>
-        </button>
-        <div class="chat-window" id="chatWindow">
-            <div class="chat-header">
-                <div style="width: 40px; height: 40px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center;">
-                    <i class="fas fa-gem" style="color: var(--gold);"></i>
-                </div>
-                <div>
-                    <h3>RYAAN Assistant</h3>
-                    <p style="font-size: 12px; opacity: 0.8;">Online • Ready to help</p>
-                </div>
-            </div>
-            <div class="chat-body" id="chatBody">
-                <div class="message bot-message">
-                    Hello! 👋 I'm your RYAAN Jewellery assistant. How can I help you today?
-                </div>
-                <div class="quick-questions">
-                    <div class="quick-question" onclick="askQuestion('What are your working hours?')">
-                        Working Hours?
-                    </div>
-                    <div class="quick-question" onclick="askQuestion('How to book appointment?')">
-                        Book Appointment
-                    </div>
-                    <div class="quick-question" onclick="askQuestion('Do you buy old gold?')">
-                        Sell Old Gold
-                    </div>
-                    <div class="quick-question" onclick="askQuestion('What is door-to-door service?')">
-                        Door-to-Door Service
-                    </div>
-                </div>
-            </div>
-            <div class="chat-input">
-                <input type="text" id="chatInput" placeholder="Type your message...">
-                <button id="sendMessage">
-                    <i class="fas fa-paper-plane"></i>
+        <div class="overlay">
+            <div class="controls" aria-hidden="false">
+                <button id="skipBtn" class="btn-skip" aria-label="Skip intro">
+                    <i class="fas fa-forward"></i> Skip intro
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-header">
-            <h3 class="cinzel">Your Cart</h3>
-            <button class="close-cart" onclick="closeCart()">
+    <!-- ====================== -->
+    <!-- MAIN WEBSITE CONTENT -->
+    <!-- ====================== -->
+    <main id="content" role="main">
+        <!-- Language Switch -->
+        <div class="language-switch">
+            <button class="lang-btn active" onclick="changeLanguage('en')">EN</button>
+            <button class="lang-btn" onclick="changeLanguage('ar')">عربي</button>
+        </div>
+
+        <!-- Overlay -->
+        <div class="overlay-main" id="overlay"></div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <button class="close-menu" id="closeMenu">
                 <i class="fas fa-times"></i>
             </button>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#products">Collections</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#appointment">Book Appointment</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be added here dynamically -->
+
+        <!-- Social Media Float -->
+        <div class="social-float">
+            <a href="https://wa.me/971543746476" target="_blank" class="social-icon whatsapp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/ryaanjewellers007" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://t.me/yourtelegram" target="_blank" class="social-icon telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
         </div>
-        <div class="cart-total">
-            <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-                <span>Total:</span>
-                <span id="cartTotal">AED 0.00</span>
-            </div>
-            <button class="btn btn-primary" style="width: 100%;">Checkout</button>
-        </div>
-    </div>
 
-    <!-- Header -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" 
-                     alt="RYAAN Jewellers Dubai">
-                <div class="logo-text">
-                    <h1 class="cinzel">RYAAN JEWELLERS</h1>
-                    <p>Dubai's Premier Door-to-Door Service</p>
-                </div>
-            </div>
-
-            <nav>
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#products">Collections</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#appointment">Book Appointment</a></li>
-                    <li><a href="#about">About Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div style="display: flex; align-items: center; gap: 20px;">
-                <button class="cart-icon" onclick="openCart()">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content animate-fadeIn">
-            <h2 class="cinzel">Luxury Jewellery at Your Doorstep in Dubai</h2>
-            <p>Experience premium 18k gold jewellery and diamond collections from Messika, Bvlgari, Chopard & Van Cleef inspired designs. Door-to-door service across Dubai with master quality assurance.</p>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#products" class="btn btn-primary">
-                    <i class="fas fa-gem"></i> Shop Collections
-                </a>
-                <a href="#appointment" class="btn btn-secondary">
-                    <i class="fas fa-calendar-alt"></i> Book Appointment
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Featured Products -->
-    <section id="products" class="section" style="background: #111111;">
-        <h2 class="section-title cinzel">Featured Collections</h2>
-        
-        <div class="products-grid" id="featuredProducts">
-            <!-- Products will be loaded here -->
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section">
-        <h2 class="section-title cinzel">Our Premium Services</h2>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-home"></i>
-                </div>
-                <h3 style="color: var(--text-light); margin-bottom: 15px;">Door-to-Door Showroom</h3>
-                <p style="color: var(--text-muted);">We bring our complete luxury jewellery collection to your home in Dubai. Private viewing with expert consultation.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-money-bill-wave"></i>
-                </div>
-                <h3 style="color: var(--text-light); margin-bottom: 15px;">Buy Old Gold</h3>
-                <p style="color: var(--text-muted);">Get best cash price for your old gold, diamonds & jewellery. Professional valuation at your location.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-tools"></i>
-                </div>
-                <h3 style="color: var(--text-light); margin-bottom: 15px;">Jewellery Repair</h3>
-                <p style="color: var(--text-muted);">Expert jewellery repair services at your doorstep. We fix, resize, polish and restore all types of jewellery.</p>
-            </div>
-            
-            <div class="service-card">
-                <div class="service-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3 style="color: var(--text-light); margin-bottom: 15px;">Custom Design</h3>
-                <p style="color: var(--text-muted);">Create your unique piece with our custom jewellery design service. From concept to creation.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Appointment Booking -->
-    <section id="appointment" class="section" style="background: #111111;">
-        <h2 class="section-title cinzel">Book Your Appointment</h2>
-        
-        <div class="appointment-form">
-            <form id="bookingForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="phone">Phone Number *</label>
-                    <input type="tel" id="phone" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" class="form-control">
-                </div>
-                
-                <div class="form-group">
-                    <label for="service">Service Required *</label>
-                    <select id="service" class="form-control" required>
-                        <option value="">Select a service</option>
-                        <option value="door-to-door">Door-to-Door Showroom</option>
-                        <option value="buy-gold">Sell Old Gold</option>
-                        <option value="repair">Jewellery Repair</option>
-                        <option value="custom">Custom Design</option>
-                        <option value="consultation">General Consultation</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="date">Preferred Date *</label>
-                    <input type="date" id="date" class="form-control" required>
-                </div>
-                
-                <div class="form-group">
-                    <label for="time">Preferred Time *</label>
-                    <select id="time" class="form-control" required>
-                        <option value="">Select time</option>
-                        <option value="09:00">9:00 AM</option>
-                        <option value="10:00">10:00 AM</option>
-                        <option value="11:00">11:00 AM</option>
-                        <option value="12:00">12:00 PM</option>
-                        <option value="13:00">1:00 PM</option>
-                        <option value="14:00">2:00 PM</option>
-                        <option value="15:00">3:00 PM</option>
-                        <option value="16:00">4:00 PM</option>
-                        <option value="17:00">5:00 PM</option>
-                        <option value="18:00">6:00 PM</option>
-                        <option value="19:00">7:00 PM</option>
-                        <option value="20:00">8:00 PM</option>
-                    </select>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Additional Notes</label>
-                    <textarea id="message" class="form-control" rows="4" placeholder="Any specific requirements or questions..."></textarea>
-                </div>
-                
-                <button type="submit" class="btn btn-primary" style="width: 100%;">
-                    <i class="fas fa-paper-plane"></i> Book Appointment
-                </button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <h2 class="section-title cinzel">Contact Us</h2>
-        
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
-                <div style="text-align: center;">
-                    <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
-                        <i class="fas fa-phone"></i>
+        <!-- Chat Bot -->
+        <div class="chat-bot">
+            <button class="chat-toggle" id="chatToggle">
+                <i class="fas fa-comment-dots"></i>
+            </button>
+            <div class="chat-window" id="chatWindow">
+                <div class="chat-header">
+                    <div style="width: 40px; height: 40px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-gem" style="color: var(--gold);"></i>
                     </div>
-                    <h3 style="color: var(--text-light); margin-bottom: 10px;">Call / WhatsApp</h3>
-                    <a href="tel:+971543746476" style="color: var(--gold); font-size: 1.2rem; text-decoration: none; font-weight: 600;">
-                        +971 543 746 476
-                    </a>
-                </div>
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
-                        <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>RYAAN Assistant</h3>
+                        <p style="font-size: 12px; opacity: 0.8;">Online • Ready to help</p>
                     </div>
-                    <h3 style="color: var(--text-light); margin-bottom: 10px;">Email</h3>
-                    <a href="mailto:ryaanjewellers@gmail.com" style="color: var(--gold); text-decoration: none;">
-                        ryaanjewellers@gmail.com
-                    </a>
                 </div>
-                
-                <div style="text-align: center;">
-                    <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
-                        <i class="fas fa-clock"></i>
+                <div class="chat-body" id="chatBody">
+                    <div class="message bot-message">
+                        Hello! 👋 I'm your RYAAN Jewellery assistant. How can I help you today?
                     </div>
-                    <h3 style="color: var(--text-light); margin-bottom: 10px;">Working Hours</h3>
-                    <p style="color: var(--text-muted);">7:00 AM - 11:00 PM<br>Daily</p>
+                    <div class="quick-questions">
+                        <div class="quick-question" onclick="askQuestion('What are your working hours?')">
+                            Working Hours?
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('How to book appointment?')">
+                            Book Appointment
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('Do you buy old gold?')">
+                            Sell Old Gold
+                        </div>
+                        <div class="quick-question" onclick="askQuestion('What is door-to-door service?')">
+                            Door-to-Door Service
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="chatInput" placeholder="Type your message...">
+                    <button id="sendMessage">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-grid">
-            <div>
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" 
-                     alt="RYAAN Jewellers" 
-                     style="height: 60px; margin-bottom: 20px;">
-                <p style="color: #AAA; font-size: 14px;">
-                    Dubai's premier door-to-door luxury jewellery service specializing in 18k gold and diamond jewellery.
-                </p>
+        <!-- Cart Modal -->
+        <div class="cart-modal" id="cartModal">
+            <div class="cart-header">
+                <h3 class="cinzel">Your Cart</h3>
+                <button class="close-cart" onclick="closeCart()">
+                    <i class="fas fa-times"></i>
+                </button>
             </div>
-            
-            <div>
-                <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Quick Links</h4>
-                <ul style="list-style: none;">
-                    <li><a href="#home" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Home</a></li>
-                    <li><a href="#products" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Collections</a></li>
-                    <li><a href="#services" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Services</a></li>
-                    <li><a href="#contact" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Contact</a></li>
-                </ul>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here dynamically -->
             </div>
-            
-            <div>
-                <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Services</h4>
-                <ul style="list-style: none;">
-                    <li style="color: #AAA; margin-bottom: 10px;">Door-to-Door Showroom</li>
-                    <li style="color: #AAA; margin-bottom: 10px;">Buy Old Gold</li>
-                    <li style="color: #AAA; margin-bottom: 10px;">Jewellery Repair</li>
-                    <li style="color: #AAA; margin-bottom: 10px;">Custom Design</li>
-                </ul>
-            </div>
-            
-            <div>
-                <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Follow Us</h4>
-                <div class="social-links">
-                    <a href="https://instagram.com/ryaanjewellers007" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/971543746476" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:ryaanjewellers@gmail.com">
-                        <i class="fas fa-envelope"></i>
-                    </a>
+            <div class="cart-total">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+                    <span>Total:</span>
+                    <span id="cartTotal">AED 0.00</span>
                 </div>
-                <div style="margin-top: 20px; color: #AAA; font-size: 14px;">
-                    <p><i class="fas fa-map-marker-alt"></i> Door-to-Door Service Across Dubai, UAE</p>
-                </div>
+                <button class="btn btn-primary" style="width: 100%;">Checkout</button>
             </div>
         </div>
-        
-        <div class="copyright">
-            <p>&copy; 2023 RYAAN Jewellers Dubai. All rights reserved.</p>
-        </div>
-    </footer>
+
+        <!-- Header -->
+        <header>
+            <div class="header-container">
+                <div class="logo">
+                    <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" 
+                         alt="RYAAN Jewellers Dubai">
+                    <div class="logo-text">
+                        <h1 class="cinzel">RYAAN JEWELLERS</h1>
+                        <p>Dubai's Premier Door-to-Door Service</p>
+                    </div>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#products">Collections</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#appointment">Book Appointment</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div style="display: flex; align-items: center; gap: 20px;">
+                    <button class="cart-icon" onclick="openCart()">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content animate-fadeIn">
+                <h2 class="cinzel">Luxury Jewellery at Your Doorstep in Dubai</h2>
+                <p>Experience premium 18k gold jewellery and diamond collections from Messika, Bvlgari, Chopard & Van Cleef inspired designs. Door-to-door service across Dubai with master quality assurance.</p>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#products" class="btn btn-primary">
+                        <i class="fas fa-gem"></i> Shop Collections
+                    </a>
+                    <a href="#appointment" class="btn btn-secondary">
+                        <i class="fas fa-calendar-alt"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section id="products" class="section" style="background: #111111;">
+            <h2 class="section-title cinzel">Featured Collections</h2>
+            
+            <div class="products-grid" id="featuredProducts">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section">
+            <h2 class="section-title cinzel">Our Premium Services</h2>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 style="color: var(--text-light); margin-bottom: 15px;">Door-to-Door Showroom</h3>
+                    <p style="color: var(--text-muted);">We bring our complete luxury jewellery collection to your home in Dubai. Private viewing with expert consultation.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 style="color: var(--text-light); margin-bottom: 15px;">Buy Old Gold</h3>
+                    <p style="color: var(--text-muted);">Get best cash price for your old gold, diamonds & jewellery. Professional valuation at your location.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 style="color: var(--text-light); margin-bottom: 15px;">Jewellery Repair</h3>
+                    <p style="color: var(--text-muted);">Expert jewellery repair services at your doorstep. We fix, resize, polish and restore all types of jewellery.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 style="color: var(--text-light); margin-bottom: 15px;">Custom Design</h3>
+                    <p style="color: var(--text-muted);">Create your unique piece with our custom jewellery design service. From concept to creation.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointment Booking -->
+        <section id="appointment" class="section" style="background: #111111;">
+            <h2 class="section-title cinzel">Book Your Appointment</h2>
+            
+            <div class="appointment-form">
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number *</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service Required *</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Select a service</option>
+                            <option value="door-to-door">Door-to-Door Showroom</option>
+                            <option value="buy-gold">Sell Old Gold</option>
+                            <option value="repair">Jewellery Repair</option>
+                            <option value="custom">Custom Design</option>
+                            <option value="consultation">General Consultation</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="date">Preferred Date *</label>
+                        <input type="date" id="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="time">Preferred Time *</label>
+                        <select id="time" class="form-control" required>
+                            <option value="">Select time</option>
+                            <option value="09:00">9:00 AM</option>
+                            <option value="10:00">10:00 AM</option>
+                            <option value="11:00">11:00 AM</option>
+                            <option value="12:00">12:00 PM</option>
+                            <option value="13:00">1:00 PM</option>
+                            <option value="14:00">2:00 PM</option>
+                            <option value="15:00">3:00 PM</option>
+                            <option value="16:00">4:00 PM</option>
+                            <option value="17:00">5:00 PM</option>
+                            <option value="18:00">6:00 PM</option>
+                            <option value="19:00">7:00 PM</option>
+                            <option value="20:00">8:00 PM</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Additional Notes</label>
+                        <textarea id="message" class="form-control" rows="4" placeholder="Any specific requirements or questions..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> Book Appointment
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <h2 class="section-title cinzel">Contact Us</h2>
+            
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 style="color: var(--text-light); margin-bottom: 10px;">Call / WhatsApp</h3>
+                        <a href="tel:+971543746476" style="color: var(--gold); font-size: 1.2rem; text-decoration: none; font-weight: 600;">
+                            +971 543 746 476
+                        </a>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 style="color: var(--text-light); margin-bottom: 10px;">Email</h3>
+                        <a href="mailto:ryaanjewellers@gmail.com" style="color: var(--gold); text-decoration: none;">
+                            ryaanjewellers@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <div style="font-size: 48px; color: var(--gold); margin-bottom: 20px;">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 style="color: var(--text-light); margin-bottom: 10px;">Working Hours</h3>
+                        <p style="color: var(--text-muted);">7:00 AM - 11:00 PM<br>Daily</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-grid">
+                <div>
+                    <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" 
+                         alt="RYAAN Jewellers" 
+                         style="height: 60px; margin-bottom: 20px;">
+                    <p style="color: #AAA; font-size: 14px;">
+                        Dubai's premier door-to-door luxury jewellery service specializing in 18k gold and diamond jewellery.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Quick Links</h4>
+                    <ul style="list-style: none;">
+                        <li><a href="#home" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Home</a></li>
+                        <li><a href="#products" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Collections</a></li>
+                        <li><a href="#services" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Services</a></li>
+                        <li><a href="#contact" style="color: #AAA; text-decoration: none; display: block; margin-bottom: 10px;">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Services</h4>
+                    <ul style="list-style: none;">
+                        <li style="color: #AAA; margin-bottom: 10px;">Door-to-Door Showroom</li>
+                        <li style="color: #AAA; margin-bottom: 10px;">Buy Old Gold</li>
+                        <li style="color: #AAA; margin-bottom: 10px;">Jewellery Repair</li>
+                        <li style="color: #AAA; margin-bottom: 10px;">Custom Design</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="cinzel" style="color: var(--gold); margin-bottom: 20px;">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/ryaanjewellers007" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/971543746476" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="mailto:ryaanjewellers@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div style="margin-top: 20px; color: #AAA; font-size: 14px;">
+                        <p><i class="fas fa-map-marker-alt"></i> Door-to-Door Service Across Dubai, UAE</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 RYAAN Jewellers Dubai. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
 
     <!-- JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
+        // ======================
+        // SPLASH SCREEN HANDLING
+        // ======================
+        (function () {
+            const splash = document.getElementById('splash');
+            const video = document.getElementById('splashVideo');
+            const skipBtn = document.getElementById('skipBtn');
+            const content = document.getElementById('content');
+
+            // End splash: fade out then hide and reveal content
+            function endSplash() {
+                // prevent multiple calls
+                if (!splash || splash.classList.contains('hidden')) return;
+                splash.style.opacity = '0';
+                // small delay to allow opacity transition
+                setTimeout(() => {
+                    splash.classList.add('hidden');
+                    // reveal site content
+                    content.classList.add('loaded');
+                    // restore scroll
+                    document.documentElement.style.overflow = '';
+                    document.body.style.overflow = '';
+                    // Initialize website
+                    initializeWebsite();
+                }, 620);
+            }
+
+            // If video ends naturally
+            video.addEventListener('ended', endSplash);
+
+            // Skip button
+            skipBtn.addEventListener('click', () => {
+                // Try to stop video and end splash
+                try { video.pause(); video.currentTime = video.duration || 0; } catch (e) {}
+                endSplash();
+            });
+
+            // Accessibility: allow Escape key to skip
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    skipBtn.click();
+                }
+            });
+
+            // In case autoplay is blocked or video fails to play: set a max timeout fallback
+            const MAX_SPLASH_MS = 8000; // 8 seconds fallback
+            let fallbackTimeout = setTimeout(() => {
+                endSplash();
+            }, MAX_SPLASH_MS);
+
+            // If video begins playing, clear fallback (let it finish)
+            video.addEventListener('playing', () => {
+                clearTimeout(fallbackTimeout);
+                // Optional: if video is long, auto-end after 12s to avoid long holds
+                const AUTO_END_AFTER = 12000;
+                setTimeout(() => {
+                    // Only end if video still visible
+                    if (splash && !splash.classList.contains('hidden')) endSplash();
+                }, AUTO_END_AFTER);
+            });
+
+            // If user has reduced motion preference, skip splash immediately
+            const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (prefersReduced) {
+                setTimeout(() => endSplash(), 100);
+            }
+
+            // Prevent scrolling while splash is visible
+            document.documentElement.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            
+            // Auto-skip after 15 seconds maximum
+            setTimeout(() => {
+                if (splash && !splash.classList.contains('hidden')) {
+                    endSplash();
+                }
+            }, 15000);
+        })();
+
+        // ======================
+        // MAIN WEBSITE FUNCTIONALITY
+        // ======================
+        
         // Translation data
         const translations = {
             en: {
                 // Splash Screen
-                "luxuryTagline": "LUXURY • GOLD • DIAMONDS",
+                "skipIntro": "Skip intro",
                 
                 // Header
                 "companyName": "RYAAN JEWELLERS",
@@ -1507,7 +1583,6 @@
                 "chatResponse2": "You can book appointment through our website form or call us directly at +971 543 746 476",
                 "chatResponse3": "Yes! We buy old gold, diamonds and jewellery at best market prices. Contact us for valuation.",
                 "chatResponse4": "We bring our entire luxury jewellery collection to your home for private viewing. It's a personalized shopping experience!",
-                "typing": "Assistant is typing...",
                 
                 // Form options
                 "selectService": "Select a service",
@@ -1515,7 +1590,7 @@
             },
             ar: {
                 // Splash Screen
-                "luxuryTagline": "الفخامة • الذهب • الماس",
+                "skipIntro": "تخطي المقدمة",
                 
                 // Header
                 "companyName": "مجوهرات رايان",
@@ -1591,7 +1666,6 @@
                 "chatResponse2": "يمكنك حجز موعد عبر نموذج الموقع أو الاتصال بنا مباشرة على +971 543 746 476",
                 "chatResponse3": "نعم! نشتري الذهب المستعمل والماس والمجوهرات بأفضل أسعار السوق. اتصل بنا للتقييم.",
                 "chatResponse4": "نحضر مجموعتنا الكاملة من المجوهرات الفاخرة إلى منزلك لعرض خاص. إنها تجربة تسوق شخصية!",
-                "typing": "المساعد يكتب...",
                 
                 // Form options
                 "selectService": "اختر الخدمة",
@@ -1659,57 +1733,95 @@
         let cartCount = 0;
         let cartTotal = 0;
 
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Splash screen animation
-            const splashScreen = document.getElementById('splashScreen');
-            const loadingProgress = document.getElementById('loadingProgress');
-            
-            // Animate loading progress
-            setTimeout(() => {
-                loadingProgress.style.width = '30%';
-            }, 300);
-            
-            setTimeout(() => {
-                loadingProgress.style.width = '60%';
-            }, 800);
-            
-            setTimeout(() => {
-                loadingProgress.style.width = '90%';
-            }, 1200);
-            
-            setTimeout(() => {
-                loadingProgress.style.width = '100%';
-                setTimeout(() => {
-                    splashScreen.classList.add('hidden');
-                }, 200);
-            }, 1500);
-            
+        // Initialize the website
+        function initializeWebsite() {
             // Load products
             loadProducts();
             
+            // Initialize chat bot
+            initChatBot();
+            
+            // Setup event listeners
+            setupEventListeners();
+            
+            // Load cart from localStorage
+            loadCartFromStorage();
+            
+            // Update date input min value to today
+            const today = new Date().toISOString().split('T')[0];
+            const dateInput = document.getElementById('date');
+            if (dateInput) {
+                dateInput.min = today;
+            }
+            
+            // Appointment form submission
+            const bookingForm = document.getElementById('bookingForm');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    // Get form data
+                    const formData = {
+                        name: document.getElementById('name').value,
+                        phone: document.getElementById('phone').value,
+                        email: document.getElementById('email').value,
+                        service: document.getElementById('service').value,
+                        date: document.getElementById('date').value,
+                        time: document.getElementById('time').value,
+                        message: document.getElementById('message').value
+                    };
+                    
+                    console.log('Booking submitted:', formData);
+                    
+                    // Show success message
+                    alert(currentLang === 'en' 
+                        ? 'Thank you! Your appointment has been booked. We will contact you shortly to confirm.'
+                        : 'شكراً! تم حجز موعدك بنجاح. سنتصل بك قريباً للتأكيد.');
+                    
+                    // Reset form
+                    bookingForm.reset();
+                    
+                    // Send WhatsApp message
+                    const whatsappMessage = currentLang === 'en' 
+                        ? `New Appointment Request:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nDate: ${formData.date}\nTime: ${formData.time}`
+                        : `طلب موعد جديد:\nالاسم: ${formData.name}\nالهاتف: ${formData.phone}\nالخدمة: ${formData.service}\nالتاريخ: ${formData.date}\nالوقت: ${formData.time}`;
+                    
+                    const whatsappUrl = `https://wa.me/971543746476?text=${encodeURIComponent(whatsappMessage)}`;
+                    window.open(whatsappUrl, '_blank');
+                });
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
             // Mobile menu
             const mobileMenuBtn = document.getElementById('mobileMenuBtn');
             const closeMenuBtn = document.getElementById('closeMenu');
             const mobileMenu = document.getElementById('mobileMenu');
             const overlay = document.getElementById('overlay');
 
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.add('open');
-                overlay.classList.add('active');
-            });
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.add('open');
+                    overlay.classList.add('active');
+                });
+            }
 
-            closeMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                overlay.classList.remove('active');
-            });
+            if (closeMenuBtn) {
+                closeMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                });
+            }
 
-            overlay.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                overlay.classList.remove('active');
-                closeCart();
-                closeChat();
-            });
+            if (overlay) {
+                overlay.addEventListener('click', () => {
+                    mobileMenu.classList.remove('open');
+                    overlay.classList.remove('active');
+                    closeCart();
+                    closeChat();
+                });
+            }
 
             // Smooth scroll
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1726,56 +1838,12 @@
                         });
                         
                         // Close mobile menu if open
-                        mobileMenu.classList.remove('open');
-                        overlay.classList.remove('active');
+                        if (mobileMenu) mobileMenu.classList.remove('open');
+                        if (overlay) overlay.classList.remove('active');
                     }
                 });
             });
-
-            // Appointment form submission
-            const bookingForm = document.getElementById('bookingForm');
-            bookingForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form data
-                const formData = {
-                    name: document.getElementById('name').value,
-                    phone: document.getElementById('phone').value,
-                    email: document.getElementById('email').value,
-                    service: document.getElementById('service').value,
-                    date: document.getElementById('date').value,
-                    time: document.getElementById('time').value,
-                    message: document.getElementById('message').value
-                };
-                
-                // Here you would typically send this to a server
-                console.log('Booking submitted:', formData);
-                
-                // Show success message
-                alert(currentLang === 'en' ? 'Thank you! Your appointment has been booked. We will contact you shortly to confirm.' : 'شكراً! تم حجز موعدك بنجاح. سنتصل بك قريباً للتأكيد.');
-                
-                // Reset form
-                bookingForm.reset();
-                
-                // Send WhatsApp message
-                const whatsappMessage = currentLang === 'en' 
-                    ? `New Appointment Request:\nName: ${formData.name}\nPhone: ${formData.phone}\nService: ${formData.service}\nDate: ${formData.date}\nTime: ${formData.time}`
-                    : `طلب موعد جديد:\nالاسم: ${formData.name}\nالهاتف: ${formData.phone}\nالخدمة: ${formData.service}\nالتاريخ: ${formData.date}\nالوقت: ${formData.time}`;
-                
-                const whatsappUrl = `https://wa.me/971543746476?text=${encodeURIComponent(whatsappMessage)}`;
-                window.open(whatsappUrl, '_blank');
-            });
-
-            // Update date input min value to today
-            const today = new Date().toISOString().split('T')[0];
-            document.getElementById('date').min = today;
-
-            // Load cart from localStorage
-            loadCartFromStorage();
-            
-            // Initialize chat bot
-            initChatBot();
-        });
+        }
 
         // Change language
         function changeLanguage(lang) {
@@ -1804,14 +1872,23 @@
             
             // Update cart display
             updateCart();
+            
+            // Update skip button
+            const skipBtn = document.getElementById('skipBtn');
+            if (skipBtn) {
+                skipBtn.innerHTML = `<i class="fas fa-forward"></i> ${translations[lang].skipIntro}`;
+            }
         }
 
         // Update all translations on the page
         function updateTranslations() {
             const trans = translations[currentLang];
             
-            // Splash screen
-            document.querySelector('.splash-text p').textContent = trans.luxuryTagline;
+            // Skip button
+            const skipBtn = document.getElementById('skipBtn');
+            if (skipBtn) {
+                skipBtn.innerHTML = `<i class="fas fa-forward"></i> ${trans.skipIntro}`;
+            }
             
             // Header
             document.querySelector('.logo-text h1').textContent = trans.companyName;
@@ -1829,8 +1906,9 @@
             // Hero section
             document.querySelector('.hero h2').textContent = trans.heroTitle;
             document.querySelector('.hero p').textContent = trans.heroText;
-            document.querySelector('.hero .btn-primary').innerHTML = `<i class="fas fa-gem"></i> ${trans.shopCollections}`;
-            document.querySelector('.hero .btn-secondary').innerHTML = `<i class="fas fa-calendar-alt"></i> ${trans.bookAppointment}`;
+            const heroBtns = document.querySelectorAll('.hero .btn');
+            if (heroBtns[0]) heroBtns[0].innerHTML = `<i class="fas fa-gem"></i> ${trans.shopCollections}`;
+            if (heroBtns[1]) heroBtns[1].innerHTML = `<i class="fas fa-calendar-alt"></i> ${trans.bookAppointment}`;
             
             // Products section
             document.querySelector('#products .section-title').textContent = trans.featuredCollections;
@@ -1850,25 +1928,28 @@
             
             // Appointment section
             document.querySelector('#appointment .section-title').textContent = trans.bookYourAppointment;
-            document.querySelector('label[for="name"]').textContent = trans.fullName;
-            document.querySelector('label[for="phone"]').textContent = trans.phoneNumber;
-            document.querySelector('label[for="email"]').textContent = trans.email;
-            document.querySelector('label[for="service"]').textContent = trans.serviceRequired;
-            document.querySelector('label[for="date"]').textContent = trans.preferredDate;
-            document.querySelector('label[for="time"]').textContent = trans.preferredTime;
-            document.querySelector('label[for="message"]').textContent = trans.additionalNotes;
+            const labels = document.querySelectorAll('label');
+            labels[0].textContent = trans.fullName;
+            labels[1].textContent = trans.phoneNumber;
+            labels[2].textContent = trans.email;
+            labels[3].textContent = trans.serviceRequired;
+            labels[4].textContent = trans.preferredDate;
+            labels[5].textContent = trans.preferredTime;
+            labels[6].textContent = trans.additionalNotes;
             document.querySelector('#message').placeholder = trans.notesPlaceholder;
             document.querySelector('#bookingForm button').innerHTML = `<i class="fas fa-paper-plane"></i> ${trans.bookAppointment}`;
             
             // Update select options
-            document.querySelector('#service option[value=""]').textContent = trans.selectService;
-            document.querySelector('#time option[value=""]').textContent = trans.selectTime;
+            const serviceSelect = document.querySelector('#service option[value=""]');
+            const timeSelect = document.querySelector('#time option[value=""]');
+            if (serviceSelect) serviceSelect.textContent = trans.selectService;
+            if (timeSelect) timeSelect.textContent = trans.selectTime;
             
             // Contact section
             document.querySelector('#contact .section-title').textContent = trans.contactUs;
             const contactTitles = document.querySelectorAll('#contact h3');
             contactTitles[0].textContent = trans.callWhatsApp;
-            contactTitles[1].textContent = trans.email.split(' ')[0]; // Just "Email"
+            contactTitles[1].textContent = trans.email.split(' ')[0];
             contactTitles[2].textContent = trans.workingHours;
             document.querySelector('#contact p[style*="color: var(--text-muted)"]').innerHTML = trans.hoursText;
             
@@ -1883,8 +1964,10 @@
             
             // Cart
             document.querySelector('.cart-header h3').textContent = trans.yourCart;
-            document.querySelector('.cart-total span:first-child').textContent = trans.total + ':';
-            document.querySelector('.cart-total button').textContent = trans.checkout;
+            const totalSpan = document.querySelector('.cart-total span:first-child');
+            if (totalSpan) totalSpan.textContent = trans.total + ':';
+            const checkoutBtn = document.querySelector('.cart-total button');
+            if (checkoutBtn) checkoutBtn.textContent = trans.checkout;
             
             // Chat bot
             const chatBody = document.getElementById('chatBody');
@@ -1905,6 +1988,8 @@
         // Load products to page
         function loadProducts() {
             const productsGrid = document.getElementById('featuredProducts');
+            if (!productsGrid) return;
+            
             productsGrid.innerHTML = '';
             
             const trans = translations[currentLang];
@@ -1965,7 +2050,8 @@
             
             // Update cart count
             cartCount = cart.reduce((total, item) => total + item.quantity, 0);
-            document.getElementById('cartCount').textContent = cartCount;
+            const cartCountEl = document.getElementById('cartCount');
+            if (cartCountEl) cartCountEl.textContent = cartCount;
             
             // Update cart total
             cartTotal = cart.reduce((total, item) => {
@@ -1973,10 +2059,13 @@
                 return total + (price * item.quantity);
             }, 0);
             
-            document.getElementById('cartTotal').textContent = `AED ${cartTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
+            const cartTotalEl = document.getElementById('cartTotal');
+            if (cartTotalEl) cartTotalEl.textContent = `AED ${cartTotal.toLocaleString('en-US', {minimumFractionDigits: 2})}`;
             
             // Update cart items display
             const cartItems = document.getElementById('cartItems');
+            if (!cartItems) return;
+            
             cartItems.innerHTML = '';
             
             if (cart.length === 0) {
@@ -2007,13 +2096,17 @@
         }
 
         function openCart() {
-            document.getElementById('cartModal').classList.add('open');
-            document.getElementById('overlay').classList.add('active');
+            const cartModal = document.getElementById('cartModal');
+            const overlay = document.getElementById('overlay');
+            if (cartModal) cartModal.classList.add('open');
+            if (overlay) overlay.classList.add('active');
         }
 
         function closeCart() {
-            document.getElementById('cartModal').classList.remove('open');
-            document.getElementById('overlay').classList.remove('active');
+            const cartModal = document.getElementById('cartModal');
+            const overlay = document.getElementById('overlay');
+            if (cartModal) cartModal.classList.remove('open');
+            if (overlay) overlay.classList.remove('active');
         }
 
         // Local storage for cart
@@ -2036,40 +2129,53 @@
             const sendButton = document.getElementById('sendMessage');
             const chatInput = document.getElementById('chatInput');
             
-            chatToggle.addEventListener('click', toggleChat);
+            if (chatToggle) {
+                chatToggle.addEventListener('click', toggleChat);
+            }
             
-            sendButton.addEventListener('click', sendMessage);
+            if (sendButton) {
+                sendButton.addEventListener('click', sendMessage);
+            }
             
-            chatInput.addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            });
+            if (chatInput) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendMessage();
+                    }
+                });
+            }
         }
         
         function toggleChat() {
             const chatWindow = document.getElementById('chatWindow');
-            chatWindow.classList.toggle('active');
-            
-            if (chatWindow.classList.contains('active')) {
-                document.getElementById('chatInput').focus();
+            if (chatWindow) {
+                chatWindow.classList.toggle('active');
+                
+                if (chatWindow.classList.contains('active')) {
+                    const chatInput = document.getElementById('chatInput');
+                    if (chatInput) chatInput.focus();
+                }
             }
         }
         
         function closeChat() {
-            document.getElementById('chatWindow').classList.remove('active');
+            const chatWindow = document.getElementById('chatWindow');
+            if (chatWindow) chatWindow.classList.remove('active');
         }
         
         function askQuestion(question) {
             const chatInput = document.getElementById('chatInput');
-            chatInput.value = question;
-            sendMessage();
+            if (chatInput) {
+                chatInput.value = question;
+                sendMessage();
+            }
         }
         
         function sendMessage() {
             const chatInput = document.getElementById('chatInput');
-            const message = chatInput.value.trim();
+            if (!chatInput) return;
             
+            const message = chatInput.value.trim();
             if (!message) return;
             
             // Add user message
@@ -2087,6 +2193,8 @@
         
         function addMessage(text, sender) {
             const chatBody = document.getElementById('chatBody');
+            if (!chatBody) return;
+            
             const messageDiv = document.createElement('div');
             messageDiv.className = `message ${sender}-message`;
             messageDiv.textContent = text;
@@ -2149,6 +2257,43 @@
             }, 3000);
         }
 
+        // Add animation keyframes
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideIn {
+                from { transform: translateX(100%); opacity: 0; }
+                to { transform: translateX(0); opacity: 1; }
+            }
+            @keyframes slideOut {
+                from { transform: translateX(0); opacity: 1; }
+                to { transform: translateX(100%); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a, .mobile-menu a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
         // WhatsApp direct chat
         function openWhatsApp() {
             window.open('https://wa.me/971543746476', '_blank');
@@ -2160,4 +2305,4 @@
         }
     </script>
 </body>
-</html>
+    </html>
