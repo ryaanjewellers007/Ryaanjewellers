@@ -128,7 +128,7 @@
 <div id="splash" aria-hidden="false">
   <div class="splash-fallback"></div>
   <div class="splash-inner">
-    <div class="splash-logo"><img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" alt="logo"></div>
+    <div class="splash-logo"><img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Logo%20new%20ryaan.png" alt="logo"></div>
     <div class="splash-title">RYAAN JEWELLERS</div>
     <div class="splash-sub">White Diamond Luxury — Dubai</div>
     <button id="enterBtn" class="enter-btn">Enter RYAAN</button>
@@ -140,7 +140,7 @@
 <header>
   <div class="container">
     <div class="brand" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-      <img src="https://raw.githubusercontent.com/ryaanjewellers007/ryaanjewellers/main/Logo%20new%20ryaan.png" alt="logo">
+      <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Logo%20new%20ryaan.png" alt="logo">
       <div>
         <div style="font-family:'Cinzel',serif;font-weight:800">RYAAN JEWELLERS</div>
         <div style="font-size:12px;color:var(--muted)">Dubai — Handcrafted Luxury</div>
@@ -219,6 +219,8 @@
         <button onclick="filterProducts('bangle', this)">Bangles</button>
         <button onclick="filterProductsByCategory('Messika Collection', this)">Messika</button>
         <button onclick="filterProductsByCategory('Van Cleef Inspired', this)">Van Cleef</button>
+        <button onclick="filterProductsByCategory('Bvlgari Inspired', this)">Bvlgari</button>
+        <button onclick="filterProductsByCategory('Chopard Inspired', this)">Chopard</button>
       </div>
 
       <div class="products-grid" id="productsGrid"></div>
@@ -332,15 +334,16 @@
 /* ---------- CONFIGURATION ---------- */
 const GOLD_API_PROVIDER = 'goldapi'; // Options: 'goldapi' or 'metals'
 const GOLD_API_KEY = ''; // Get your free API key from goldapi.io
+const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/';
 
-/* ---------- MESSIKA PRODUCTS ---------- */
+/* ---------- MESSIKA PRODUCTS (with GitHub paths) ---------- */
 const messikaProducts = [
   {
     id: 100,
     name: "Messika Move Hoop Earrings",
     category: "Messika Collection",
     price: 8500,
-    image: "Messika-Move-Hoop-04407-YG.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-Hoop-04407-YG.jpg",
     type: "earrings",
     description: "Yellow gold move hoop earrings with diamonds"
   },
@@ -349,7 +352,7 @@ const messikaProducts = [
     name: "Messika Move Uno Mini Hoops",
     category: "Messika Collection",
     price: 7200,
-    image: "Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg",
     type: "earrings",
     description: "White gold mini hoop earrings with moving diamonds"
   },
@@ -358,7 +361,7 @@ const messikaProducts = [
     name: "Messika Move Classic Bracelet",
     category: "Messika Collection",
     price: 9200,
-    image: "Messika-Move-Classic-03998-WG.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-Classic-03998-WG.jpg",
     type: "bracelet",
     description: "Classic move bracelet in white gold with diamonds"
   },
@@ -367,7 +370,7 @@ const messikaProducts = [
     name: "Messika Move Uno Bracelet",
     category: "Messika Collection",
     price: 8800,
-    image: "Messika-Move-Uno-04705-WG.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-Uno-04705-WG.jpg",
     type: "bracelet",
     description: "Uno move bracelet in white gold"
   },
@@ -376,7 +379,7 @@ const messikaProducts = [
     name: "Messika Move Thin Bracelet",
     category: "Messika Collection",
     price: 6800,
-    image: "Messika-Move-Thin-04068-RG-2-1024x1024.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-Thin-04068-RG-2-1024x1024.jpg",
     type: "bracelet",
     description: "Rose gold thin move bracelet with diamonds"
   },
@@ -385,7 +388,7 @@ const messikaProducts = [
     name: "Messika Move Romane Necklace",
     category: "Messika Collection",
     price: 11500,
-    image: "Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg",
+    image: GITHUB_BASE_URL + "Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg",
     type: "necklace",
     description: "Yellow gold romane necklace with moving diamonds"
   },
@@ -394,7 +397,7 @@ const messikaProducts = [
     name: "Messika Move XL Earrings",
     category: "Messika Collection",
     price: 9800,
-    image: "messika_-packshot-boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg.jpg",
+    image: GITHUB_BASE_URL + "messika_-packshot-boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg.jpg",
     type: "earrings",
     description: "XL pavé diamond earrings with move technology"
   },
@@ -403,7 +406,7 @@ const messikaProducts = [
     name: "Messika Move Uno Pavé Necklace",
     category: "Messika Collection",
     price: 12500,
-    image: "messika_paris-collier_move_uno_pav_vue_1_04708_p.jpg",
+    image: GITHUB_BASE_URL + "messika_paris-collier_move_uno_pav_vue_1_04708_p.jpg",
     type: "necklace",
     description: "Uno pavé necklace with moving diamonds"
   },
@@ -412,7 +415,7 @@ const messikaProducts = [
     name: "Messika Move Uno Pampille Choker",
     category: "Messika Collection",
     price: 14200,
-    image: "messika-packshot-collier_choker_move_uno_pampille_pav_vue_1_12150_wg.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-collier_choker_move_uno_pampille_pav_vue_1_12150_wg.jpg",
     type: "necklace",
     description: "White gold choker with pampille diamonds"
   },
@@ -421,7 +424,7 @@ const messikaProducts = [
     name: "Messika Move Uno Pampille Choker",
     category: "Messika Collection",
     price: 14500,
-    image: "messika-packshot-collier_choker_move_uno_pampille_vue_1_14588_wg.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-collier_choker_move_uno_pampille_vue_1_14588_wg.jpg",
     type: "necklace",
     description: "Elegant choker with moving diamond pampilles"
   },
@@ -430,7 +433,7 @@ const messikaProducts = [
     name: "Messika Move Classic Pavé Necklace",
     category: "Messika Collection",
     price: 11200,
-    image: "messika-packshot-collier_move_classique_pav_vue_1_03994_p.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-collier_move_classique_pav_vue_1_03994_p.jpg",
     type: "necklace",
     description: "Classic pavé necklace with move technology"
   },
@@ -439,7 +442,7 @@ const messikaProducts = [
     name: "Messika Lucky Eye Necklace",
     category: "Messika Collection",
     price: 9500,
-    image: "messika-packshot-collier_lucky_eye_pav_vue_1_07525_yg.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-collier_lucky_eye_pav_vue_1_07525_yg.jpg",
     type: "necklace",
     description: "Yellow gold lucky eye necklace with diamonds"
   },
@@ -448,7 +451,7 @@ const messikaProducts = [
     name: "Messika Lucky Eye Necklace Pink",
     category: "Messika Collection",
     price: 9700,
-    image: "messika-packshot-collier_lucky_eye_pav_vue_2_07525_pg.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-collier_lucky_eye_pav_vue_2_07525_pg.jpg",
     type: "necklace",
     description: "Pink gold lucky eye necklace with diamonds"
   },
@@ -457,7 +460,7 @@ const messikaProducts = [
     name: "Messika Uno Pampille Choker White",
     category: "Messika Collection",
     price: 13800,
-    image: "messika-packshot-_collier_choker_move_uno_pampille_vue_1_14588_wg.jpg",
+    image: GITHUB_BASE_URL + "messika-packshot-_collier_choker_move_uno_pampille_vue_1_14588_wg.jpg",
     type: "necklace",
     description: "White gold uno pampille choker with diamonds"
   }
@@ -465,13 +468,13 @@ const messikaProducts = [
 
 /* ---------- MAIN PRODUCTS ARRAY ---------- */
 const allProducts = [
-  // Your existing products
+  // Your existing products (already in your repo)
   {
     id: 1,
     name: "Van Cleef Onyx Bracelet",
     category: "Van Cleef Inspired",
     price: 9800,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Onyx.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Onyx.jpg",
     type: "bracelet",
     description: "Luxury gold bracelet with genuine black onyx stones"
   },
@@ -480,7 +483,7 @@ const allProducts = [
     name: "Van Cleef Carnelian Bracelet",
     category: "Van Cleef Inspired",
     price: 10200,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Carnelian.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Carnelian.jpg",
     type: "bracelet",
     description: "Gold bracelet with vibrant carnelian stones"
   },
@@ -489,7 +492,7 @@ const allProducts = [
     name: "Van Cleef Agate Bracelet",
     category: "Van Cleef Inspired",
     price: 9500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Agate.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Agate.jpg",
     type: "bracelet",
     description: "Gold bracelet with natural agate stones"
   },
@@ -498,7 +501,7 @@ const allProducts = [
     name: "Van Cleef Chalcedony Bracelet",
     category: "Van Cleef Inspired",
     price: 10800,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Chalcedony.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Chalcedony.jpg",
     type: "bracelet",
     description: "Gold bracelet with beautiful blue chalcedony"
   },
@@ -507,7 +510,7 @@ const allProducts = [
     name: "Van Cleef Mother of Pearl Bracelet",
     category: "Van Cleef Inspired",
     price: 11200,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Mother%20of%20Pearl.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Mother%20of%20Pearl.jpg",
     type: "bracelet",
     description: "Gold bracelet with mother of pearl inlay"
   },
@@ -516,7 +519,7 @@ const allProducts = [
     name: "Van Cleef Tiger Eye Bracelet",
     category: "Van Cleef Inspired",
     price: 9600,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Tiger%20Eye.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Tiger%20Eye.jpg",
     type: "bracelet",
     description: "Gold bracelet with tiger eye stone"
   },
@@ -525,7 +528,7 @@ const allProducts = [
     name: "Van Cleef Malachite Bracelet",
     category: "Van Cleef Inspired",
     price: 10400,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Malachite.jpg",
+    image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Malachite.jpg",
     type: "bracelet",
     description: "Gold bracelet with green malachite stones"
   },
@@ -534,7 +537,7 @@ const allProducts = [
     name: "Serpenti Choker Necklace",
     category: "Bvlgari Inspired",
     price: 12500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Serpenti%20Bvulgari%20Chocker.jpg",
+    image: GITHUB_BASE_URL + "Serpenti%20Bvulgari%20Chocker.jpg",
     type: "necklace",
     description: "Luxury serpent design necklace with diamonds"
   },
@@ -543,7 +546,7 @@ const allProducts = [
     name: "Diamond Pendant Necklace",
     category: "Luxury Collection",
     price: 8500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/White%20.%20Blue%20.%20jpg.jpg",
+    image: GITHUB_BASE_URL + "White%20.%20Blue%20.%20jpg.jpg",
     type: "necklace",
     description: "Elegant diamond pendant necklace"
   },
@@ -552,7 +555,7 @@ const allProducts = [
     name: "Butterfly Diamond Ring",
     category: "Messika Inspired",
     price: 4850,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg",
+    image: GITHUB_BASE_URL + "Butterfly%20Ring.jpg",
     type: "ring",
     description: "18K gold ring with diamond butterfly design"
   },
@@ -561,7 +564,7 @@ const allProducts = [
     name: "Emerald Solitaire Ring",
     category: "Classic Collection",
     price: 7500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251129_014624_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251129_014624_Chrome.jpg",
     type: "ring",
     description: "Solitaire emerald ring with diamond halo"
   },
@@ -570,7 +573,7 @@ const allProducts = [
     name: "Ruby Diamond Ring",
     category: "Classic Collection",
     price: 8200,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251129_014621_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251129_014621_Chrome.jpg",
     type: "ring",
     description: "Ruby center stone with diamond accents"
   },
@@ -579,7 +582,7 @@ const allProducts = [
     name: "Heart Bangle",
     category: "Chopard Inspired",
     price: 8250,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Heart%20Bangle.jpg",
+    image: GITHUB_BASE_URL + "Heart%20Bangle.jpg",
     type: "bangle",
     description: "18K gold heart design bangle"
   },
@@ -588,7 +591,7 @@ const allProducts = [
     name: "Chopard Diamond Earrings",
     category: "Chopard Inspired",
     price: 6500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chopard%20Earring.jpg",
+    image: GITHUB_BASE_URL + "Chopard%20Earring.jpg",
     type: "earrings",
     description: "Diamond stud earrings with gold setting"
   },
@@ -597,7 +600,7 @@ const allProducts = [
     name: "Messika Rose Uno Move",
     category: "Messika Inspired",
     price: 7250,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20rose%20uno%20move.jpg",
+    image: GITHUB_BASE_URL + "Messika%20rose%20uno%20move.jpg",
     type: "bracelet",
     description: "Moving diamond rose gold bracelet"
   },
@@ -606,7 +609,7 @@ const allProducts = [
     name: "Diamond Tennis Bracelet",
     category: "Classic Collection",
     price: 12500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251129_014606_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251129_014606_Chrome.jpg",
     type: "bracelet",
     description: "Full diamond tennis bracelet"
   },
@@ -615,7 +618,7 @@ const allProducts = [
     name: "Pearl Drop Earrings",
     category: "Luxury Collection",
     price: 5800,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251129_014550_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251129_014550_Chrome.jpg",
     type: "earrings",
     description: "Pearl drop earrings with diamond accents"
   },
@@ -624,7 +627,7 @@ const allProducts = [
     name: "Diamond Halo Necklace",
     category: "Luxury Collection",
     price: 11500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251129_014405_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251129_014405_Chrome.jpg",
     type: "necklace",
     description: "Diamond halo pendant necklace"
   },
@@ -633,7 +636,7 @@ const allProducts = [
     name: "Custom Diamond Ring",
     category: "Bespoke Collection",
     price: 9500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251126_021000_Instagram.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251126_021000_Instagram.jpg",
     type: "ring",
     description: "Custom designed diamond ring"
   },
@@ -642,7 +645,7 @@ const allProducts = [
     name: "Gold Diamond Set",
     category: "Luxury Collection",
     price: 18500,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20251126_020930_Instagram.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20251126_020930_Instagram.jpg",
     type: "set",
     description: "Complete gold and diamond jewellery set"
   },
@@ -651,7 +654,7 @@ const allProducts = [
     name: "Classic Diamond Ring",
     category: "Timeless Collection",
     price: 6800,
-    image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Screenshot_20250618_220852_Chrome.jpg",
+    image: GITHUB_BASE_URL + "Screenshot_20250618_220852_Chrome.jpg",
     type: "ring",
     description: "Classic diamond solitaire ring"
   },
@@ -769,21 +772,22 @@ function renderSlider() {
   const track = document.getElementById('sliderTrack');
   track.innerHTML = '';
   
-  // Mix products for featured slider
+  // Mix products for featured slider (show variety)
   const featuredProducts = [
-    allProducts[0],  // Van Cleef Onyx
-    allProducts[7],  // Serpenti Choker
+    allProducts[0],   // Van Cleef Onyx Bracelet
+    allProducts[7],   // Serpenti Choker Necklace
     allProducts[100], // Messika Hoop Earrings
-    allProducts[15], // Messika Rose Uno
-    allProducts[8],  // Diamond Pendant
-    allProducts[102] // Messika Classic Bracelet
+    allProducts[15],  // Messika Rose Uno Move
+    allProducts[8],   // Diamond Pendant Necklace
+    allProducts[102]  // Messika Classic Bracelet
   ];
   
   featuredProducts.forEach(p => {
+    if (!p) return;
     const slide = document.createElement('div');
     slide.className = 'slide';
     slide.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjODA4MDgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UllBQU4gSkVXRUxMRVJTPC90ZXh0Pjwvc3ZnPg=='">
+      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjODA4MDgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UllBQU4gSkVXRUxMRVJTPC90ZXh0Pjwvc3ZnPg=='">
       <div class="meta">
         <div style="font-size:13px;color:var(--muted)">${p.category}</div>
         <div style="font-weight:800;margin:6px 0">${p.name}</div>
@@ -850,7 +854,7 @@ function renderProducts() {
     productCard.setAttribute('data-category', p.category);
     
     productCard.innerHTML = `
-      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjODA4MDgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UlkgSkVXRUxMRVJTPC90ZXh0Pjwvc3ZnPg=='">
+      <img src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNHB4IiBmaWxsPSIjODA4MDgwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBkeT0iLjNlbSI+UlkgSkVXRUxMRVJTPC90ZXh0Pjwvc3ZnPg=='">
       <div class="info">
         <div class="name">${p.name}</div>
         <div class="desc">${p.description}</div>
@@ -939,7 +943,7 @@ function renderCart() {
     const itemElement = document.createElement('div');
     itemElement.className = 'cart-item';
     itemElement.innerHTML = `
-      <img src="${item.image}" alt="${item.name}" style="width:70px;height:70px;object-fit:cover;border-radius:8px" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTJweCIgZmlsbD0iIzgwODA4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlJZQUFOIEpFV0VMQzwvdGV4dD48L3N2Zz4='">
+      <img src="${item.image}" alt="${item.name}" style="width:70px;height:70px;object-fit:cover;border-radius:8px" onerror="this.onerror=null; this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzAiIGhlaWdodD0iNzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2YwZjBmMCIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTJweCIgZmlsbD0iIzgwODA4MCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlJZQUFOIEpFV0VMQzwvdGV4dD48L3N2Zz4='">
       <div style="flex:1">
         <div style="font-weight:700;font-size:15px">${item.name}</div>
         <div style="color:var(--rose);font-weight:700;margin-top:4px">AED ${item.price.toLocaleString()}</div>
