@@ -1405,4 +1405,2021 @@
         }
 
         .notification.success {
-            background:
+            background: linear-gradient(135deg, var(--success), #66BB6A);
+        }
+
+        .notification.info {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+        }
+
+        /* ====== VIDEO SECTION ====== */
+        .videos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .video-card {
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            transition: all var(--transition);
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            background: var(--dark-gray);
+        }
+
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-content {
+            padding: 2rem;
+        }
+
+        .video-content h3 {
+            color: var(--text-accent);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .video-content p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* ====== RESPONSIVE DESIGN ====== */
+        @media (max-width: 1200px) {
+            .brand-text h1 {
+                font-size: 2rem;
+            }
+            
+            .cart-modal {
+                width: 400px;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            
+            .brand {
+                min-width: auto;
+                order: 1;
+            }
+            
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 90px;
+                left: 0;
+                right: 0;
+                background: var(--dark-gray);
+                flex-direction: column;
+                padding: 2rem;
+                border-top: 1px solid rgba(212, 175, 55, 0.15);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .header-actions {
+                order: 2;
+                min-width: auto;
+            }
+            
+            .hero-slider {
+                height: 70vh;
+                margin-top: 150px;
+            }
+            
+            .slide-title {
+                font-size: 3rem;
+            }
+            
+            .slide-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2.8rem;
+            }
+
+            .cart-modal {
+                width: 350px;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .brand-text h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-container {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .gold-ticker {
+                top: 100px;
+                padding: 12px 1rem;
+            }
+            
+            .hero-slider {
+                height: 60vh;
+            }
+            
+            .slide-content {
+                padding: 2rem;
+                margin: 0 auto;
+                text-align: center;
+            }
+            
+            .slide-title {
+                font-size: 2.5rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .product-card {
+                height: 500px;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+            
+            .product-image-container {
+                height: 250px;
+            }
+
+            .cart-modal {
+                width: 100%;
+            }
+            
+            .videos-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-text h1 {
+                font-size: 1.5rem;
+            }
+            
+            .slide-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
+            .splash-text {
+                font-size: 3rem;
+            }
+            
+            .splash-logo {
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        /* ====== MOBILE MENU ====== */
+        .mobile-menu-btn {
+            display: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            color: var(--text-primary);
+            cursor: pointer;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 992px) {
+            .mobile-menu-btn {
+                display: flex;
+            }
+        }
+
+        /* ====== RTL SUPPORT ====== */
+        [dir="rtl"] .slide-content {
+            margin-left: 0;
+            margin-right: 10%;
+            text-align: right;
+        }
+
+        [dir="rtl"] .nav-link::after {
+            left: auto;
+            right: 0;
+        }
+
+        [dir="rtl"] .footer-links a:hover {
+            padding-left: 0;
+            padding-right: 10px;
+        }
+
+        [dir="rtl"] .footer-column h3::after {
+            left: auto;
+            right: 0;
+        }
+
+        /* ====== SCROLLBAR ====== */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--dark-gray);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-gold);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(45deg, var(--gold-bright), var(--gold));
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Splash Screen -->
+    <div id="splashScreen">
+        <div class="splash-logo">
+            <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="https://github.com/ryaanjewellers007/Ryaanjewellers/blob/main/LogoDec.mp4?raw=true" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <h1 class="splash-text">RYAAN JEWELLERS</h1>
+        <p class="splash-subtext">Ultimate Luxury Experience</p>
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </div>
+
+    <!-- Gold Price Ticker -->
+    <div class="gold-ticker">
+        <div class="ticker-content">
+            <i class="fas fa-chart-line"></i>
+            <span>Live Gold (24K): </span>
+            <span class="gold-price" id="liveGoldPrice">AED 510.00/g</span>
+            <span class="ticker-change" style="color: #4CAF50;">+2.4%</span>
+            <button class="btn btn-secondary" onclick="showGoldRateModal()" style="padding: 5px 15px; font-size: 0.9rem;">
+                View Details
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close" onclick="closeCartModal()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer" id="cartFooter">
+            <!-- Cart footer will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <a href="#" class="brand">
+                <div class="logo-container">
+                    <video autoplay muted loop style="width: 100%; height: 100%; object-fit: cover;">
+                        <source src="https://github.com/ryaanjewellers007/Ryaanjewellers/blob/main/LogoDec.mp4?raw=true" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="brand-text">
+                    <h1>RYAAN JEWELLERS</h1>
+                    <div class="tagline">DUBAI LUXURY</div>
+                </div>
+            </a>
+
+            <nav class="nav-links" id="navLinks" aria-label="Main Navigation">
+                <a href="#home" class="nav-link" aria-current="page">Home</a>
+                <a href="#collections" class="nav-link">Collections</a>
+                <a href="#products" class="nav-link">Luxury Pieces</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#videos" class="nav-link">Videos</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#about" class="nav-link">Heritage</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <button class="action-button" id="languageButton" aria-label="Switch language">
+                        <i class="fas fa-language"></i>
+                    </button>
+                    <div class="language-dropdown" id="languageDropdown">
+                        <a href="#" class="language-option" data-lang="en">
+                            <i class="fas fa-globe-americas"></i> English
+                        </a>
+                        <a href="#" class="language-option" data-lang="ar">
+                            <i class="fas fa-globe-asia"></i> العربية
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Theme Switcher -->
+                <button class="action-button" id="themeButton" aria-label="Switch theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <!-- Cart Button -->
+                <button class="action-button" id="cartButton" aria-label="Shopping cart" onclick="toggleCartModal()">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+                
+                <!-- Wishlist Button -->
+                <button class="action-button" id="wishlistButton" aria-label="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="wishlist-count" id="wishlistCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Slider -->
+        <section class="hero-slider" id="home">
+            <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20white%20.jpg');">
+                <div class="slide-content">
+                    <h2 class="slide-title">Messika White Collection</h2>
+                    <p class="slide-subtitle">Exquisite white diamond jewellery crafted with precision and passion, featuring the finest Messika designs from Dubai's most prestigious collection.</p>
+                    <button class="btn btn-primary" onclick="filterByCollection('messika')">Discover Collection</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg');">
+                <div class="slide-content">
+                    <h2 class="slide-title">Mov Uno Masterpieces</h2>
+                    <p class="slide-subtitle">Innovative moving diamond jewellery combining traditional Emirati craftsmanship with contemporary French design excellence.</p>
+                    <button class="btn btn-primary" onclick="filterByCollection('messika')">View Masterpieces</button>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chaumet%20Bangles.jpg');">
+                <div class="slide-content">
+                    <h2 class="slide-title">Chaumet Heritage Collection</h2>
+                    <p class="slide-subtitle">Timeless elegance meets royal heritage in our exclusive Chaumet diamond bangles collection.</p>
+                    <button class="btn btn-primary" onclick="filterByCollection('classic')">Explore Heritage</button>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <div class="slider-dot active" data-slide="0"></div>
+                <div class="slider-dot" data-slide="1"></div>
+                <div class="slider-dot" data-slide="2"></div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label class="filter-label">Category</label>
+                    <select class="filter-select" id="categoryFilter" onchange="filterProducts()">
+                        <option value="all">All Categories</option>
+                        <option value="Messika Collection">Messika</option>
+                        <option value="Van Cleef Inspired">Van Cleef</option>
+                        <option value="Bvlgari Inspired">Bvlgari</option>
+                        <option value="Classic Collection">Classic</option>
+                        <option value="earrings">Earrings</option>
+                        <option value="bracelets">Bracelets</option>
+                        <option value="necklaces">Necklaces</option>
+                        <option value="rings">Rings</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Price Range</label>
+                    <select class="filter-select" id="priceFilter" onchange="filterProducts()">
+                        <option value="all">All Prices</option>
+                        <option value="0-7000">Under AED 7,000</option>
+                        <option value="7000-15000">AED 7,000 - 15,000</option>
+                        <option value="15000-25000">AED 15,000 - 25,000</option>
+                        <option value="25000+">Over AED 25,000</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label class="filter-label">Sort By</label>
+                    <select class="filter-select" id="sortFilter" onchange="filterProducts()">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+                <div class="filter-buttons">
+                    <button class="btn btn-secondary" onclick="resetFilters()">
+                        <i class="fas fa-redo"></i> Reset
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="products-section">
+            <div class="section-header">
+                <h2 class="section-title">Featured Luxury Pieces</h2>
+                <p class="section-subtitle">Handcrafted masterpieces for the most discerning connoisseurs of fine jewellery.</p>
+            </div>
+            
+            <div class="products-grid" id="productsContainer">
+                <!-- Products will be loaded here -->
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services-section">
+            <div class="section-header">
+                <h2 class="section-title">Premium Services</h2>
+                <p class="section-subtitle">Experience unparalleled luxury with our exclusive services designed for the discerning client.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3>Old Gold Exchange</h3>
+                    <p>Get the best value for your old gold jewellery. We offer premium exchange rates and transparent valuation.</p>
+                    <button class="btn btn-primary" onclick="showServiceModal('gold-exchange')">
+                        <i class="fas fa-exchange-alt"></i> Exchange Now
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Door-to-Door Service</h3>
+                    <p>Experience luxury at your doorstep. Our personal shoppers bring the collection to you with secure delivery.</p>
+                    <button class="btn btn-primary" onclick="showServiceModal('doorstep')">
+                        <i class="fas fa-calendar-check"></i> Schedule Visit
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-crown"></i>
+                    </div>
+                    <h3>VIP Personal Shopper</h3>
+                    <p>Dedicated personal shoppers for exclusive access to limited edition pieces and private viewings.</p>
+                    <button class="btn btn-primary" onclick="showServiceModal('vip')">
+                        <i class="fas fa-crown"></i> Become VIP
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="videos-section">
+            <div class="section-header">
+                <h2 class="section-title">Collection Videos</h2>
+                <p class="section-subtitle">Experience the brilliance of our luxury collections in motion.</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls poster="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20white%20.jpg">
+                            <source src="https://github.com/ryaanjewellers007/Ryaanjewellers/blob/main/Ryaan%20Jewellers%20splash%20.mp4?raw=true" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <h3>RYAAN JEWELLERS Collection Showcase</h3>
+                        <p>Watch our complete luxury collection in a stunning visual presentation. From diamond-studded masterpieces to gold craftsmanship, experience the elegance that defines RYAAN JEWELLERS.</p>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-container">
+                        <video controls poster="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chaumet%20Bangles.jpg">
+                            <source src="https://github.com/ryaanjewellers007/Ryaanjewellers/blob/main/LogoDec.mp4?raw=true" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="video-content">
+                        <h3>Brand Legacy & Craftsmanship</h3>
+                        <p>Discover the story behind RYAAN JEWELLERS. Our journey from the Dubai Gold Souk to becoming a symbol of luxury jewellery excellence in the Middle East.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews -->
+        <section id="reviews" class="reviews-section">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">What our esteemed clients say about their RYAAN JEWELLERS experience.</p>
+            </div>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The custom ring I designed with their 3D tool came out exactly as I imagined. The craftsmanship is exceptional and the service was impeccable."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">SA</div>
+                        <div class="author-info">
+                            <h4>Sheikha Al Maktoum</h4>
+                            <p>VIP Client</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Door-to-door service saved me so much time! They brought the entire collection to my home and helped me choose the perfect piece."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">AF</div>
+                        <div class="author-info">
+                            <h4>Ahmed Al Farsi</h4>
+                            <p>Business Executive</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="review-card">
+                    <div class="review-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Exchanged my old gold jewellery and got amazing value. The transparent pricing and professional service made the process smooth."</p>
+                    <div class="review-author">
+                        <div class="author-avatar">FQ</div>
+                        <div class="author-info">
+                            <h4>Fatima Al Qasimi</h4>
+                            <p>Luxury Collector</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section">
+            <div class="section-header">
+                <h2 class="section-title">Our Heritage</h2>
+                <p class="section-subtitle">Crafting luxury since 1985 in the heart of Dubai</p>
+            </div>
+            
+            <div class="about-content">
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <h3 style="color: var(--text-accent); font-size: 2.2rem; margin-bottom: 2rem; font-family: var(--font-heading);">A Legacy of Excellence</h3>
+                    <div class="about-text" style="font-size: 1.2rem; line-height: 1.9; color: var(--text-secondary);">
+                        <p>Founded in 1985 in the prestigious Dubai Gold Souk, RYAAN JEWELLERS has been at the forefront of luxury jewellery for over three decades. Our legacy is built on a foundation of exceptional craftsmanship, timeless design, and an unwavering commitment to quality.</p>
+                        <p>We blend traditional Emirati jewellery-making techniques with contemporary design aesthetics to create pieces that not only adorn but also tell stories and celebrate life's most precious moments.</p>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 4rem;">
+                        <div class="mission-card" style="background: var(--glass); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(212, 175, 55, 0.15);">
+                            <h3 style="color: var(--text-accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-bullseye"></i> Our Mission</h3>
+                            <p style="color: var(--text-secondary);">To create extraordinary jewellery pieces that embody luxury, quality, and timeless elegance while maintaining the highest standards of craftsmanship and ethical sourcing.</p>
+                        </div>
+                        
+                        <div class="vision-card" style="background: var(--glass); padding: 2rem; border-radius: var(--radius); border: 1px solid rgba(212, 175, 55, 0.15);">
+                            <h3 style="color: var(--text-accent); margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;"><i class="fas fa-eye"></i> Our Vision</h3>
+                            <p style="color: var(--text-secondary);">To be the most trusted and admired luxury jewellery brand in the Middle East, recognized globally for our exquisite designs, unparalleled quality, and exceptional customer experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>RYAAN JEWELLERS</h3>
+                <p>Dubai Gold Souk, Deira</p>
+                <p>Dubai, United Arab Emirates</p>
+                <p>Email: concierge@ryaanjewellers.com</p>
+                <p>VIP Line: +971 4 123 4567</p>
+                <p>WhatsApp: +971 54 374 6476</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Access</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Luxury Pieces</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#videos">Videos</a></li>
+                    <li><a href="#reviews">Client Reviews</a></li>
+                    <li><a href="#about">Heritage</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>VIP Services</h3>
+                <ul class="footer-links">
+                    <li><a href="#" onclick="showServiceModal('private-consultation')">Private Consultations</a></li>
+                    <li><a href="#" onclick="showServiceModal('custom-design')">Custom Design Studio</a></li>
+                    <li><a href="#" onclick="showServiceModal('international')">International Shipping</a></li>
+                    <li><a href="#" onclick="showServiceModal('warranty')">Lifetime Warranty</a></li>
+                    <li><a href="#" onclick="showServiceModal('events')">VIP Events</a></li>
+                    <li><a href="#" onclick="showServiceModal('gold-exchange')">Old Gold Exchange</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>VIP Hours</h3>
+                <p>Saturday - Thursday: 10:00 AM - 10:00 PM</p>
+                <p>Friday: 2:00 PM - 10:00 PM</p>
+                <p>Ramadan Hours: 5:00 PM - 2:00 AM</p>
+                <p style="margin-top: 1rem; color: var(--text-accent); font-weight: 700;">By Appointment Only</p>
+                <div style="margin-top: 2rem;">
+                    <button class="btn btn-primary" onclick="showAppointmentModal()" style="width: 100%;">
+                        <i class="fas fa-calendar-alt"></i> Book Appointment
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 RYAAN JEWELLERS FZE. All rights reserved.</p>
+            <p>Certified Diamonds • Hallmarked Gold • Lifetime Warranty • Ethical Sourcing</p>
+            <p style="margin-top: 1rem; color: var(--text-accent);">
+                <i class="fas fa-shield-alt"></i> Secure Payment • 
+                <i class="fas fa-shipping-fast"></i> Free Shipping • 
+                <i class="fas fa-gem"></i> Authenticity Guaranteed
+            </p>
+        </div>
+    </footer>
+
+    <!-- Gold Rates Modal -->
+    <div class="modal" id="goldRateModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('goldRateModal')">&times;</button>
+            <h2 style="color: var(--text-accent); margin-bottom: 2rem;">Live Gold Rates</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div style="background: var(--glass); padding: 1.5rem; border-radius: var(--radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <h4 style="color: var(--text-accent); margin-bottom: 0.5rem;">24K Gold</h4>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-primary);">AED 510.00/g</p>
+                    <p style="color: var(--success); font-size: 0.9rem;"><i class="fas fa-arrow-up"></i> +2.4% today</p>
+                </div>
+                <div style="background: var(--glass); padding: 1.5rem; border-radius: var(--radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <h4 style="color: var(--text-accent); margin-bottom: 0.5rem;">22K Gold</h4>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-primary);">AED 468.50/g</p>
+                    <p style="color: var(--success); font-size: 0.9rem;"><i class="fas fa-arrow-up"></i> +2.2% today</p>
+                </div>
+                <div style="background: var(--glass); padding: 1.5rem; border-radius: var(--radius); border: 1px solid rgba(212, 175, 55, 0.2);">
+                    <h4 style="color: var(--text-accent); margin-bottom: 0.5rem;">18K Gold</h4>
+                    <p style="font-size: 1.5rem; font-weight: bold; color: var(--text-primary);">AED 383.25/g</p>
+                    <p style="color: var(--success); font-size: 0.9rem;"><i class="fas fa-arrow-up"></i> +2.1% today</p>
+                </div>
+            </div>
+            <p style="color: var(--text-secondary); margin-bottom: 1rem;"><i class="fas fa-info-circle"></i> Rates updated every 10 minutes. Last update: <span id="lastUpdate">Just now</span></p>
+            <p style="color: var(--text-tertiary); font-size: 0.9rem;"><i class="fas fa-exclamation-triangle"></i> Gold prices fluctuate based on international markets. Actual prices may vary slightly.</p>
+        </div>
+    </div>
+
+    <!-- Appointment Modal -->
+    <div class="modal" id="appointmentModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('appointmentModal')">&times;</button>
+            <h2 style="color: var(--text-accent); margin-bottom: 2rem;">Book VIP Appointment</h2>
+            <form id="appointmentForm" style="display: grid; gap: 1.5rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">First Name</label>
+                        <input type="text" required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Last Name</label>
+                        <input type="text" required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                    </div>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Email</label>
+                    <input type="email" required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Phone</label>
+                    <input type="tel" required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Preferred Date</label>
+                    <input type="date" required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Service Required</label>
+                    <select required style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);">
+                        <option value="">Select a service</option>
+                        <option value="private-viewing">Private Collection Viewing</option>
+                        <option value="custom-design">Custom Design Consultation</option>
+                        <option value="gold-exchange">Old Gold Exchange</option>
+                        <option value="doorstep">Door-to-Door Service</option>
+                        <option value="vip">VIP Personal Shopper</option>
+                    </select>
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; color: var(--text-secondary);">Special Requests</label>
+                    <textarea rows="4" style="width: 100%; padding: 12px; border-radius: var(--radius); background: var(--black); border: 1px solid rgba(212, 175, 55, 0.2); color: var(--text-primary);"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <i class="fas fa-calendar-check"></i> Confirm Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div class="modal" id="wishlistModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('wishlistModal')">&times;</button>
+            <h2 style="color: var(--text-accent); margin-bottom: 2rem;">My Wishlist</h2>
+            <div id="wishlistItems" style="max-height: 400px; overflow-y: auto;">
+                <!-- Wishlist items will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div class="modal" id="productDetailModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('productDetailModal')">&times;</button>
+            <div id="productDetailContent">
+                <!-- Product details will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // ========== CONFIGURATION ==========
+        const GITHUB_BASE_URL = 'https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/';
+        const WHATSAPP_NUMBER = '971543746476';
+        const INSTAGRAM_URL = 'https://instagram.com/ryaanjewellers';
+        const FACEBOOK_URL = 'https://facebook.com/ryaanjewellers';
+
+        // ========== GLOBAL VARIABLES ==========
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+        let sliderInterval;
+        let currentSlide = 0;
+        let currentLanguage = 'en';
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        let currentProducts = [];
+
+        // ========== PRODUCTS DATABASE ==========
+        const products = [
+            // Messika Collection
+            {
+                id: 100,
+                name: "Messika Move Hoop Earrings",
+                category: "Messika Collection",
+                price: 8500,
+                image: GITHUB_BASE_URL + "Messika-Move-Hoop-04407-YG.jpg",
+                altImage: GITHUB_BASE_URL + "Messika-Move-Hoop-04407-YG.jpg",
+                type: "earrings",
+                collection: "messika",
+                description: "18K yellow gold move hoop earrings with brilliant-cut diamonds. Features innovative moving diamond technology.",
+                material: "18K Yellow Gold",
+                stones: "Brilliant-cut Diamonds (1.5ct total)",
+                weight: "8.2g",
+                featured: true,
+                dimensions: "25mm diameter",
+                certification: "GIA Certified"
+            },
+            {
+                id: 101,
+                name: "Messika Move Uno Mini Hoops",
+                category: "Messika Collection",
+                price: 7200,
+                image: GITHUB_BASE_URL + "Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg",
+                altImage: GITHUB_BASE_URL + "Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg",
+                type: "earrings",
+                collection: "messika",
+                description: "White gold mini hoop earrings with single moving diamond. Modern design with timeless elegance.",
+                material: "18K White Gold",
+                stones: "Single Brilliant-cut Diamond (0.5ct)",
+                weight: "6.5g",
+                featured: true,
+                dimensions: "15mm diameter",
+                certification: "IGI Certified"
+            },
+            {
+                id: 102,
+                name: "Messika Move Classic",
+                category: "Messika Collection",
+                price: 9200,
+                image: GITHUB_BASE_URL + "Messika-Move-Classic-03998-WG",
+                altImage: GITHUB_BASE_URL + "Messika-Move-Classic-03998-WG",
+                type: "earrings",
+                collection: "messika",
+                description: "Classic Move collection earrings with moving diamonds in white gold setting.",
+                material: "18K White Gold",
+                stones: "Brilliant-cut Diamonds (2ct total)",
+                weight: "9.8g",
+                featured: false,
+                dimensions: "30mm diameter",
+                certification: "GIA Certified"
+            },
+            {
+                id: 103,
+                name: "Messika Move Uno Bracelet",
+                category: "Messika Collection",
+                price: 14500,
+                image: GITHUB_BASE_URL + "Messika-Move-Uno-04705-WG.jpg",
+                altImage: GITHUB_BASE_URL + "Messika-Move-Uno-04705-WG.jpg",
+                type: "bracelet",
+                collection: "messika",
+                description: "Elegant Move Uno bracelet with sliding diamond motif. Perfect for everyday luxury.",
+                material: "18K White Gold",
+                stones: "Brilliant-cut Diamonds (3ct total)",
+                weight: "22.5g",
+                featured: true,
+                dimensions: "Adjustable 16-18cm",
+                certification: "IGI Certified"
+            },
+            {
+                id: 104,
+                name: "Messika Move Thin Ring",
+                category: "Messika Collection",
+                price: 6800,
+                image: GITHUB_BASE_URL + "Messika-Move-Thin-04068-RG-2-1024x1024.jpg",
+                altImage: GITHUB_BASE_URL + "Messika-Move-Thin-04068-RG-2-1024x1024.jpg",
+                type: "ring",
+                collection: "messika",
+                description: "Delicate thin ring from the Move collection in rose gold with moving diamonds.",
+                material: "18K Rose Gold",
+                stones: "Brilliant-cut Diamonds (0.75ct total)",
+                weight: "4.8g",
+                featured: false,
+                dimensions: "US Size 6",
+                certification: "GIA Certified"
+            },
+            {
+                id: 105,
+                name: "Messika Move Romane Necklace",
+                category: "Messika Collection",
+                price: 18500,
+                image: GITHUB_BASE_URL + "Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg",
+                altImage: GITHUB_BASE_URL + "Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg",
+                type: "necklace",
+                collection: "messika",
+                description: "Romane necklace from the Move collection featuring multiple moving diamond stations.",
+                material: "18K Yellow Gold",
+                stones: "Brilliant-cut Diamonds (5ct total)",
+                weight: "38.2g",
+                featured: true,
+                dimensions: "45cm chain",
+                certification: "GIA Certified"
+            },
+            {
+                id: 106,
+                name: "Messika Boucles d'Oreilles",
+                category: "Messika Collection",
+                price: 12500,
+                image: GITHUB_BASE_URL + "messika_-packshot-boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg",
+                altImage: GITHUB_BASE_URL + "messika_-packshot-boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg",
+                type: "earrings",
+                collection: "messika",
+                description: "Pendant earrings from the Move 10th collection with extra large pavé diamonds.",
+                material: "Platinum & Gold",
+                stones: "Pavé Diamonds (6ct total)",
+                weight: "15.2g",
+                featured: true,
+                dimensions: "40mm length",
+                certification: "GIA Certified"
+            },
+            {
+                id: 107,
+                name: "Messika Move Uno Necklace",
+                category: "Messika Collection",
+                price: 16500,
+                image: GITHUB_BASE_URL + "messika_paris-collier_move_uno_pav_vue_1_04708_p",
+                altImage: GITHUB_BASE_URL + "messika_paris-collier_move_uno_pav_vue_1_04708_p",
+                type: "necklace",
+                collection: "messika",
+                description: "Move Uno necklace with pavé diamond station. Iconic design with exceptional craftsmanship.",
+                material: "18K Rose Gold",
+                stones: "Pavé Diamonds (4.5ct total)",
+                weight: "32.8g",
+                featured: false,
+                dimensions: "42cm chain",
+                certification: "IGI Certified"
+            },
+            {
+                id: 108,
+                name: "Messika Choker Necklace",
+                category: "Messika Collection",
+                price: 22500,
+                image: GITHUB_BASE_URL + "messika-packshot-collier_choker_move_uno_pampille_pav_vue_1_12150_wg",
+                altImage: GITHUB_BASE_URL + "messika-packshot-collier_choker_move_uno_pampille_pav_vue_1_12150_wg",
+                type: "necklace",
+                collection: "messika",
+                description: "Choker necklace with pampille design featuring pavé diamonds. Statement piece for special occasions.",
+                material: "18K White Gold",
+                stones: "Pavé Diamonds (8ct total)",
+                weight: "45.5g",
+                featured: true,
+                dimensions: "38cm choker",
+                certification: "GIA Certified"
+            },
+            {
+                id: 109,
+                name: "Messika Lucky Eye Necklace",
+                category: "Messika Collection",
+                price: 9800,
+                image: GITHUB_BASE_URL + "messika-packshot-collier_lucky_eye_pav_vue_1_07525_yg",
+                altImage: GITHUB_BASE_URL + "messika-packshot-collier_lucky_eye_pav_vue_1_07525_yg",
+                type: "necklace",
+                collection: "messika",
+                description: "Lucky Eye necklace with protective symbolism and pavé diamond details.",
+                material: "18K Yellow Gold",
+                stones: "Pavé Diamonds (2.5ct total)",
+                weight: "18.6g",
+                featured: false,
+                dimensions: "40cm chain",
+                certification: "IGI Certified"
+            },
+            {
+                id: 110,
+                name: "Messika Move Classic Necklace",
+                category: "Messika Collection",
+                price: 19500,
+                image: GITHUB_BASE_URL + "messika-packshot-collier_move_classique_pav_vue_1_03994_p",
+                altImage: GITHUB_BASE_URL + "messika-packshot-collier_move_classique_pav_vue_1_03994_p",
+                type: "necklace",
+                collection: "messika",
+                description: "Classic Move necklace with pavé diamonds and signature moving elements.",
+                material: "Platinum",
+                stones: "Pavé Diamonds (7ct total)",
+                weight: "42.3g",
+                featured: true,
+                dimensions: "44cm chain",
+                certification: "GIA Certified"
+            },
+            // Van Cleef Inspired Collection
+            {
+                id: 1,
+                name: "Van Cleef Onyx Bracelet",
+                category: "Van Cleef Inspired",
+                price: 9800,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Onyx.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Onyx.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Luxury gold bracelet with black onyx and diamond accents. Inspired by iconic Alhambra collection.",
+                material: "18K Yellow Gold",
+                stones: "Black Onyx, Diamonds (1.2ct)",
+                weight: "22.5g",
+                featured: true,
+                dimensions: "17cm bracelet",
+                certification: "Diamond Certified"
+            },
+            {
+                id: 2,
+                name: "Van Cleef Carnelian Bracelet",
+                category: "Van Cleef Inspired",
+                price: 10200,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Carnelian.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Carnelian.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Gold bracelet with vibrant carnelian stones. Four-leaf clover motif for good luck.",
+                material: "18K Rose Gold",
+                stones: "Carnelian, Diamonds (1.5ct)",
+                weight: "24.8g",
+                featured: true,
+                dimensions: "17cm bracelet",
+                certification: "Diamond Certified"
+            },
+            {
+                id: 111,
+                name: "Van Cleef Malachite Bracelet",
+                category: "Van Cleef Inspired",
+                price: 9800,
+                image: GITHUB_BASE_URL + "Vancmeef%20Bracelet%20Malchite.jpg",
+                altImage: GITHUB_BASE_URL + "Vancmeef%20Bracelet%20Malchite.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Luxurious malachite and gold bracelet with diamond accents. Malachite is known for its protective properties.",
+                material: "18K Yellow Gold",
+                stones: "Malachite, Diamonds (1.8ct total)",
+                weight: "25.2g",
+                featured: true,
+                dimensions: "17cm bracelet",
+                certification: "Natural Malachite Certified"
+            },
+            {
+                id: 112,
+                name: "Van Cleef Chalcedony Bracelet",
+                category: "Van Cleef Inspired",
+                price: 10200,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Chalcedony%20.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Chalcedony%20.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Elegant blue chalcedony bracelet set in rose gold. Chalcedony represents calmness and harmony.",
+                material: "18K Rose Gold",
+                stones: "Blue Chalcedony, Diamonds (2ct total)",
+                weight: "23.8g",
+                featured: true,
+                dimensions: "17cm bracelet",
+                certification: "Natural Chalcedony Certified"
+            },
+            {
+                id: 113,
+                name: "Van Cleef Agate Bracelet",
+                category: "Van Cleef Inspired",
+                price: 9500,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Agate.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Agate.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Striped agate bracelet with delicate gold setting. Agate stones are known for their grounding energy.",
+                material: "18K White Gold",
+                stones: "Striped Agate, Diamonds (1.5ct total)",
+                weight: "21.5g",
+                featured: false,
+                dimensions: "17cm bracelet",
+                certification: "Natural Agate Certified"
+            },
+            {
+                id: 114,
+                name: "Van Cleef Tiger Eye Bracelet",
+                category: "Van Cleef Inspired",
+                price: 8900,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Tiger%20Eye.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Tiger%20Eye.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Striking tiger eye stone bracelet with golden shimmer. Tiger eye is associated with courage and protection.",
+                material: "18K Yellow Gold",
+                stones: "Tiger Eye, Diamonds (1.2ct total)",
+                weight: "20.8g",
+                featured: false,
+                dimensions: "17cm bracelet",
+                certification: "Natural Tiger Eye Certified"
+            },
+            {
+                id: 115,
+                name: "Van Cleef Mother of Pearl Bracelet",
+                category: "Van Cleef Inspired",
+                price: 10500,
+                image: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Mother%20of%20Pearl.jpg",
+                altImage: GITHUB_BASE_URL + "Vancleef%20Bracelet%20Mother%20of%20Pearl.jpg",
+                type: "bracelet",
+                collection: "vancleef",
+                description: "Iridescent mother of pearl bracelet with diamond accents. Each piece has unique natural patterns.",
+                material: "18K White Gold",
+                stones: "Mother of Pearl, Diamonds (2.2ct total)",
+                weight: "24.5g",
+                featured: true,
+                dimensions: "17cm bracelet",
+                certification: "Natural Mother of Pearl"
+            },
+            // Bvlgari Inspired Collection
+            {
+                id: 3,
+                name: "Serpenti Choker Necklace",
+                category: "Bvlgari Inspired",
+                price: 12500,
+                image: GITHUB_BASE_URL + "Serpenti%20Bvulgari%20Chocker.jpg",
+                altImage: GITHUB_BASE_URL + "Serpenti%20Bvulgari%20Chocker.jpg",
+                type: "necklace",
+                collection: "bvlgari",
+                description: "Iconic serpent design choker necklace with emerald eyes. Timeless Bvlgari inspiration.",
+                material: "18K White Gold",
+                stones: "Diamonds (3.5ct), Emerald Eyes",
+                weight: "45.2g",
+                featured: true,
+                dimensions: "36cm choker",
+                certification: "GIA & Emerald Certified"
+            },
+            // Classic Collection
+            {
+                id: 116,
+                name: "Chaumet Diamond Bangle",
+                category: "Classic Collection",
+                price: 18500,
+                image: GITHUB_BASE_URL + "Chaumet%20Bangles.jpg",
+                altImage: GITHUB_BASE_URL + "Chaumet%20Bangles.jpg",
+                type: "bracelet",
+                collection: "classic",
+                description: "Exquisite Chaumet diamond bangle with intricate craftsmanship and timeless elegance.",
+                material: "18K White Gold",
+                stones: "Brilliant-cut Diamonds (4.5ct total)",
+                weight: "38.2g",
+                featured: true,
+                dimensions: "16cm bangle",
+                certification: "GIA Certified"
+            },
+            {
+                id: 117,
+                name: "Chopard Diamond Earrings",
+                category: "Classic Collection",
+                price: 12500,
+                image: GITHUB_BASE_URL + "Chopard%20Earring.jpg",
+                altImage: GITHUB_BASE_URL + "Chopard%20Earring.jpg",
+                type: "earrings",
+                collection: "classic",
+                description: "Luxurious Chopard diamond earrings with exceptional sparkle and Swiss craftsmanship.",
+                material: "18K White Gold",
+                stones: "Brilliant-cut Diamonds (3.2ct total)",
+                weight: "12.5g",
+                featured: true,
+                dimensions: "28mm diameter",
+                certification: "GIA Certified"
+            },
+            {
+                id: 118,
+                name: "Chopard Heart White Gold Bangle",
+                category: "Classic Collection",
+                price: 16800,
+                image: GITHUB_BASE_URL + "Chopard%20heart%20bangles%20whithe.jpg",
+                altImage: GITHUB_BASE_URL + "Chopard%20heart%20bangles%20whithe.jpg",
+                type: "bracelet",
+                collection: "classic",
+                description: "Romantic heart-shaped Chopard bangle in white gold with pavé diamond setting.",
+                material: "18K White Gold",
+                stones: "Pavé Diamonds (5.5ct total)",
+                weight: "42.8g",
+                featured: true,
+                dimensions: "17cm bangle",
+                certification: "GIA Certified"
+            },
+            {
+                id: 119,
+                name: "Heart Diamond Bangle",
+                category: "Classic Collection",
+                price: 14200,
+                image: GITHUB_BASE_URL + "Heart%20Bangle.jpg",
+                altImage: GITHUB_BASE_URL + "Heart%20Bangle.jpg",
+                type: "bracelet",
+                collection: "classic",
+                description: "Elegant heart motif bangle with channel-set diamonds and smooth gold finish.",
+                material: "18K Rose Gold",
+                stones: "Channel-set Diamonds (3.8ct total)",
+                weight: "35.5g",
+                featured: false,
+                dimensions: "17cm bangle",
+                certification: "IGI Certified"
+            },
+            {
+                id: 120,
+                name: "White and Blue Diamond Bracelet",
+                category: "Classic Collection",
+                price: 19500,
+                image: GITHUB_BASE_URL + "White%20.%20Blue%20.jpg",
+                altImage: GITHUB_BASE_URL + "White%20.%20Blue%20.jpg",
+                type: "bracelet",
+                collection: "classic",
+                description: "Stunning white and blue diamond bracelet creating a beautiful color contrast.",
+                material: "Platinum and 18K White Gold",
+                stones: "White & Blue Diamonds (6.2ct total)",
+                weight: "48.5g",
+                featured: true,
+                dimensions: "18cm bracelet",
+                certification: "GIA Certified Blue & White Diamonds"
+            },
+            {
+                id: 10,
+                name: "Butterfly Diamond Ring",
+                category: "Classic Collection",
+                price: 4850,
+                image: GITHUB_BASE_URL + "Butterfly%20Ring.jpg",
+                altImage: GITHUB_BASE_URL + "Butterfly%20Ring.jpg",
+                type: "ring",
+                collection: "classic",
+                description: "Delicate butterfly motif ring with diamond accents. Symbol of transformation and beauty.",
+                material: "18K Rose Gold",
+                stones: "Brilliant-cut Diamonds (0.8ct total)",
+                weight: "4.2g",
+                featured: true,
+                dimensions: "US Size 6",
+                certification: "IGI Certified"
+            },
+            {
+                id: 4,
+                name: "Diamond Tennis Bracelet",
+                category: "Classic Collection",
+                price: 15600,
+                image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80",
+                altImage: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80",
+                type: "bracelet",
+                collection: "classic",
+                description: "Classic tennis bracelet with channel-set brilliant diamonds. Perfect for any occasion.",
+                material: "18K White Gold",
+                stones: "Brilliant-cut Diamonds (2ct total)",
+                weight: "18.6g",
+                featured: true,
+                dimensions: "18cm bracelet",
+                certification: "GIA Certified"
+            },
+            {
+                id: 5,
+                name: "Pear Drop Diamond Earrings",
+                category: "Classic Collection",
+                price: 8900,
+                image: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?w=800&q=80",
+                altImage: "https://images.unsplash.com/photo-1594576722512-582d5577dc56?w=800&q=80",
+                type: "earrings",
+                collection: "classic",
+                description: "Elegant pear-shaped diamond drop earrings. Timeless sophistication.",
+                material: "18K White Gold",
+                stones: "Pear-shaped Diamonds (1.5ct total)",
+                weight: "9.8g",
+                featured: false,
+                dimensions: "25mm length",
+                certification: "GIA Certified"
+            }
+        ];
+
+        // ========== INITIALIZATION ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            initApp();
+        });
+
+        function initApp() {
+            // Initialize splash screen
+            handleSplashScreen();
+            
+            // Initialize theme
+            initTheme();
+            
+            // Initialize language
+            initLanguage();
+            
+            // Load products
+            currentProducts = [...products];
+            renderProducts();
+            
+            // Initialize cart
+            updateCartCount();
+            renderCart();
+            
+            // Initialize wishlist
+            updateWishlistCount();
+            renderWishlist();
+            
+            // Initialize slider
+            initSlider();
+            
+            // Initialize gold price
+            updateGoldPrice();
+            
+            // Initialize mobile menu
+            initMobileMenu();
+            
+            // Initialize language dropdown
+            initLanguageDropdown();
+            
+            // Initialize modals
+            initModals();
+        }
+
+        // ========== SPLASH SCREEN ==========
+        function handleSplashScreen() {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const splashScreen = document.getElementById('splashScreen');
+                    if (splashScreen) {
+                        splashScreen.classList.add('hidden');
+                        setTimeout(() => {
+                            splashScreen.style.display = 'none';
+                        }, 1000);
+                    }
+                }, 3000);
+            });
+        }
+
+        // ========== THEME MANAGEMENT ==========
+        function initTheme() {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            const themeButton = document.getElementById('themeButton');
+            if (themeButton) {
+                themeButton.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+                themeButton.addEventListener('click', toggleTheme);
+            }
+        }
+
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            localStorage.setItem('theme', currentTheme);
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            const themeButton = document.getElementById('themeButton');
+            if (themeButton) {
+                themeButton.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+            }
+            showNotification(`Switched to ${currentTheme} mode`, 'info');
+        }
+
+        // ========== LANGUAGE MANAGEMENT ==========
+        function initLanguage() {
+            currentLanguage = localStorage.getItem('language') || 'en';
+            document.documentElement.lang = currentLanguage;
+            document.documentElement.dir = currentLanguage === 'ar' ? 'rtl' : 'ltr';
+        }
+
+        function initLanguageDropdown() {
+            const languageButton = document.getElementById('languageButton');
+            const languageDropdown = document.getElementById('languageDropdown');
+            const languageOptions = document.querySelectorAll('.language-option');
+            
+            if (languageButton) {
+                languageButton.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    languageDropdown.classList.toggle('active');
+                });
+                
+                languageOptions.forEach(option => {
+                    option.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const lang = this.getAttribute('data-lang');
+                        switchLanguage(lang);
+                        languageDropdown.classList.remove('active');
+                    });
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
+                        languageDropdown.classList.remove('active');
+                    }
+                });
+            }
+        }
+
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('language', lang);
+            document.documentElement.lang = lang;
+            document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+            showNotification(`Language switched to ${lang === 'en' ? 'English' : 'Arabic'}`, 'info');
+        }
+
+        // ========== CART MANAGEMENT ==========
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+            
+            updateCartCount();
+            saveCart();
+            renderCart();
+            showNotification('Product added to cart!', 'success');
+            
+            // Open cart modal if on mobile
+            if (window.innerWidth <= 768) {
+                toggleCartModal();
+            }
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartCount();
+            saveCart();
+            renderCart();
+            showNotification('Item removed from cart', 'info');
+        }
+
+        function updateCartItemQuantity(productId, quantity) {
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                if (quantity <= 0) {
+                    removeFromCart(productId);
+                } else {
+                    item.quantity = quantity;
+                    updateCartCount();
+                    saveCart();
+                    renderCart();
+                }
+            }
+        }
+
+        function updateCartCount() {
+            const count = cart.reduce((total, item) => total + item.quantity, 0);
+            document.getElementById('cartCount').textContent = count;
+        }
+
+        function saveCart() {
+            localStorage.setItem('cart', JSON.stringify(cart));
+        }
+
+        function renderCart() {
+            const cartItems = document.getElementById('cartItems');
+            const cartFooter = document.getElementById('cartFooter');
+            
+            if (!cartItems || !cartFooter) return;
+            
+            if (cart.length === 0) {
+                cartItems.innerHTML = `
+                    <div class="cart-empty">
+                        <i class="fas fa-shopping-bag"></i>
+                        <h3>Your cart is empty</h3>
+                        <p>Add some luxurious items to get started</p>
+                        <button class="btn btn-primary" onclick="closeCartModal()" style="margin-top: 1rem;">
+                            Continue Shopping
+                        </button>
+                    </div>
+                `;
+                
+                cartFooter.innerHTML = '';
+                return;
+            }
+            
+            let cartHTML = '';
+            let total = 0;
+            
+            cart.forEach(item => {
+                total += item.price * item.quantity;
+                
+                cartHTML += `
+                <div class="cart-item">
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&q=80'">
+                    </div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">AED ${item.price.toLocaleString()}</div>
+                        <div class="cart-item-controls">
+                            <button onclick="updateCartItemQuantity(${item.id}, ${item.quantity - 1})">-</button>
+                            <span class="cart-item-quantity">${item.quantity}</span>
+                            <button onclick="updateCartItemQuantity(${item.id}, ${item.quantity + 1})">+</button>
+                            <button class="cart-item-remove" onclick="removeFromCart(${item.id})">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+            });
+            
+            cartItems.innerHTML = cartHTML;
+            
+            cartFooter.innerHTML = `
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span>AED ${total.toLocaleString()}</span>
+                </div>
+                <button class="btn btn-primary" style="width: 100%;" onclick="checkout()">
+                    <i class="fas fa-lock"></i> Proceed to Checkout
+                </button>
+            `;
+        }
+
+        function toggleCartModal() {
+            const cartModal = document.getElementById('cartModal');
+            cartModal.classList.toggle('active');
+            renderCart();
+        }
+
+        function closeCartModal() {
+            const cartModal = document.getElementById('cartModal');
+            cartModal.classList.remove('active');
+        }
+
+        function checkout() {
+            showNotification('Checkout functionality would be implemented here!', 'info');
+            closeCartModal();
+        }
+
+        // ========== WISHLIST MANAGEMENT ==========
+        function toggleWishlist(productId) {
+            const index = wishlist.indexOf(productId);
+            if (index === -1) {
+                wishlist.push(productId);
+                showNotification('Added to wishlist!', 'success');
+            } else {
+                wishlist.splice(index, 1);
+                showNotification('Removed from wishlist', 'info');
+            }
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            updateWishlistCount();
+            renderWishlist();
+            renderProducts();
+        }
+
+        function updateWishlistCount() {
+            const count = wishlist.length;
+            document.getElementById('wishlistCount').textContent = count;
+        }
+
+        function renderWishlist() {
+            const wishlistItems = document.getElementById('wishlistItems');
+            if (!wishlistItems) return;
+            
+            if (wishlist.length === 0) {
+                wishlistItems.innerHTML = `
+                    <div style="text-align: center; padding: 2rem; color: var(--text-secondary);">
+                        <i class="fas fa-heart" style="font-size: 3rem; margin-bottom: 1rem; color: var(--text-tertiary);"></i>
+                        <h3>Your wishlist is empty</h3>
+                        <p>Save your favorite items here</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            let wishlistHTML = '<div style="display: grid; gap: 1rem;">';
+            
+            wishlist.forEach(productId => {
+                const product = products.find(p => p.id === productId);
+                if (product) {
+                    wishlistHTML += `
+                    <div style="display: flex; gap: 1rem; padding: 1rem; background: var(--glass); border-radius: var(--radius);">
+                        <img src="${product.image}" alt="${product.name}" style="width: 60px; height: 60px; object-fit: cover; border-radius: var(--radius);" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=200&q=80'">
+                        <div style="flex: 1;">
+                            <div style="font-weight: 700; color: var(--text-primary);">${product.name}</div>
+                            <div style="color: var(--text-accent); font-weight: 900;">AED ${product.price.toLocaleString()}</div>
+                        </div>
+                        <div style="display: flex; gap: 0.5rem;">
+                            <button class="btn btn-secondary" onclick="addToCart(${product.id}); closeModal('wishlistModal');" style="padding: 5px 10px;">
+                                <i class="fas fa-shopping-bag"></i>
+                            </button>
+                            <button class="btn btn-secondary" onclick="toggleWishlist(${product.id})" style="padding: 5px 10px;">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                    `;
+                }
+            });
+            
+            wishlistHTML += '</div>';
+            wishlistItems.innerHTML = wishlistHTML;
+        }
+
+        function toggleWishlistModal() {
+            const wishlistModal = document.getElementById('wishlistModal');
+            wishlistModal.classList.toggle('active');
+            renderWishlist();
+        }
+
+        // ========== PRODUCTS MANAGEMENT ==========
+        function renderProducts() {
+            const container = document.getElementById('productsContainer');
+            if (!container) return;
+            
+            container.innerHTML = currentProducts.map(product => {
+                const isInWishlist = wishlist.includes(product.id);
+                const badge = product.featured ? 'FEATURED' : product.collection === 'messika' ? 'MESSIKA' : product.collection === 'vancleef' ? 'VAN CLEEF' : product.collection === 'bvlgari' ? 'BVGLARI' : 'NEW';
+                
+                return `
+                <div class="product-card fade-in">
+                    <div class="product-badge">${badge}</div>
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&q=80'">
+                    </div>
+                    <div class="product-content">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">
+                            AED ${product.price.toLocaleString()}
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn btn-secondary" onclick="showProductDetail(${product.id})">
+                                <i class="fas fa-eye"></i> View
+                            </button>
+                            <button class="btn ${isInWishlist ? 'btn-primary' : 'btn-secondary'}" onclick="toggleWishlist(${product.id})">
+                                <i class="fas fa-heart"></i> ${isInWishlist ? 'Saved' : 'Save'}
+                            </button>
+                            <button class="btn btn-primary" onclick="addToCart(${product.id})">
+                                <i class="fas fa-shopping-bag"></i> Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                `;
+            }).join('');
+        }
+
+        function showProductDetail(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const modal = document.getElementById('productDetailModal');
+            const content = document.getElementById('productDetailContent');
+            
+            content.innerHTML = `
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem;">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="${product.image}" alt="${product.name}" style="max-width: 100%; max-height: 400px; object-fit: contain; background: var(--dark-gray); padding: 2rem; border-radius: var(--radius);" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600&q=80'">
+                    </div>
+                    <div>
+                        <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: var(--text-accent);">${product.name}</h2>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.7;">${product.description}</p>
+                        
+                        <div style="background: var(--glass); padding: 1.5rem; border-radius: var(--radius); margin-bottom: 1.5rem;">
+                            <h4 style="color: var(--text-accent); margin-bottom: 1rem;">Specifications</h4>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Material</div>
+                                    <div style="color: var(--text-primary); font-weight: 600;">${product.material}</div>
+                                </div>
+                                <div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Stones</div>
+                                    <div style="color: var(--text-primary); font-weight: 600;">${product.stones}</div>
+                                </div>
+                                <div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Weight</div>
+                                    <div style="color: var(--text-primary); font-weight: 600;">${product.weight}</div>
+                                </div>
+                                <div>
+                                    <div style="color: var(--text-secondary); font-size: 0.9rem;">Dimensions</div>
+                                    <div style="color: var(--text-primary); font-weight: 600;">${product.dimensions}</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="font-size: 2.5rem; color: var(--text-accent); font-weight: 900; margin-bottom: 1.5rem;">
+                            AED ${product.price.toLocaleString()}
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem;">
+                            <button class="btn btn-primary" onclick="addToCart(${product.id}); closeModal('productDetailModal');">
+                                <i class="fas fa-shopping-bag"></i> Add to Cart
+                            </button>
+                            <button class="btn ${wishlist.includes(product.id) ? 'btn-primary' : 'btn-secondary'}" onclick="toggleWishlist(${product.id}); closeModal('productDetailModal');">
+                                <i class="fas fa-heart"></i> ${wishlist.includes(product.id) ? 'Saved' : 'Save to Wishlist'}
+                            </button>
+                        </div>
+                        
+                        <div style="background: var(--glass); padding: 1.5rem; border-radius: var(--radius);">
+                            <h4 style="color: var(--text-accent); margin-bottom: 0.5rem;"><i class="fas fa-shield-alt"></i> Included Services</h4>
+                            <ul style="color: var(--text-secondary); padding-left: 1.5rem;">
+                                <li>Lifetime Warranty</li>
+                                <li>Free Professional Cleaning</li>
+                                <li>Certificate of Authenticity</li>
+                                <li>Complimentary Insurance Appraisal</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+
+        function filterProducts() {
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const priceFilter = document.getElementById('priceFilter').value;
+            const sortFilter = document.getElementById('sortFilter').value;
+            
+            let filteredProducts = [...products];
+            
+            // Filter by category
+            if (categoryFilter !== 'all') {
+                if (['earrings', 'bracelets', 'necklaces', 'rings'].includes(categoryFilter)) {
+                    filteredProducts = filteredProducts.filter(product => product.type === categoryFilter);
+                } else {
+                    filteredProducts = filteredProducts.filter(product => product.category === categoryFilter);
+                }
+            }
+            
+            // Filter by price
+            if (priceFilter !== 'all') {
+                const [min, max] = priceFilter.split('-');
+                if (max === '+') {
+                    filteredProducts = filteredProducts.filter(product => product.price >= parseInt(min));
+                } else {
+                    filteredProducts = filteredProducts.filter(product => 
+                        product.price >= parseInt(min) && product.price <= parseInt(max)
+                    );
+                }
+            }
+            
+            // Sort products
+            switch(sortFilter) {
+                case 'price-low':
+                    filteredProducts.sort((a, b) => a.price - b.price);
+                    break;
+                case 'price-high':
+                    filteredProducts.sort((a, b) => b.price - a.price);
+                    break;
+                case 'newest':
+                    // Assuming newer products have higher IDs
+                    filteredProducts.sort((a, b) => b.id - a.id);
+                    break;
+                case 'popular':
+                    // Sort by featured and collection
+                    filteredProducts.sort((a, b) => {
+                        const aScore = (a.featured ? 2 : 0) + (a.collection === 'messika' ? 1 : 0);
+                        const bScore = (b.featured ? 2 : 0) + (b.collection === 'messika' ? 1 : 0);
+                        return bScore - aScore;
+                    });
+                    break;
+            }
+            
+            currentProducts = filteredProducts;
+            renderProducts();
+        }
+
+        function filterByCollection(collection) {
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('priceFilter').value = 'all';
+            
+            if (collection === 'messika') {
+                currentProducts = products.filter(p => p.collection === 'messika');
+            } else if (collection === 'classic') {
+                currentProducts = products.filter(p => p.collection === 'classic');
+            } else {
+                currentProducts = [...products];
+            }
+            
+            renderProducts();
+            window.scrollTo({
+                top: document.getElementById('products').offsetTop - 120,
+                behavior: 'smooth'
+            });
+        }
+
+        function resetFilters() {
+            document.getElementById('categoryFilter').value = 'all';
+            document.getElementById('priceFilter').value = 'all';
+            document.getElementById('sortFilter').value = 'featured';
+            currentProducts = [...products];
+            renderProducts();
+            showNotification('Filters reset', 'info');
+        }
+
+        // ========== SLIDER ==========
+        function initSlider() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    clearInterval(sliderInterval);
+                    showSlide(index);
+                    startSlider();
+                });
+            });
+            
+            function startSlider() {
+                sliderInterval = setInterval(() => {
+                    let nextSlide = currentSlide + 1;
+                    if (nextSlide >= slides.length) nextSlide = 0;
+                    showSlide(nextSlide);
+                }, 5000);
+            }
+            
+            startSlider();
+        }
+
+        // ========== GOLD PRICE ==========
+        function updateGoldPrice() {
+            const goldElement = document.getElementById('liveGoldPrice');
+            if (!goldElement) return;
+            
+            setInterval(() => {
+                const change = (Math.random() - 0.5) * 5;
+                const basePrice = 510.00;
+                const newPrice = basePrice + change;
+                goldElement.textContent = `AED ${newPrice.toFixed(2)}/g`;
+                
+                const changeElement = goldElement.nextElementSibling;
+                if (changeElement) {
+                    changeElement.textContent = change >= 0 ? `+${change.toFixed(2)}%` : `${change.toFixed(2)}%`;
+                    changeElement.style.color = change >= 0 ? '#4CAF50' : '#F44336';
+                }
+                
+                // Update last update time
+                const lastUpdate = document.getElementById('lastUpdate');
+                if (lastUpdate) {
+                    lastUpdate.textContent = new Date().toLocaleTimeString();
+                }
+            }, 10000);
+        }
+
+        function showGoldRateModal() {
+            const modal = document.getElementById('goldRateModal');
+            modal.classList.add('active');
+        }
+
+        // ========== MOBILE MENU ==========
+        function initMobileMenu() {
+            const menuBtn = document.getElementById('mobileMenuBtn');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                });
+                
+                document.addEventListener('click', function(e) {
+                    if (!navLinks.contains(e.target) && !menuBtn.contains(e.target)) {
+                        navLinks.classList.remove('active');
+                    }
+                });
+                
+                navLinks.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
+        }
+
+        // ========== MODALS ==========
+        function initModals() {
+            // Close modals when clicking outside
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.classList.remove('active');
+                    }
+                });
+            });
+            
+            // Appointment form
+            const appointmentForm = document.getElementById('appointmentForm');
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    showNotification('Appointment request submitted successfully! We will contact you shortly.', 'success');
+                    closeModal('appointmentModal');
+                });
+            }
+            
+            // Close cart modal when clicking outside
+            document.addEventListener('click', function(e) {
+                const cartModal = document.getElementById('cartModal');
+                if (cartModal.classList.contains('active') && 
+                    !cartModal.contains(e.target) && 
+                    e.target.id !== 'cartButton' && 
+                    !e.target.closest('#cartButton')) {
+                    cartModal.classList.remove('active');
+                }
+            });
+        }
+
+        function showAppointmentModal() {
+            const modal = document.getElementById('appointmentModal');
+            modal.classList.add('active');
+        }
+
+        function showServiceModal(service) {
+            const serviceNames = {
+                'gold-exchange': 'Old Gold Exchange',
+                'doorstep': 'Door-to-Door Service',
+                'vip': 'VIP Personal Shopper',
+                'private-consultation': 'Private Consultation',
+                'custom-design': 'Custom Design Studio',
+                'international': 'International Shipping',
+                'warranty': 'Lifetime Warranty',
+                'events': 'VIP Events'
+            };
+            
+            showNotification(`${serviceNames[service]} service selected. Booking appointment...`, 'info');
+            showAppointmentModal();
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('active');
+        }
+
+        // ========== NOTIFICATION ==========
+        function showNotification(message, type = 'success') {
+            const notification = document.createElement('div');
+            notification.className = `notification ${type}`;
+            notification.innerHTML = `
+                <i class="fas fa-${type === 'success' ? 'check-circle' : 
+                                  type === 'error' ? 'exclamation-circle' : 
+                                  type === 'warning' ? 'exclamation-triangle' : 'info-circle'}"></i>
+                ${message}
+            `;
+            
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.classList.add('hiding');
+                setTimeout(() => notification.remove(), 300);
+            }, 3000);
+        }
+
+        // ========== SMOOTH SCROLL ==========
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 120,
+                        behavior: 'smooth'
+                    });
+                    
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.removeAttribute('aria-current');
+                    });
+                    this.setAttribute('aria-current', 'page');
+                }
+            });
+        });
+    </script>
+</body>
+    </html>
