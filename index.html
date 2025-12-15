@@ -16,35 +16,13 @@
     <meta property="og:url" content="https://ryaanjewellers.com">
     <meta name="twitter:card" content="summary_large_image">
     
-    <!-- Structured Data for SEO -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "JewelryStore",
-        "name": "RYAAN JEWELLERS",
-        "image": "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20white%20.jpg",
-        "description": "Complete luxury jewellery collection with gold, diamonds, custom designs",
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Dubai",
-            "addressRegion": "Dubai",
-            "addressCountry": "United Arab Emirates"
-        },
-        "telephone": "+971-4-123-4567",
-        "priceRange": "$$$$",
-        "openingHours": "Mo-Th 10:00-22:00, Fr 14:00-22:00",
-        "rating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.9",
-            "reviewCount": "127"
-        }
-    }
-    </script>
-    
-    <!-- Fonts & Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Luxury Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Marcellus&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💎</text></svg>">
+    
+    <!-- Three.js for 3D Ring Customizer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.min.js"></script>
     
     <style>
         /* ====== LUXURY THEME VARIABLES ====== */
@@ -52,8 +30,9 @@
             --black: #0a0a0a;
             --dark-gray: #1a1a1a;
             --gray: #2a2a2a;
-            --light-gray: #888;
-            --white: #fff;
+            --light-gray: #b0b0b0;
+            --white: #ffffff;
+            --off-white: #f5f5f5;
             --gold: #D4AF37;
             --gold-light: #F4E4A6;
             --gold-dark: #B8941F;
@@ -63,32 +42,62 @@
             --ruby: #E0115F;
             --emerald: #50C878;
             --rose: #C77B7B;
+            --sapphire: #0F52BA;
             --success: #4CAF50;
             --warning: #FF9800;
             --error: #F44336;
             --transition: 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
-            --radius: 16px;
-            --radius-lg: 24px;
+            --radius: 12px;
+            --radius-lg: 20px;
             --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             --shadow-gold: 0 10px 30px rgba(212, 175, 55, 0.2);
-            --shadow-light: 0 8px 30px rgba(0, 0, 0, 0.1);
             --glass: rgba(255, 255, 255, 0.05);
             --glass-dark: rgba(0, 0, 0, 0.6);
             --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #F4E4A6 50%, #B8941F 100%);
-            --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
-            --gradient-light: linear-gradient(135deg, #f5f5f5 0%, #ffffff 50%, #e5e5e5 100%);
+            --gradient-dark: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            --gradient-diamond: linear-gradient(135deg, #B9F2FF 0%, #E6F9FF 50%, #8AE0FF 100%);
+            --gradient-emerald: linear-gradient(135deg, #50C878 0%, #90EE90 50%, #228B22 100%);
+            --gradient-ruby: linear-gradient(135deg, #E0115F 0%, #FF69B4 50%, #8B0000 100%);
+            --gradient-sapphire: linear-gradient(135deg, #0F52BA 0%, #6495ED 50%, #00008B 100%);
+            
+            /* Text contrast improvements */
+            --text-primary: #ffffff;
+            --text-secondary: #e8e8e8;
+            --text-tertiary: #b0b0b0;
+            --text-accent: #D4AF37;
+            --text-dark: #1a1a1a;
+            
+            /* Luxury Fonts */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Marcellus', serif;
+            --font-accent: 'Cormorant Garamond', serif;
+            --font-luxury: 'Tangerine', cursive;
+            --font-ui: 'Inter', sans-serif;
         }
 
-        /* Luxury Light Theme */
+        /* LIGHT THEME */
         [data-theme="light"] {
-            --black: #f8f8f8;
-            --dark-gray: #f0f0f0;
-            --gray: #e0e0e0;
-            --light-gray: #666;
-            --white: #1a1a1a;
+            --black: #ffffff;
+            --dark-gray: #f8f8f8;
+            --gray: #f0f0f0;
+            --light-gray: #666666;
+            --white: #0a0a0a;
+            --off-white: #1a1a1a;
+            --gold: #B8941F;
+            --gold-light: #D4AF37;
+            --gold-dark: #9C7C1A;
+            --gold-bright: #FFC107;
             --glass: rgba(0, 0, 0, 0.03);
             --glass-dark: rgba(255, 255, 255, 0.6);
-            --gradient-dark: linear-gradient(135deg, #f8f8f8 0%, #f0f0f0 50%, #e0e0e0 100%);
+            --gradient-dark: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+            --gradient-gold: linear-gradient(135deg, #B8941F 0%, #D4AF37 50%, #9C7C1A 100%);
+            
+            /* Text contrast improvements for light mode */
+            --text-primary: #0a0a0a;
+            --text-secondary: #333333;
+            --text-tertiary: #666666;
+            --text-accent: #B8941F;
+            --text-dark: #0a0a0a;
         }
 
         /* ====== GLOBAL STYLES ====== */
@@ -100,24 +109,84 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 120px;
+            scroll-padding-top: 140px;
             overflow-x: hidden;
         }
 
         body {
-            font-family: 'Cormorant Garamond', serif;
+            font-family: var(--font-body);
             background: var(--gradient-dark);
-            color: var(--white);
-            line-height: 1.8;
+            color: var(--text-primary);
+            line-height: 1.7;
             overflow-x: hidden;
             font-weight: 400;
             transition: background 0.6s var(--transition), color 0.6s var(--transition);
+            font-size: 17px;
         }
 
         h1, h2, h3, h4, h5, h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
+            font-family: var(--font-heading);
+            font-weight: 700;
             letter-spacing: 0.5px;
+            color: var(--text-primary);
+            line-height: 1.3;
+        }
+
+        p, span, div, li, a:not(.nav-link):not(.language-option):not(.social-link) {
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+        }
+
+        /* ====== ACCESSIBILITY ====== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: var(--gold);
+            color: var(--text-dark);
+            padding: 8px 16px;
+            z-index: 9999;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ====== ANIMATIONS ====== */
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes loading {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
         }
 
         /* ====== SPLASH SCREEN ====== */
@@ -141,54 +210,59 @@
         #splashScreen.hidden {
             opacity: 0;
             visibility: hidden;
+            pointer-events: none;
         }
 
         .splash-logo {
-            width: 180px;
-            height: 180px;
-            margin-bottom: 40px;
+            width: 200px;
+            height: 200px;
+            margin-bottom: 30px;
             position: relative;
             overflow: hidden;
             border-radius: 50%;
             box-shadow: 0 20px 50px rgba(212, 175, 55, 0.3);
             animation: float 3s ease-in-out infinite;
+            background: var(--gradient-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .splash-logo video {
+        .splash-logo img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 50%;
+            object-fit: contain;
+            padding: 30px;
         }
 
         .splash-text {
-            color: var(--white);
-            font-size: 3.5rem;
-            font-weight: 700;
+            color: var(--text-primary);
+            font-size: 4rem;
+            font-weight: 900;
             text-align: center;
             margin-bottom: 10px;
             text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-heading);
             letter-spacing: 2px;
         }
 
         .splash-subtext {
-            color: var(--gold-light);
-            font-size: 1.3rem;
+            color: var(--text-accent);
+            font-size: 1.5rem;
             text-align: center;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
             text-transform: uppercase;
+            font-weight: 700;
+            font-family: var(--font-ui);
+            margin-bottom: 40px;
         }
 
         .loading-bar {
             width: 400px;
-            height: 2px;
+            height: 4px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 1px;
-            margin-top: 60px;
+            border-radius: 2px;
+            margin-top: 30px;
             overflow: hidden;
             position: relative;
         }
@@ -197,8 +271,8 @@
             height: 100%;
             width: 0%;
             background: var(--gradient-gold);
-            border-radius: 1px;
-            animation: loading 3s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+            border-radius: 2px;
+            animation: loading 2.5s cubic-bezier(0.65, 0, 0.35, 1) forwards;
         }
 
         /* ====== GOLD TICKER ====== */
@@ -208,35 +282,37 @@
             left: 0;
             right: 0;
             background: var(--gradient-gold);
-            color: var(--black);
+            color: var(--text-dark);
             padding: 15px 2rem;
-            font-weight: 600;
+            font-weight: 800;
             z-index: 990;
             text-align: center;
             box-shadow: var(--shadow-gold);
             font-size: 1rem;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-ui);
             backdrop-filter: blur(10px);
         }
 
         .ticker-content {
             display: inline-flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .ticker-content i {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             animation: pulse 2s infinite;
         }
 
-        /* ====== LUXURY HEADER ====== */
+        /* ====== HEADER ====== */
         header {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            padding: 1.5rem 3rem;
+            padding: 0.8rem 2rem;
             background: rgba(10, 10, 10, 0.98);
             backdrop-filter: blur(30px) saturate(180%);
             z-index: 1000;
@@ -251,11 +327,12 @@
         }
 
         .header-container {
-            max-width: 1600px;
+            max-width: 1800px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
         }
 
         .brand {
@@ -263,42 +340,33 @@
             align-items: center;
             gap: 1.5rem;
             text-decoration: none;
+            min-width: 300px;
         }
 
         .logo-container {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             overflow: hidden;
-            border: 2px solid var(--gold);
+            border: 3px solid var(--gold);
             background: var(--gradient-gold);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--black);
+            color: var(--text-dark);
             font-size: 2rem;
-            font-weight: 700;
-            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+            font-family: var(--font-heading);
             position: relative;
             box-shadow: var(--shadow-gold);
+            flex-shrink: 0;
         }
 
-        .logo-container video {
+        .logo-container img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-        }
-
-        .logo-container::after {
-            content: '';
-            position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
-            border-radius: 50%;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            animation: rotate 20s linear infinite;
+            object-fit: contain;
+            padding: 15px;
         }
 
         .brand-text {
@@ -307,49 +375,50 @@
         }
 
         .brand-text h1 {
-            font-size: 1.8rem;
+            font-size: 2.5rem;
             background: var(--gradient-gold);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: 2px;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            line-height: 1;
         }
 
         .brand-text .tagline {
-            font-size: 0.75rem;
-            color: var(--gold-light);
+            font-size: 0.8rem;
+            color: var(--text-accent);
             letter-spacing: 3px;
             text-transform: uppercase;
             margin-top: 5px;
+            font-weight: 700;
+            font-family: var(--font-ui);
         }
 
-        /* ====== LUXURY NAVIGATION ====== */
+        /* ====== NAVIGATION ====== */
         .nav-links {
             display: flex;
-            gap: 2.5rem;
+            gap: 2rem;
             align-items: center;
+            margin: 0 1rem;
         }
 
         .nav-link {
-            color: var(--white);
+            color: var(--text-primary);
             text-decoration: none;
-            font-weight: 500;
-            font-size: 0.95rem;
+            font-weight: 700;
+            font-size: 1rem;
             letter-spacing: 1.5px;
             position: relative;
-            padding: 0.5rem 0;
+            padding: 0.8rem 0;
             transition: all var(--transition);
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-ui);
             text-transform: uppercase;
-        }
-
-        [data-theme="light"] .nav-link {
-            color: var(--black);
+            white-space: nowrap;
         }
 
         .nav-link:hover {
-            color: var(--gold-light);
+            color: var(--text-accent);
         }
 
         .nav-link::after {
@@ -358,7 +427,7 @@
             bottom: 0;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 3px;
             background: var(--gradient-gold);
             transition: width var(--transition);
         }
@@ -370,29 +439,27 @@
         /* ====== HEADER ACTIONS ====== */
         .header-actions {
             display: flex;
-            gap: 1.2rem;
+            gap: 1rem;
             align-items: center;
+            min-width: 250px;
+            justify-content: flex-end;
         }
 
         .action-button {
-            min-width: 48px;
-            min-height: 48px;
-            border-radius: 12px;
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
             background: var(--glass);
             border: 1px solid rgba(212, 175, 55, 0.15);
-            color: var(--white);
+            color: var(--text-primary);
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all var(--transition);
             position: relative;
-            font-size: 1.1rem;
-        }
-
-        [data-theme="light"] .action-button {
-            background: rgba(0, 0, 0, 0.05);
-            color: var(--black);
+            font-size: 1.2rem;
+            flex-shrink: 0;
         }
 
         .action-button:hover {
@@ -407,16 +474,16 @@
             top: -8px;
             right: -8px;
             background: var(--gold);
-            color: var(--black);
-            font-size: 0.75rem;
-            font-weight: 700;
-            width: 22px;
-            height: 22px;
+            color: var(--text-dark);
+            font-size: 0.8rem;
+            font-weight: 900;
+            width: 24px;
+            height: 24px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-family: 'Montserrat', sans-serif;
+            font-family: var(--font-ui);
         }
 
         .wishlist-count {
@@ -429,131 +496,67 @@
             position: relative;
         }
 
+        .language-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--transition);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .language-button:hover {
+            background: rgba(212, 175, 55, 0.1);
+            border-color: var(--gold);
+        }
+
         .language-dropdown {
             position: absolute;
-            top: calc(100% + 10px);
+            top: 60px;
             right: 0;
             background: var(--dark-gray);
-            border: 1px solid rgba(212, 175, 55, 0.2);
+            border: 1px solid rgba(212, 175, 55, 0.15);
             border-radius: var(--radius);
-            min-width: 150px;
+            padding: 10px;
+            min-width: 120px;
             display: none;
-            z-index: 1001;
             box-shadow: var(--shadow);
-            backdrop-filter: blur(20px);
         }
 
-        [data-theme="light"] .language-dropdown {
-            background: rgba(255, 255, 255, 0.98);
-            border: 1px solid rgba(0, 0, 0, 0.1);
-        }
-
-        .language-dropdown.show {
+        .language-dropdown.active {
             display: block;
+            animation: fadeIn 0.3s ease;
         }
 
         .language-option {
-            padding: 12px 20px;
-            color: var(--white);
+            padding: 10px 15px;
+            color: var(--text-primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
+            border-radius: 8px;
             transition: all var(--transition);
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        [data-theme="light"] .language-option {
-            color: var(--black);
         }
 
         .language-option:hover {
             background: rgba(212, 175, 55, 0.1);
-            padding-left: 25px;
+            color: var(--text-accent);
         }
 
-        .language-option.active {
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold-light);
-            border-left: 3px solid var(--gold);
-        }
-
-        /* ====== THEME TOGGLER ====== */
-        .theme-toggle {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 8px 15px;
-            background: var(--glass);
-            border-radius: var(--radius);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-        }
-
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 70px;
-            height: 34px;
-        }
-
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .toggle-slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, #666, #999);
-            transition: .4s;
-            border-radius: 34px;
-        }
-
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background: var(--white);
-            transition: .4s;
-            border-radius: 50%;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        input:checked + .toggle-slider {
-            background: var(--gradient-gold);
-        }
-
-        input:checked + .toggle-slider:before {
-            transform: translateX(36px);
-            background: var(--black);
-        }
-
-        #themeLabel {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: var(--white);
-            min-width: 50px;
-        }
-
-        [data-theme="light"] #themeLabel {
-            color: var(--black);
-        }
-
-        /* ====== LUXURY HERO SLIDER ====== */
+        /* ====== HERO SLIDER ====== */
         .hero-slider {
             position: relative;
             width: 100%;
-            height: 95vh;
-            margin-top: 130px;
+            height: 90vh;
+            margin-top: 140px;
             overflow: hidden;
             border-radius: 0 0 var(--radius-lg) var(--radius-lg);
         }
@@ -584,7 +587,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
         }
 
         .slide-content {
@@ -598,21 +601,22 @@
 
         .slide-title {
             font-size: 4.5rem;
-            color: var(--gold-light);
+            color: var(--text-accent);
             margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            line-height: 1.2;
+            font-family: var(--font-heading);
+            font-weight: 900;
+            line-height: 1.1;
             text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
         }
 
         .slide-subtitle {
-            font-size: 1.4rem;
-            color: var(--white);
+            font-size: 1.5rem;
+            color: var(--text-primary);
             margin-bottom: 3rem;
-            max-width: 500px;
+            max-width: 600px;
             line-height: 1.8;
-            font-weight: 300;
+            font-weight: 400;
+            opacity: 0.95;
         }
 
         .slider-controls {
@@ -626,8 +630,8 @@
         }
 
         .slider-dot {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             background: rgba(255, 255, 255, 0.2);
             cursor: pointer;
@@ -646,9 +650,9 @@
             transform: scale(1.3);
         }
 
-        /* ====== LUXURY SECTIONS ====== */
+        /* ====== SECTIONS ====== */
         section {
-            padding: 6rem 3rem;
+            padding: 6rem 2rem;
             position: relative;
         }
 
@@ -660,10 +664,10 @@
 
         .section-title {
             font-size: 3.5rem;
-            color: var(--gold);
+            color: var(--text-accent);
             margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            font-family: var(--font-heading);
+            font-weight: 900;
             position: relative;
             display: inline-block;
         }
@@ -675,212 +679,30 @@
             left: 50%;
             transform: translateX(-50%);
             width: 100px;
-            height: 3px;
+            height: 4px;
             background: var(--gradient-gold);
             border-radius: 2px;
         }
 
         .section-subtitle {
-            color: var(--light-gray);
-            font-size: 1.2rem;
-            max-width: 600px;
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            max-width: 700px;
             margin: 2rem auto 0;
-            font-weight: 300;
+            font-weight: 400;
             line-height: 1.8;
+            opacity: 0.9;
         }
 
-        /* ====== LUXURY CATEGORIES ====== */
-        .categories-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .category-card {
-            position: relative;
-            border-radius: var(--radius-lg);
-            overflow: hidden;
-            height: 350px;
-            cursor: pointer;
-            transition: all var(--transition);
-            box-shadow: var(--shadow);
-        }
-
-        .category-card:hover {
-            transform: translateY(-15px) scale(1.02);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
-        }
-
-        .category-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
-        }
-
-        .category-card:hover .category-image {
-            transform: scale(1.1);
-        }
-
-        .category-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
-            padding: 2.5rem;
-            color: white;
-        }
-
-        .category-name {
-            font-size: 1.8rem;
-            font-weight: 600;
-            margin-bottom: 0.8rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .category-overlay p {
-            color: var(--gold-light);
-            font-size: 1rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* ====== LUXURY BRANDS ====== */
-        .brands-section {
-            background: var(--dark-gray);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .brands-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--gradient-gold);
-        }
-
-        .brands-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 3rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .brand-card {
-            text-align: center;
-            padding: 3rem 2rem;
-            background: var(--glass);
-            border-radius: var(--radius);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            transition: all var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .brand-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: var(--gradient-gold);
-            transform: scaleX(0);
-            transition: transform var(--transition);
-        }
-
-        .brand-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .brand-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .brand-icon {
-            font-size: 3.5rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .brand-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .brand-card p {
-            color: var(--light-gray);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-
-        /* ====== LUXURY PRODUCTS ====== */
-        .products-section {
-            background: var(--black);
-            position: relative;
-        }
-
-        .products-filter {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin-bottom: 4rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 12px 30px;
-            background: transparent;
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: 30px;
-            color: var(--light-gray);
-            cursor: pointer;
-            transition: all var(--transition);
-            font-weight: 500;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .filter-btn:hover, .filter-btn.active {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--gold-light);
-            border-color: var(--gold);
-            transform: translateY(-2px);
-        }
-
-        .filter-btn.active {
-            background: var(--gradient-gold);
-            color: var(--black);
-            border: none;
-            box-shadow: var(--shadow-gold);
-            font-weight: 600;
-        }
-
+        /* ====== PRODUCTS GRID ====== */
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 3rem;
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
         }
 
-        /* ====== LUXURY PRODUCT CARD ====== */
         .product-card {
             background: var(--glass);
             border: 1px solid rgba(212, 175, 55, 0.15);
@@ -888,7 +710,7 @@
             overflow: hidden;
             transition: all var(--transition);
             position: relative;
-            height: 480px;
+            height: 550px;
             display: flex;
             flex-direction: column;
         }
@@ -899,38 +721,28 @@
             box-shadow: var(--shadow);
         }
 
-        .product-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-gold);
-            transform: scaleX(0);
-            transition: transform var(--transition);
-            z-index: 2;
-        }
-
-        .product-card:hover::before {
-            transform: scaleX(1);
-        }
-
         .product-image-container {
-            height: 280px;
-            overflow: hidden;
+            height: 300px;
+            width: 100%;
+            background: var(--dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
             position: relative;
         }
 
         .product-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
             transition: transform 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
         }
 
         .product-card:hover .product-image {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .product-badge {
@@ -939,12 +751,13 @@
             right: 20px;
             background: var(--ruby);
             color: white;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            font-family: 'Montserrat', sans-serif;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.85rem;
+            font-weight: 800;
+            font-family: var(--font-ui);
             z-index: 3;
+            text-transform: uppercase;
         }
 
         .product-content {
@@ -956,46 +769,48 @@
         }
 
         .product-category {
-            color: var(--gold);
-            font-size: 0.85rem;
+            color: var(--text-accent);
+            font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             margin-bottom: 0.8rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+            font-family: var(--font-ui);
+            font-weight: 800;
         }
 
         .product-title {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
-            line-height: 1.4;
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-weight: 800;
+            line-height: 1.3;
         }
 
         .product-description {
-            color: var(--light-gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            line-height: 1.7;
             margin-bottom: 1.5rem;
             flex: 1;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .product-price {
-            color: var(--gold);
-            font-size: 1.8rem;
-            font-weight: 700;
+            color: var(--text-accent);
+            font-size: 2rem;
+            font-weight: 900;
             margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
+            font-family: var(--font-heading);
         }
 
         .product-price .original {
-            color: var(--light-gray);
+            color: var(--text-tertiary);
             text-decoration: line-through;
-            font-size: 1.2rem;
-            margin-left: 10px;
-            font-weight: 400;
+            font-size: 1.4rem;
+            margin-left: 12px;
+            font-weight: 500;
         }
 
         .product-actions {
@@ -1006,559 +821,386 @@
 
         .btn {
             padding: 12px 24px;
-            border-radius: 25px;
-            font-weight: 600;
+            border-radius: 30px;
+            font-weight: 800;
             cursor: pointer;
             transition: all var(--transition);
             border: none;
-            font-size: 0.95rem;
-            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-family: var(--font-ui);
             letter-spacing: 1px;
             text-transform: uppercase;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            min-height: 48px;
+            min-height: 50px;
         }
 
         .btn-primary {
             background: var(--gradient-gold);
-            color: var(--black);
+            color: var(--text-dark);
             flex: 2;
-            font-weight: 700;
+            font-weight: 900;
         }
 
         .btn-primary:hover {
             background: linear-gradient(45deg, var(--gold-bright), var(--gold-light));
-            transform: translateY(-2px) scale(1.05);
+            transform: translateY(-3px) scale(1.05);
             box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
         }
 
         .btn-secondary {
             background: transparent;
             border: 2px solid rgba(212, 175, 55, 0.3);
-            color: var(--gold-light);
+            color: var(--text-accent);
             flex: 1;
+            font-weight: 700;
         }
 
         .btn-secondary:hover {
             background: rgba(212, 175, 55, 0.1);
             border-color: var(--gold);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
-        /* ====== ABOUT SECTION ====== */
-        .about-section {
-            background: var(--gradient-dark);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .about-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--gradient-gold);
-        }
-
-        .about-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 5rem;
-            align-items: center;
-        }
-
-        .about-text {
-            color: var(--light-gray);
-            line-height: 1.9;
-            font-size: 1.1rem;
-        }
-
-        .about-text h3 {
-            color: var(--gold);
-            margin: 2.5rem 0 1.2rem;
-            font-size: 1.8rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .mission-vision {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2.5rem;
-            margin-top: 4rem;
-        }
-
-        .mission-card, .vision-card {
-            padding: 2.5rem;
-            background: var(--glass);
-            border-radius: var(--radius);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            transition: all var(--transition);
-        }
-
-        .mission-card:hover, .vision-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .mission-card h3, .vision-card h3 {
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* ====== CUSTOM DESIGN ====== */
-        .custom-design-section {
-            background: var(--dark-gray);
-            position: relative;
-        }
-
-        .design-tool {
-            max-width: 1400px;
-            margin: 0 auto;
-            background: var(--glass);
-            border-radius: var(--radius-lg);
-            padding: 4rem;
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            box-shadow: var(--shadow);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .design-tool::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-gold);
-        }
-
-        .design-canvas {
-            width: 100%;
-            height: 450px;
-            background: var(--black);
-            border-radius: var(--radius);
-            margin-bottom: 3rem;
-            position: relative;
-            border: 2px dashed rgba(212, 175, 55, 0.3);
-            overflow: hidden;
-        }
-
-        .design-canvas:hover {
-            border-color: var(--gold);
-        }
-
-        .design-controls {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .design-group {
-            margin-bottom: 2rem;
-        }
-
-        .design-label {
-            display: block;
-            margin-bottom: 0.8rem;
-            color: var(--gold-light);
-            font-weight: 500;
-            font-family: 'Montserrat', sans-serif;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-        }
-
-        .design-input {
-            width: 100%;
-            padding: 14px 20px;
-            background: var(--black);
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: var(--radius);
-            color: var(--white);
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-            transition: all var(--transition);
-        }
-
-        .design-input:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
-        }
-
-        .design-input option {
-            background: var(--dark-gray);
-            color: var(--white);
-            padding: 10px;
-        }
-
-        /* ====== TESTIMONIALS ====== */
-        .testimonials-section {
-            background: var(--black);
-            position: relative;
-        }
-
-        .testimonials-slider {
-            max-width: 900px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .testimonial-card {
-            background: var(--glass);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: var(--radius-lg);
-            padding: 3rem;
-            margin: 1.5rem;
-            position: relative;
-        }
-
-        .testimonial-card::before {
-            content: '"';
-            position: absolute;
-            top: -20px;
-            left: 30px;
-            font-size: 8rem;
-            color: rgba(212, 175, 55, 0.1);
-            font-family: 'Playfair Display', serif;
-            line-height: 1;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--light-gray);
-            margin-bottom: 2rem;
-            line-height: 1.9;
-            font-size: 1.2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .testimonial-author {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .author-avatar {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: var(--gradient-gold);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--black);
-            font-weight: 700;
-            font-size: 1.2rem;
-            font-family: 'Playfair Display', serif;
-        }
-
-        .author-info h4 {
-            font-size: 1.2rem;
-            margin-bottom: 0.3rem;
-            color: var(--white);
-        }
-
-        .author-info p {
-            color: var(--gold-light);
-            font-size: 0.95rem;
-        }
-
-        /* ====== PAYMENT SECTION ====== */
-        .payment-section {
-            background: var(--dark-gray);
-            position: relative;
-        }
-
-        .payment-options {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .payment-card {
-            background: var(--glass);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: var(--radius);
-            padding: 3rem 2rem;
-            text-align: center;
-            transition: all var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .payment-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-10px);
-            box-shadow: var(--shadow);
-        }
-
-        .payment-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-gold);
-            transform: scaleX(0);
-            transition: transform var(--transition);
-        }
-
-        .payment-card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .payment-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .payment-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--white);
-        }
-
-        .payment-card p {
-            color: var(--light-gray);
-            margin-bottom: 2rem;
-        }
-
-        .qr-code {
-            margin: 2rem 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        .qr-code img {
-            width: 150px;
-            height: 150px;
-            border-radius: 8px;
-            padding: 10px;
-            background: white;
-        }
-
-        /* ====== SOCIAL SECTION ====== */
-        .social-section {
-            background: var(--black);
-            text-align: center;
-            position: relative;
-        }
-
-        .social-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 1px;
-            background: var(--gradient-gold);
-        }
-
-        .social-links {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 3rem auto 0;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            padding: 2rem;
-            background: var(--glass);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            border-radius: var(--radius);
-            color: var(--white);
-            text-decoration: none;
-            transition: all var(--transition);
-            text-align: left;
-        }
-
-        .social-link:hover {
-            border-color: var(--gold);
-            transform: translateY(-5px);
-            box-shadow: var(--shadow);
-        }
-
-        .social-link.whatsapp:hover {
-            background: rgba(37, 211, 102, 0.05);
-        }
-
-        .social-link.instagram:hover {
-            background: rgba(228, 64, 95, 0.05);
-        }
-
-        .social-link.facebook:hover {
-            background: rgba(24, 119, 242, 0.05);
-        }
-
-        .social-link .fa-2x {
-            font-size: 2.5rem;
-            color: var(--gold);
-        }
-
-        .social-link h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-            color: var(--white);
-        }
-
-        .social-link p {
-            color: var(--light-gray);
-            font-size: 0.95rem;
-        }
-
-        /* ====== LUXURY CART MODAL ====== */
+        /* ====== CART MODAL ====== */
         .cart-modal {
             position: fixed;
             top: 0;
-            right: -450px;
-            width: 420px;
+            right: 0;
+            width: 450px;
             height: 100vh;
             background: var(--dark-gray);
-            border-left: 1px solid rgba(212, 175, 55, 0.15);
-            z-index: 2000;
-            transition: right 0.5s cubic-bezier(0.215, 0.610, 0.355, 1);
+            z-index: 10001;
+            box-shadow: -10px 0 50px rgba(0, 0, 0, 0.3);
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.215, 0.610, 0.355, 1);
             display: flex;
             flex-direction: column;
-            box-shadow: -20px 0 60px rgba(0, 0, 0, 0.3);
         }
 
-        .cart-modal.open {
-            right: 0;
+        .cart-modal.active {
+            transform: translateX(0);
         }
 
         .cart-header {
-            padding: 2.5rem;
+            padding: 2rem;
             border-bottom: 1px solid rgba(212, 175, 55, 0.15);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: var(--glass);
         }
 
-        .cart-header h3 {
+        .cart-header h2 {
+            color: var(--text-accent);
+            font-size: 1.8rem;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            color: var(--text-primary);
             font-size: 1.5rem;
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
+            cursor: pointer;
+            transition: all var(--transition);
+        }
+
+        .cart-close:hover {
+            color: var(--text-accent);
+            transform: rotate(90deg);
         }
 
         .cart-items {
             flex: 1;
             overflow-y: auto;
-            padding: 2.5rem;
+            padding: 1.5rem;
         }
 
         .cart-item {
             display: flex;
-            gap: 1.5rem;
-            padding: 1.5rem 0;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-        }
-
-        .cart-item:last-child {
-            border-bottom: none;
+            gap: 1rem;
+            padding: 1rem;
+            background: var(--glass);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .cart-item-image {
-            width: 90px;
-            height: 90px;
-            border-radius: 12px;
-            object-fit: cover;
-            border: 2px solid rgba(212, 175, 55, 0.2);
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: var(--dark-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .cart-item-content {
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
             flex: 1;
         }
 
         .cart-item-title {
-            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--white);
-            font-family: 'Playfair Display', serif;
         }
 
         .cart-item-price {
-            color: var(--gold);
+            color: var(--text-accent);
+            font-weight: 900;
             font-size: 1.2rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
         }
 
         .cart-item-controls {
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .cart-item-controls button {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-item-controls button:hover {
+            background: rgba(212, 175, 55, 0.2);
+        }
+
+        .cart-item-quantity {
+            min-width: 30px;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .cart-item-remove {
+            background: none;
+            border: none;
+            color: var(--error);
+            cursor: pointer;
+            margin-left: auto;
         }
 
         .cart-footer {
-            padding: 2.5rem;
+            padding: 2rem;
             border-top: 1px solid rgba(212, 175, 55, 0.15);
-            background: var(--glass);
-        }
-
-        .discount-section {
-            margin-bottom: 2rem;
-        }
-
-        .discount-input {
-            width: 100%;
-            padding: 14px;
-            background: var(--black);
-            border: 2px solid rgba(212, 175, 55, 0.2);
-            border-radius: var(--radius);
-            color: var(--white);
-            margin-bottom: 1rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.1rem;
-        }
-
-        .discount-input:focus {
-            outline: none;
-            border-color: var(--gold);
         }
 
         .cart-total {
             display: flex;
             justify-content: space-between;
             margin-bottom: 1.5rem;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--text-accent);
         }
 
-        .cart-total span:last-child {
+        .cart-empty {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+        }
+
+        .cart-empty i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--text-tertiary);
+        }
+
+        /* ====== FILTER SECTION ====== */
+        .filter-section {
+            background: var(--dark-gray);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-lg);
+            margin: 2rem auto;
+            max-width: 1600px;
+        }
+
+        .filter-container {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            min-width: 200px;
+        }
+
+        .filter-label {
+            color: var(--text-accent);
+            font-weight: 700;
+            font-family: var(--font-ui);
+            font-size: 1rem;
+        }
+
+        .filter-select {
+            padding: 12px 20px;
+            border-radius: var(--radius);
+            background: var(--black);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            color: var(--text-primary);
+            font-family: var(--font-ui);
+            font-size: 1rem;
+            transition: all var(--transition);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+        }
+
+        .filter-buttons {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        /* ====== SERVICES SECTION ====== */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: var(--glass);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            text-align: center;
+            transition: all var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold);
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2rem;
+            color: var(--text-dark);
+        }
+
+        .service-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-accent);
+        }
+
+        .service-card p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* ====== REVIEWS SECTION ====== */
+        .reviews-section {
+            background: var(--glass);
+            border-radius: var(--radius-lg);
+            padding: 4rem;
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .review-card {
+            background: var(--dark-gray);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: all var(--transition);
+        }
+
+        .review-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold);
+        }
+
+        .review-rating {
             color: var(--gold);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
         }
 
-        /* ====== LUXURY FOOTER ====== */
+        .review-text {
+            color: var(--text-secondary);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-dark);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.3rem;
+        }
+
+        .author-info p {
+            color: var(--text-tertiary);
+            font-size: 0.9rem;
+        }
+
+        /* ====== FOOTER ====== */
         footer {
             background: var(--black);
-            padding: 5rem 3rem 2rem;
+            padding: 5rem 2rem 2rem;
             border-top: 1px solid rgba(212, 175, 55, 0.15);
             position: relative;
         }
@@ -1574,7 +1216,7 @@
         }
 
         .footer-content {
-            max-width: 1400px;
+            max-width: 1600px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -1583,12 +1225,13 @@
         }
 
         .footer-column h3 {
-            color: var(--gold);
+            color: var(--text-accent);
             margin-bottom: 2rem;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            font-size: 1.8rem;
             position: relative;
             display: inline-block;
+            font-weight: 900;
         }
 
         .footer-column h3::after {
@@ -1596,15 +1239,16 @@
             position: absolute;
             bottom: -8px;
             left: 0;
-            width: 40px;
-            height: 2px;
+            width: 50px;
+            height: 3px;
             background: var(--gradient-gold);
         }
 
         .footer-column p {
-            color: var(--light-gray);
+            color: var(--text-secondary);
             margin-bottom: 1rem;
             line-height: 1.8;
+            font-weight: 500;
         }
 
         .footer-links {
@@ -1616,28 +1260,18 @@
         }
 
         .footer-links a {
-            color: var(--light-gray);
+            color: var(--text-secondary);
             text-decoration: none;
             transition: all var(--transition);
             display: flex;
             align-items: center;
             gap: 10px;
+            font-weight: 600;
         }
 
         .footer-links a:hover {
-            color: var(--gold);
+            color: var(--text-accent);
             padding-left: 10px;
-        }
-
-        .footer-links a::before {
-            content: '›';
-            color: var(--gold);
-            opacity: 0;
-            transition: opacity var(--transition);
-        }
-
-        .footer-links a:hover::before {
-            opacity: 1;
         }
 
         .footer-social {
@@ -1647,33 +1281,35 @@
         }
 
         .footer-social a {
-            width: 40px;
-            height: 40px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: var(--glass);
             border: 1px solid rgba(212, 175, 55, 0.15);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--gold-light);
+            color: var(--text-accent);
             text-decoration: none;
             transition: all var(--transition);
+            font-weight: 700;
         }
 
         .footer-social a:hover {
             background: var(--gold);
-            color: var(--black);
-            transform: translateY(-3px);
+            color: var(--text-dark);
+            transform: translateY(-5px);
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 3rem;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
-            color: var(--light-gray);
-            font-size: 0.95rem;
-            max-width: 1400px;
+            color: var(--text-secondary);
+            font-size: 1rem;
+            max-width: 1600px;
             margin: 0 auto;
+            font-weight: 500;
         }
 
         .footer-bottom p {
@@ -1681,59 +1317,72 @@
         }
 
         .footer-bottom p:last-child {
-            color: var(--gold-light);
+            color: var(--text-accent);
             font-size: 0.9rem;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
             text-transform: uppercase;
+            font-weight: 700;
         }
 
-        /* ====== ANIMATIONS ====== */
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
+        /* ====== MODALS ====== */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
         }
 
-        @keyframes loading {
-            0% { width: 0%; }
-            100% { width: 100%; }
+        .modal.active {
+            opacity: 1;
+            visibility: visible;
         }
 
-        @keyframes pulse {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.7; transform: scale(1.1); }
+        .modal-content {
+            background: var(--dark-gray);
+            border-radius: var(--radius-lg);
+            padding: 3rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: var(--shadow);
         }
 
-        @keyframes rotate {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+        .modal-close {
+            position: absolute;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all var(--transition);
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateX(100%); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
-        }
-
-        @keyframes slideOut {
-            from { transform: translateX(0); opacity: 1; }
-            to { transform: translateX(100%); opacity: 0; }
-        }
-
-        .fade-in {
-            animation: fadeIn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+        .modal-close:hover {
+            color: var(--text-accent);
+            transform: rotate(90deg);
         }
 
         /* ====== NOTIFICATION ====== */
         .notification {
             position: fixed;
-            top: 120px;
-            right: 30px;
+            top: 140px;
+            right: 20px;
             background: var(--gradient-gold);
-            color: var(--black);
+            color: var(--text-dark);
             padding: 1.2rem 2rem;
             border-radius: var(--radius);
             z-index: 10000;
@@ -1742,1656 +1391,18 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
+            font-family: var(--font-ui);
+            font-weight: 900;
             max-width: 400px;
         }
 
-        .notification i {
-            font-size: 1.2rem;
+        .notification.hiding {
+            animation: slideOut 0.3s ease;
         }
 
-        /* ====== PRODUCT MODAL ====== */
-        .product-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 3000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.4s ease;
-            padding: 2rem;
+        .notification.error {
+            background: linear-gradient(135deg, var(--error), #FF6B6B);
         }
 
-        .product-modal.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .product-modal-content {
-            background: var(--gradient-dark);
-            border-radius: var(--radius-lg);
-            max-width: 1000px;
-            width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
-            position: relative;
-            box-shadow: var(--shadow);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-        }
-
-        .product-modal-content::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--gradient-gold);
-        }
-
-        /* ====== RESPONSIVE DESIGN ====== */
-        @media (max-width: 1200px) {
-            .hero-slider {
-                height: 85vh;
-                margin-top: 140px;
-            }
-            
-            .slide-title {
-                font-size: 3.5rem;
-            }
-            
-            .section-title {
-                font-size: 3rem;
-            }
-            
-            .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-                gap: 2.5rem;
-            }
-        }
-
-        @media (max-width: 992px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1.5rem;
-                padding: 1.5rem;
-            }
-            
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1.5rem;
-                margin: 1rem 0;
-            }
-            
-            .hero-slider {
-                height: 75vh;
-                margin-top: 200px;
-            }
-            
-            .slide-content {
-                margin-left: 5%;
-                padding: 3rem;
-            }
-            
-            .slide-title {
-                font-size: 2.8rem;
-            }
-            
-            .slide-subtitle {
-                font-size: 1.2rem;
-            }
-            
-            section {
-                padding: 4rem 2rem;
-            }
-            
-            .products-grid {
-                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            }
-        }
-
-        @media (max-width: 768px) {
-            header {
-                padding: 1rem 1.5rem;
-            }
-            
-            .gold-ticker {
-                top: 110px;
-                padding: 12px 1.5rem;
-                font-size: 0.9rem;
-            }
-            
-            .hero-slider {
-                height: 65vh;
-                margin-top: 170px;
-            }
-            
-            .slide-content {
-                padding: 2rem;
-                margin: 0 auto;
-                text-align: center;
-            }
-            
-            .slide-title {
-                font-size: 2.2rem;
-            }
-            
-            .slide-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .section-title {
-                font-size: 2.5rem;
-            }
-            
-            .section-subtitle {
-                font-size: 1.1rem;
-            }
-            
-            .categories-grid {
-                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-                gap: 1.5rem;
-            }
-            
-            .category-card {
-                height: 300px;
-            }
-            
-            .products-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-            
-            .product-card {
-                height: auto;
-                max-width: 400px;
-                margin: 0 auto;
-            }
-            
-            .product-image-container {
-                height: 250px;
-            }
-            
-            .design-tool {
-                padding: 2rem;
-            }
-            
-            .design-canvas {
-                height: 350px;
-            }
-            
-            .social-links {
-                grid-template-columns: 1fr;
-            }
-            
-            .cart-modal {
-                width: 100%;
-                right: -100%;
-            }
-            
-            .footer-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 3rem;
-            }
-            
-            .footer-column h3::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .footer-links a:hover {
-                padding-left: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .header-actions {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 0.8rem;
-            }
-            
-            .action-button {
-                min-width: 44px;
-                min-height: 44px;
-                font-size: 1rem;
-            }
-            
-            .hero-slider {
-                height: 60vh;
-                margin-top: 180px;
-            }
-            
-            .slide-title {
-                font-size: 1.8rem;
-            }
-            
-            .slide-subtitle {
-                font-size: 1rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .categories-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .category-card {
-                height: 280px;
-            }
-            
-            .brands-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .payment-options {
-                grid-template-columns: 1fr;
-            }
-            
-            .product-actions {
-                flex-direction: column;
-            }
-            
-            .product-actions .btn {
-                width: 100%;
-            }
-            
-            .splash-text {
-                font-size: 2.5rem;
-            }
-            
-            .splash-logo {
-                width: 120px;
-                height: 120px;
-            }
-            
-            .splash-logo i {
-                font-size: 50px;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Splash Screen -->
-    <div id="splashScreen">
-        <div class="splash-logo">
-            <video autoplay muted playsinline>
-                <source src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Ryaan%20Jewellers%20splash%20.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <h1 class="splash-text">RYAAN JEWELLERS</h1>
-        <p class="splash-subtext">Ultimate Luxury Experience</p>
-        <div class="loading-bar">
-            <div class="loading-progress"></div>
-        </div>
-    </div>
-
-    <!-- Gold Price Ticker -->
-    <div class="gold-ticker">
-        <div class="ticker-content">
-            <i class="fas fa-chart-line"></i>
-            <span>Live Gold (24K): </span>
-            <span class="gold-price" id="liveGoldPrice">AED 510.00/g</span>
-            <span class="ticker-change" style="color: #4CAF50;">+2.4%</span>
-        </div>
-    </div>
-
-    <!-- Luxury Header -->
-    <header>
-        <div class="header-container">
-            <a href="#" class="brand">
-                <div class="logo-container">
-                    <video autoplay muted loop playsinline>
-                        <source src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/LogoDec.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-                <div class="brand-text">
-                    <h1>RYAAN JEWELLERS</h1>
-                    <div class="tagline">DUBAI LUXURY</div>
-                </div>
-            </a>
-
-            <nav class="nav-links" aria-label="Main Navigation">
-                <a href="#home" class="nav-link" aria-current="page">Home</a>
-                <a href="#categories" class="nav-link">Collections</a>
-                <a href="#brands" class="nav-link">Brands</a>
-                <a href="#products" class="nav-link">Luxury Pieces</a>
-                <a href="#about" class="nav-link">Heritage</a>
-                <a href="#custom" class="nav-link">Custom Design</a>
-                <a href="#testimonials" class="nav-link">Testimonials</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </nav>
-
-            <div class="header-actions">
-                <!-- Language Switcher -->
-                <div class="language-switcher">
-                    <button class="action-button" id="languageToggle" aria-label="Change language" aria-haspopup="true" aria-expanded="false">
-                        <i class="fas fa-globe"></i>
-                    </button>
-                    <div class="language-dropdown" id="languageDropdown">
-                        <a href="#" class="language-option active" data-lang="en">
-                            <i class="fas fa-language"></i> English
-                        </a>
-                        <a href="#" class="language-option" data-lang="ar">
-                            <i class="fas fa-language"></i> العربية
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Wishlist Button -->
-                <button class="action-button" id="wishlistButton" aria-label="Wishlist">
-                    <i class="fas fa-heart"></i>
-                    <span class="wishlist-count" id="wishlistCount">0</span>
-                </button>
-                
-                <!-- Theme Toggle -->
-                <div class="theme-toggle">
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="themeToggle">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span id="themeLabel">Light</span>
-                </div>
-                
-                <!-- Cart Button -->
-                <button class="action-button" id="cartButton">
-                    <i class="fas fa-shopping-bag"></i>
-                    <span class="cart-count" id="cartCount">0</span>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Luxury Hero Slider -->
-    <section class="hero-slider" id="home">
-        <div class="slide active" style="background-image: url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20white%20.jpg');">
-            <div class="slide-content">
-                <h2 class="slide-title">Messika White Collection</h2>
-                <p class="slide-subtitle">Exquisite white diamond jewellery crafted with precision and passion, featuring the finest Messika designs from Dubai's most prestigious collection.</p>
-                <button class="btn btn-primary" onclick="showProductQuickView(2)">Discover Collection</button>
-            </div>
-        </div>
-        <div class="slide" style="background-image: url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg');">
-            <div class="slide-content">
-                <h2 class="slide-title">Mov Uno Masterpieces</h2>
-                <p class="slide-subtitle">Innovative moving diamond jewellery combining traditional Emirati craftsmanship with contemporary French design excellence.</p>
-                <button class="btn btn-primary" onclick="showProductQuickView(4)">View Masterpieces</button>
-            </div>
-        </div>
-        <div class="slider-controls">
-            <div class="slider-dot active" data-slide="0"></div>
-            <div class="slider-dot" data-slide="1"></div>
-        </div>
-    </section>
-
-    <!-- Luxury Collections -->
-    <section id="categories">
-        <div class="section-header">
-            <h2 class="section-title">Luxury Collections</h2>
-            <p class="section-subtitle">Explore our curated collections of premium jewellery, each piece telling its own story of craftsmanship and elegance.</p>
-        </div>
-        <div class="categories-grid">
-            <div class="category-card" onclick="filterProducts('rings')">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg" alt="Rings Collection" class="category-image" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-name">Rings Collection</h3>
-                    <p>Engagement • Wedding • Couture</p>
-                </div>
-            </div>
-            <div class="category-card" onclick="filterProducts('bracelets')">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chopard%20heart%20bangles%20white.jpg" alt="Bracelets Collection" class="category-image" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-name">Bracelets</h3>
-                    <p>Chopard • Chaumet • Signature</p>
-                </div>
-            </div>
-            <div class="category-card" onclick="filterProducts('earrings')">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chopard%20Earring.jpg" alt="Earrings Collection" class="category-image" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-name">Earrings</h3>
-                    <p>Studs • Hoops • Drops • Chandeliers</p>
-                </div>
-            </div>
-            <div class="category-card" onclick="filterProducts('necklaces')">
-                <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg" alt="Necklaces Collection" class="category-image" loading="lazy">
-                <div class="category-overlay">
-                    <h3 class="category-name">Necklaces</h3>
-                    <p>Pendants • Chains • Statement Pieces</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Luxury Brands -->
-    <section id="brands" class="brands-section">
-        <div class="section-header">
-            <h2 class="section-title">Our Luxury Partners</h2>
-            <p class="section-subtitle">Partnering with the world's most prestigious jewellery houses to bring you unparalleled luxury.</p>
-        </div>
-        <div class="brands-grid">
-            <div class="brand-card">
-                <div class="brand-icon">
-                    <i class="fas fa-gem"></i>
-                </div>
-                <h3>Messika</h3>
-                <p>French luxury diamond jewellery known for innovation and contemporary design.</p>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">
-                    <i class="fas fa-crown"></i>
-                </div>
-                <h3>Chaumet</h3>
-                <p>Parisian high jewellery since 1780, official jeweler to French royalty.</p>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">
-                    <i class="fas fa-star"></i>
-                </div>
-                <h3>Chopard</h3>
-                <p>Swiss luxury watches & jewellery, celebrated for craftsmanship and elegance.</p>
-            </div>
-            <div class="brand-card">
-                <div class="brand-icon">
-                    <i class="fas fa-heart"></i>
-                </div>
-                <h3>RYAAN Exclusive</h3>
-                <p>Our signature line featuring bespoke designs and rare gemstones.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Luxury Products -->
-    <section id="products" class="products-section">
-        <div class="section-header">
-            <h2 class="section-title">Featured Luxury Pieces</h2>
-            <p class="section-subtitle">Handcrafted masterpieces for the most discerning connoisseurs of fine jewellery.</p>
-        </div>
-        
-        <div class="products-filter">
-            <button class="filter-btn active" data-filter="all">All Collections</button>
-            <button class="filter-btn" data-filter="rings">Rings</button>
-            <button class="filter-btn" data-filter="necklaces">Necklaces</button>
-            <button class="filter-btn" data-filter="earrings">Earrings</button>
-            <button class="filter-btn" data-filter="bracelets">Bracelets</button>
-        </div>
-        
-        <div class="products-grid" id="productsContainer">
-            <!-- Products will be loaded here -->
-        </div>
-    </section>
-
-    <!-- Heritage Section -->
-    <section id="about" class="about-section">
-        <div class="section-header">
-            <h2 class="section-title">Our Heritage</h2>
-            <p class="section-subtitle">Crafting luxury since 1985 in the heart of Dubai</p>
-        </div>
-        
-        <div class="about-content">
-            <div>
-                <h3 style="color: var(--gold); font-size: 2.2rem; margin-bottom: 2rem; font-family: 'Playfair Display', serif;">A Legacy of Excellence</h3>
-                <div class="about-text">
-                    <p>Founded in 1985 in the prestigious Dubai Gold Souk, RYAAN JEWELLERS has been at the forefront of luxury jewellery for over three decades. Our legacy is built on a foundation of exceptional craftsmanship, timeless design, and an unwavering commitment to quality.</p>
-                    <p>We blend traditional Emirati jewellery-making techniques with contemporary design aesthetics to create pieces that not only adorn but also tell stories and celebrate life's most precious moments. Each creation is a testament to our passion for perfection and our dedication to the art of jewellery making.</p>
-                </div>
-            </div>
-            
-            <div class="mission-vision">
-                <div class="mission-card">
-                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                    <p>To create extraordinary jewellery pieces that embody luxury, quality, and timeless elegance while maintaining the highest standards of craftsmanship and ethical sourcing.</p>
-                </div>
-                
-                <div class="vision-card">
-                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                    <p>To be the most trusted and admired luxury jewellery brand in the Middle East, recognized globally for our exquisite designs, unparalleled quality, and exceptional customer experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Custom Design Studio -->
-    <section id="custom" class="custom-design-section">
-        <div class="section-header">
-            <h2 class="section-title">Bespoke Design Studio</h2>
-            <p class="section-subtitle">Create your dream jewellery with our exclusive design tool</p>
-        </div>
-        
-        <div class="design-tool">
-            <div class="design-canvas" id="designCanvas">
-                <canvas id="sketchCanvas" width="1200" height="450"></canvas>
-            </div>
-            
-            <div class="design-controls">
-                <div class="design-group">
-                    <label class="design-label">Jewellery Type</label>
-                    <select class="design-input" id="designType">
-                        <option value="ring">Ring</option>
-                        <option value="necklace">Necklace</option>
-                        <option value="earrings">Earrings</option>
-                        <option value="bracelet">Bracelet</option>
-                        <option value="tiara">Tiara</option>
-                        <option value="brooch">Brooch</option>
-                    </select>
-                </div>
-                
-                <div class="design-group">
-                    <label class="design-label">Metal Type</label>
-                    <select class="design-input" id="metalType">
-                        <option value="24k-gold">24K Gold</option>
-                        <option value="18k-gold">18K Gold</option>
-                        <option value="white-gold">White Gold</option>
-                        <option value="platinum">Platinum</option>
-                        <option value="rose-gold">Rose Gold</option>
-                    </select>
-                </div>
-                
-                <div class="design-group">
-                    <label class="design-label">Gemstone</label>
-                    <select class="design-input" id="gemstone">
-                        <option value="diamond">Diamond</option>
-                        <option value="emerald">Emerald</option>
-                        <option value="ruby">Ruby</option>
-                        <option value="sapphire">Sapphire</option>
-                        <option value="pearl">Pearl</option>
-                        <option value="tanzanite">Tanzanite</option>
-                    </select>
-                </div>
-                
-                <div class="design-group">
-                    <label class="design-label">Complexity Level</label>
-                    <input type="range" class="design-input" id="complexityRange" min="1" max="10" value="5">
-                </div>
-                
-                <button class="btn btn-primary" onclick="saveDesign()">Save Design</button>
-                <button class="btn btn-secondary" onclick="clearCanvas()">Clear Canvas</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="section-header">
-            <h2 class="section-title">Client Experiences</h2>
-            <p class="section-subtitle">What our distinguished clients say about their RYAAN experience</p>
-        </div>
-        
-        <div class="testimonials-slider">
-            <div class="testimonial-card">
-                <p class="testimonial-text">"The custom engagement ring they crafted for me was beyond expectations. The attention to detail and quality is unparalleled. My fiancé was moved to tears when she saw it for the first time."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AM</div>
-                    <div class="author-info">
-                        <h4>Ahmed Mohammed Al Maktoum</h4>
-                        <p>Royal Family Member, Dubai</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <p class="testimonial-text">"Exceptional craftsmanship and service. My wife's anniversary gift, a Messika necklace, was crafted to absolute perfection. The team's professionalism and attention to detail are remarkable."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">SA</div>
-                    <div class="author-info">
-                        <h4>Sarah Al Mansoori</h4>
-                        <p>Business Executive, Abu Dhabi</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Payment Options -->
-    <section id="payment" class="payment-section">
-        <div class="section-header">
-            <h2 class="section-title">Secure Luxury Payment</h2>
-            <p class="section-subtitle">Multiple exclusive payment options with complete security and discretion</p>
-        </div>
-        
-        <div class="payment-options">
-            <div class="payment-card">
-                <div class="payment-icon">
-                    <i class="fas fa-qrcode"></i>
-                </div>
-                <h3>QR Code Payment</h3>
-                <p>Secure instant payment via QR code</p>
-                <div class="qr-code">
-                    <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://www.paypal.com/qrcodes/p2pqrc/Y5KUVSAMQHYVQ&color=212175&bgcolor=0a0a0a" alt="Payment QR Code">
-                </div>
-            </div>
-            
-            <div class="payment-card">
-                <div class="payment-icon">
-                    <i class="fab fa-cc-visa"></i>
-                </div>
-                <h3>Credit/Debit Card</h3>
-                <p>Visa, Mastercard, Amex, Diners</p>
-                <button class="btn btn-secondary">Secure Payment</button>
-            </div>
-            
-            <div class="payment-card">
-                <div class="payment-icon">
-                    <i class="fab fa-whatsapp"></i>
-                </div>
-                <h3>WhatsApp Concierge</h3>
-                <p>Personal shopping assistant via WhatsApp</p>
-                <a href="https://wa.me/971543746476" class="btn btn-primary" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Start Chat
-                </a>
-            </div>
-            
-            <div class="payment-card">
-                <div class="payment-icon">
-                    <i class="fas fa-university"></i>
-                </div>
-                <h3>Bank Transfer</h3>
-                <p>Direct transfer with VIP rates</p>
-                <button class="btn btn-secondary">View Details</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Social Integration -->
-    <section id="social" class="social-section">
-        <div class="section-header">
-            <h2 class="section-title">Connect With Us</h2>
-            <p class="section-subtitle">Follow our journey and discover new collections through our exclusive channels</p>
-        </div>
-        
-        <div class="social-links">
-            <a href="https://wa.me/971543746476" class="social-link whatsapp" target="_blank">
-                <i class="fab fa-whatsapp fa-2x"></i>
-                <div>
-                    <h3>WhatsApp Concierge</h3>
-                    <p>+971 54 374 6476</p>
-                </div>
-            </a>
-            
-            <a href="https://instagram.com/ryaanjewellers" class="social-link instagram" target="_blank">
-                <i class="fab fa-instagram fa-2x"></i>
-                <div>
-                    <h3>Instagram</h3>
-                    <p>@ryaanjewellers</p>
-                </div>
-            </a>
-            
-            <a href="https://facebook.com/ryaanjewellers" class="social-link facebook" target="_blank">
-                <i class="fab fa-facebook fa-2x"></i>
-                <div>
-                    <h3>Facebook</h3>
-                    <p>RYAAN Jewellers</p>
-                </div>
-            </a>
-            
-            <a href="https://linkedin.com/company/ryaanjewellers" class="social-link" target="_blank">
-                <i class="fab fa-linkedin fa-2x"></i>
-                <div>
-                    <h3>LinkedIn</h3>
-                    <p>Professional Network</p>
-                </div>
-            </a>
-        </div>
-    </section>
-
-    <!-- Luxury Cart Modal -->
-    <div class="cart-modal" id="cartModal">
-        <div class="cart-header">
-            <h3>Luxury Cart</h3>
-            <button class="action-button" onclick="closeCart()">
-                <i class="fas fa-times"></i>
-            </button>
-        </div>
-        
-        <div class="cart-items" id="cartItems">
-            <!-- Cart items will be loaded here -->
-        </div>
-        
-        <div class="cart-footer">
-            <div class="discount-section">
-                <input type="text" id="discountCode" class="discount-input" placeholder="VIP Discount Code">
-                <button class="btn btn-secondary" onclick="applyDiscount()" style="width: 100%;">Apply Discount</button>
-            </div>
-            <div class="cart-total">
-                <span>Total Amount:</span>
-                <span id="cartTotalAmount">AED 0.00</span>
-            </div>
-            <button class="btn btn-primary" style="width: 100%;">Proceed to VIP Checkout</button>
-        </div>
-    </div>
-
-    <!-- Luxury Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <div class="footer-column">
-                <h3>RYAAN JEWELLERS</h3>
-                <p>Dubai Gold Souk, Deira</p>
-                <p>Dubai, United Arab Emirates</p>
-                <p>Email: concierge@ryaanjewellers.com</p>
-                <p>VIP Line: +971 4 123 4567</p>
-                <div class="footer-social">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Quick Access</h3>
-                <ul class="footer-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#categories">Collections</a></li>
-                    <li><a href="#products">Luxury Pieces</a></li>
-                    <li><a href="#about">Our Heritage</a></li>
-                    <li><a href="#custom">Bespoke Design</a></li>
-                    <li><a href="#testimonials">Client Experiences</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>Client Services</h3>
-                <ul class="footer-links">
-                    <li><a href="#">VIP Shipping</a></li>
-                    <li><a href="#">Returns & Exchanges</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
-                    <li><a href="#">Lifetime Warranty</a></li>
-                    <li><a href="#">FAQ</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-column">
-                <h3>VIP Hours</h3>
-                <p>Saturday - Thursday: 10:00 AM - 10:00 PM</p>
-                <p>Friday: 2:00 PM - 10:00 PM</p>
-                <p>Ramadan Hours: 5:00 PM - 2:00 AM</p>
-                <p style="margin-top: 1rem; color: var(--gold);">By Appointment Only</p>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <p>&copy; 2025 RYAAN JEWELLERS FZE. All rights reserved.</p>
-            <p>Certified Diamonds • Hallmarked Gold • Lifetime Warranty • Ethical Sourcing</p>
-        </div>
-    </footer>
-
-    <!-- JavaScript -->
-    <script>
-        // ========== GLOBAL VARIABLES ==========
-        let currentLanguage = localStorage.getItem('language') || 'en';
-        let currentTheme = localStorage.getItem('theme') || 'dark';
-        let cart = JSON.parse(localStorage.getItem('cart')) || [];
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        let soundEnabled = true;
-        let splashSoundPlayed = false;
-        let sliderInterval;
-        let currentSlide = 0;
-        let discountApplied = false;
-        let discountAmount = 0;
-
-        // ========== PRODUCTS DATABASE ==========
-        const products = [
-            {
-                id: 1,
-                name: "Butterfly Diamond Ring",
-                category: "rings",
-                price: 28500,
-                originalPrice: 32500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg",
-                description: "Exquisite butterfly design featuring 2.5ct brilliant-cut diamonds set in 24K gold. A masterpiece of delicate craftsmanship.",
-                badge: "LIMITED EDITION"
-            },
-            {
-                id: 2,
-                name: "Messika White Diamond Earrings",
-                category: "earrings",
-                price: 19500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20white%20.jpg",
-                description: "Messika white diamond drop earrings with gold setting. Classic elegance meets contemporary design.",
-                badge: "BEST SELLER"
-            },
-            {
-                id: 3,
-                name: "Chopard Heart Bracelet",
-                category: "bracelets",
-                price: 32500,
-                originalPrice: 37500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chopard%20heart%20bangles%20white.jpg",
-                description: "Chopard heart design bracelet with diamonds. A symbol of eternal love and Swiss precision.",
-                badge: "EXCLUSIVE"
-            },
-            {
-                id: 4,
-                name: "Messika Mov Uno Collection",
-                category: "necklaces",
-                price: 42500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg",
-                description: "Messika moving diamond necklace with unique design. Experience the innovation of moving diamonds.",
-                badge: "SIGNATURE"
-            },
-            {
-                id: 5,
-                name: "Chaumet Diamond Bangles",
-                category: "bracelets",
-                price: 29500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chaumet%20Bangles.jpg",
-                description: "Chaumet diamond bangles set in white gold. Royal heritage meets modern sophistication.",
-                badge: "HERITAGE"
-            },
-            {
-                id: 6,
-                name: "Chopard Diamond Earrings",
-                category: "earrings",
-                price: 26500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Chopard%20Earring.jpg",
-                description: "Chopard diamond stud earrings with platinum setting. Timeless beauty with Swiss craftsmanship.",
-                badge: "CLASSIC"
-            },
-            {
-                id: 7,
-                name: "Messika Move Classic Ring",
-                category: "rings",
-                price: 24500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika-Move-Classic-0399.jpg",
-                description: "Messika move classic diamond ring. The perfect blend of tradition and innovation.",
-                badge: "MOVING DIAMONDS"
-            },
-            {
-                id: 8,
-                name: "Messika Move Hoop Earrings",
-                category: "earrings",
-                price: 23500,
-                image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika-Move-Hoop-04407.jpg",
-                description: "Messika moving diamond hoop earrings. Dynamic design with mesmerizing movement.",
-                badge: "INNOVATION"
-            }
-        ];
-
-        // ========== INITIALIZATION ==========
-        document.addEventListener('DOMContentLoaded', function() {
-            initApp();
-        });
-
-        function initApp() {
-            // Initialize theme
-            setTheme(currentTheme);
-            
-            // Initialize language
-            setLanguage(currentLanguage);
-            
-            // Load products
-            renderProducts();
-            
-            // Initialize cart
-            updateCartCount();
-            
-            // Initialize wishlist
-            updateWishlistCount();
-            
-            // Initialize slider
-            initSlider();
-            
-            // Initialize gold price
-            updateGoldPrice();
-            
-            // Initialize custom design canvas
-            initCanvas();
-            
-            // Initialize lazy loading
-            initLazyLoading();
-            
-            // Handle splash screen with fallback
-            handleSplashScreen();
-            
-            // Add sound toggle button
-            addSoundToggle();
-        }
-
-        // ========== SPLASH SCREEN FIXED ==========
-        function handleSplashScreen() {
-            const splashScreen = document.getElementById('splashScreen');
-            const splashVideo = splashScreen.querySelector('video');
-            
-            // Set a fallback timeout to hide splash screen
-            const fallbackTimeout = setTimeout(() => {
-                hideSplashScreen();
-            }, 5000); // 5 seconds fallback
-            
-            // Try to detect when video can play
-            if (splashVideo) {
-                splashVideo.addEventListener('canplay', () => {
-                    // Video loaded successfully
-                    splashVideo.play().catch(e => {
-                        console.log("Video autoplay prevented");
-                    });
-                });
-                
-                splashVideo.addEventListener('ended', () => {
-                    // Video finished playing
-                    clearTimeout(fallbackTimeout);
-                    hideSplashScreen();
-                });
-                
-                splashVideo.addEventListener('error', () => {
-                    // Video failed to load
-                    console.log("Video failed to load");
-                    clearTimeout(fallbackTimeout);
-                    hideSplashScreen();
-                });
-                
-                // Try to play video
-                splashVideo.play().catch(e => {
-                    console.log("Video autoplay prevented, using fallback");
-                });
-            }
-            
-            // Also hide after loading bar animation completes (3 seconds)
-            setTimeout(() => {
-                clearTimeout(fallbackTimeout);
-                hideSplashScreen();
-            }, 3000);
-        }
-
-        function hideSplashScreen() {
-            const splashScreen = document.getElementById('splashScreen');
-            splashScreen.classList.add('hidden');
-            
-            // Remove from DOM after animation
-            setTimeout(() => {
-                splashScreen.style.display = 'none';
-            }, 1000);
-        }
-
-        // ========== THEME MANAGEMENT ==========
-        function setTheme(theme) {
-            currentTheme = theme;
-            localStorage.setItem('theme', theme);
-            document.documentElement.setAttribute('data-theme', theme);
-            
-            const themeLabel = document.getElementById('themeLabel');
-            const themeToggle = document.getElementById('themeToggle');
-            
-            if (theme === 'light') {
-                themeLabel.textContent = 'Dark';
-                themeToggle.checked = false;
-            } else {
-                themeLabel.textContent = 'Light';
-                themeToggle.checked = true;
-            }
-        }
-
-        document.getElementById('themeToggle').addEventListener('change', function() {
-            if (this.checked) {
-                setTheme('dark');
-            } else {
-                setTheme('light');
-            }
-        });
-
-        // ========== LANGUAGE MANAGEMENT ==========
-        function setLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('language', lang);
-            
-            // Update RTL for Arabic
-            if (lang === 'ar') {
-                document.documentElement.dir = 'rtl';
-                document.documentElement.lang = 'ar';
-            } else {
-                document.documentElement.dir = 'ltr';
-                document.documentElement.lang = 'en';
-            }
-            
-            // Re-render products with new language
-            renderProducts();
-        }
-
-        // Language switcher toggle
-        document.getElementById('languageToggle').addEventListener('click', function() {
-            const dropdown = document.getElementById('languageDropdown');
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            dropdown.classList.toggle('show');
-        });
-
-        // Language selection
-        document.querySelectorAll('.language-option').forEach(option => {
-            option.addEventListener('click', function(e) {
-                e.preventDefault();
-                const lang = this.getAttribute('data-lang');
-                setLanguage(lang);
-                document.getElementById('languageDropdown').classList.remove('show');
-                document.getElementById('languageToggle').setAttribute('aria-expanded', 'false');
-            });
-        });
-
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.language-switcher')) {
-                document.getElementById('languageDropdown').classList.remove('show');
-                document.getElementById('languageToggle').setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // ========== GOLD PRICE ==========
-        function updateGoldPrice() {
-            const goldElement = document.getElementById('liveGoldPrice');
-            let basePrice = 510.00;
-            
-            setInterval(() => {
-                const change = (Math.random() - 0.5) * 5;
-                const newPrice = basePrice + change;
-                goldElement.textContent = `AED ${newPrice.toFixed(2)}/g`;
-                
-                const changeElement = goldElement.nextElementSibling;
-                changeElement.textContent = change >= 0 ? `+${change.toFixed(2)}%` : `${change.toFixed(2)}%`;
-                changeElement.style.color = change >= 0 ? '#4CAF50' : '#F44336';
-            }, 10000);
-        }
-
-        // ========== PRODUCTS MANAGEMENT ==========
-        function renderProducts() {
-            const container = document.getElementById('productsContainer');
-            if (!container) return;
-            
-            const activeFilter = document.querySelector('.filter-btn.active')?.dataset.filter || 'all';
-            
-            let filteredProducts = products;
-            if (activeFilter !== 'all') {
-                filteredProducts = products.filter(p => p.category === activeFilter);
-            }
-            
-            container.innerHTML = filteredProducts.map(product => {
-                const isInWishlist = wishlist.includes(product.id);
-                const hasOriginalPrice = product.originalPrice && product.originalPrice > product.price;
-                
-                return `
-                <div class="product-card fade-in">
-                    ${product.badge ? `<div class="product-badge">${product.badge}</div>` : ''}
-                    <div class="product-image-container">
-                        <img src="${product.image}" alt="${product.name}" class="product-image" loading="lazy">
-                    </div>
-                    <div class="product-content">
-                        <div class="product-category">${product.category.toUpperCase()}</div>
-                        <h3 class="product-title">${product.name}</h3>
-                        <p class="product-description">${product.description}</p>
-                        <div class="product-price">
-                            AED ${product.price.toLocaleString()}
-                            ${hasOriginalPrice ? `<span class="original">AED ${product.originalPrice.toLocaleString()}</span>` : ''}
-                        </div>
-                        <div class="product-actions">
-                            <button class="btn btn-secondary" onclick="showProductQuickView(${product.id})">
-                                <i class="fas fa-eye"></i> View
-                            </button>
-                            <button class="btn ${isInWishlist ? 'btn-primary' : 'btn-secondary'}" onclick="toggleWishlist(${product.id})">
-                                <i class="fas fa-heart"></i> ${isInWishlist ? 'Saved' : 'Save'}
-                            </button>
-                            <button class="btn btn-primary" onclick="addToCart(${product.id})">
-                                <i class="fas fa-shopping-bag"></i> Add
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                `;
-            }).join('');
-        }
-
-        function filterProducts(category) {
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            document.querySelector(`.filter-btn[data-filter="${category}"]`).classList.add('active');
-            renderProducts();
-        }
-
-        // Filter products
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
-                renderProducts();
-            });
-        });
-
-        // ========== WISHLIST MANAGEMENT ==========
-        function toggleWishlist(productId) {
-            const index = wishlist.indexOf(productId);
-            if (index === -1) {
-                wishlist.push(productId);
-                showNotification('Added to wishlist!', 'success');
-            } else {
-                wishlist.splice(index, 1);
-                showNotification('Removed from wishlist', 'info');
-            }
-            localStorage.setItem('wishlist', JSON.stringify(wishlist));
-            updateWishlistCount();
-            renderProducts();
-        }
-
-        function updateWishlistCount() {
-            const count = wishlist.length;
-            document.getElementById('wishlistCount').textContent = count;
-        }
-
-        // ========== CART MANAGEMENT ==========
-        function addToCart(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-            
-            const existingItem = cart.find(item => item.id === productId);
-            
-            if (existingItem) {
-                existingItem.quantity += 1;
-            } else {
-                cart.push({
-                    id: product.id,
-                    name: product.name,
-                    price: product.price,
-                    image: product.image,
-                    quantity: 1
-                });
-            }
-            
-            updateCartCount();
-            updateCartDisplay();
-            saveCart();
-            showNotification('Product added to cart!', 'success');
-        }
-
-        function updateCartCount() {
-            const count = cart.reduce((total, item) => total + item.quantity, 0);
-            document.getElementById('cartCount').textContent = count;
-        }
-
-        function calculateCartTotal() {
-            return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
-        }
-
-        function updateCartDisplay() {
-            const container = document.getElementById('cartItems');
-            const totalAmount = document.getElementById('cartTotalAmount');
-            
-            if (cart.length === 0) {
-                container.innerHTML = '<p style="text-align: center; color: var(--light-gray); padding: 2rem;">Your cart is empty</p>';
-                totalAmount.textContent = 'AED 0.00';
-                return;
-            }
-            
-            let total = calculateCartTotal();
-            if (discountApplied) {
-                total -= discountAmount;
-            }
-            
-            container.innerHTML = cart.map(item => {
-                const itemTotal = item.price * item.quantity;
-                
-                return `
-                    <div class="cart-item">
-                        <img src="${item.image}" alt="${item.name}" class="cart-item-image">
-                        <div class="cart-item-content">
-                            <h4 class="cart-item-title">${item.name}</h4>
-                            <div class="cart-item-price">AED ${item.price.toLocaleString()}</div>
-                            <div class="cart-item-controls">
-                                <button class="action-button" style="width: 30px; height: 30px;" onclick="updateCartItem(${item.id}, ${item.quantity - 1})">
-                                    <i class="fas fa-minus"></i>
-                                </button>
-                                <span>${item.quantity}</span>
-                                <button class="action-button" style="width: 30px; height: 30px;" onclick="updateCartItem(${item.id}, ${item.quantity + 1})">
-                                    <i class="fas fa-plus"></i>
-                                </button>
-                                <button class="action-button" style="width: 30px; height: 30px; margin-left: auto;" onclick="removeFromCart(${item.id})">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            }).join('');
-            
-            if (discountApplied) {
-                container.innerHTML += `
-                    <div style="padding: 1.5rem 0; border-top: 1px solid rgba(212, 175, 55, 0.1);">
-                        <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
-                            <span>Subtotal:</span>
-                            <span>AED ${calculateCartTotal().toLocaleString()}</span>
-                        </div>
-                        <div style="display: flex; justify-content: space-between; color: var(--success);">
-                            <span>Discount:</span>
-                            <span>-AED ${discountAmount.toLocaleString()}</span>
-                        </div>
-                    </div>
-                `;
-            }
-            
-            totalAmount.textContent = `AED ${total.toLocaleString()}`;
-        }
-
-        function updateCartItem(productId, newQuantity) {
-            if (newQuantity < 1) {
-                removeFromCart(productId);
-                return;
-            }
-            
-            const item = cart.find(item => item.id === productId);
-            if (item) {
-                item.quantity = newQuantity;
-                updateCartCount();
-                updateCartDisplay();
-                saveCart();
-            }
-        }
-
-        function removeFromCart(productId) {
-            cart = cart.filter(item => item.id !== productId);
-            updateCartCount();
-            updateCartDisplay();
-            saveCart();
-            showNotification('Product removed from cart', 'info');
-        }
-
-        function saveCart() {
-            localStorage.setItem('cart', JSON.stringify(cart));
-        }
-
-        // Cart modal controls
-        document.getElementById('cartButton').addEventListener('click', openCart);
-
-        function openCart() {
-            updateCartDisplay();
-            document.getElementById('cartModal').classList.add('open');
-        }
-
-        function closeCart() {
-            document.getElementById('cartModal').classList.remove('open');
-        }
-
-        // ========== DISCOUNT SYSTEM ==========
-        function applyDiscount() {
-            const code = document.getElementById('discountCode').value.trim();
-            const discountCodes = {
-                'RYAAN10': 0.10,
-                'GOLD20': 0.20,
-                'WELCOME5': 0.05,
-                'VIP2025': 0.15
-            };
-            
-            if (discountCodes[code]) {
-                const discount = discountCodes[code];
-                const total = calculateCartTotal();
-                discountAmount = total * discount;
-                discountApplied = true;
-                showNotification(`VIP Discount applied! Saved AED ${discountAmount.toFixed(2)}`, 'success');
-                updateCartDisplay();
-            } else {
-                showNotification('Invalid discount code', 'error');
-            }
-        }
-
-        // ========== SLIDER ==========
-        function initSlider() {
-            const slides = document.querySelectorAll('.slide');
-            const dots = document.querySelectorAll('.slider-dot');
-            
-            function showSlide(index) {
-                slides.forEach(slide => slide.classList.remove('active'));
-                dots.forEach(dot => dot.classList.remove('active'));
-                
-                slides[index].classList.add('active');
-                dots[index].classList.add('active');
-                currentSlide = index;
-            }
-            
-            // Dot controls
-            dots.forEach((dot, index) => {
-                dot.addEventListener('click', () => {
-                    clearInterval(sliderInterval);
-                    showSlide(index);
-                    startSlider();
-                });
-            });
-            
-            // Auto slide
-            function startSlider() {
-                sliderInterval = setInterval(() => {
-                    let nextSlide = currentSlide + 1;
-                    if (nextSlide >= slides.length) nextSlide = 0;
-                    showSlide(nextSlide);
-                }, 5000);
-            }
-            
-            startSlider();
-        }
-
-        // ========== CUSTOM DESIGN CANVAS ==========
-        function initCanvas() {
-            const canvas = document.getElementById('sketchCanvas');
-            if (!canvas) return;
-            
-            const ctx = canvas.getContext('2d');
-            
-            // Set canvas size
-            canvas.width = canvas.parentElement.clientWidth;
-            canvas.height = canvas.parentElement.clientHeight;
-            
-            let isDrawing = false;
-            let lastX = 0;
-            let lastY = 0;
-            
-            // Drawing functions
-            canvas.addEventListener('mousedown', (e) => {
-                isDrawing = true;
-                [lastX, lastY] = [e.offsetX, e.offsetY];
-            });
-            
-            canvas.addEventListener('mousemove', (e) => {
-                if (!isDrawing) return;
-                
-                ctx.strokeStyle = '#D4AF37';
-                ctx.lineWidth = 2;
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-                
-                ctx.beginPath();
-                ctx.moveTo(lastX, lastY);
-                ctx.lineTo(e.offsetX, e.offsetY);
-                ctx.stroke();
-                
-                [lastX, lastY] = [e.offsetX, e.offsetY];
-            });
-            
-            canvas.addEventListener('mouseup', () => isDrawing = false);
-            canvas.addEventListener('mouseout', () => isDrawing = false);
-            
-            // Touch support for mobile
-            canvas.addEventListener('touchstart', (e) => {
-                e.preventDefault();
-                const touch = e.touches[0];
-                const rect = canvas.getBoundingClientRect();
-                isDrawing = true;
-                [lastX, lastY] = [touch.clientX - rect.left, touch.clientY - rect.top];
-            });
-            
-            canvas.addEventListener('touchmove', (e) => {
-                e.preventDefault();
-                if (!isDrawing) return;
-                
-                const touch = e.touches[0];
-                const rect = canvas.getBoundingClientRect();
-                const x = touch.clientX - rect.left;
-                const y = touch.clientY - rect.top;
-                
-                ctx.strokeStyle = '#D4AF37';
-                ctx.lineWidth = 2;
-                ctx.lineJoin = 'round';
-                ctx.lineCap = 'round';
-                
-                ctx.beginPath();
-                ctx.moveTo(lastX, lastY);
-                ctx.lineTo(x, y);
-                ctx.stroke();
-                
-                [lastX, lastY] = [x, y];
-            });
-            
-            canvas.addEventListener('touchend', () => isDrawing = false);
-        }
-
-        function saveDesign() {
-            const designType = document.getElementById('designType').value;
-            const metalType = document.getElementById('metalType').value;
-            const gemstone = document.getElementById('gemstone').value;
-            
-            if (!validateDesignForm()) return;
-            
-            const design = {
-                type: designType,
-                metal: metalType,
-                gemstone: gemstone,
-                timestamp: new Date().toISOString()
-            };
-            
-            localStorage.setItem('customDesign', JSON.stringify(design));
-            showNotification('Design saved successfully! Our design team will contact you soon.', 'success');
-        }
-
-        function validateDesignForm() {
-            const designType = document.getElementById('designType').value;
-            const metalType = document.getElementById('metalType').value;
-            
-            if (!designType || !metalType) {
-                showNotification('Please select all required fields', 'error');
-                return false;
-            }
-            
-            return true;
-        }
-
-        function clearCanvas() {
-            const canvas = document.getElementById('sketchCanvas');
-            const ctx = canvas.getContext('2d');
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-        }
-
-        // ========== PRODUCT QUICK VIEW ==========
-        function showProductQuickView(productId) {
-            const product = products.find(p => p.id === productId);
-            if (!product) return;
-            
-            const isInWishlist = wishlist.includes(productId);
-            const hasOriginalPrice = product.originalPrice && product.originalPrice > product.price;
-            
-            const modal = document.createElement('div');
-            modal.className = 'product-modal';
-            modal.innerHTML = `
-                <div class="product-modal-content">
-                    <button class="action-button" style="position: absolute; top: 1rem; right: 1rem; z-index: 10;" onclick="closeModal(this)">
-                        <i class="fas fa-times"></i>
-                    </button>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 3rem;">
-                        <div>
-                            <img src="${product.image}" alt="${product.name}" 
-                                 style="width: 100%; border-radius: var(--radius);" loading="lazy">
-                        </div>
-                        <div>
-                            <div class="product-category">${product.category.toUpperCase()}</div>
-                            <h2 style="color: var(--gold); margin-bottom: 1.5rem; font-size: 2rem;">${product.name}</h2>
-                            <p style="color: var(--light-gray); margin-bottom: 1.5rem; line-height: 1.8;">${product.description}</p>
-                            <div style="color: var(--gold); font-size: 2.2rem; font-weight: bold; margin-bottom: 2rem;">
-                                AED ${product.price.toLocaleString()}
-                                ${hasOriginalPrice ? `<div style="color: var(--light-gray); font-size: 1.4rem; text-decoration: line-through; margin-top: 0.5rem;">AED ${product.originalPrice.toLocaleString()}</div>` : ''}
-                            </div>
-                            
-                            <div style="margin-bottom: 2rem;">
-                                <h4 style="color: var(--gold-light); margin-bottom: 1rem;">Specifications</h4>
-                                <ul style="color: var(--light-gray); list-style: none; padding-left: 0;">
-                                    <li style="margin-bottom: 0.5rem;">• Material: 24K Gold</li>
-                                    <li style="margin-bottom: 0.5rem;">• Diamonds: Premium Quality</li>
-                                    <li style="margin-bottom: 0.5rem;">• Certification: GIA Certified</li>
-                                    <li style="margin-bottom: 0.5rem;">• Warranty: Lifetime</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="product-actions" style="margin-bottom: 1rem;">
-                                <button class="btn ${isInWishlist ? 'btn-primary' : 'btn-secondary'}" onclick="toggleWishlist(${product.id}); closeModal(this)" 
-                                        style="flex: 1;">
-                                    <i class="fas fa-heart"></i> ${isInWishlist ? 'Saved' : 'Save to Wishlist'}
-                                </button>
-                            </div>
-                            <button class="btn btn-primary" onclick="addToCart(${product.id}); closeModal(this)" 
-                                    style="width: 100%; margin-bottom: 1rem;">
-                                <i class="fas fa-shopping-bag"></i> Add to Cart
-                            </button>
-                            <button class="btn btn-secondary" onclick="closeModal(this)" style="width: 100%;">
-                                Continue Shopping
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-            setTimeout(() => modal.classList.add('active'), 10);
-            
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) closeModal(modal);
-            });
-        }
-
-        function closeModal(element) {
-            const modal = element.closest('.product-modal') || element;
-            modal.classList.remove('active');
-            setTimeout(() => modal.remove(), 300);
-        }
-
-        // ========== LAZY LOADING ==========
-        function initLazyLoading() {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        // Already loaded
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(img => imageObserver.observe(img));
-        }
-
-        // ========== UTILITY FUNCTIONS ==========
-        function showNotification(message, type = 'success') {
-            const colors = {
-                success: '#4CAF50',
-                error: '#F44336',
-                warning: '#FF9800',
-                info: '#2196F3'
-            };
-            
-            // Remove existing notification
-            const existingNotification = document.querySelector('.notification');
-            if (existingNotification) {
-                existingNotification.remove();
-            }
-            
-            // Create new notification
-            const notification = document.createElement('div');
-            notification.className = 'notification';
-            notification.style.cssText = `
-                position: fixed;
-                top: 120px;
-                right: 30px;
-                background: ${colors[type] || colors.success};
-                color: white;
-                padding: 1.2rem 2rem;
-                border-radius: var(--radius);
-                z-index: 10000;
-                box-shadow: var(--shadow);
-                animation: slideIn 0.3s ease;
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                font-family: 'Montserrat', sans-serif;
-                font-weight: 600;
-                max-width: 400px;
-            `;
-            
-            notification.innerHTML = `
-                <i class="fas fa-${type === 'success' ? 'check-circle' : 
-                                  type === 'error' ? 'exclamation-circle' : 
-                                  type === 'warning' ? 'exclamation-triangle' : 'info-circle'}"></i>
-                ${message}
-            `;
-            
-            document.body.appendChild(notification);
-            
-            // Remove after 3 seconds
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.3s ease';
-                setTimeout(() => notification.remove(), 300);
-            }, 3000);
-        }
-
-        function addSoundToggle() {
-            const soundToggle = document.createElement('button');
-            soundToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
-            soundToggle.style.cssText = `
-                position: fixed;
-                bottom: 20px;
-                right: 20px;
-                width: 50px;
-                height: 50px;
-                background: var(--gold);
-                color: var(--black);
-                border-radius: 50%;
-                border: none;
-                cursor: pointer;
-                z-index: 1000;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                box-shadow: var(--shadow);
-                font-size: 1.2rem;
-            `;
-            soundToggle.setAttribute('aria-label', 'Toggle sound');
-            
-            soundToggle.addEventListener('click', () => {
-                soundEnabled = !soundEnabled;
-                soundToggle.innerHTML = soundEnabled ? 
-                    '<i class="fas fa-volume-up"></i>' : 
-                    '<i class="fas fa-volume-mute"></i>';
-                showNotification(soundEnabled ? 'Sound enabled' : 'Sound muted', 'info');
-            });
-            
-            document.body.appendChild(soundToggle);
-        }
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 100,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Update active nav link
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.removeAttribute('aria-current');
-                    });
-                    this.setAttribute('aria-current', 'page');
-                }
-            });
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeCart();
-                const modal = document.querySelector('.product-modal.active');
-                if (modal) closeModal(modal);
-                document.getElementById('languageDropdown').classList.remove('show');
-            }
-        });
-    </script>
-</body>
-  </html>
+        .notification.success {
+            background:
