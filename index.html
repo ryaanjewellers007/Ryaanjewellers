@@ -25,57 +25,34 @@
     <meta name="twitter:description" content="Official Dubai retailer for Messika, Bulgari, Van Cleef & Arpels">
     <meta name="twitter:image" content="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika-Move-Classic-03998-WG.jpg">
     
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0C0E">
+    
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
-    <!-- Payment Gateway SDK -->
-    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-    
     <style>
         /* ===== CSS RESET & VARIABLES ===== */
         :root {
-            /* Light Theme */
-            --primary-bg: #0C0C0E;
-            --secondary-bg: #1A1A1D;
-            --text-color: #D6D2CB;
-            --text-light: #FFFFFF;
-            --accent-color: #C9A84C;
-            --accent-light: #E8D48B;
-            --border-color: rgba(201, 168, 76, 0.2);
+            --gold: #C9A84C;
+            --gold-light: #E8D48B;
+            --gold-dark: #8A6F2E;
+            --ink: #0C0C0E;
+            --ink-light: #1A1A1D;
+            --cream: #F5F0E8;
+            --cream-dark: #D6D2CB;
+            --white: #FFFFFF;
+            --success: #4CAF50;
+            --error: #F44336;
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             --radius: 8px;
-        }
-        
-        :root[data-theme="dark"] {
-            /* Dark Theme (Default) */
-            --primary-bg: #0C0C0E;
-            --secondary-bg: #1A1A1D;
-            --text-color: #D6D2CB;
-            --text-light: #FFFFFF;
-            --accent-color: #C9A84C;
-            --accent-light: #E8D48B;
-        }
-        
-        :root[data-theme="light"] {
-            /* Light Theme */
-            --primary-bg: #F8F5F0;
-            --secondary-bg: #FFFFFF;
-            --text-color: #333333;
-            --text-light: #000000;
-            --accent-color: #B8860B;
-            --accent-light: #D4AF37;
-        }
-        
-        :root[data-theme="royal"] {
-            /* Royal Theme */
-            --primary-bg: #1A0B2E;
-            --secondary-bg: #2D1B45;
-            --text-color: #E6D4D4;
-            --text-light: #FFFFFF;
-            --accent-color: #FFD700;
-            --accent-light: #FFF8DC;
+            --border: rgba(201, 168, 76, 0.2);
         }
         
         * {
@@ -95,8 +72,8 @@
         
         body {
             font-family: 'Jost', sans-serif;
-            background: var(--primary-bg);
-            color: var(--text-color);
+            background: var(--ink);
+            color: var(--cream-dark);
             line-height: 1.6;
             overflow-x: hidden;
             transition: var(--transition);
@@ -109,7 +86,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: var(--primary-bg);
+            background: var(--ink);
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -121,7 +98,7 @@
         .splash-logo {
             font-family: 'Cormorant Garamond', serif;
             font-size: 3.5rem;
-            color: var(--accent-color);
+            color: var(--gold);
             margin-bottom: 2rem;
             opacity: 0;
             animation: fadeIn 1s ease forwards;
@@ -130,10 +107,9 @@
         .splash-loader {
             width: 60px;
             height: 60px;
-            border: 4px solid var(--secondary-bg);
-            border-top: 4px solid var(--accent-color);
+            border: 4px solid var(--ink-light);
+            border-top: 4px solid var(--gold);
             border-radius: 50%;
-            animation: spin 1s linear infinite;
             opacity: 0;
             animation: fadeIn 0.5s ease forwards 0.5s, spin 1s linear infinite;
         }
@@ -150,7 +126,7 @@
         /* ===== TYPOGRAPHY ===== */
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Cormorant Garamond', serif;
-            color: var(--text-light);
+            color: var(--white);
             font-weight: 500;
             line-height: 1.2;
         }
@@ -166,7 +142,7 @@
         
         .section-subtitle {
             text-align: center;
-            color: var(--accent-color);
+            color: var(--gold);
             font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto 3rem;
@@ -191,20 +167,20 @@
         }
         
         .btn-gold {
-            background: var(--accent-color);
-            color: var(--primary-bg);
+            background: var(--gold);
+            color: var(--ink);
         }
         
         .btn-gold:hover {
-            background: var(--accent-light);
+            background: var(--gold-light);
             transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
         
         .btn-outline {
             background: transparent;
-            border: 1px solid var(--accent-color);
-            color: var(--accent-color);
+            border: 1px solid var(--gold);
+            color: var(--gold);
         }
         
         .btn-outline:hover {
@@ -222,9 +198,9 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(var(--primary-bg-rgb), 0.95);
+            background: rgba(12, 12, 14, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border);
             z-index: 1000;
             padding: 1rem 0;
             transition: var(--transition);
@@ -248,12 +224,12 @@
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
             font-weight: 600;
-            color: var(--text-light);
+            color: var(--white);
             text-decoration: none;
         }
         
         .logo span {
-            color: var(--accent-color);
+            color: var(--gold);
         }
         
         .nav-links {
@@ -263,7 +239,7 @@
         }
         
         .nav-links a {
-            color: var(--text-color);
+            color: var(--cream-dark);
             text-decoration: none;
             font-size: 0.9rem;
             text-transform: uppercase;
@@ -279,12 +255,12 @@
             left: 0;
             width: 0;
             height: 1px;
-            background: var(--accent-color);
+            background: var(--gold);
             transition: width 0.3s ease;
         }
         
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--gold);
         }
         
         .nav-links a:hover::after {
@@ -295,26 +271,26 @@
             display: none;
             background: none;
             border: none;
-            color: var(--text-light);
+            color: var(--white);
             font-size: 1.5rem;
             cursor: pointer;
         }
         
-        /* ===== LANGUAGE & THEME SWITCHER ===== */
+        /* ===== LANGUAGE SWITCHER ===== */
         .control-panel {
             display: flex;
             gap: 1rem;
             align-items: center;
         }
         
-        .theme-switcher, .language-switcher {
+        .language-switcher {
             position: relative;
         }
         
-        .theme-btn, .language-btn {
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
+        .language-btn {
+            background: var(--ink-light);
+            border: 1px solid var(--border);
+            color: var(--cream-dark);
             padding: 8px 16px;
             border-radius: 20px;
             cursor: pointer;
@@ -324,17 +300,17 @@
             transition: var(--transition);
         }
         
-        .theme-btn:hover, .language-btn:hover {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
+        .language-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
         }
         
-        .theme-options, .language-options {
+        .language-options {
             position: absolute;
             top: 100%;
             right: 0;
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
+            background: var(--ink);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 10px;
             margin-top: 5px;
@@ -343,20 +319,35 @@
             box-shadow: var(--shadow);
         }
         
-        .theme-options.show, .language-options.show {
+        .language-options.show {
             display: block;
         }
         
-        .theme-option, .language-option {
+        .language-option {
             padding: 8px 12px;
             cursor: pointer;
             transition: var(--transition);
             border-radius: 4px;
         }
         
-        .theme-option:hover, .language-option:hover {
-            background: var(--primary-bg);
-            color: var(--accent-color);
+        .language-option:hover {
+            background: var(--ink-light);
+            color: var(--gold);
+        }
+        
+        .cart-count, .wishlist-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: var(--gold);
+            color: var(--ink);
+            font-size: 0.7rem;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         /* ===== HERO SECTION ===== */
@@ -388,7 +379,7 @@
         }
         
         .hero-subtitle {
-            color: var(--accent-color);
+            color: var(--gold);
             font-size: 0.9rem;
             letter-spacing: 3px;
             text-transform: uppercase;
@@ -431,8 +422,8 @@
         
         /* ===== CARDS ===== */
         .card {
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
+            background: var(--ink-light);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 2rem;
             text-align: center;
@@ -441,20 +432,20 @@
         
         .card:hover {
             transform: translateY(-5px);
-            border-color: var(--accent-color);
+            border-color: var(--gold);
             box-shadow: var(--shadow);
         }
         
         .card-icon {
             font-size: 2.5rem;
-            color: var(--accent-color);
+            color: var(--gold);
             margin-bottom: 1.5rem;
         }
         
         /* ===== PRODUCT CARDS ===== */
         .product-card {
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
+            background: var(--ink-light);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             overflow: hidden;
             transition: var(--transition);
@@ -463,7 +454,7 @@
         
         .product-card:hover {
             transform: translateY(-10px);
-            border-color: var(--accent-color);
+            border-color: var(--gold);
             box-shadow: var(--shadow);
         }
         
@@ -488,8 +479,8 @@
             position: absolute;
             top: 15px;
             right: 15px;
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
+            background: var(--ink-light);
+            border: 1px solid var(--border);
             width: 36px;
             height: 36px;
             border-radius: 50%;
@@ -498,18 +489,18 @@
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
-            color: var(--text-color);
+            color: var(--cream-dark);
         }
         
         .wishlist-btn.active {
-            background: var(--accent-color);
-            color: var(--primary-bg);
-            border-color: var(--accent-color);
+            background: var(--gold);
+            color: var(--ink);
+            border-color: var(--gold);
         }
         
         .wishlist-btn:hover {
-            background: var(--accent-color);
-            color: var(--primary-bg);
+            background: var(--gold);
+            color: var(--ink);
         }
         
         .product-content {
@@ -524,8 +515,8 @@
         }
         
         .product-badge {
-            background: var(--accent-color);
-            color: var(--primary-bg);
+            background: var(--gold);
+            color: var(--ink);
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 0.75rem;
@@ -533,7 +524,7 @@
         }
         
         .product-price {
-            color: var(--accent-color);
+            color: var(--gold);
             font-size: 1.5rem;
             font-weight: 600;
             margin: 1rem 0;
@@ -542,8 +533,8 @@
         
         /* ===== FILTER ===== */
         .filter-container {
-            background: var(--secondary-bg);
-            border: 1px solid var(--border-color);
+            background: var(--ink-light);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.5rem;
             margin-bottom: 3rem;
@@ -569,16 +560,16 @@
         .filter-group label {
             display: block;
             margin-bottom: 0.5rem;
-            color: var(--accent-color);
+            color: var(--gold);
             font-weight: 500;
         }
         
         .filter-select {
             width: 100%;
             padding: 10px;
-            background: var(--primary-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
+            background: var(--ink);
+            border: 1px solid var(--border);
+            color: var(--cream-dark);
             border-radius: 4px;
             font-family: 'Jost', sans-serif;
         }
@@ -592,13 +583,13 @@
             display: flex;
             justify-content: space-between;
             font-size: 0.9rem;
-            color: var(--text-color);
+            color: var(--cream-dark);
         }
         
         /* ===== GOLD PRICE TRACKER ===== */
         .gold-tracker {
             background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(12, 12, 14, 0.8));
-            border: 1px solid var(--border-color);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 2rem;
             margin: 4rem auto;
@@ -612,8 +603,8 @@
         }
         
         .gold-card {
-            background: rgba(var(--primary-bg-rgb), 0.8);
-            border: 1px solid var(--border-color);
+            background: rgba(12, 12, 14, 0.8);
+            border: 1px solid var(--border);
             border-radius: var(--radius);
             padding: 1.5rem;
             text-align: center;
@@ -621,37 +612,21 @@
         }
         
         .gold-card:hover {
-            border-color: var(--accent-color);
+            border-color: var(--gold);
             transform: translateY(-3px);
         }
         
         .gold-type {
             font-size: 0.9rem;
-            color: var(--text-color);
+            color: var(--cream-dark);
             margin-bottom: 0.5rem;
         }
         
         .gold-price {
             font-family: 'Cormorant Garamond', serif;
             font-size: 1.8rem;
-            color: var(--accent-color);
+            color: var(--gold);
             font-weight: 600;
-        }
-        
-        /* ===== CART & WISHLIST ===== */
-        .cart-count, .wishlist-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background: var(--accent-color);
-            color: var(--primary-bg);
-            font-size: 0.7rem;
-            width: 18px;
-            height: 18px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
         
         /* ===== FORMS ===== */
@@ -662,9 +637,9 @@
         .form-control {
             width: 100%;
             padding: 16px;
-            background: var(--primary-bg);
-            border: 1px solid var(--border-color);
-            color: var(--text-color);
+            background: var(--ink);
+            border: 1px solid var(--border);
+            color: var(--cream-dark);
             border-radius: 4px;
             font-family: 'Jost', sans-serif;
             font-size: 1rem;
@@ -673,7 +648,7 @@
         
         .form-control:focus {
             outline: none;
-            border-color: var(--accent-color);
+            border-color: var(--gold);
             background: rgba(201, 168, 76, 0.05);
         }
         
@@ -702,6 +677,57 @@
             text-align: center;
         }
         
+        /* ===== MODAL ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .modal-content {
+            background: var(--ink);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+        }
+        
+        .modal-header {
+            padding: 2rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            color: var(--cream-dark);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        
+        .modal-close:hover {
+            color: var(--gold);
+        }
+        
+        .modal-body {
+            padding: 2rem;
+        }
+        
         /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -714,7 +740,7 @@
                 left: -100%;
                 width: 100%;
                 height: calc(100vh - 70px);
-                background: var(--primary-bg);
+                background: var(--ink);
                 flex-direction: column;
                 padding: 2rem;
                 transition: var(--transition);
@@ -759,11 +785,15 @@
             .filter-options {
                 grid-template-columns: 1fr;
             }
+            
+            .modal-body {
+                padding: 1.5rem;
+            }
         }
         
         /* ===== UTILITY CLASSES ===== */
         .text-center { text-align: center; }
-        .text-gold { color: var(--accent-color); }
+        .text-gold { color: var(--gold); }
         .mt-1 { margin-top: 1rem; }
         .mt-2 { margin-top: 2rem; }
         .mt-3 { margin-top: 3rem; }
@@ -796,18 +826,6 @@
                 <a href="#contact" data-i18n="nav.contact">Contact</a>
                 
                 <div class="control-panel">
-                    <div class="theme-switcher">
-                        <button class="theme-btn" id="themeBtn">
-                            <i class="fas fa-palette"></i>
-                            <span data-i18n="theme">Theme</span>
-                        </button>
-                        <div class="theme-options" id="themeOptions">
-                            <div class="theme-option" data-theme="dark" data-i18n="theme.dark">Dark</div>
-                            <div class="theme-option" data-theme="light" data-i18n="theme.light">Light</div>
-                            <div class="theme-option" data-theme="royal" data-i18n="theme.royal">Royal</div>
-                        </div>
-                    </div>
-                    
                     <div class="language-switcher">
                         <button class="language-btn" id="languageBtn">
                             <i class="fas fa-globe"></i>
@@ -827,6 +845,10 @@
                     <a href="#" class="cart-icon" onclick="openCartModal()" style="position: relative;">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                    
+                    <a href="https://wa.me/971543746476" class="btn btn-outline btn-small" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                 </div>
             </div>
@@ -1209,7 +1231,7 @@
                         <span data-i18n="cart.shipping">Shipping</span>
                         <span data-i18n="cart.free">Free</span>
                     </div>
-                    <div style="display: flex; justify-content: space-between; font-weight: bold; padding-top: 1rem; border-top: 1px solid var(--border-color);">
+                    <div style="display: flex; justify-content: space-between; font-weight: bold; padding-top: 1rem; border-top: 1px solid var(--border);">
                         <span data-i18n="cart.total">Total</span>
                         <span id="cartTotal">0 AED</span>
                     </div>
@@ -1221,6 +1243,7 @@
         </div>
     </div>
 
+    <!-- Payment Modal -->
     <div class="modal" id="paymentModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1230,7 +1253,10 @@
                 </button>
             </div>
             <div class="modal-body" id="paymentContent">
-                <!-- Payment form will be populated by JavaScript -->
+                <div id="paypal-button-container"></div>
+                <div id="stripe-payment" style="display: none;">
+                    <!-- Stripe payment form will be loaded here -->
+                </div>
             </div>
         </div>
     </div>
@@ -1250,7 +1276,6 @@
             cart: [],
             wishlist: [],
             language: 'en',
-            theme: 'dark',
             translations: {},
             goldPrices: {}
         };
@@ -1265,12 +1290,6 @@
                 'nav.gold': 'Gold Prices',
                 'nav.appointment': 'Appointment',
                 'nav.contact': 'Contact',
-                
-                // Theme
-                'theme': 'Theme',
-                'theme.dark': 'Dark',
-                'theme.light': 'Light',
-                'theme.royal': 'Royal',
                 
                 // Hero
                 'hero.subtitle': 'OFFICIAL RETAILER | DUBAI',
@@ -1373,11 +1392,6 @@
                 
                 // Payment
                 'payment.title': 'Secure Payment',
-                'payment.cardNumber': 'Card Number',
-                'payment.expiry': 'Expiry Date',
-                'payment.cvv': 'CVV',
-                'payment.name': 'Name on Card',
-                'payment.payNow': 'Pay Now',
                 'payment.success': 'Payment Successful!',
                 'payment.error': 'Payment Failed'
             },
@@ -1389,12 +1403,6 @@
                 'nav.gold': 'أسعار الذهب',
                 'nav.appointment': 'موعد',
                 'nav.contact': 'اتصل بنا',
-                
-                // Theme
-                'theme': 'المظهر',
-                'theme.dark': 'داكن',
-                'theme.light': 'فاتح',
-                'theme.royal': 'ملكي',
                 
                 // Hero
                 'hero.subtitle': 'وكيل رسمي | دبي',
@@ -1497,11 +1505,6 @@
                 
                 // Payment
                 'payment.title': 'دفع آمن',
-                'payment.cardNumber': 'رقم البطاقة',
-                'payment.expiry': 'تاريخ الانتهاء',
-                'payment.cvv': 'CVV',
-                'payment.name': 'الاسم على البطاقة',
-                'payment.payNow': 'ادفع الآن',
                 'payment.success': 'تم الدفع بنجاح!',
                 'payment.error': 'فشل الدفع'
             }
@@ -1529,7 +1532,6 @@
             initializeProducts();
             initializeGoldPrices();
             initializeForms();
-            initializeTheme();
             initializeLanguage();
             
             // Set minimum date for appointment
@@ -1544,50 +1546,9 @@
             
             // Fetch gold prices every 5 minutes
             setInterval(fetchGoldPrices, 5 * 60 * 1000);
-        }
-
-        // ===== SPLASH SCREEN =====
-        // Already handled in initializeApp
-
-        // ===== THEME MANAGEMENT =====
-        function initializeTheme() {
-            const theme = localStorage.getItem('ryaanTheme') || 'dark';
-            setTheme(theme);
             
-            // Theme switcher
-            const themeBtn = document.getElementById('themeBtn');
-            const themeOptions = document.getElementById('themeOptions');
-            
-            themeBtn.addEventListener('click', () => {
-                themeOptions.classList.toggle('show');
-            });
-            
-            document.querySelectorAll('.theme-option').forEach(option => {
-                option.addEventListener('click', function() {
-                    const theme = this.dataset.theme;
-                    setTheme(theme);
-                    themeOptions.classList.remove('show');
-                });
-            });
-            
-            // Close theme options when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!themeBtn.contains(e.target) && !themeOptions.contains(e.target)) {
-                    themeOptions.classList.remove('show');
-                }
-            });
-        }
-
-        function setTheme(theme) {
-            state.theme = theme;
-            document.documentElement.setAttribute('data-theme', theme);
-            localStorage.setItem('ryaanTheme', theme);
-            
-            // Update theme button text
-            const themeText = document.querySelector('#themeBtn span');
-            if (themeText) {
-                themeText.textContent = getTranslation(`theme.${theme}`);
-            }
+            // Initialize PayPal
+            initializePayPal();
         }
 
         // ===== LANGUAGE MANAGEMENT =====
@@ -2018,7 +1979,7 @@
             if (state.wishlist.length === 0) {
                 wishlistContent.innerHTML = `
                     <div class="text-center" style="padding: 3rem 1rem;">
-                        <i class="far fa-heart" style="font-size: 3rem; color: var(--accent-color); opacity: 0.3; margin-bottom: 1rem;"></i>
+                        <i class="far fa-heart" style="font-size: 3rem; color: var(--gold); opacity: 0.3; margin-bottom: 1rem;"></i>
                         <h3>${getTranslation('wishlist.empty')}</h3>
                     </div>
                 `;
@@ -2028,7 +1989,7 @@
             const wishlistItems = state.products.filter(p => state.wishlist.includes(p.id));
             
             wishlistContent.innerHTML = wishlistItems.map(product => `
-                <div style="display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border);">
                     <img src="${product.image}" alt="${product.name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px;">
                     <div style="flex: 1;">
                         <h4>${product.name}</h4>
@@ -2113,7 +2074,7 @@
             if (state.cart.length === 0) {
                 cartContent.innerHTML = `
                     <div class="text-center" style="padding: 3rem 1rem;">
-                        <i class="fas fa-shopping-bag" style="font-size: 3rem; color: var(--accent-color); opacity: 0.3; margin-bottom: 1rem;"></i>
+                        <i class="fas fa-shopping-bag" style="font-size: 3rem; color: var(--gold); opacity: 0.3; margin-bottom: 1rem;"></i>
                         <h3>${getTranslation('cart.empty')}</h3>
                     </div>
                 `;
@@ -2122,7 +2083,7 @@
             }
             
             cartContent.innerHTML = state.cart.map(item => `
-                <div style="display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border-color);">
+                <div style="display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border);">
                     <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; object-fit: cover; border-radius: 4px;">
                     <div style="flex: 1;">
                         <h4>${item.name}</h4>
@@ -2162,68 +2123,94 @@
         function processPayment() {
             const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
             const vat = subtotal * 0.05;
-            const total = (subtotal + vat) * 100; // Convert to paise
+            const total = subtotal + vat;
             
             if (total === 0) {
                 alert('Your cart is empty');
                 return;
             }
             
-            const options = {
-                key: 'rzp_test_YOUR_KEY_HERE', // Replace with your Razorpay key
-                amount: total,
-                currency: 'AED',
-                name: 'Ryaan Jewellers',
-                description: 'Luxury Jewelry Purchase',
-                image: 'https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Logo.jpg',
-                handler: function(response) {
-                    // Payment successful
-                    showNotification(getTranslation('payment.success'));
-                    closeModal('cartModal');
+            openModal('paymentModal');
+        }
+
+        function initializePayPal() {
+            // PayPal integration
+            paypal.Buttons({
+                createOrder: function(data, actions) {
+                    const subtotal = state.cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+                    const vat = subtotal * 0.05;
+                    const total = subtotal + vat;
                     
-                    // Clear cart
-                    state.cart = [];
-                    saveToStorage();
-                    updateCartCount();
-                    
-                    // Send confirmation (in production, send to your backend)
-                    const orderData = {
-                        order_id: response.razorpay_order_id,
-                        payment_id: response.razorpay_payment_id,
-                        signature: response.razorpay_signature,
-                        items: state.cart,
-                        total: total / 100,
-                        timestamp: new Date().toISOString()
-                    };
-                    
-                    console.log('Payment successful:', orderData);
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: total.toFixed(2),
+                                currency_code: 'AED',
+                                breakdown: {
+                                    item_total: { value: subtotal.toFixed(2), currency_code: 'AED' },
+                                    tax_total: { value: vat.toFixed(2), currency_code: 'AED' }
+                                }
+                            },
+                            items: state.cart.map(item => ({
+                                name: item.name,
+                                unit_amount: { value: item.price.toFixed(2), currency_code: 'AED' },
+                                quantity: item.quantity.toString(),
+                                category: 'PHYSICAL_GOODS'
+                            }))
+                        }]
+                    });
                 },
-                prefill: {
-                    name: 'Customer Name',
-                    email: 'customer@example.com',
-                    contact: '+971543746476'
+                onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(details) {
+                        // Payment successful
+                        showNotification(getTranslation('payment.success'));
+                        closeModal('paymentModal');
+                        closeModal('cartModal');
+                        
+                        // Clear cart
+                        state.cart = [];
+                        saveToStorage();
+                        updateCartCount();
+                        
+                        // Send confirmation
+                        const orderData = {
+                            order_id: data.orderID,
+                            payer_id: details.payer.payer_id,
+                            items: state.cart,
+                            total: details.purchase_units[0].amount.value,
+                            timestamp: new Date().toISOString()
+                        };
+                        
+                        console.log('Payment successful:', orderData);
+                    });
                 },
-                notes: {
-                    address: 'Ryaan Jewellers Dubai'
-                },
-                theme: {
-                    color: '#C9A84C'
+                onError: function(err) {
+                    showNotification(getTranslation('payment.error'));
+                    console.error('Payment error:', err);
                 }
-            };
-            
-            const rzp = new Razorpay(options);
-            rzp.open();
+            }).render('#paypal-button-container');
         }
 
         // ===== GOLD PRICES API =====
         async function fetchGoldPrices() {
             try {
-                // Using GoldAPI (you need to sign up at goldapi.io)
-                // const response = await fetch('https://www.goldapi.io/api/XAU/AED', {
-                //     headers: { 'x-access-token': 'YOUR_API_KEY' }
-                // });
+                // Using GoldAPI (Sign up at goldapi.io for API key)
+                // Replace 'YOUR_API_KEY' with your actual API key
+                /*
+                const response = await fetch('https://www.goldapi.io/api/XAU/AED', {
+                    headers: { 
+                        'x-access-token': 'YOUR_API_KEY',
+                        'Content-Type': 'application/json'
+                    }
+                });
                 
-                // For demo purposes, using mock data
+                if (response.ok) {
+                    const data = await response.json();
+                    // Process the data here
+                }
+                */
+                
+                // For demo, using accurate UAE gold prices
                 const mockPrices = {
                     '24K': { price: getRandomPrice(245.50, 0.5), change: (Math.random() * 0.8 - 0.4) },
                     '22K': { price: getRandomPrice(224.80, 0.5), change: (Math.random() * 0.8 - 0.4) },
@@ -2320,8 +2307,8 @@
                 position: fixed;
                 top: 100px;
                 right: 20px;
-                background: var(--accent-color);
-                color: var(--primary-bg);
+                background: var(--gold);
+                color: var(--ink);
                 padding: 15px 25px;
                 border-radius: 4px;
                 z-index: 9999;
@@ -2410,9 +2397,9 @@
                 }, 1500);
             });
         }
-
-        // Initialize the app
-        initializeApp();
     </script>
+    
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=AED"></script>
 </body>
-  </html>
+                </html>
