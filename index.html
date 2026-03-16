@@ -3,304 +3,348 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ryaan Jewellers Dubai | Premium 18K Gold & Diamond Jewelry</title>
-<meta name="description" content="Dubai's premier inspired jewelry destination. Premium 18K gold designs inspired by Messika, Van Cleef & Arpels, Bulgari and more. Buy & Sell Gold – Door-to-Door Service.">
+<title>Ryaan Jewellers Dubai | Premium Gold & Diamond Jewelry | Gold Souk Deira</title>
+<meta name="description" content="Dubai's Gold Souk destination for designer-inspired 18K gold jewelry. Messika, Van Cleef, Bulgari & Chopard styles. Buy & Sell Gold – Door-to-Door Service.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
-/* ══════════════════════════════════════════════
-   RYAAN JEWELLERS — GOLD SOUK LUXURY EDITION
-   ══════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════
+   RYAAN JEWELLERS — DEFINITIVE EDITION
+   Gold Souk · Deira · Dubai
+   ═══════════════════════════════════════════════════════ */
 :root {
-  --bg: #FEFCF7;
-  --bg2: #FFFFFF;
-  --card: #F9F5EE;
-  --txt: #1A1209;
-  --txt2: #3D2F1A;
-  --muted: #8B7355;
-  --gold: #C9A84C;
-  --gold-hi: #F0D080;
-  --gold-dk: #9A7520;
-  --gold-pale: #FDF4DC;
-  --rose: #C17B6A;
-  --border: rgba(201,168,76,0.25);
-  --glow: 0 0 40px rgba(201,168,76,0.35);
-  --shadow: 0 12px 50px rgba(26,18,9,0.12);
-  --t: all 0.4s cubic-bezier(0.4,0,0.2,1);
-  --t-slow: all 0.8s cubic-bezier(0.16,1,0.3,1);
-  --font-serif: 'Playfair Display', serif;
-  --font-italic: 'Cormorant Garamond', serif;
-  --font-body: 'Jost', sans-serif;
+  --bg:     #FEFCF5;
+  --bg2:    #FFFFFF;
+  --card:   #F8F4EC;
+  --txt:    #1A1108;
+  --txt2:   #3A2C18;
+  --muted:  #8A7355;
+  --gold:   #C8A84B;
+  --gold-h: #EDD070;
+  --gold-d: #97720F;
+  --gold-p: #FDF3D8;
+  --rose:   #C1796B;
+  --border: rgba(200,168,75,0.22);
+  --glow:   0 0 45px rgba(200,168,75,.4);
+  --shad:   0 14px 55px rgba(26,17,8,.12);
+  --t:      all 0.38s cubic-bezier(.4,0,.2,1);
+  --ts:     all 0.75s cubic-bezier(.16,1,.3,1);
+  --serif:  'Playfair Display', serif;
+  --italic: 'Cormorant Garamond', serif;
+  --body:   'Jost', sans-serif;
 }
 body.dark {
-  --bg: #0E0B06;
-  --bg2: #1A1209;
-  --card: #231C0F;
-  --txt: #F9F5EE;
-  --txt2: #E8D9BA;
-  --muted: #A08B68;
-  --border: rgba(201,168,76,0.2);
+  --bg:#0E0A04; --bg2:#1A1108; --card:#231A0C; --txt:#F8F4EC;
+  --txt2:#E5D6B8; --muted:#A08760; --border:rgba(200,168,75,.18);
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;overflow-x:hidden}
-body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
 
-/* ─── ANNOUNCEMENT ─── */
-.ann{background:var(--gold);color:#1A1209;text-align:center;padding:.7rem 1rem;font-size:.8rem;font-weight:600;letter-spacing:1.5px;position:relative;overflow:hidden}
-.ann::after{content:'';position:absolute;top:0;left:-100%;width:60%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.35),transparent);animation:sweep 3s infinite}
+/* ─── ANNOUNCEMENT BAR ─── */
+.ann{background:var(--gold);color:#1A1108;text-align:center;padding:.75rem 1rem;font-size:.79rem;font-weight:600;letter-spacing:1.5px;position:relative;overflow:hidden}
+.ann::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);animation:sweep 3.5s infinite}
 @keyframes sweep{to{left:140%}}
 
 /* ─── TOP BAR ─── */
-.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:.65rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.75rem;font-size:.82rem}
-.tb-left{display:flex;gap:1.8rem;align-items:center;flex-wrap:wrap}
-.tb-item{display:flex;align-items:center;gap:.45rem;color:var(--muted)}
-.tb-item i{color:var(--gold)}
-.tb-right{display:flex;gap:1rem;align-items:center}
-.soc-wrap{display:flex;gap:.6rem}
-.soc{width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.8rem;transition:var(--t)}
-.soc:hover{background:var(--gold);color:#1A1209;transform:translateY(-3px) rotate(360deg);box-shadow:var(--glow)}
-.theme-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.4rem .9rem;border-radius:20px;cursor:pointer;font-size:.82rem;display:flex;align-items:center;gap:.5rem;transition:var(--t)}
-.theme-btn:hover{background:var(--gold);color:#1A1209}
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:.65rem 2.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.65rem;font-size:.81rem;transition:var(--t)}
+.tb-l{display:flex;gap:1.8rem;align-items:center;flex-wrap:wrap}
+.tbi{display:flex;align-items:center;gap:.4rem;color:var(--muted)}
+.tbi i{color:var(--gold)}
+.tb-r{display:flex;gap:.85rem;align-items:center;flex-wrap:wrap}
+.soc-row{display:flex;gap:.5rem}
+.soc{width:28px;height:28px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.77rem;transition:var(--t)}
+.soc:hover{background:var(--gold);color:#1A1108;transform:translateY(-3px) rotate(360deg);box-shadow:var(--glow)}
+.dark-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.38rem .9rem;border-radius:20px;cursor:pointer;font-size:.79rem;font-family:var(--body);display:flex;align-items:center;gap:.45rem;transition:var(--t)}
+.dark-btn:hover{background:var(--gold);color:#1A1108}
 
 /* ─── ANIMATED LOGO ─── */
-@keyframes logoFloat {
-  0%,100%{transform:translateY(0) scale(1)}
-  50%{transform:translateY(-6px) scale(1.04)}
-}
-@keyframes logoGlow {
-  0%,100%{filter:drop-shadow(0 0 6px rgba(201,168,76,.5)) drop-shadow(0 0 14px rgba(201,168,76,.3))}
-  50%{filter:drop-shadow(0 0 18px rgba(201,168,76,.9)) drop-shadow(0 0 35px rgba(201,168,76,.55))}
-}
-@keyframes logoSpin {
-  from{transform:rotate(-10deg) scale(0.8);opacity:0}
-  to{transform:rotate(0deg) scale(1);opacity:1}
-}
-.logo-img{
-  width:56px;height:56px;border-radius:50%;
-  border:2.5px solid var(--gold);
-  object-fit:cover;
-  animation:logoFloat 4s ease-in-out infinite, logoGlow 3s ease-in-out infinite;
-  animation-play-state:running;
-  transition:var(--t);
-}
-.logo-img.entry{animation:logoSpin .8s cubic-bezier(.16,1,.3,1) forwards, logoFloat 4s ease-in-out 1s infinite, logoGlow 3s ease-in-out 1s infinite}
-.logo-img:hover{transform:scale(1.15) rotate(5deg)!important}
+@keyframes logoFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-7px) scale(1.05)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 5px rgba(200,168,75,.45)) drop-shadow(0 0 12px rgba(200,168,75,.28))}50%{filter:drop-shadow(0 0 18px rgba(200,168,75,.92)) drop-shadow(0 0 35px rgba(200,168,75,.5))}}
+@keyframes logoEntry{from{transform:rotate(-15deg) scale(.7);opacity:0}to{transform:rotate(0) scale(1);opacity:1}}
+.logo-img{width:54px;height:54px;border-radius:50%;border:2.5px solid var(--gold);object-fit:cover;animation:logoEntry .9s cubic-bezier(.16,1,.3,1) forwards,logoFloat 4s ease-in-out 1s infinite,logoGlow 3.2s ease-in-out 1s infinite;cursor:pointer;transition:var(--t)}
+.logo-img:hover{transform:scale(1.18) rotate(6deg)!important}
+@keyframes goldShimmer{0%{background-position:0%}100%{background-position:300%}}
 
 /* ─── NAV ─── */
-.nav{position:sticky;top:0;z-index:999;background:var(--bg2);border-bottom:2px solid var(--gold);box-shadow:0 4px 20px rgba(201,168,76,.15);transition:var(--t)}
-.nav-inner{max-width:1500px;margin:0 auto;padding:1.2rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
-.logo{display:flex;align-items:center;gap:.85rem;text-decoration:none}
-.logo-text-wrap{}
-.logo-name{font-family:var(--font-serif);font-size:1.65rem;font-weight:700;background:linear-gradient(135deg,var(--gold-dk),var(--gold),var(--gold-hi),var(--gold));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:3px;animation:goldShimmer 4s linear infinite}
-@keyframes goldShimmer{0%{background-position:0%}100%{background-position:300%}}
-.logo-sub{font-size:.62rem;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-top:-4px}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{font-size:.82rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);text-decoration:none;position:relative;padding:.4rem 0;transition:var(--t)}
-.nav-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .4s ease}
-.nav-links a:hover{color:var(--gold)}
-.nav-links a:hover::after{width:100%}
-.nav-acts{display:flex;gap:1.2rem;align-items:center}
-.ico{background:none;border:none;color:var(--txt);font-size:1.1rem;cursor:pointer;position:relative;transition:var(--t);padding:.3rem}
-.ico:hover{color:var(--gold);transform:scale(1.2)}
-.badge-dot{position:absolute;top:-4px;right:-4px;background:#C0392B;color:#fff;font-size:.6rem;font-weight:700;padding:1px 5px;border-radius:8px;min-width:16px;text-align:center}
+.nav{position:sticky;top:0;z-index:999;background:var(--bg2);border-bottom:2px solid var(--gold);box-shadow:0 4px 22px rgba(200,168,75,.13);transition:var(--t)}
+.nav-in{max-width:1520px;margin:0 auto;padding:1.15rem 2.5rem;display:flex;justify-content:space-between;align-items:center}
+.logo-wrap{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.logo-name{font-family:var(--serif);font-size:1.6rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h),var(--gold));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:3px;animation:goldShimmer 4.5s linear infinite}
+.logo-sub{font-size:.6rem;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-top:-4px}
+.nav-ul{display:flex;gap:1.9rem;list-style:none}
+.nav-ul a{font-size:.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);text-decoration:none;position:relative;padding:.4rem 0;transition:var(--t)}
+.nav-ul a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .38s}
+.nav-ul a:hover{color:var(--gold)}
+.nav-ul a:hover::after{width:100%}
+.nav-acts{display:flex;gap:1.1rem;align-items:center}
+.ico{background:none;border:none;color:var(--txt);font-size:1.1rem;cursor:pointer;position:relative;transition:var(--t);padding:.28rem}
+.ico:hover{color:var(--gold);transform:scale(1.22)}
+.bdg{position:absolute;top:-5px;right:-5px;background:#B72525;color:#fff;font-size:.58rem;font-weight:700;padding:1px 5px;border-radius:8px;min-width:16px;text-align:center}
 .hmb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
-.hmb span{width:24px;height:2px;background:var(--txt);transition:var(--t);display:block}
+.hmb span{width:23px;height:2px;background:var(--txt);transition:var(--t);display:block}
 
 /* ─── HERO ─── */
-.hero{position:relative;height:100vh;min-height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0A0805}
-.hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=1920') center/cover;opacity:.35;animation:zoomBG 20s ease-in-out infinite alternate}
-@keyframes zoomBG{0%{transform:scale(1)}100%{transform:scale(1.12)}}
-.hero-ov{position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(10,8,5,.1) 0%,rgba(10,8,5,.88) 100%)}
-.hero-c{position:relative;z-index:2;text-align:center;max-width:1000px;padding:2rem;animation:riseUp 1.2s cubic-bezier(.16,1,.3,1)}
-@keyframes riseUp{from{opacity:0;transform:translateY(50px)}to{opacity:1;transform:translateY(0)}}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:.75rem;padding:.6rem 2rem;background:rgba(201,168,76,.12);border:1.5px solid var(--gold);border-radius:50px;font-size:.72rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
-.hero-title{font-family:var(--font-serif);font-size:clamp(3rem,9vw,7rem);font-weight:700;font-style:italic;color:#FEFCF7;line-height:1.05;margin-bottom:1.25rem;text-shadow:0 15px 40px rgba(0,0,0,.7)}
-.hero-sub{font-family:var(--font-italic);font-size:clamp(1.1rem,2.5vw,1.7rem);font-style:italic;color:#E8D9BA;margin-bottom:2.5rem;letter-spacing:1.5px;font-weight:300}
-.brand-pills{display:flex;justify-content:center;gap:1rem;flex-wrap:wrap;margin:2rem 0}
-.pill{font-family:var(--font-italic);font-size:.95rem;font-style:italic;color:var(--gold);padding:.6rem 1.5rem;border:1.5px solid var(--gold);border-radius:4px;background:rgba(201,168,76,.04);transition:var(--t);cursor:pointer;letter-spacing:.5px}
-.pill:hover{background:var(--gold);color:#1A1209;transform:translateY(-4px);box-shadow:var(--glow)}
-.hero-btns{display:flex;gap:1.25rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
-.btn{padding:1rem 2.5rem;font-family:var(--font-body);font-size:.82rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:var(--t-slow);display:inline-flex;align-items:center;gap:.65rem;position:relative;overflow:hidden}
-.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent,rgba(255,255,255,.35),transparent);transform:translateX(-100%);transition:transform .6s}
+.hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#080503}
+.hero-bg{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png') center/cover;opacity:.28;animation:zbg 22s ease-in-out infinite alternate;filter:blur(2px)}
+@keyframes zbg{0%{transform:scale(1)}100%{transform:scale(1.14)}}
+.hero-ov{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(8,5,3,.05) 0%,rgba(8,5,3,.92) 100%)}
+.hero-c{position:relative;z-index:2;text-align:center;max-width:980px;padding:2rem;animation:rise 1.3s cubic-bezier(.16,1,.3,1)}
+@keyframes rise{from{opacity:0;transform:translateY(55px)}to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:.7rem;padding:.58rem 1.9rem;background:rgba(200,168,75,.11);border:1.5px solid var(--gold);border-radius:50px;font-size:.7rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:2rem}
+.hero-title{font-family:var(--serif);font-size:clamp(3rem,9vw,7rem);font-weight:700;font-style:italic;color:#FEFCF5;line-height:1.05;margin-bottom:1.2rem;text-shadow:0 18px 45px rgba(0,0,0,.75)}
+.hero-sub{font-family:var(--italic);font-size:clamp(1.1rem,2.5vw,1.75rem);font-style:italic;color:#E5D6B8;margin-bottom:2.5rem;letter-spacing:1.5px;font-weight:300}
+.pills{display:flex;justify-content:center;gap:.9rem;flex-wrap:wrap;margin:2rem 0}
+.pill{font-family:var(--italic);font-size:.92rem;font-style:italic;color:var(--gold);padding:.58rem 1.45rem;border:1.5px solid var(--gold);border-radius:4px;background:rgba(200,168,75,.04);transition:var(--t);cursor:pointer}
+.pill:hover{background:var(--gold);color:#1A1108;transform:translateY(-4px);box-shadow:var(--glow)}
+.hero-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-top:2.5rem}
+
+/* ─── BUTTONS ─── */
+.btn{padding:.95rem 2.4rem;font-family:var(--body);font-size:.8rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:var(--ts);display:inline-flex;align-items:center;gap:.6rem;position:relative;overflow:hidden;border-radius:2px}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent,rgba(255,255,255,.38),transparent);transform:translateX(-100%);transition:transform .55s}
 .btn:hover::before{transform:translateX(100%)}
-.btn-gold{background:var(--gold);color:#1A1209;box-shadow:0 8px 25px rgba(201,168,76,.4)}
-.btn-gold:hover{background:var(--gold-hi);transform:translateY(-3px);box-shadow:var(--glow)}
-.btn-outline{background:transparent;color:#FEFCF7;border:1.5px solid var(--gold)}
-.btn-outline:hover{background:rgba(201,168,76,.15);border-color:var(--gold-hi);transform:translateY(-3px)}
+.btn-gold{background:var(--gold);color:#1A1108;box-shadow:0 8px 25px rgba(200,168,75,.38)}
+.btn-gold:hover{background:var(--gold-h);transform:translateY(-3px);box-shadow:var(--glow)}
+.btn-out{background:transparent;color:#FEFCF5;border:1.5px solid var(--gold)}
+.btn-out:hover{background:rgba(200,168,75,.14);border-color:var(--gold-h);transform:translateY(-3px)}
 
-/* ─── SECTIONS ─── */
-.section{padding:7rem 2.5rem}
-.sec-inner{max-width:1500px;margin:0 auto}
-.sec-head{text-align:center;max-width:800px;margin:0 auto 4.5rem}
-.sec-eye{font-size:.72rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem;display:block}
-.sec-title{font-family:var(--font-serif);font-size:clamp(2rem,5vw,4rem);font-weight:700;color:var(--txt);margin-bottom:1.5rem;line-height:1.2}
-.sec-desc{font-size:1rem;font-weight:300;color:var(--muted);line-height:1.9}
+/* ─── SECTION BASICS ─── */
+.sec{padding:7rem 2.5rem}
+.sec-in{max-width:1520px;margin:0 auto}
+.sec-head{text-align:center;max-width:780px;margin:0 auto 4.5rem}
+.eye{font-size:.7rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1.1rem;display:block}
+.stitle{font-family:var(--serif);font-size:clamp(2rem,5vw,4rem);font-weight:700;color:var(--txt);margin-bottom:1.5rem;line-height:1.2}
+.sdesc{font-size:.97rem;font-weight:300;color:var(--muted);line-height:1.95}
 
-/* ─── PRODUCT FILTER TABS ─── */
-.filter-bar{display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem}
-.filter-btn{padding:.6rem 1.8rem;font-size:.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;background:var(--card);border:1.5px solid var(--border);color:var(--muted);cursor:pointer;border-radius:4px;transition:var(--t)}
-.filter-btn.active,.filter-btn:hover{background:var(--gold);border-color:var(--gold);color:#1A1209;box-shadow:0 4px 15px rgba(201,168,76,.3)}
+/* ─── FEATURED HERO SLIDESHOW ─── */
+.featured-sec{background:var(--txt);overflow:hidden}
+.featured-track{display:flex;gap:0;width:100%}
+.featured-slide{min-width:33.333%;aspect-ratio:3/4;position:relative;overflow:hidden;cursor:pointer}
+.featured-slide img{width:100%;height:100%;object-fit:cover;transition:var(--ts)}
+.featured-slide:hover img{transform:scale(1.12)}
+.featured-slide::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(8,5,3,.88) 100%)}
+.fs-content{position:absolute;bottom:0;left:0;right:0;padding:2.5rem;z-index:2}
+.fs-label{font-size:.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.fs-name{font-family:var(--serif);font-size:1.9rem;font-style:italic;color:#FEFCF5;margin-bottom:.5rem;line-height:1.2}
+.fs-price{font-family:var(--italic);font-size:1.1rem;color:var(--gold-h);letter-spacing:1px}
+.fs-btn{display:inline-flex;align-items:center;gap:.5rem;font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border-bottom:1.5px solid var(--gold);padding-bottom:.2rem;margin-top:.9rem;transition:var(--t)}
+.featured-slide:hover .fs-btn{gap:1rem;color:var(--gold-h)}
+
+/* ─── FILTER BAR ─── */
+.filter-bar{display:flex;gap:.65rem;justify-content:center;flex-wrap:wrap;margin-bottom:3.5rem}
+.fb{padding:.55rem 1.65rem;font-size:.75rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;background:var(--card);border:1.5px solid var(--border);color:var(--muted);cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body)}
+.fb:hover,.fb.on{background:var(--gold);border-color:var(--gold);color:#1A1108;box-shadow:0 4px 14px rgba(200,168,75,.28)}
 
 /* ─── PRODUCTS GRID ─── */
-.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:2rem}
-.p-card{background:var(--card);border-radius:6px;overflow:hidden;transition:var(--t-slow);cursor:pointer;border:1px solid var(--border);position:relative}
-.p-card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--gold)}
-.p-card.hidden{display:none}
-.p-img-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg2)}
-.p-img{width:100%;height:100%;object-fit:cover;transition:var(--t-slow)}
-.p-card:hover .p-img{transform:scale(1.1)}
-.p-lbl{position:absolute;top:.85rem;left:.85rem;background:var(--gold);color:#1A1209;padding:.35rem .85rem;font-size:.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:3px}
-.p-lbl.new{background:#2D6A4F;color:#fff}
-.p-lbl.hot{background:#C0392B;color:#fff}
-.p-acts{position:absolute;top:.85rem;right:.85rem;display:flex;flex-direction:column;gap:.45rem;opacity:0;transform:translateX(12px);transition:var(--t)}
-.p-card:hover .p-acts{opacity:1;transform:translateX(0)}
-.p-act{width:36px;height:36px;background:rgba(254,252,247,.95);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);cursor:pointer;font-size:.9rem;transition:var(--t);box-shadow:0 2px 8px rgba(0,0,0,.1)}
-.p-act:hover{background:var(--gold);color:#1A1209;transform:scale(1.1)}
-.p-info{padding:1.4rem}
-.p-brand{font-size:.68rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
-.p-name{font-family:var(--font-serif);font-size:1.1rem;font-weight:600;color:var(--txt);margin-bottom:.5rem;line-height:1.3}
-.p-desc{font-size:.82rem;color:var(--muted);margin-bottom:.9rem;line-height:1.6}
-.p-footer{display:flex;align-items:center;justify-content:space-between}
-.p-price{font-size:1.25rem;font-weight:700;color:var(--txt)}
-.p-price span{font-size:.72rem;color:var(--muted);font-weight:400}
-.p-cart{background:var(--gold);border:none;color:#1A1209;padding:.5rem 1.1rem;font-size:.75rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:3px;transition:var(--t)}
-.p-cart:hover{background:var(--gold-hi);transform:scale(1.05)}
-
-/* Image fallback */
-.p-img-wrap::before{content:'💎';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:3rem;z-index:0;opacity:.15}
-.p-img{position:relative;z-index:1}
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:2rem}
+.pc{background:var(--card);border-radius:5px;overflow:hidden;transition:var(--ts);cursor:pointer;border:1px solid var(--border)}
+.pc:hover{transform:translateY(-9px);box-shadow:var(--shad);border-color:var(--gold)}
+.pi-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg2)}
+.pi{width:100%;height:100%;object-fit:cover;transition:var(--ts);position:relative;z-index:1}
+.pc:hover .pi{transform:scale(1.1)}
+.plbl{position:absolute;top:.8rem;left:.8rem;padding:.3rem .8rem;font-size:.64rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:3px;z-index:2}
+.plbl-gold{background:var(--gold);color:#1A1108}
+.plbl-green{background:#2A6846;color:#fff}
+.plbl-red{background:#B02020;color:#fff}
+.plbl-rose{background:var(--rose);color:#fff}
+.p-acts{position:absolute;top:.8rem;right:.8rem;display:flex;flex-direction:column;gap:.42rem;opacity:0;transform:translateX(14px);transition:var(--t);z-index:2}
+.pc:hover .p-acts{opacity:1;transform:translateX(0)}
+.pa{width:34px;height:34px;background:rgba(254,252,245,.95);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);cursor:pointer;font-size:.85rem;transition:var(--t);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.pa:hover{background:var(--gold);color:#1A1108;transform:scale(1.1)}
+.pfall{display:none;position:absolute;inset:0;background:var(--gold-p);align-items:center;justify-content:center;flex-direction:column;gap:.75rem;z-index:1}
+.pinfo{padding:1.35rem}
+.pbrand{font-size:.65rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.pname{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--txt);margin-bottom:.45rem;line-height:1.3}
+.pdesc{font-size:.8rem;color:var(--muted);margin-bottom:.85rem;line-height:1.6}
+.pfooter{display:flex;align-items:center;justify-content:space-between}
+.pprice{font-size:1.18rem;font-weight:700;color:var(--txt)}
+.pprice span{font-size:.68rem;color:var(--muted);font-weight:400}
+.pcart{background:var(--gold);border:none;color:#1A1108;padding:.45rem 1rem;font-size:.72rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body)}
+.pcart:hover{background:var(--gold-h);transform:scale(1.06)}
 
 /* ─── GOLD SERVICES ─── */
-.gold-sec{background:linear-gradient(135deg,var(--gold-dk),var(--gold),#E8C460,var(--gold));position:relative;overflow:hidden}
-.gold-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z' fill='none' stroke='rgba(255,255,255,0.08)' stroke-width='1'/%3E%3C/svg%3E") repeat;opacity:.5}
-.gs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2.5rem}
-.gs-card{background:rgba(255,255,255,.92);backdrop-filter:blur(10px);padding:2.5rem;border-radius:10px;text-align:center;transition:var(--t-slow);box-shadow:0 8px 30px rgba(0,0,0,.15)}
-.gs-card:hover{transform:translateY(-12px);box-shadow:0 25px 60px rgba(0,0,0,.25)}
-.gs-icon{width:88px;height:88px;margin:0 auto 1.8rem;background:linear-gradient(135deg,var(--gold-dk),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.5rem;color:#1A1209;box-shadow:0 8px 25px rgba(201,168,76,.5)}
-.gs-title{font-family:var(--font-serif);font-size:1.7rem;font-weight:700;color:#1A1209;margin-bottom:.85rem}
-.gs-desc{font-size:.95rem;color:#3D2F1A;line-height:1.8;margin-bottom:1.5rem}
+.gold-sec{background:linear-gradient(135deg,var(--gold-d),var(--gold),#DEB84A,var(--gold));position:relative;overflow:hidden}
+.gold-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='70' height='70' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 0L70 35L35 70L0 35Z' fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3C/svg%3E") repeat;opacity:.6}
+.gs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(295px,1fr));gap:2.5rem}
+.gs-card{background:rgba(255,255,255,.93);backdrop-filter:blur(12px);padding:2.5rem;border-radius:10px;text-align:center;transition:var(--ts);box-shadow:0 8px 28px rgba(0,0,0,.14)}
+.gs-card:hover{transform:translateY(-13px);box-shadow:0 28px 65px rgba(0,0,0,.24)}
+.gs-ico{width:84px;height:84px;margin:0 auto 1.8rem;background:linear-gradient(135deg,var(--gold-d),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.4rem;color:#1A1108;box-shadow:0 8px 24px rgba(200,168,75,.45)}
+.gs-title{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:#1A1108;margin-bottom:.8rem}
+.gs-desc{font-size:.92rem;color:#3A2C18;line-height:1.85;margin-bottom:1.5rem}
 .gs-list{list-style:none;text-align:left;margin-bottom:2rem}
-.gs-list li{display:flex;align-items:center;gap:.85rem;padding:.6rem 0;border-bottom:1px solid rgba(201,168,76,.2);font-size:.9rem;color:#3D2F1A}
+.gs-list li{display:flex;align-items:center;gap:.8rem;padding:.58rem 0;border-bottom:1px solid rgba(200,168,75,.2);font-size:.88rem;color:#3A2C18}
 .gs-list li:last-child{border:none}
-.gs-list i{color:var(--gold);font-size:1rem}
+.gs-list i{color:var(--gold);font-size:.95rem}
 
-/* ─── QR SECTION ─── */
-.qr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2.5rem}
-.qr-card{background:var(--card);padding:2.5rem;border-radius:8px;text-align:center;border:2px solid var(--gold);box-shadow:0 4px 20px rgba(201,168,76,.1);transition:var(--t-slow)}
-.qr-card:hover{transform:translateY(-8px);box-shadow:var(--glow)}
-.qr-icon{font-size:3rem;color:var(--gold);margin-bottom:1.5rem}
-.qr-title{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;color:var(--txt);margin-bottom:.75rem}
-.qr-desc{font-size:.9rem;color:var(--muted);margin-bottom:1.8rem;line-height:1.7}
-.qr-box{display:inline-block;padding:1.5rem;background:#fff;border:1.5px solid var(--gold);border-radius:6px;margin-bottom:1.2rem}
-.qr-hint{font-size:.78rem;font-weight:600;color:var(--gold);letter-spacing:1px}
+/* ─── TRYON ─── */
+.tryon-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.tryon-box{aspect-ratio:4/5;background:var(--card);border-radius:10px;overflow:hidden;border:2px solid var(--gold);box-shadow:var(--shad);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:2.5rem;text-align:center}
+.tryon-box i{font-size:4rem;color:var(--gold)}
+.tryon-h{font-family:var(--serif);font-size:1.55rem;color:var(--txt)}
+.tryon-p{color:var(--muted);font-size:.88rem;line-height:1.72}
+.tryon-feats{list-style:none;margin:2rem 0}
+.tryon-feats li{display:flex;align-items:flex-start;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border)}
+.tryon-feats li:last-child{border:none}
+.tryon-feats i{color:var(--gold);font-size:1.1rem;margin-top:.22rem}
+
+/* ─── QR GRID ─── */
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2.5rem}
+.qr-card{background:var(--card);padding:2.4rem;border-radius:8px;text-align:center;border:2px solid var(--gold);box-shadow:0 4px 18px rgba(200,168,75,.1);transition:var(--ts)}
+.qr-card:hover{transform:translateY(-9px);box-shadow:var(--glow)}
+.qr-ico{font-size:2.8rem;color:var(--gold);margin-bottom:1.4rem}
+.qr-title{font-family:var(--serif);font-size:1.5rem;font-weight:700;color:var(--txt);margin-bottom:.7rem}
+.qr-desc{font-size:.87rem;color:var(--muted);margin-bottom:1.7rem;line-height:1.7}
+.qr-box{display:inline-block;padding:1.4rem;background:#fff;border:1.5px solid var(--gold);border-radius:6px;margin-bottom:1.1rem}
+.qr-hint{font-size:.74rem;font-weight:600;color:var(--gold);letter-spacing:1px}
+
+/* ─── APPOINTMENT FORM ─── */
+.appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.appt-form{background:var(--bg2);padding:3.5rem;border:2px solid var(--gold);box-shadow:var(--shad);border-radius:6px}
+.form-group{margin-bottom:1.8rem}
+.form-label{display:block;font-size:.72rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.65rem}
+.form-input,.form-select,.form-textarea{width:100%;padding:1.05rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.92rem;transition:var(--t);border-radius:3px}
+.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,168,75,.12)}
+.form-textarea{resize:vertical;min-height:120px}
+.form-btn{width:100%;padding:1.35rem;background:var(--gold);color:#1A1108;font-size:.82rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:var(--ts);font-family:var(--body);border-radius:3px;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.form-btn:hover{background:var(--gold-h);transform:translateY(-2px);box-shadow:var(--glow)}
+.appt-list{list-style:none;margin-top:2rem}
+.appt-list li{display:flex;align-items:center;gap:1rem;padding:.9rem 0;border-bottom:1px solid var(--border);font-size:.95rem;color:var(--txt2)}
+.appt-list li:last-child{border:none}
+.appt-list i{color:var(--gold);font-size:1.1rem}
+
+/* ─── TESTIMONIAL ─── */
+.testi-card{background:var(--bg2);border:2px solid var(--gold);padding:4rem 3.5rem;text-align:center;max-width:900px;margin:0 auto;box-shadow:var(--shad);border-radius:4px}
+.testi-q{font-family:var(--italic);font-size:clamp(1.3rem,3vw,2rem);font-style:italic;color:var(--txt);line-height:1.72;margin-bottom:2.5rem;position:relative}
+.testi-q::before{content:'"';position:absolute;top:-45px;left:50%;transform:translateX(-50%);font-size:7rem;color:var(--gold);opacity:.18;font-family:var(--serif);line-height:1}
+.testi-name{font-size:1.1rem;font-weight:600;color:var(--txt);margin-bottom:.4rem}
+.testi-loc{font-size:.87rem;color:var(--muted);margin-bottom:1rem}
+.stars i{color:var(--gold);font-size:1.05rem}
 
 /* ─── INSTAGRAM ─── */
-.ig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
-.ig-post{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;border-radius:6px;background:var(--card)}
-.ig-post img{width:100%;height:100%;object-fit:cover;transition:var(--t-slow)}
-.ig-post:hover img{transform:scale(1.15)}
-.ig-ov{position:absolute;inset:0;background:rgba(201,168,76,.9);display:flex;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:var(--t);border-radius:6px}
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:1.2rem}
+.ig-post{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;border-radius:5px;background:var(--card)}
+.ig-post img{width:100%;height:100%;object-fit:cover;transition:var(--ts)}
+.ig-post:hover img{transform:scale(1.16)}
+.ig-ov{position:absolute;inset:0;background:rgba(200,168,75,.9);display:flex;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:var(--t);border-radius:5px}
 .ig-post:hover .ig-ov{opacity:1}
-.ig-stat{display:flex;align-items:center;gap:.45rem;color:#1A1209;font-size:1.1rem;font-weight:700}
-.ig-handle-link{display:inline-flex;align-items:center;gap:.75rem;font-size:1.2rem;color:var(--gold);text-decoration:none;padding:.85rem 2rem;border:1.5px solid var(--gold);border-radius:50px;transition:var(--t);margin-bottom:2.5rem}
-.ig-handle-link:hover{background:var(--gold);color:#1A1209;transform:scale(1.04)}
+.ig-stat{display:flex;align-items:center;gap:.4rem;color:#1A1108;font-size:1rem;font-weight:700}
+.ig-handle{display:inline-flex;align-items:center;gap:.7rem;font-size:1.15rem;color:var(--gold);text-decoration:none;padding:.8rem 1.9rem;border:1.5px solid var(--gold);border-radius:50px;transition:var(--t);margin-bottom:2.5rem}
+.ig-handle:hover{background:var(--gold);color:#1A1108;transform:scale(1.04)}
 
 /* ─── FOOTER ─── */
-.footer{background:var(--bg2);border-top:2px solid var(--gold);padding:5rem 2.5rem 2.5rem}
-.footer-grid{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
-.f-logo-name{font-family:var(--font-serif);font-size:2.2rem;font-weight:700;background:linear-gradient(135deg,var(--gold-dk),var(--gold),var(--gold-hi));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.5rem;display:block}
-.f-tagline{font-size:.92rem;color:var(--muted);line-height:1.85;margin-bottom:2rem}
-.f-h4{font-family:var(--font-serif);font-size:1.25rem;font-style:italic;color:var(--txt);margin-bottom:1.5rem}
-.f-links{list-style:none;display:flex;flex-direction:column;gap:.85rem}
-.f-links a{color:var(--muted);text-decoration:none;font-size:.9rem;transition:var(--t);display:inline-block}
-.f-links a:hover{color:var(--gold);padding-left:6px}
-.f-bottom{max-width:1500px;margin:0 auto;padding-top:2.5rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.85rem;color:var(--muted)}
-.f-bottom a{color:var(--gold);text-decoration:none}
-.f-bottom a:hover{text-decoration:underline}
+.footer{background:var(--bg2);border-top:2.5px solid var(--gold);padding:5rem 2.5rem 2.5rem}
+.fg{max-width:1520px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+.f-name{font-family:var(--serif);font-size:2.1rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.4rem;display:block}
+.f-tag{font-size:.9rem;color:var(--muted);line-height:1.87;margin-bottom:2rem}
+.f-h4{font-family:var(--serif);font-size:1.2rem;font-style:italic;color:var(--txt);margin-bottom:1.4rem}
+.f-ul{list-style:none;display:flex;flex-direction:column;gap:.85rem}
+.f-ul a{color:var(--muted);text-decoration:none;font-size:.88rem;transition:var(--t);display:inline-block}
+.f-ul a:hover{color:var(--gold);padding-left:6px}
+.f-btm{max-width:1520px;margin:0 auto;padding-top:2.4rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.82rem;color:var(--muted)}
+.f-btm a{color:var(--gold);text-decoration:none}
+.f-btm a:hover{text-decoration:underline}
 
 /* ─── TOAST ─── */
-.toast{position:fixed;bottom:2rem;right:2rem;background:var(--bg2);color:var(--txt);padding:1.2rem 1.8rem;border-left:4px solid var(--gold);box-shadow:var(--shadow);z-index:9999;display:none;align-items:center;gap:1rem;min-width:280px;border-radius:6px;animation:slideIn .5s ease-out}
+.toast{position:fixed;bottom:2rem;right:2rem;background:var(--bg2);color:var(--txt);padding:1.15rem 1.75rem;border-left:4px solid var(--gold);box-shadow:var(--shad);z-index:9999;display:none;align-items:center;gap:.9rem;min-width:270px;border-radius:5px;animation:toastIn .45s ease-out}
 .toast.show{display:flex}
-@keyframes slideIn{from{transform:translateX(400px);opacity:0}to{transform:translateX(0);opacity:1}}
-.toast-ico{font-size:1.4rem;color:var(--gold)}
-.toast.success{border-color:#2D6A4F}.toast.success .toast-ico{color:#2D6A4F}
-.toast.err{border-color:#C0392B}.toast.err .toast-ico{color:#C0392B}
+@keyframes toastIn{from{transform:translateX(360px);opacity:0}to{transform:translateX(0);opacity:1}}
+.ti{font-size:1.35rem;color:var(--gold)}
+.toast.ok{border-color:#2A6846}.toast.ok .ti{color:#2A6846}
+.toast.er{border-color:#B02020}.toast.er .ti{color:#B02020}
 
-/* ─── LOADING ─── */
-.loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .6s}
+/* ─── LOADER ─── */
+.loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .55s}
 .loader.gone{opacity:0;pointer-events:none}
-.loader-ring{width:56px;height:56px;border:3px solid rgba(201,168,76,.2);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite}
+.ring{width:54px;height:54px;border:3px solid rgba(200,168,75,.2);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
 
+/* ─── LANG DROPDOWN ─── */
+.lang-wrap{position:relative}
+.lang-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.38rem .85rem;border-radius:4px;cursor:pointer;font-size:.78rem;font-family:var(--body);display:flex;align-items:center;gap:.4rem;transition:var(--t)}
+.lang-btn:hover{background:var(--gold);color:#1A1108}
+.lang-dd{position:absolute;top:105%;right:0;background:var(--bg2);border:1px solid var(--gold);border-radius:4px;box-shadow:var(--shad);display:none;min-width:138px;z-index:999}
+.lang-dd.open{display:block}
+.lopt{padding:.7rem 1rem;cursor:pointer;font-size:.82rem;border-bottom:1px solid var(--border);transition:var(--t)}
+.lopt:last-child{border:none}
+.lopt:hover{background:var(--gold);color:#1A1108}
+
 /* ─── RESPONSIVE ─── */
-@media(max-width:1024px){.nav-links{display:none}.hmb{display:flex}.footer-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:768px){.topbar,.tb-left,.hero-btns{flex-direction:column;gap:.6rem}.brand-pills{gap:.6rem}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:1100px){.nav-ul{display:none}.hmb{display:flex}.fg{grid-template-columns:1fr 1fr}.tryon-grid,.appt-grid{grid-template-columns:1fr;gap:3rem}}
+@media(max-width:768px){.topbar,.tb-l,.hero-btns{flex-direction:column;gap:.55rem}.pills{gap:.55rem}.fg{grid-template-columns:1fr}.featured-track{flex-direction:column}.featured-slide{min-width:100%}}
+@media(max-width:540px){.pgrid{grid-template-columns:1fr 1fr}.qr-grid,.gs-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 
-<!-- LOADING -->
-<div class="loader" id="loader"><div class="loader-ring"></div></div>
+<!-- LOADER -->
+<div class="loader" id="loader"><div class="ring"></div></div>
 
 <!-- ANNOUNCEMENT -->
-<div class="ann">✦ Free Gold Purity Testing &amp; Valuation &nbsp;·&nbsp; Door-to-Door Buy/Sell Service in Dubai &nbsp;·&nbsp; WhatsApp: +971 54 374 6476 ✦</div>
+<div class="ann">✦ Free Gold Purity Testing · Door-to-Door Buy/Sell Service in Dubai · WhatsApp +971 54 374 6476 ✦</div>
 
 <!-- TOP BAR -->
 <div class="topbar">
-  <div class="tb-left">
-    <span class="tb-item"><i class="fas fa-phone"></i>+971 54 374 6476</span>
-    <span class="tb-item"><i class="fas fa-envelope"></i>info@ryaanjewellers.com</span>
-    <span class="tb-item"><i class="fas fa-map-marker-alt"></i>Gold Souk, Deira, Dubai</span>
+  <div class="tb-l">
+    <span class="tbi"><i class="fas fa-phone"></i>+971 54 374 6476</span>
+    <span class="tbi"><i class="fas fa-envelope"></i>info@ryaanjewellers.com</span>
+    <span class="tbi"><i class="fas fa-map-marker-alt"></i>Gold Souk, Deira, Dubai</span>
   </div>
-  <div class="tb-right">
-    <div class="soc-wrap">
+  <div class="tb-r">
+    <div class="soc-row">
       <a href="https://instagram.com/ryaanjewellers" target="_blank" class="soc"><i class="fab fa-instagram"></i></a>
       <a href="https://facebook.com/RyaanJewellers" target="_blank" class="soc"><i class="fab fa-facebook-f"></i></a>
       <a href="https://wa.me/971543746476" target="_blank" class="soc"><i class="fab fa-whatsapp"></i></a>
       <a href="https://pinterest.com/ryaanjewellers" target="_blank" class="soc"><i class="fab fa-pinterest-p"></i></a>
       <a href="https://tiktok.com/@ryaanjewellers" target="_blank" class="soc"><i class="fab fa-tiktok"></i></a>
     </div>
-    <button class="theme-btn" onclick="toggleTheme()">
-      <i class="fas fa-moon" id="themeIco"></i> <span id="themeLabel">Dark</span>
+    <button class="dark-btn" onclick="toggleDark()">
+      <i id="dico" class="fas fa-moon"></i><span id="dlbl">Dark</span>
     </button>
+    <div class="lang-wrap">
+      <button class="lang-btn" onclick="toggleLang()"><i class="fas fa-globe"></i><span id="langLabel">EN</span><i class="fas fa-chevron-down fa-xs"></i></button>
+      <div class="lang-dd" id="langDD">
+        <div class="lopt" onclick="setLang('🇬🇧 English')">🇬🇧 English</div>
+        <div class="lopt" onclick="setLang('🇦🇪 عربي')">🇦🇪 Arabic</div>
+        <div class="lopt" onclick="setLang('🇮🇳 हिन्दी')">🇮🇳 Hindi</div>
+        <div class="lopt" onclick="setLang('🇵🇰 اردو')">🇵🇰 Urdu</div>
+        <div class="lopt" onclick="setLang('🇫🇷 Français')">🇫🇷 French</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <!-- NAV -->
 <nav class="nav">
-  <div class="nav-inner">
-    <a href="#" class="logo">
-      <!-- Animated logo from GitHub -->
-      <img
-        id="logoImg"
-        class="logo-img entry"
+  <div class="nav-in">
+    <a href="#" class="logo-wrap">
+      <img id="logoImg" class="logo-img"
         src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png"
         alt="Ryaan Jewellers Logo"
-        onerror="this.src='https://ui-avatars.com/api/?name=Ryaan&background=C9A84C&color=1A1209&size=100&bold=true&font-size=0.45'"
-      >
-      <div class="logo-text-wrap">
+        onerror="this.src='https://ui-avatars.com/api/?name=RJ&background=C8A84B&color=1A1108&size=110&bold=true&font-size=0.5'">
+      <div>
         <div class="logo-name">RYAAN JEWELLERS</div>
         <div class="logo-sub">Gold Souk · Deira · Dubai</div>
       </div>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-ul">
+      <li><a href="#featured">Featured</a></li>
       <li><a href="#products">Collections</a></li>
-      <li><a href="#gold-services">Buy / Sell Gold</a></li>
-      <li><a href="#virtual-tryon">Try-On</a></li>
+      <li><a href="#gold">Buy/Sell Gold</a></li>
+      <li><a href="#tryon">Try‑On</a></li>
+      <li><a href="#appointment">Appointment</a></li>
       <li><a href="#payment">Payment</a></li>
-      <li><a href="#instagram">Instagram</a></li>
     </ul>
     <div class="nav-acts">
-      <button class="ico" onclick="toast('Search coming soon!','gold')"><i class="fas fa-search"></i></button>
-      <button class="ico" onclick="toast('Wishlist is empty — start adding!','gold')">
-        <i class="fas fa-heart"></i><span class="badge-dot" id="wlBadge">0</span>
+      <button class="ico" onclick="showToast('Search coming soon!','')"><i class="fas fa-search"></i></button>
+      <button class="ico" onclick="showToast('Added to wishlist!','ok')">
+        <i class="fas fa-heart"></i><span class="bdg" id="wBdg">0</span>
       </button>
-      <button class="ico" onclick="toast('Cart is empty — browse collections!','gold')">
-        <i class="fas fa-shopping-bag"></i><span class="badge-dot" id="cartBadge">0</span>
+      <button class="ico" onclick="showToast('Open cart coming soon!','')">
+        <i class="fas fa-shopping-bag"></i><span class="bdg" id="cBdg">0</span>
       </button>
-      <button class="hmb" onclick="toast('Mobile menu coming soon!','gold')">
+      <button class="hmb" onclick="showToast('Mobile menu coming soon!','')">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -312,91 +356,125 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
   <div class="hero-bg"></div>
   <div class="hero-ov"></div>
   <div class="hero-c">
-    <div class="hero-eyebrow"><i class="fas fa-star"></i> Gold Souk Deira Dubai · Premium Inspired Designs</div>
+    <div class="hero-eyebrow"><i class="fas fa-star"></i>Gold Souk Deira · Premium Inspired Designs</div>
     <h1 class="hero-title">Elegance<br>Born of Gold</h1>
     <p class="hero-sub">Designer-Inspired 18K Gold & Diamond Jewelry · Best Prices in Dubai</p>
-    <div class="brand-pills">
-      <span class="pill" onclick="filterProducts('vca')">Van Cleef Style</span>
-      <span class="pill" onclick="filterProducts('messika')">Messika Style</span>
-      <span class="pill" onclick="filterProducts('bulgari')">Bulgari Style</span>
-      <span class="pill" onclick="filterProducts('chopard')">Chopard Style</span>
+    <div class="pills">
+      <span class="pill" onclick="filter('vca',null)">Van Cleef Style</span>
+      <span class="pill" onclick="filter('messika',null)">Messika Style</span>
+      <span class="pill" onclick="filter('bulgari',null)">Bulgari Style</span>
+      <span class="pill" onclick="filter('flower',null)">Flower Collection</span>
     </div>
     <div class="hero-btns">
-      <a href="#products" class="btn btn-gold"><i class="fas fa-gem"></i> Shop Collections</a>
-      <a href="#gold-services" class="btn btn-outline"><i class="fas fa-coins"></i> Buy / Sell Gold</a>
+      <a href="#products" class="btn btn-gold"><i class="fas fa-gem"></i>Shop Collections</a>
+      <a href="#gold" class="btn btn-out"><i class="fas fa-coins"></i>Buy / Sell Gold</a>
     </div>
   </div>
 </section>
 
-<!-- PRODUCTS SECTION -->
-<section class="section" id="products" style="background:var(--bg2)">
-  <div class="sec-inner">
+<!-- FEATURED 3-UP GRID -->
+<section id="featured" class="featured-sec">
+  <div class="featured-track">
+    <div class="featured-slide">
+      <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png" alt="Van Cleef Gold Bracelet" onerror="this.src='https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800'">
+      <div class="fs-content">
+        <div class="fs-label">Van Cleef Style</div>
+        <div class="fs-name">Alhambra Gold Bracelet</div>
+        <div class="fs-price">From AED 680</div>
+        <div class="fs-btn" onclick="filter('vca',null)">Shop Style <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="featured-slide">
+      <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg" alt="Messika Move Bangle" onerror="this.src='https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800'">
+      <div class="fs-content">
+        <div class="fs-label">Messika Style</div>
+        <div class="fs-name">Move Uno Bangle</div>
+        <div class="fs-price">From AED 780</div>
+        <div class="fs-btn" onclick="filter('messika',null)">Shop Style <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+    <div class="featured-slide">
+      <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg" alt="Flower Collection" onerror="this.src='https://images.unsplash.com/photo-1603561596112-0a132b757442?w=800'">
+      <div class="fs-content">
+        <div class="fs-label">Flower Collection</div>
+        <div class="fs-name">Floral Gold Pieces</div>
+        <div class="fs-price">From AED 450</div>
+        <div class="fs-btn" onclick="filter('flower',null)">Shop Style <i class="fas fa-arrow-right"></i></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="sec" style="background:var(--bg2)">
+  <div class="sec-in">
     <div class="sec-head">
-      <span class="sec-eye">Curated Collections</span>
-      <h2 class="sec-title">Our Signature Pieces</h2>
-      <p class="sec-desc">Designer-inspired 18K gold jewelry at honest prices. Every piece crafted with care for the discerning Dubai buyer.</p>
+      <span class="eye">Curated Collections</span>
+      <h2 class="stitle">Our Signature Pieces</h2>
+      <p class="sdesc">Designer-inspired 18K gold jewelry at honest prices. Every piece crafted with care for the discerning Dubai buyer.</p>
     </div>
     <div class="filter-bar">
-      <button class="filter-btn active" onclick="filterProducts('all',this)">All Pieces</button>
-      <button class="filter-btn" onclick="filterProducts('vca',this)">Van Cleef Style</button>
-      <button class="filter-btn" onclick="filterProducts('messika',this)">Messika Style</button>
-      <button class="filter-btn" onclick="filterProducts('bulgari',this)">Bulgari Style</button>
-      <button class="filter-btn" onclick="filterProducts('chopard',this)">Chopard Style</button>
-      <button class="filter-btn" onclick="filterProducts('flower',this)">Flower Collection</button>
+      <button class="fb on" onclick="filter('all',this)">All Pieces</button>
+      <button class="fb" onclick="filter('vca',this)">Van Cleef Style</button>
+      <button class="fb" onclick="filter('messika',this)">Messika Style</button>
+      <button class="fb" onclick="filter('bulgari',this)">Bulgari Style</button>
+      <button class="fb" onclick="filter('chopard',this)">Chopard Style</button>
+      <button class="fb" onclick="filter('flower',this)">Flower Collection</button>
+      <button class="fb" onclick="filter('lv',this)">Monogram Style</button>
     </div>
-    <div class="products-grid" id="pgrid"></div>
+    <div class="pgrid" id="pgrid"></div>
   </div>
 </section>
 
 <!-- GOLD SERVICES -->
-<section class="section gold-sec" id="gold-services">
-  <div class="sec-inner">
+<section id="gold" class="sec gold-sec">
+  <div class="sec-in">
     <div class="sec-head">
-      <span class="sec-eye" style="color:rgba(26,18,9,.65)">Premium Gold Services</span>
-      <h2 class="sec-title" style="color:#1A1209">Buy &amp; Sell Gold with Confidence</h2>
-      <p class="sec-desc" style="color:rgba(26,18,9,.7)">Best market rates · Instant payment · Door-to-door service across Dubai</p>
+      <span class="eye" style="color:rgba(26,17,8,.6)">Premium Gold Services</span>
+      <h2 class="stitle" style="color:#1A1108">Buy &amp; Sell Gold with Confidence</h2>
+      <p class="sdesc" style="color:rgba(26,17,8,.7)">Best market rates · Instant payment · Door-to-door service across Dubai</p>
     </div>
     <div class="gs-grid">
       <div class="gs-card">
-        <div class="gs-icon"><i class="fas fa-coins"></i></div>
+        <div class="gs-ico"><i class="fas fa-coins"></i></div>
         <h3 class="gs-title">Sell Your Gold</h3>
-        <p class="gs-desc">We buy old gold, broken jewelry, and coins at the best market rates with instant cash payment.</p>
+        <p class="gs-desc">We buy old gold, broken jewelry and coins at the best market rates — instant cash or bank transfer.</p>
         <ul class="gs-list">
-          <li><i class="fas fa-check-circle"></i> Free purity testing (XRF machine)</li>
-          <li><i class="fas fa-check-circle"></i> Best market rate guaranteed</li>
-          <li><i class="fas fa-check-circle"></i> Instant cash or bank transfer</li>
-          <li><i class="fas fa-check-circle"></i> Home pickup in Dubai</li>
+          <li><i class="fas fa-check-circle"></i>Free XRF purity testing</li>
+          <li><i class="fas fa-check-circle"></i>Best market rate guaranteed</li>
+          <li><i class="fas fa-check-circle"></i>Instant cash or bank transfer</li>
+          <li><i class="fas fa-check-circle"></i>Home pickup across Dubai</li>
         </ul>
-        <a href="https://wa.me/971543746476?text=I+want+to+sell+gold" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">
-          <i class="fab fa-whatsapp"></i> WhatsApp to Sell
+        <a href="https://wa.me/971543746476?text=I+want+to+sell+my+gold" target="_blank" class="btn btn-gold" style="width:100%;justify-content:center">
+          <i class="fab fa-whatsapp"></i>WhatsApp to Sell
         </a>
       </div>
       <div class="gs-card">
-        <div class="gs-icon"><i class="fas fa-gem"></i></div>
+        <div class="gs-ico"><i class="fas fa-gem"></i></div>
         <h3 class="gs-title">Buy Premium Gold</h3>
-        <p class="gs-desc">Shop our certified 18K gold jewelry with authenticity guarantees, lifetime warranty, and buyback policy.</p>
+        <p class="gs-desc">Certified 18K gold jewelry with authenticity guarantees, lifetime warranty and buyback policy.</p>
         <ul class="gs-list">
-          <li><i class="fas fa-check-circle"></i> Certified 18K / 21K / 22K gold</li>
-          <li><i class="fas fa-check-circle"></i> GIA diamond certification available</li>
-          <li><i class="fas fa-check-circle"></i> Lifetime warranty & buyback</li>
-          <li><i class="fas fa-check-circle"></i> Secure home delivery</li>
+          <li><i class="fas fa-check-circle"></i>Certified 18K / 21K / 22K gold</li>
+          <li><i class="fas fa-check-circle"></i>GIA diamond certification available</li>
+          <li><i class="fas fa-check-circle"></i>Lifetime warranty &amp; buyback</li>
+          <li><i class="fas fa-check-circle"></i>Secure home delivery</li>
         </ul>
         <a href="#products" class="btn btn-gold" style="width:100%;justify-content:center">
-          <i class="fas fa-shopping-bag"></i> Browse Collection
+          <i class="fas fa-shopping-bag"></i>Browse Collection
         </a>
       </div>
       <div class="gs-card">
-        <div class="gs-icon"><i class="fas fa-truck"></i></div>
-        <h3 class="gs-title">Door-to-Door Service</h3>
-        <p class="gs-desc">Can't visit us? We come to you. Schedule a home visit and our gold expert evaluates your pieces on-site.</p>
+        <div class="gs-ico"><i class="fas fa-truck"></i></div>
+        <h3 class="gs-title">Door-to-Door</h3>
+        <p class="gs-desc">Can't visit us? We come to you. Our expert evaluates your gold pieces at home, same day.</p>
         <ul class="gs-list">
-          <li><i class="fas fa-check-circle"></i> Free home visit in Dubai</li>
-          <li><i class="fas fa-check-circle"></i> Expert evaluation on-site</li>
-          <li><i class="fas fa-check-circle"></i> Safe &amp; fully insured transaction</li>
-          <li><i class="fas fa-check-circle"></i> Same-day appointments available</li>
+          <li><i class="fas fa-check-circle"></i>Free home visit in Dubai</li>
+          <li><i class="fas fa-check-circle"></i>Expert evaluation on-site</li>
+          <li><i class="fas fa-check-circle"></i>Safe &amp; fully insured</li>
+          <li><i class="fas fa-check-circle"></i>Same-day available</li>
         </ul>
         <a href="tel:+971543746476" class="btn btn-gold" style="width:100%;justify-content:center">
-          <i class="fas fa-phone"></i> Call +971 54 374 6476
+          <i class="fas fa-phone"></i>Call +971 54 374 6476
         </a>
       </div>
     </div>
@@ -404,77 +482,135 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
 </section>
 
 <!-- VIRTUAL TRY-ON -->
-<section class="section" id="virtual-tryon">
-  <div class="sec-inner" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
-    <div style="position:relative;aspect-ratio:4/5;background:var(--card);border-radius:10px;overflow:hidden;border:2px solid var(--gold);box-shadow:var(--shadow);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:2rem;text-align:center">
-      <i class="fas fa-camera" style="font-size:4rem;color:var(--gold)"></i>
-      <h3 style="font-family:var(--font-serif);font-size:1.6rem;color:var(--txt)">AI Virtual Try-On</h3>
-      <p style="color:var(--muted);font-size:.9rem;line-height:1.7">Upload your photo to see how our jewelry looks on you — rings, bracelets, necklaces!</p>
-      <button class="btn btn-gold" onclick="toast('Virtual Try-On launching soon! WhatsApp us for a preview.','gold')">
-        <i class="fas fa-upload"></i> Try On a Piece
-      </button>
-    </div>
-    <div>
-      <span class="sec-eye">AI Technology</span>
-      <h2 class="sec-title" style="text-align:left;font-size:clamp(2rem,4vw,3rem)">See It On You Before You Buy</h2>
-      <p class="sec-desc" style="text-align:left;margin-bottom:2rem">Our AI try-on technology lets you visualize jewelry on your hand or wrist before purchasing — from home, anytime.</p>
-      <ul style="list-style:none;display:flex;flex-direction:column;gap:1.2rem">
-        <li style="display:flex;align-items:flex-start;gap:1rem">
-          <i class="fas fa-magic" style="color:var(--gold);font-size:1.2rem;margin-top:.2rem"></i>
-          <div><strong>AI-Powered Accuracy</strong><br><span style="color:var(--muted);font-size:.88rem">Realistic gold sheen, size and proportion matching</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:1rem">
-          <i class="fas fa-mobile-alt" style="color:var(--gold);font-size:1.2rem;margin-top:.2rem"></i>
-          <div><strong>Works on Any Device</strong><br><span style="color:var(--muted);font-size:.88rem">Phone, tablet, or desktop — no app required</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:1rem">
-          <i class="fas fa-share-alt" style="color:var(--gold);font-size:1.2rem;margin-top:.2rem"></i>
-          <div><strong>Save &amp; Share</strong><br><span style="color:var(--muted);font-size:.88rem">Download your try-on photo and share with family</span></div>
-        </li>
-        <li style="display:flex;align-items:flex-start;gap:1rem">
-          <i class="fas fa-shield-alt" style="color:var(--gold);font-size:1.2rem;margin-top:.2rem"></i>
-          <div><strong>100% Private</strong><br><span style="color:var(--muted);font-size:.88rem">Your photos are never stored or shared</span></div>
-        </li>
-      </ul>
+<section id="tryon" class="sec">
+  <div class="sec-in">
+    <div class="tryon-grid">
+      <div class="tryon-box">
+        <i class="fas fa-camera"></i>
+        <h3 class="tryon-h">AI Virtual Try‑On</h3>
+        <p class="tryon-p">Upload your photo and see how our jewelry looks on you — rings, bracelets, necklaces, earrings!</p>
+        <button class="btn btn-gold" onclick="showToast('Virtual Try-On launching soon! WhatsApp us for a preview.','ok')">
+          <i class="fas fa-upload"></i>Try On a Piece
+        </button>
+      </div>
+      <div>
+        <span class="eye">AI Technology</span>
+        <h2 class="stitle" style="text-align:left;font-size:clamp(1.8rem,4vw,2.9rem)">See It On You<br>Before You Buy</h2>
+        <p class="sdesc" style="text-align:left;margin-bottom:2rem">Our AI technology lets you visualise any jewelry piece on your hand or wrist — from home, anytime, on any device.</p>
+        <ul class="tryon-feats">
+          <li><i class="fas fa-magic"></i><div><strong>AI-Powered Accuracy</strong><br><span style="color:var(--muted);font-size:.85rem">Realistic gold sheen, size and proportion</span></div></li>
+          <li><i class="fas fa-mobile-alt"></i><div><strong>Any Device</strong><br><span style="color:var(--muted);font-size:.85rem">Phone, tablet or desktop — no app needed</span></div></li>
+          <li><i class="fas fa-share-alt"></i><div><strong>Save &amp; Share</strong><br><span style="color:var(--muted);font-size:.85rem">Download your look and share with family</span></div></li>
+          <li><i class="fas fa-shield-alt"></i><div><strong>100% Private</strong><br><span style="color:var(--muted);font-size:.85rem">Photos never stored or shared</span></div></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- PAYMENT / QR SECTION -->
-<section class="section" id="payment" style="background:var(--bg2)">
-  <div class="sec-inner">
+<!-- APPOINTMENT -->
+<section id="appointment" class="sec" style="background:var(--card)">
+  <div class="sec-in">
+    <div class="appt-grid">
+      <div>
+        <span class="eye">Private Consultation</span>
+        <h2 class="stitle">Book Your Exclusive Viewing</h2>
+        <p class="sdesc" style="margin-bottom:2rem">Schedule a private viewing at our Gold Souk boutique or request a home visit. Our luxury consultants will guide you through our entire collection.</p>
+        <ul class="appt-list">
+          <li><i class="fas fa-check-circle"></i>Private boutique access</li>
+          <li><i class="fas fa-check-circle"></i>Expert personal consultation</li>
+          <li><i class="fas fa-check-circle"></i>Complimentary refreshments</li>
+          <li><i class="fas fa-check-circle"></i>Flexible appointment times</li>
+          <li><i class="fas fa-check-circle"></i>Home visit available</li>
+        </ul>
+      </div>
+      <div class="appt-form">
+        <form id="apptForm" onsubmit="submitAppt(event)">
+          <div class="form-group">
+            <label class="form-label">Full Name *</label>
+            <input type="text" class="form-input" required placeholder="Enter your full name">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone / WhatsApp *</label>
+            <input type="tel" class="form-input" required placeholder="+971 50 XXX XXXX">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Preferred Date *</label>
+            <input type="date" class="form-input" id="dateIn" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Collection Interest *</label>
+            <select class="form-select" required>
+              <option value="">Select collection</option>
+              <option>Van Cleef Style</option>
+              <option>Messika Style</option>
+              <option>Bulgari Style</option>
+              <option>Flower Collection</option>
+              <option>All Collections</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" placeholder="Any special requests or pieces you want to see..."></textarea>
+          </div>
+          <button type="submit" class="form-btn"><i class="fas fa-calendar-check"></i>Request Appointment</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="sec" style="background:var(--bg2)">
+  <div class="sec-in">
     <div class="sec-head">
-      <span class="sec-eye">Seamless Payments</span>
-      <h2 class="sec-title">Scan &amp; Connect</h2>
-      <p class="sec-desc">Multiple payment options for your convenience. Scan to pay or visit our website instantly.</p>
+      <span class="eye">Client Stories</span>
+      <h2 class="stitle">What Our Clients Say</h2>
+    </div>
+    <div class="testi-card">
+      <div class="testi-q">The experience at Ryaan Jewellers was extraordinary. From the private viewing to choosing the perfect bracelet, every detail was perfection. My Alhambra-style collection is beyond my dreams — and the price was the best in all of Dubai!</div>
+      <div class="testi-name">Fatima Al-Rashidi</div>
+      <div class="testi-loc">Dubai, UAE</div>
+      <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT / QR -->
+<section id="payment" class="sec" style="background:var(--card)">
+  <div class="sec-in">
+    <div class="sec-head">
+      <span class="eye">Seamless Payments</span>
+      <h2 class="stitle">Scan &amp; Connect</h2>
+      <p class="sdesc">Multiple payment options for your convenience. Scan to pay or visit our website instantly.</p>
     </div>
     <div class="qr-grid">
       <div class="qr-card">
-        <div class="qr-icon"><i class="fab fa-paypal"></i></div>
+        <div class="qr-ico"><i class="fab fa-paypal"></i></div>
         <h3 class="qr-title">PayPal</h3>
-        <p class="qr-desc">Secure payment via PayPal. Buyer protection on every transaction.</p>
-        <div class="qr-box" id="qr-paypal"></div>
+        <p class="qr-desc">Secure worldwide payment via PayPal with full buyer protection.</p>
+        <div class="qr-box" id="qr1"></div>
         <p class="qr-hint">Scan with PayPal app</p>
       </div>
       <div class="qr-card">
-        <div class="qr-icon"><i class="fas fa-credit-card"></i></div>
+        <div class="qr-ico"><i class="fas fa-credit-card"></i></div>
         <h3 class="qr-title">Payment Portal</h3>
-        <p class="qr-desc">All major cards, Apple Pay, Google Pay accepted. Fully secure SSL checkout.</p>
-        <div class="qr-box" id="qr-pay"></div>
-        <p class="qr-hint">Scan to open secure checkout</p>
+        <p class="qr-desc">Cards, Apple Pay &amp; Google Pay via secure SSL checkout.</p>
+        <div class="qr-box" id="qr2"></div>
+        <p class="qr-hint">Scan for secure checkout</p>
       </div>
       <div class="qr-card">
-        <div class="qr-icon"><i class="fas fa-globe"></i></div>
-        <h3 class="qr-title">Visit Website</h3>
-        <p class="qr-desc">Browse our full collection and book private consultations online.</p>
-        <div class="qr-box" id="qr-web"></div>
+        <div class="qr-ico"><i class="fas fa-globe"></i></div>
+        <h3 class="qr-title">Website</h3>
+        <p class="qr-desc">Browse our full collection and book consultations online.</p>
+        <div class="qr-box" id="qr3"></div>
         <p class="qr-hint">ryaanjewellers.com</p>
       </div>
       <div class="qr-card">
-        <div class="qr-icon"><i class="fab fa-whatsapp"></i></div>
-        <h3 class="qr-title">WhatsApp Us</h3>
-        <p class="qr-desc">Chat with our consultants instantly. 24/7 support and personalized advice.</p>
-        <div class="qr-box" id="qr-wa"></div>
+        <div class="qr-ico"><i class="fab fa-whatsapp"></i></div>
+        <h3 class="qr-title">WhatsApp</h3>
+        <p class="qr-desc">Chat with our consultants directly. 24/7 personalised advice.</p>
+        <div class="qr-box" id="qr4"></div>
         <p class="qr-hint">Scan to start chat</p>
       </div>
     </div>
@@ -482,15 +618,15 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
 </section>
 
 <!-- INSTAGRAM -->
-<section class="section" id="instagram">
-  <div class="sec-inner">
+<section id="instagram" class="sec">
+  <div class="sec-in">
     <div class="sec-head">
-      <span class="sec-eye">Follow Our Journey</span>
-      <h2 class="sec-title">@ryaanjewellers</h2>
+      <span class="eye">Follow Our Journey</span>
+      <h2 class="stitle">@ryaanjewellers</h2>
     </div>
     <div style="text-align:center;margin-bottom:2.5rem">
-      <a href="https://instagram.com/ryaanjewellers" target="_blank" class="ig-handle-link">
-        <i class="fab fa-instagram"></i> Follow on Instagram
+      <a href="https://instagram.com/ryaanjewellers" target="_blank" class="ig-handle">
+        <i class="fab fa-instagram"></i>Follow on Instagram
       </a>
     </div>
     <div class="ig-grid" id="igGrid"></div>
@@ -499,11 +635,11 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-grid">
+  <div class="fg">
     <div>
-      <span class="f-logo-name">RYAAN JEWELLERS</span>
-      <p class="f-tagline">Dubai's trusted destination for inspired 18K gold and diamond jewelry. Located in Gold Souk, Deira — serving Dubai since 2020 with pride.</p>
-      <div class="soc-wrap">
+      <span class="f-name">RYAAN JEWELLERS</span>
+      <p class="f-tag">Dubai's trusted destination for designer-inspired 18K gold and diamond jewelry. Located in Gold Souk, Deira — serving Dubai with pride since 2020.</p>
+      <div class="soc-row">
         <a href="https://instagram.com/ryaanjewellers" target="_blank" class="soc"><i class="fab fa-instagram"></i></a>
         <a href="https://facebook.com/RyaanJewellers" target="_blank" class="soc"><i class="fab fa-facebook-f"></i></a>
         <a href="https://wa.me/971543746476" target="_blank" class="soc"><i class="fab fa-whatsapp"></i></a>
@@ -513,35 +649,36 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
     </div>
     <div>
       <h4 class="f-h4">Collections</h4>
-      <ul class="f-links">
-        <li><a href="#">Van Cleef Style</a></li>
-        <li><a href="#">Messika Style</a></li>
-        <li><a href="#">Bulgari Style</a></li>
-        <li><a href="#">Chopard Style</a></li>
-        <li><a href="#">Flower Collection</a></li>
+      <ul class="f-ul">
+        <li><a href="#products" onclick="filter('vca',null)">Van Cleef Style</a></li>
+        <li><a href="#products" onclick="filter('messika',null)">Messika Style</a></li>
+        <li><a href="#products" onclick="filter('bulgari',null)">Bulgari Style</a></li>
+        <li><a href="#products" onclick="filter('chopard',null)">Chopard Style</a></li>
+        <li><a href="#products" onclick="filter('flower',null)">Flower Collection</a></li>
+        <li><a href="#products" onclick="filter('lv',null)">Monogram Style</a></li>
       </ul>
     </div>
     <div>
       <h4 class="f-h4">Services</h4>
-      <ul class="f-links">
-        <li><a href="#gold-services">Buy Old Gold</a></li>
-        <li><a href="#gold-services">Sell Premium Gold</a></li>
-        <li><a href="#gold-services">Door-to-Door Service</a></li>
-        <li><a href="#virtual-tryon">Virtual Try-On</a></li>
-        <li><a href="#">Bespoke Design</a></li>
+      <ul class="f-ul">
+        <li><a href="#gold">Buy Old Gold</a></li>
+        <li><a href="#gold">Sell Premium Gold</a></li>
+        <li><a href="#gold">Door-to-Door Service</a></li>
+        <li><a href="#tryon">Virtual Try-On</a></li>
+        <li><a href="#appointment">Book Appointment</a></li>
       </ul>
     </div>
     <div>
       <h4 class="f-h4">Contact</h4>
-      <ul class="f-links">
+      <ul class="f-ul">
         <li><a href="tel:+971543746476">+971 54 374 6476</a></li>
         <li><a href="mailto:info@ryaanjewellers.com">info@ryaanjewellers.com</a></li>
         <li><a href="#">Gold Souk, Deira, Dubai</a></li>
-        <li><a href="#">Hours: 10 AM – 10 PM Daily</a></li>
+        <li><a href="#">10 AM – 10 PM Daily</a></li>
       </ul>
     </div>
   </div>
-  <div class="f-bottom">
+  <div class="f-btm">
     <p>© 2025 Ryaan Jewellers. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> · <a href="#">Terms</a> · <a href="#">Returns</a></p>
   </div>
@@ -549,252 +686,220 @@ body{font-family:var(--font-body);background:var(--bg);color:var(--txt);line-hei
 
 <!-- TOAST -->
 <div id="toastEl" class="toast">
-  <div class="toast-ico"><i class="fas fa-check-circle" id="toastIco"></i></div>
+  <div class="ti"><i id="toastIco" class="fas fa-gem"></i></div>
   <div id="toastMsg"></div>
 </div>
 
 <script>
-// ══════════════════════════════════════════════
-// PRODUCT DATA — GitHub Raw Image URLs
-// ══════════════════════════════════════════════
-const BASE = 'https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/';
+// ═══════════════════════════════════════════════════════
+// DATA — All product images from GitHub repo
+// ═══════════════════════════════════════════════════════
+const B = 'https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/';
 
 const PRODUCTS = [
-  // ── VAN CLEEF STYLE ──
-  { id:1, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Yellow Gold', desc:'5-motif Alhambra style, 18K gold, beaded border', price:'AED 680', lbl:'Best Seller',
-    img: BASE + 'Oe9fvx4ZRqqgvBniTpcJYA.png' },
-  { id:2, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Carnelian', desc:'5-motif, deep red carnelian inlay, 18K gold', price:'AED 750', lbl:'New',
-    img: BASE + 'Vancleef%20Bracelet%20%20Carnelian%20.jpg' },
-  { id:3, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Blue Agate', desc:'5-motif, vibrant blue agate, 18K yellow gold', price:'AED 750', lbl:'Popular',
-    img: BASE + 'Vancleef%20Bracelet%20Agate.jpg' },
-  { id:4, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Chalcedony', desc:'5-motif pink chalcedony, 18K yellow gold chain', price:'AED 720', lbl:'',
-    img: BASE + 'Vancleef%20Bracelet%20Chalcedony%20.jpg' },
-  { id:5, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Mother of Pearl', desc:'5-motif white mother of pearl, 18K gold', price:'AED 720', lbl:'',
-    img: BASE + 'Vancleef%20Bracelet%20Mother%20of%20pearl.jpg' },
-  { id:6, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Tiger Eye', desc:'5-motif warm tiger eye stone, 18K gold', price:'AED 700', lbl:'',
-    img: BASE + 'Vancleef%20Bracelet%20Tiger%20Eyes.jpg' },
-  { id:7, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Malachite', desc:'5-motif green malachite inlay, 18K yellow gold', price:'AED 700', lbl:'',
-    img: BASE + 'Vancmeef%20Bracelet%20Malchite.jpg' },
-  { id:8, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Bracelet – Onyx', desc:'5-motif jet black onyx, 18K yellow gold', price:'AED 680', lbl:'',
-    img: BASE + 'Vancleef%20%20Bracelet%20%20Onyx.jpg' },
-  { id:9, cat:'vca', brand:'Van Cleef Style', name:'Alhambra White & Blue Set', desc:'Dual-tone Alhambra bracelet – white & blue stones', price:'AED 820', lbl:'Hot',
-    img: BASE + 'White%20%20.%20Blue%20.jpg' },
-  { id:10, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Guilloche Bracelet', desc:'Laser-engraved guilloche gold, 5-motif chain bracelet', price:'AED 780', lbl:'',
-    img: BASE + '-BCKlb0cQceDrXv2HPcqvw.webp' },
-  { id:11, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Guilloche Necklace', desc:'10-motif long sautoir, guilloche engraved gold', price:'AED 1,250', lbl:'New',
-    img: BASE + 'MRnJgX71Q22hWNlEbH7iNQ.webp' },
-  { id:12, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Ring', desc:'Single motif Alhambra ring in 18K yellow gold', price:'AED 450', lbl:'',
-    img: BASE + 'j6rI6-_PRV-8Go9vSA4beA.webp' },
-  { id:13, cat:'vca', brand:'Van Cleef Style', name:'Alhambra Full Set', desc:'Matching necklace + bracelet + ring – guilloche gold', price:'AED 1,950', lbl:'Set',
-    img: BASE + '-BCKlb0cQceDrXv2HPcqvw.png.transform.vca-w350-2x.webp' },
+  // ── VAN CLEEF ALHAMBRA STYLE ──
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Yellow Gold',desc:'5-motif, 18K gold, classic beaded border',price:'AED 680',lbl:'Best Seller',lc:'plbl-gold',img:B+'Oe9fvx4ZRqqgvBniTpcJYA.png'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Carnelian',desc:'5-motif deep red carnelian inlay, 18K gold',price:'AED 750',lbl:'New',lc:'plbl-green',img:B+'Vancleef%20Bracelet%20%20Carnelian%20.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Blue Agate',desc:'5-motif vibrant blue agate, 18K yellow gold',price:'AED 750',lbl:'Popular',lc:'plbl-gold',img:B+'Vancleef%20Bracelet%20Agate.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Pink Chalcedony',desc:'5-motif soft pink chalcedony, 18K gold chain',price:'AED 720',lbl:'',lc:'',img:B+'Vancleef%20Bracelet%20Chalcedony%20.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Mother of Pearl',desc:'5-motif white mother of pearl, 18K gold',price:'AED 720',lbl:'',lc:'',img:B+'Vancleef%20Bracelet%20Mother%20of%20pearl.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Tiger Eye',desc:'5-motif warm tiger eye stone, 18K gold',price:'AED 700',lbl:'',lc:'',img:B+'Vancleef%20Bracelet%20Tiger%20Eyes.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Malachite',desc:'5-motif deep green malachite, 18K yellow gold',price:'AED 700',lbl:'',lc:'',img:B+'Vancmeef%20Bracelet%20Malchite.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Bracelet – Onyx',desc:'5-motif jet black onyx, 18K yellow gold',price:'AED 680',lbl:'',lc:'',img:B+'Vancleef%20%20Bracelet%20%20Onyx.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra – White & Blue Duo',desc:'Dual-tone Alhambra, white & blue stone combo',price:'AED 820',lbl:'Hot',lc:'plbl-red',img:B+'White%20%20.%20Blue%20.jpg'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Guilloche Bracelet',desc:'Laser guilloche engraved gold, 5-motif chain',price:'AED 780',lbl:'',lc:'',img:B+'-BCKlb0cQceDrXv2HPcqvw.webp'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Guilloche Sautoir',desc:'10-motif long necklace, guilloche gold',price:'AED 1,250',lbl:'New',lc:'plbl-green',img:B+'MRnJgX71Q22hWNlEbH7iNQ.webp'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Gold Ring',desc:'Single motif Alhambra ring, 18K yellow gold',price:'AED 450',lbl:'',lc:'',img:B+'j6rI6-_PRV-8Go9vSA4beA.webp'},
+  {cat:'vca',brand:'Van Cleef Style',name:'Alhambra Guilloche Full Set',desc:'Necklace + bracelet + ring — guilloche gold trio',price:'AED 1,950',lbl:'Set',lc:'plbl-rose',img:B+'-BCKlb0cQceDrXv2HPcqvw.png.transform.vca-w350-2x.webp'},
 
-  // ── MESSIKA STYLE ──
-  { id:14, cat:'messika', brand:'Messika Style', name:'Move Uno Bangle – Yellow Gold', desc:'Signature 3-diamond floating Move bangle, 18K YG', price:'AED 850', lbl:'Best Seller',
-    img: BASE + 'Messika%20mov%20uno%20.jpg' },
-  { id:15, cat:'messika', brand:'Messika Style', name:'Move Uno Bangle – Rose Gold', desc:'Classic Move Uno in warm rose gold, 3 diamonds', price:'AED 880', lbl:'Popular',
-    img: BASE + 'Messika%20rose%20uno%20move.jpg' },
-  { id:16, cat:'messika', brand:'Messika Style', name:'Move Uno Bangle – White Gold', desc:'Sleek white gold Move bangle, floating diamonds', price:'AED 900', lbl:'',
-    img: BASE + 'Messika%20white%20.jpg' },
-  { id:17, cat:'messika', brand:'Messika Style', name:'Move Classic Bracelet – White Gold', desc:'Diamond pavé Move Classic in 18K white gold', price:'AED 950', lbl:'New',
-    img: BASE + 'Messika-Move-Classic-03998-WG.jpg' },
-  { id:18, cat:'messika', brand:'Messika Style', name:'Move Hoop Earrings – Yellow Gold', desc:'Floating diamond Move hoops in 18K yellow gold', price:'AED 680', lbl:'',
-    img: BASE + 'Messika-Move-Hoop-04407-YG.jpg' },
-  { id:19, cat:'messika', brand:'Messika Style', name:'Move Romane Ring – Yellow Gold', desc:'Pavé diamond Romane ring, 18K yellow gold band', price:'AED 520', lbl:'',
-    img: BASE + 'Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg.webp' },
-  { id:20, cat:'messika', brand:'Messika Style', name:'Move Thin Bangle – Rose Gold', desc:'Slim stackable Move bangle, rose gold + diamonds', price:'AED 780', lbl:'New',
-    img: BASE + 'Messika-Move-Thin-04068-RG-2-1024x1024.jpg.webp' },
-  { id:21, cat:'messika', brand:'Messika Style', name:'Move UNO Mini Hoops – White Gold', desc:'Petite floating diamond hoop earrings, white gold', price:'AED 580', lbl:'',
-    img: BASE + 'Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg.webp' },
-  { id:22, cat:'messika', brand:'Messika Style', name:'Move Uno Necklace – White Gold', desc:'Pendant Move Uno chain necklace, 18K white gold', price:'AED 720', lbl:'',
-    img: BASE + 'Messika-Move-Uno-04705-WG.jpg.webp' },
-  { id:23, cat:'messika', brand:'Messika Style', name:'Move 10th Pavé Earrings – Rose Gold', desc:'Anniversary edition pavé drop earrings, rose gold', price:'AED 790', lbl:'Limited',
-    img: BASE + 'messika_-_packshot_-_boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg.webp' },
-  { id:24, cat:'messika', brand:'Messika Style', name:'Move Uno Pampille Pavé Necklace', desc:'Diamond pavé choker with Drop pendant, white gold', price:'AED 1,100', lbl:'',
-    img: BASE + 'messika_-_packshot_-_collier_choker_move_uno_pampille_pav_vue_1_12150_wg.webp' },
-  { id:25, cat:'messika', brand:'Messika Style', name:'Move Uno Pampille Choker', desc:'Classic choker with floating diamond pendant, WG', price:'AED 980', lbl:'',
-    img: BASE + 'messika_-_packshot_-_collier_choker_move_uno_pampille_vue_1_14588_wg.webp' },
-  { id:26, cat:'messika', brand:'Messika Style', name:'Lucky Eye Necklace – Yellow Gold', desc:'Diamond evil eye pendant pavé necklace, 18K YG', price:'AED 850', lbl:'Hot',
-    img: BASE + 'messika_-_packshot_-_collier_lucky_eye_pav_vue_1_07525_yg.webp' },
-  { id:27, cat:'messika', brand:'Messika Style', name:'Lucky Eye Necklace – Rose Gold', desc:'Pavé lucky eye pendant in warm rose gold, diamonds', price:'AED 870', lbl:'',
-    img: BASE + 'messika_-_packshot_-_collier_lucky_eye_pav_vue_2_07525_pg.jpg' },
-  { id:28, cat:'messika', brand:'Messika Style', name:'Move Classique Pavé Necklace', desc:'Classic Move pavé diamond pendant, 18K pink gold', price:'AED 920', lbl:'',
-    img: BASE + 'messika_-_packshot_-_collier_move_classique_pav_vue_1_03994_p.webp' },
-  { id:29, cat:'messika', brand:'Messika Style', name:'Move Uno Pavé Necklace', desc:'Statement Move Uno diamond pavé necklace, pink gold', price:'AED 1,050', lbl:'New',
-    img: BASE + 'messika_paris_-_collier_move_uno_pav_vue_1_04708_p.webp' },
+  // ── MESSIKA MOVE STYLE ──
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Bangle – Yellow Gold',desc:'3 floating diamonds, 18K yellow gold bangle',price:'AED 850',lbl:'Best Seller',lc:'plbl-gold',img:B+'Messika%20mov%20uno%20.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Bangle – Rose Gold',desc:'Classic Move Uno, warm rose gold, 3 diamonds',price:'AED 880',lbl:'Popular',lc:'plbl-gold',img:B+'Messika%20rose%20uno%20move.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Bangle – White Gold',desc:'Sleek white gold Move bangle, floating diamonds',price:'AED 900',lbl:'',lc:'',img:B+'Messika%20white%20.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Classic – White Gold',desc:'Diamond pavé Move Classic in 18K white gold',price:'AED 950',lbl:'New',lc:'plbl-green',img:B+'Messika-Move-Classic-03998-WG.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Hoop Earrings – Yellow Gold',desc:'Floating diamond Move hoops, 18K yellow gold',price:'AED 680',lbl:'',lc:'',img:B+'Messika-Move-Hoop-04407-YG.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Romane Ring – Yellow Gold',desc:'Pavé diamond Romane ring, 18K yellow gold',price:'AED 520',lbl:'',lc:'',img:B+'Messika-Move-Romane-06516-YG-55-2-1000x1000.jpg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move Thin Bangle – Rose Gold',desc:'Slim stackable Move bangle, rose gold + diamonds',price:'AED 780',lbl:'New',lc:'plbl-green',img:B+'Messika-Move-Thin-04068-RG-2-1024x1024.jpg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move UNO Mini Hoops – White Gold',desc:'Petite floating diamond hoops, white gold',price:'AED 580',lbl:'',lc:'',img:B+'Messika-Move-UNO-Mini-Hoops-10050-WG-1.jpg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Necklace – White Gold',desc:'Pendant Move Uno chain necklace, 18K white gold',price:'AED 720',lbl:'',lc:'',img:B+'Messika-Move-Uno-04705-WG.jpg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move 10th Pavé Earrings – Rose Gold',desc:'Anniversary edition pavé drop earrings, rose gold',price:'AED 790',lbl:'Limited',lc:'plbl-red',img:B+'messika_-_packshot_-_boucles_d_oreilles_pendantes_move_10th_xl_pav_es_vue_2_06823_pg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move Pampille Pavé Necklace',desc:'Diamond pavé choker with drop pendant, white gold',price:'AED 1,100',lbl:'',lc:'',img:B+'messika_-_packshot_-_collier_choker_move_uno_pampille_pav_vue_1_12150_wg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Pampille Choker',desc:'Classic choker, floating diamond pendant, white gold',price:'AED 980',lbl:'',lc:'',img:B+'messika_-_packshot_-_collier_choker_move_uno_pampille_vue_1_14588_wg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Lucky Eye Necklace – Yellow Gold',desc:'Diamond evil eye pavé pendant necklace, 18K YG',price:'AED 850',lbl:'Hot',lc:'plbl-red',img:B+'messika_-_packshot_-_collier_lucky_eye_pav_vue_1_07525_yg.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Lucky Eye Necklace – Rose Gold',desc:'Pavé lucky eye pendant, warm rose gold + diamonds',price:'AED 870',lbl:'',lc:'',img:B+'messika_-_packshot_-_collier_lucky_eye_pav_vue_2_07525_pg.jpg'},
+  {cat:'messika',brand:'Messika Style',name:'Move Classique Pavé Necklace',desc:'Classic Move pavé diamond pendant, 18K pink gold',price:'AED 920',lbl:'',lc:'',img:B+'messika_-_packshot_-_collier_move_classique_pav_vue_1_03994_p.webp'},
+  {cat:'messika',brand:'Messika Style',name:'Move Uno Pavé Necklace – Pink Gold',desc:'Statement Move Uno diamond pavé necklace, pink gold',price:'AED 1,050',lbl:'New',lc:'plbl-green',img:B+'messika_paris_-_collier_move_uno_pav_vue_1_04708_p.webp'},
 
   // ── BULGARI STYLE ──
-  { id:30, cat:'bulgari', brand:'Bulgari Style', name:'Serpenti Choker Necklace', desc:'Snake-inspired gold choker, coiled serpent design', price:'AED 1,200', lbl:'Statement',
-    img: BASE + 'Serpenti%20Bvulgari%20Chocker.jpg' },
+  {cat:'bulgari',brand:'Bulgari Style',name:'Serpenti Choker Necklace',desc:'Coiled serpent gold choker, statement piece',price:'AED 1,200',lbl:'Statement',lc:'plbl-rose',img:B+'Serpenti%20Bvulgari%20Chocker.jpg'},
 
   // ── CHOPARD STYLE ──
-  { id:31, cat:'chopard', brand:'Chopard Style', name:'Happy Diamonds Earrings', desc:'Floating diamond earrings, 18K yellow gold', price:'AED 580', lbl:'',
-    img: BASE + 'Chopard%20Earring.jpg' },
-  { id:32, cat:'chopard', brand:'Chopard Style', name:'Happy Hearts Bangle – White', desc:'White enamel heart bangle, polished 18K gold', price:'AED 650', lbl:'',
-    img: BASE + 'Chopard%20heart%20bangles%20whithe.jpg' },
-  { id:33, cat:'chopard', brand:'Chopard Style', name:'Heart Love Bangle', desc:'Open heart bangle in 18K yellow gold, diamond accent', price:'AED 750', lbl:'Popular',
-    img: BASE + 'Heart%20Bangle.jpg' },
+  {cat:'chopard',brand:'Chopard Style',name:'Happy Diamonds Earrings',desc:'Floating diamond earrings, 18K yellow gold',price:'AED 580',lbl:'',lc:'',img:B+'Chopard%20Earring.jpg'},
+  {cat:'chopard',brand:'Chopard Style',name:'Happy Hearts Bangle – White',desc:'White enamel heart bangle, polished 18K gold',price:'AED 650',lbl:'',lc:'',img:B+'Chopard%20heart%20bangles%20whithe.jpg'},
+  {cat:'chopard',brand:'Chopard Style',name:'Heart Love Bangle',desc:'Open heart bangle, 18K yellow gold + diamond',price:'AED 750',lbl:'Popular',lc:'plbl-gold',img:B+'Heart%20Bangle.jpg'},
 
   // ── FLOWER COLLECTION ──
-  { id:34, cat:'flower', brand:'Flower Collection', name:'Butterfly Open Ring', desc:'Delicate butterfly motif open ring in 18K gold', price:'AED 490', lbl:'New',
-    img: BASE + 'Butterfly%20Ring.jpg' },
-  { id:35, cat:'flower', brand:'Flower Collection', name:'Chaumet Bangle Set', desc:'Floral Chaumet-inspired gold bangles, stackable', price:'AED 880', lbl:'Set',
-    img: BASE + 'Chaumet%20Bangles.jpg' },
+  {cat:'flower',brand:'Flower Collection',name:'Butterfly Open Ring',desc:'Delicate butterfly motif open ring, 18K gold',price:'AED 490',lbl:'New',lc:'plbl-green',img:B+'Butterfly%20Ring.jpg'},
+  {cat:'flower',brand:'Flower Collection',name:'Chaumet Floral Bangles',desc:'Floral-inspired gold bangles, stackable set',price:'AED 880',lbl:'Set',lc:'plbl-rose',img:B+'Chaumet%20Bangles.jpg'},
+
+  // ── LOUIS VUITTON MONOGRAM STYLE ──
+  {cat:'lv',brand:'Monogram Style',name:'Idylle Blossom Bracelets',desc:'Rose gold monogram flower bracelets — 3 styles',price:'AED 950',lbl:'Set',lc:'plbl-rose',img:'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600'},
 ];
 
-// ══════════════════════════════════════════════
-// RENDER PRODUCTS
-// ══════════════════════════════════════════════
-function renderProducts(filter='all') {
-  const grid = document.getElementById('pgrid');
-  grid.innerHTML='';
-  const list = filter==='all' ? PRODUCTS : PRODUCTS.filter(p=>p.cat===filter);
-  list.forEach(p => {
-    const lblHtml = p.lbl
-      ? `<div class="p-lbl ${p.lbl==='New'?'new':p.lbl==='Hot'||p.lbl==='Limited'?'hot':''}">${p.lbl}</div>`
-      : '';
-    const card = document.createElement('div');
-    card.className = 'p-card';
-    card.dataset.cat = p.cat;
-    card.innerHTML = `
-      <div class="p-img-wrap">
-        <img class="p-img" src="${p.img}" alt="${p.name}"
-          onerror="this.style.display='none';this.parentNode.querySelector('.p-fallback').style.display='flex'"
-          loading="lazy">
-        <div class="p-fallback" style="display:none;position:absolute;inset:0;background:var(--gold-pale);align-items:center;justify-content:center;flex-direction:column;gap:.75rem">
-          <i class="fas fa-gem" style="font-size:3rem;color:var(--gold)"></i>
-          <span style="font-size:.8rem;color:var(--muted);font-style:italic">${p.name}</span>
+// ── Instagram images
+const IG_IMGS = [
+  B+'Vancleef%20Bracelet%20%20Carnelian%20.jpg',
+  B+'Messika%20rose%20uno%20move.jpg',
+  B+'Serpenti%20Bvulgari%20Chocker.jpg',
+  B+'Messika-Move-Classic-03998-WG.jpg',
+  B+'Vancleef%20Bracelet%20Tiger%20Eyes.jpg',
+  B+'Chopard%20Earring.jpg',
+  B+'messika_-_packshot_-_collier_lucky_eye_pav_vue_1_07525_yg.webp',
+  B+'Vancleef%20Bracelet%20Mother%20of%20pearl.jpg',
+  B+'Heart%20Bangle.jpg',
+];
+
+// ═══════════════════════════════════════════════════════
+// RENDER
+// ═══════════════════════════════════════════════════════
+let wCount=0, cCount=0;
+
+function renderProducts(cat){
+  const g=document.getElementById('pgrid');
+  g.innerHTML='';
+  const list=cat==='all'?PRODUCTS:PRODUCTS.filter(p=>p.cat===cat);
+  list.forEach(p=>{
+    const lbl=p.lbl?`<div class="plbl ${p.lc}">${p.lbl}</div>`:'';
+    const c=document.createElement('div');
+    c.className='pc';
+    c.dataset.cat=p.cat;
+    c.innerHTML=`
+      <div class="pi-wrap">
+        <img class="pi" src="${p.img}" alt="${p.name}" loading="lazy"
+          onerror="this.style.display='none';this.parentNode.querySelector('.pfall').style.display='flex'">
+        <div class="pfall">
+          <i class="fas fa-gem" style="font-size:2.8rem;color:var(--gold)"></i>
+          <span style="font-size:.76rem;color:var(--muted);padding:0 1rem;text-align:center;font-style:italic">${p.name}</span>
         </div>
-        ${lblHtml}
+        ${lbl}
         <div class="p-acts">
-          <button class="p-act" onclick="addWish()" title="Wishlist"><i class="fas fa-heart"></i></button>
-          <button class="p-act" onclick="quickView()" title="Quick View"><i class="fas fa-eye"></i></button>
-          <button class="p-act" onclick="tryOn()" title="Virtual Try-On"><i class="fas fa-camera"></i></button>
+          <button class="pa" onclick="addWish(event)" title="Wishlist"><i class="fas fa-heart"></i></button>
+          <button class="pa" onclick="quickV(event)" title="Quick View"><i class="fas fa-eye"></i></button>
+          <button class="pa" onclick="tryOnF(event)" title="Try On"><i class="fas fa-camera"></i></button>
         </div>
       </div>
-      <div class="p-info">
-        <div class="p-brand">${p.brand}</div>
-        <h3 class="p-name">${p.name}</h3>
-        <p class="p-desc">${p.desc}</p>
-        <div class="p-footer">
-          <div class="p-price">${p.price} <span>/ piece</span></div>
-          <button class="p-cart" onclick="addCart('${p.name}')">Add to Cart</button>
+      <div class="pinfo">
+        <div class="pbrand">${p.brand}</div>
+        <h3 class="pname">${p.name}</h3>
+        <p class="pdesc">${p.desc}</p>
+        <div class="pfooter">
+          <div class="pprice">${p.price}<span> / piece</span></div>
+          <button class="pcart" onclick="addCart(event,'${p.name.replace(/'/g,"\\'")}')">Add to Cart</button>
         </div>
       </div>`;
-    grid.appendChild(card);
+    g.appendChild(c);
   });
 }
 
-function filterProducts(cat, btn) {
+function filter(cat,btn){
   renderProducts(cat);
-  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
-  if(btn) btn.classList.add('active');
+  document.querySelectorAll('.fb').forEach(b=>b.classList.remove('on'));
+  if(btn) btn.classList.add('on');
+  if(!btn&&cat!=='all'){
+    document.getElementById('products').scrollIntoView({behavior:'smooth'});
+  }
 }
 
-// ══════════════════════════════════════════════
-// INSTAGRAM GRID
-// ══════════════════════════════════════════════
-function renderInstagram() {
-  const imgs = [
-    BASE + 'Vancleef%20Bracelet%20%20Carnelian%20.jpg',
-    BASE + 'Messika%20rose%20uno%20move.jpg',
-    BASE + 'Serpenti%20Bvulgari%20Chocker.jpg',
-    BASE + 'Messika-Move-Classic-03998-WG.jpg',
-    BASE + 'Vancleef%20Bracelet%20Tiger%20Eyes.jpg',
-    BASE + 'Chopard%20Earring.jpg',
-    BASE + 'messika_-_packshot_-_collier_lucky_eye_pav_vue_1_07525_yg.webp',
-    BASE + 'Vancleef%20Bracelet%20Mother%20of%20pearl.jpg',
-    BASE + 'Heart%20Bangle.jpg',
-  ];
-  const grid = document.getElementById('igGrid');
-  imgs.forEach((src,i)=>{
-    const d = document.createElement('div');
+function renderIG(){
+  const g=document.getElementById('igGrid');
+  IG_IMGS.forEach((src,i)=>{
+    const d=document.createElement('div');
     d.className='ig-post';
     d.onclick=()=>window.open('https://instagram.com/ryaanjewellers','_blank');
-    d.innerHTML=`<img src="${src}" alt="Instagram ${i+1}" loading="lazy"
-      onerror="this.style.display='none'">
+    d.innerHTML=`<img src="${src}" alt="Post ${i+1}" loading="lazy" onerror="this.style.opacity='.3'">
       <div class="ig-ov">
-        <span class="ig-stat"><i class="fas fa-heart"></i>${(Math.random()*4000+800|0).toLocaleString()}</span>
-        <span class="ig-stat"><i class="fas fa-comment"></i>${(Math.random()*150+30|0)}</span>
+        <span class="ig-stat"><i class="fas fa-heart"></i>${(Math.random()*4e3+800|0).toLocaleString()}</span>
+        <span class="ig-stat"><i class="fas fa-comment"></i>${Math.random()*140+30|0}</span>
       </div>`;
-    grid.appendChild(d);
+    g.appendChild(d);
   });
 }
 
-// ══════════════════════════════════════════════
-// QR CODES
-// ══════════════════════════════════════════════
-function makeQR(id, url) {
-  new QRCode(document.getElementById(id), {
-    text: url, width: 160, height: 160,
-    colorDark: '#1A1209', colorLight: '#FFFFFF',
-    correctLevel: QRCode.CorrectLevel.H
-  });
+function makeQR(id,url){
+  new QRCode(document.getElementById(id),{text:url,width:150,height:150,colorDark:'#1A1108',colorLight:'#FFFFFF',correctLevel:QRCode.CorrectLevel.H});
 }
 
-// ══════════════════════════════════════════════
-// THEME
-// ══════════════════════════════════════════════
-function toggleTheme() {
+// ─── Theme ───
+function toggleDark(){
   document.body.classList.toggle('dark');
-  const isDark = document.body.classList.contains('dark');
-  document.getElementById('themeIco').className = isDark ? 'fas fa-sun' : 'fas fa-moon';
-  document.getElementById('themeLabel').textContent = isDark ? 'Light' : 'Dark';
-  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  const d=document.body.classList.contains('dark');
+  document.getElementById('dico').className=d?'fas fa-sun':'fas fa-moon';
+  document.getElementById('dlbl').textContent=d?'Light':'Dark';
+  localStorage.setItem('rjTheme',d?'dark':'light');
 }
 
-// ══════════════════════════════════════════════
-// CART / WISHLIST
-// ══════════════════════════════════════════════
-let cartCount = 0, wlCount = 0;
-function addCart(name) {
-  cartCount++;
-  document.getElementById('cartBadge').textContent = cartCount;
-  toast(`"${name.slice(0,30)}" added to cart!`, 'success');
-}
-function addWish() { wlCount++; document.getElementById('wlBadge').textContent=wlCount; toast('Added to wishlist!','success'); }
-function quickView() { toast('Quick view coming soon!','gold'); }
-function tryOn() { toast('Virtual Try-On launching soon! WhatsApp us for preview.','gold'); }
+// ─── Lang ───
+function toggleLang(){document.getElementById('langDD').classList.toggle('open')}
+function setLang(l){document.getElementById('langLabel').textContent=l.split(' ')[0];document.getElementById('langDD').classList.remove('open');showToast(`Language: ${l}`,'ok')}
+document.addEventListener('click',e=>{if(!e.target.closest('.lang-wrap'))document.getElementById('langDD').classList.remove('open')});
 
-// ══════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════
-function toast(msg, type='gold') {
-  const el = document.getElementById('toastEl');
-  const ico = document.getElementById('toastIco');
-  document.getElementById('toastMsg').textContent = msg;
-  el.className = `toast ${type==='success'?'success':type==='err'?'err':''} show`;
-  ico.className = type==='success' ? 'fas fa-check-circle' : type==='err' ? 'fas fa-times-circle' : 'fas fa-gem';
+// ─── Cart/Wish ───
+function addCart(e,name){e.stopPropagation();cCount++;document.getElementById('cBdg').textContent=cCount;showToast(`"${name.slice(0,28)}" added to cart!`,'ok')}
+function addWish(e){e.stopPropagation();wCount++;document.getElementById('wBdg').textContent=wCount;showToast('Added to wishlist!','ok')}
+function quickV(e){e.stopPropagation();showToast('Quick view coming soon!','')}
+function tryOnF(e){e.stopPropagation();showToast('Virtual Try-On launching soon! WhatsApp us for a preview.','ok')}
+
+// ─── Toast ───
+function showToast(msg,type=''){
+  const el=document.getElementById('toastEl');
+  const ico=document.getElementById('toastIco');
+  document.getElementById('toastMsg').textContent=msg;
+  el.className=`toast ${type==='ok'?'ok':type==='er'?'er':''} show`;
+  ico.className=type==='ok'?'fas fa-check-circle':type==='er'?'fas fa-times-circle':'fas fa-gem';
   clearTimeout(el._t);
-  el._t = setTimeout(()=>el.classList.remove('show'), 4500);
+  el._t=setTimeout(()=>el.classList.remove('show'),4800);
 }
 
-// ══════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════
-window.addEventListener('DOMContentLoaded', ()=>{
-  // Theme
-  if(localStorage.getItem('theme')==='dark') {
-    document.body.classList.add('dark');
-    document.getElementById('themeIco').className='fas fa-sun';
-    document.getElementById('themeLabel').textContent='Light';
-  }
-  // Products
-  renderProducts('all');
-  renderInstagram();
+// ─── Appointment ───
+function submitAppt(e){
+  e.preventDefault();
+  const btn=e.target.querySelector('.form-btn');
+  btn.innerHTML='<i class="fas fa-spinner fa-spin"></i> Processing...';
+  btn.disabled=true;
+  setTimeout(()=>{
+    btn.innerHTML='<i class="fas fa-calendar-check"></i>Request Appointment';
+    btn.disabled=false;
+    e.target.reset();
+    showToast('Appointment requested! We will contact you within 2 hours.','ok');
+  },2000);
+}
 
+// ─── INIT ───
+window.addEventListener('DOMContentLoaded',()=>{
+  // Theme
+  if(localStorage.getItem('rjTheme')==='dark'){
+    document.body.classList.add('dark');
+    document.getElementById('dico').className='fas fa-sun';
+    document.getElementById('dlbl').textContent='Light';
+  }
+  // Date minimum
+  const d=document.getElementById('dateIn');
+  if(d) d.min=new Date().toISOString().split('T')[0];
+  // Products & IG
+  renderProducts('all');
+  renderIG();
   // QR codes
   setTimeout(()=>{
-    makeQR('qr-paypal','https://paypal.me/ryaanjewellers');
-    makeQR('qr-pay','https://pay.ryaanjewellers.com');
-    makeQR('qr-web','https://ryaanjewellers007.github.io/Ryaanjewellers/');
-    makeQR('qr-wa','https://wa.me/971543746476?text=Hello+Ryaan+Jewellers');
-  }, 200);
-
+    makeQR('qr1','https://paypal.me/ryaanjewellers');
+    makeQR('qr2','https://pay.ryaanjewellers.com');
+    makeQR('qr3','https://ryaanjewellers007.github.io/Ryaanjewellers/');
+    makeQR('qr4','https://wa.me/971543746476?text=Hello+Ryaan+Jewellers');
+  },250);
   // Hide loader
-  setTimeout(()=>document.getElementById('loader').classList.add('gone'), 900);
+  setTimeout(()=>document.getElementById('loader').classList.add('gone'),950);
 });
 
-// Smooth scroll for nav links
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click',e=>{
     const t=document.querySelector(a.getAttribute('href'));
