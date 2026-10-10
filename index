@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ═══ PRIMARY SEO META TAGS ═══ -->
+<title>Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry | Gold Souk Deira</title>
+<meta name="description" content="Ryaan Jewellers — Dubai's Gold Souk premium 18K gold &amp; diamond jewelry store. Van Cleef style, Messika style, Bulgari style bracelets &amp; necklaces. Buy &amp; sell gold door-to-door. WhatsApp +971 54 374 6476.">
+<meta name="keywords" content="Ryaan Jewellers, Ryaan Jewellers Dubai, 18K gold jewelry Dubai, gold souk Dubai jewelry, buy gold Dubai, sell gold Dubai, Van Cleef style bracelet Dubai, Messika bracelet Dubai, Bulgari necklace Dubai, diamond jewelry Dubai, gold bracelet Dubai price, Alhambra bracelet Dubai, Move bangle Dubai, gold jewellery UAE, 18K bracelet UAE, gold souk Deira, luxury jewelry Dubai, gold necklace Dubai, buy sell gold UAE, door to door gold Dubai, inspired jewelry Dubai">
+<meta name="author" content="Ryaan Jewellers Dubai">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="3 days">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai, United Arab Emirates">
+<meta name="geo.position" content="25.2697;55.3095">
+<meta name="ICBM" content="25.2697, 55.3095">
+<link rel="canonical" href="https://ryaanjewellers007.github.io/Ryaanjewellers/">
+
+<!-- ═══ OPEN GRAPH (Facebook / WhatsApp / LinkedIn) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ryaanjewellers007.github.io/Ryaanjewellers/">
+<meta property="og:title" content="Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry">
+<meta property="og:description" content="Dubai Gold Souk's premium 18K gold jewelry. Van Cleef &amp; Messika inspired designs. Buy &amp; sell gold with door-to-door service. WhatsApp +971 54 374 6476.">
+<meta property="og:image" content="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Ryaan Jewellers">
+<meta property="og:locale" content="en_AE">
+<meta property="og:locale:alternate" content="ar_AE">
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ryaanjewellers">
+<meta name="twitter:creator" content="@ryaanjewellers">
+<meta name="twitter:title" content="Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry">
+<meta name="twitter:description" content="Premium 18K gold jewelry at Dubai Gold Souk. Designer-inspired Van Cleef, Messika &amp; Bulgari styles. Best prices. Buy &amp; sell gold.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png">
+
+<!-- ═══ SCHEMA.ORG STRUCTURED DATA (JSON-LD) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "JewelryStore",
+      "@id": "https://ryaanjewellers007.github.io/Ryaanjewellers/#organization",
+      "name": "Ryaan Jewellers",
+      "alternateName": ["Ryaan Jewellers Dubai", "Ryaan Gold & Diamonds"],
+      "url": "https://ryaanjewellers007.github.io/Ryaanjewellers/",
+      "logo": "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png",
+      "image": "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png",
+      "description": "Ryaan Jewellers is Dubai's Gold Souk premium destination for 18K gold and diamond jewelry. Specialising in designer-inspired Van Cleef, Messika and Bulgari style pieces. Buy and sell gold with door-to-door service across Dubai.",
+      "telephone": "+971543746476",
+      "email": "info@ryaanjewellers.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gold Souk, Deira",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE",
+        "postalCode": "00000"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2697,
+        "longitude": 55.3095
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      "priceRange": "AED 2,450 - AED 15,100",
+      "currenciesAccepted": "AED, USD",
+      "paymentAccepted": "Cash, Credit Card, Apple Pay, PayPal, Bank Transfer",
+      "areaServed": ["Dubai", "Sharjah", "Abu Dhabi", "Ajman", "UAE"],
+      "hasMap": "https://maps.google.com/?q=Gold+Souk+Deira+Dubai",
+      "sameAs": [
+        "https://www.instagram.com/ryaanjewellers",
+        "https://www.facebook.com/RyaanJewellers",
+        "https://www.tiktok.com/@ryaanjewellers"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "247",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Fatima Al-Rashidi"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "The Alhambra bracelet was stunning and the price was unbeatable. Fast delivery and beautiful packaging!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Ahmed Al-Mansoori"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Best gold rate in the entire Gold Souk. Professional, honest and fast."
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://ryaanjewellers007.github.io/Ryaanjewellers/#website",
+      "url": "https://ryaanjewellers007.github.io/Ryaanjewellers/",
+      "name": "Ryaan Jewellers Dubai",
+      "description": "Dubai's premier 18K gold and diamond jewelry store at Gold Souk Deira",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ryaanjewellers007.github.io/Ryaanjewellers/?search={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the gold price per gram in Dubai today?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Today's Dubai gold rates: 24K = AED 601.14/g, 22K = AED 551.05/g, 21K = AED 526.00/g, 18K = AED 450.86/g. Prices updated daily."}
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Ryaan Jewellers located?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Ryaan Jewellers is located in the Gold Souk, Deira, Dubai, UAE. We are open daily from 10 AM to 10 PM."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ryaan Jewellers buy old gold?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes! Ryaan Jewellers buys old gold, broken jewelry, and coins at the best market rates with instant cash payment. We offer free purity testing and door-to-door home pickup service across Dubai."}
+        },
+        {
+          "@type": "Question",
+          "name": "What types of jewelry does Ryaan Jewellers sell?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We sell designer-inspired 18K gold jewelry including Van Cleef Alhambra style bracelets, Messika Move style bangles, Bulgari Serpenti style necklaces, Chopard Happy Diamonds earrings, and our exclusive Flower Collection."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ryaan Jewellers deliver to home?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes! We offer free home delivery across Dubai. We also provide door-to-door gold buying and selling service. WhatsApp us at +971 54 374 6476."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ═══ PERFORMANCE & PRELOADS ═══ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.goldapi.io">
+<link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+<link rel="dns-prefetch" href="https://raw.githubusercontent.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+:root{
+  --bg:#FBF7F6;--bg2:#FFFFFF;--card:#F3E9E8;--txt:#17121A;--txt2:#3A2E3E;
+  --muted:#8C7274;--gold:#B76E79;--gold-h:#E3A6A9;--gold-d:#8E4A55;
+  --gold-p:#FBE9EA;--rose:#D9A0A0;--border:rgba(183,110,121,.22);
+  --glow:0 0 45px rgba(183,110,121,.4);--shad:0 14px 55px rgba(23,18,26,.12);
+  --t:all 0.38s cubic-bezier(.4,0,.2,1);--ts:all 0.75s cubic-bezier(.16,1,.3,1);
+  --serif:'Playfair Display',serif;--italic:'Cormorant Garamond',serif;--body:'Jost',sans-serif;
+}
+body.dark{--bg:#0F0B12;--bg2:#17121A;--card:#1B1520;--txt:#F3E9E8;--txt2:#EBDDE0;--muted:#A68C90;--border:rgba(183,110,121,.18)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+
+/* ANNOUNCEMENT */
+.ann{background:var(--gold);color:#17121A;text-align:center;padding:.7rem 1rem;font-size:.79rem;font-weight:600;letter-spacing:1.5px;position:relative;overflow:hidden;cursor:default}
+.ann::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);animation:sweep 3.5s infinite}
+@keyframes sweep{to{left:140%}}
+
+/* TOP BAR */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;font-size:.8rem;transition:var(--t)}
+.tb-l{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.tbi{display:flex;align-items:center;gap:.4rem;color:var(--muted)}
+.tbi i{color:var(--gold)}
+.tb-r{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.soc-row{display:flex;gap:.45rem}
+.soc{width:27px;height:27px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.76rem;transition:var(--t)}
+.soc:hover{background:var(--gold);color:#17121A;transform:translateY(-3px) rotate(360deg);box-shadow:var(--glow)}
+.small-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.35rem .85rem;border-radius:20px;cursor:pointer;font-size:.76rem;font-family:var(--body);display:flex;align-items:center;gap:.4rem;transition:var(--t)}
+.small-btn:hover{background:var(--gold);color:#17121A}
+.gold-ticker{background:var(--gold-d);color:var(--gold-h);padding:.35rem 1rem;border-radius:20px;font-size:.74rem;font-weight:600;letter-spacing:.5px;display:flex;align-items:center;gap:.4rem}
+
+/* ANIMATED LOGO */
+@keyframes logoFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-7px) scale(1.04)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 6px rgba(183,110,121,.5)) drop-shadow(0 0 14px rgba(183,110,121,.28))}50%{filter:drop-shadow(0 0 22px rgba(183,110,121,.95)) drop-shadow(0 0 42px rgba(183,110,121,.55))}}
+@keyframes logoEntry{from{transform:rotate(-15deg) scale(.65);opacity:0}to{transform:rotate(0) scale(1);opacity:1}}
+@keyframes logoRotatePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08) rotate(3deg)}}
+.logo-img{width:62px;height:62px;border-radius:50%;border:2.5px solid var(--gold);object-fit:cover;animation:logoEntry .9s cubic-bezier(.16,1,.3,1) forwards,logoFloat 4s ease-in-out 1s infinite,logoGlow 3.2s ease-in-out 1s infinite;cursor:pointer;transition:var(--t)}
+.logo-img:hover{transform:scale(1.18) rotate(8deg)!important;box-shadow:var(--glow)}
+@keyframes goldShimmer{0%{background-position:0%}100%{background-position:300%}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:999;background:var(--bg2);border-bottom:2px solid var(--gold);box-shadow:0 4px 22px rgba(183,110,121,.13);transition:var(--t)}
+.nav-in{max-width:1520px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo-wrap{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.logo-name{font-family:var(--serif);font-size:1.55rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h),var(--gold));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:3px;animation:goldShimmer 4.5s linear infinite}
+.logo-sub{font-size:.58rem;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-top:-4px}
+.nav-ul{display:flex;gap:1.7rem;list-style:none}
+.nav-ul a{font-size:.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);text-decoration:none;position:relative;padding:.4rem 0;transition:var(--t)}
+.nav-ul a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .38s}
+.nav-ul a:hover{color:var(--gold)}
+.nav-ul a:hover::after{width:100%}
+.nav-acts{display:flex;gap:1rem;align-items:center}
+.ico{background:none;border:none;color:var(--txt);font-size:1.05rem;cursor:pointer;position:relative;transition:var(--t);padding:.28rem}
+.ico:hover{color:var(--gold);transform:scale(1.22)}
+.bdg{position:absolute;top:-5px;right:-5px;background:#B72525;color:#fff;font-size:.58rem;font-weight:700;padding:1px 5px;border-radius:8px;min-width:16px;text-align:center;pointer-events:none}
+.hmb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
+.hmb span{width:22px;height:2px;background:var(--txt);transition:var(--t);display:block}
+
+/* SEARCH BAR */
+.search-overlay{position:fixed;inset:0;background:rgba(23,18,26,.92);z-index:9998;display:none;align-items:flex-start;justify-content:center;padding-top:8rem;backdrop-filter:blur(8px)}
+.search-overlay.open{display:flex}
+.search-box{width:min(680px,90vw);position:relative}
+.search-box input{width:100%;padding:1.2rem 3.5rem 1.2rem 1.5rem;background:var(--bg2);border:2px solid var(--gold);color:var(--txt);font-family:var(--body);font-size:1.1rem;border-radius:4px}
+.search-box input:focus{outline:none}
+.search-close{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gold);font-size:1.4rem;cursor:pointer}
+.search-results{background:var(--bg2);border:1px solid var(--border);border-top:none;max-height:350px;overflow-y:auto}
+.sr-item{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;cursor:pointer;border-bottom:1px solid var(--border);transition:var(--t)}
+.sr-item:hover{background:var(--gold-p)}
+.sr-item img{width:48px;height:48px;object-fit:cover;border-radius:3px;border:1px solid var(--border)}
+.sr-name{font-weight:500;font-size:.9rem;color:var(--txt)}
+.sr-price{font-size:.82rem;color:var(--gold);font-weight:600}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#0A070C}
+.hero-bg{position:absolute;inset:0;background:url('https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20rose%20uno%20move.jpg') center/cover;opacity:.3;animation:zbg 22s ease-in-out infinite alternate;filter:blur(2px)}
+@keyframes zbg{0%{transform:scale(1)}100%{transform:scale(1.14)}}
+.hero-ov{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(10,7,12,.05) 0%,rgba(10,7,12,.92) 100%)}
+.hero-c{position:relative;z-index:2;text-align:center;max-width:980px;padding:2rem;animation:rise 1.3s cubic-bezier(.16,1,.3,1)}
+@keyframes rise{from{opacity:0;transform:translateY(55px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:.7rem;padding:.58rem 1.9rem;background:rgba(183,110,121,.12);border:1.5px solid var(--gold);border-radius:50px;font-size:.7rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,9vw,7rem);font-weight:700;font-style:italic;color:#FBF7F6;line-height:1.05;margin-bottom:1.2rem;text-shadow:0 18px 45px rgba(0,0,0,.75)}
+.hero-sub{font-family:var(--italic);font-size:clamp(1rem,2.5vw,1.65rem);font-style:italic;color:#EBDDE0;margin-bottom:2.5rem;letter-spacing:1.5px;font-weight:300}
+.pills{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin:2rem 0}
+.pill{font-family:var(--italic);font-size:.9rem;font-style:italic;color:var(--gold);padding:.55rem 1.4rem;border:1.5px solid var(--gold);border-radius:4px;background:rgba(183,110,121,.04);transition:var(--t);cursor:pointer}
+.pill:hover{background:var(--gold);color:#17121A;transform:translateY(-4px);box-shadow:var(--glow)}
+.hero-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+
+/* BUTTONS */
+.btn{padding:.92rem 2.3rem;font-family:var(--body);font-size:.79rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:var(--ts);display:inline-flex;align-items:center;gap:.6rem;position:relative;overflow:hidden;border-radius:2px}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent,rgba(255,255,255,.38),transparent);transform:translateX(-100%);transition:transform .55s}
+.btn:hover::before{transform:translateX(100%)}
+.btn-gold{background:var(--gold);color:#17121A;box-shadow:0 8px 25px rgba(183,110,121,.38)}
+.btn-gold:hover{background:var(--gold-h);transform:translateY(-3px);box-shadow:var(--glow)}
+.btn-out{background:transparent;color:#FBF7F6;border:1.5px solid var(--gold)}
+.btn-out:hover{background:rgba(183,110,121,.14);transform:translateY(-3px)}
+.btn-dark{background:var(--txt);color:var(--gold-h);border:1.5px solid var(--gold)}
+.btn-dark:hover{background:var(--gold);color:#17121A;transform:translateY(-3px)}
+
+/* SECTION */
+.sec{padding:6.5rem 2.5rem}
+.sec-in{max-width:1520px;margin:0 auto}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 4rem}
+.eye{font-size:.68rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.stitle{font-family:var(--serif);font-size:clamp(1.9rem,5vw,3.8rem);font-weight:700;color:var(--txt);margin-bottom:1.4rem;line-height:1.2}
+.sdesc{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.95}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.fb{padding:.52rem 1.55rem;font-size:.73rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;background:var(--card);border:1.5px solid var(--border);color:var(--muted);cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body)}
+.fb:hover,.fb.on{background:var(--gold);border-color:var(--gold);color:#17121A;box-shadow:0 4px 14px rgba(183,110,121,.28)}
+
+/* SORT & COUNT */
+.pgrid-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem}
+.pg-count{font-size:.82rem;color:var(--muted)}
+.sort-sel{padding:.45rem 1rem;background:var(--card);border:1px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.79rem;border-radius:3px;cursor:pointer}
+
+/* PRODUCTS GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:1.85rem}
+.pc{background:var(--card);border-radius:5px;overflow:hidden;transition:var(--ts);cursor:pointer;border:1px solid var(--border)}
+.pc:hover{transform:translateY(-9px);box-shadow:var(--shad);border-color:var(--gold)}
+.pi-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg2)}
+.pi{width:100%;height:100%;object-fit:cover;transition:var(--ts);position:relative;z-index:1}
+.pc:hover .pi{transform:scale(1.1)}
+.plbl{position:absolute;top:.75rem;left:.75rem;padding:.28rem .75rem;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:3px;z-index:2}
+.lbl-g{background:var(--gold);color:#17121A}
+.lbl-gr{background:#2A6846;color:#fff}
+.lbl-r{background:#B02020;color:#fff}
+.lbl-ro{background:var(--rose);color:#fff}
+.p-acts{position:absolute;top:.75rem;right:.75rem;display:flex;flex-direction:column;gap:.4rem;opacity:0;transform:translateX(14px);transition:var(--t);z-index:2}
+.pc:hover .p-acts{opacity:1;transform:translateX(0)}
+.pa{width:33px;height:33px;background:rgba(251,247,246,.95);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);cursor:pointer;font-size:.82rem;transition:var(--t);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.pa:hover{background:var(--gold);color:#17121A;transform:scale(1.1)}
+.pa.wishlisted{background:var(--gold);color:#17121A}
+.pfall{display:none;position:absolute;inset:0;background:var(--gold-p);align-items:center;justify-content:center;flex-direction:column;gap:.75rem;z-index:1}
+.pinfo{padding:1.3rem}
+.pbrand{font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.pname{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--txt);margin-bottom:.42rem;line-height:1.3}
+.pdesc{font-size:.78rem;color:var(--muted);margin-bottom:.85rem;line-height:1.6}
+.pfooter{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.pprice{font-size:1.15rem;font-weight:700;color:var(--txt)}
+.pprice span{font-size:.65rem;color:var(--muted);font-weight:400}
+.pcart{background:var(--gold);border:none;color:#17121A;padding:.42rem .95rem;font-size:.7rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body);white-space:nowrap}
+.pcart:hover{background:var(--gold-h);transform:scale(1.06)}
+.pcart.added{background:#2A6846;color:#fff}
+
+/* GOLD SERVICES */
+.gold-sec{background:linear-gradient(135deg,var(--gold-d),var(--gold),#C98189,var(--gold));position:relative;overflow:hidden}
+.gold-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='70' height='70' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M35 0L70 35L35 70L0 35Z' fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3C/svg%3E") repeat;opacity:.6}
+.gs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2.5rem}
+.gs-card{background:rgba(255,255,255,.93);padding:2.4rem;border-radius:10px;text-align:center;transition:var(--ts);box-shadow:0 8px 28px rgba(0,0,0,.14)}
+.gs-card:hover{transform:translateY(-13px);box-shadow:0 28px 65px rgba(0,0,0,.24)}
+.gs-ico{width:82px;height:82px;margin:0 auto 1.7rem;background:linear-gradient(135deg,var(--gold-d),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.3rem;color:#17121A;box-shadow:0 8px 24px rgba(183,110,121,.45)}
+.gs-title{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:#17121A;margin-bottom:.75rem}
+.gs-desc{font-size:.9rem;color:#3A2E3E;line-height:1.85;margin-bottom:1.4rem}
+.gs-list{list-style:none;text-align:left;margin-bottom:1.9rem}
+.gs-list li{display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid rgba(183,110,121,.2);font-size:.87rem;color:#3A2E3E}
+.gs-list li:last-child{border:none}
+.gs-list i{color:var(--gold)}
+
+/* TRYON */
+.tryon-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.tryon-box{aspect-ratio:4/5;background:var(--card);border-radius:10px;overflow:hidden;border:2px solid var(--gold);box-shadow:var(--shad);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:2.5rem;text-align:center;position:relative}
+#tryonCanvas{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#tryonVideo{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tryon-feats{list-style:none;margin:2rem 0}
+.tryon-feats li{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--border)}
+.tryon-feats li:last-child{border:none}
+.tryon-feats i{color:var(--gold);font-size:1.05rem;margin-top:.2rem}
+
+/* CART SIDEBAR */
+.cart-sidebar{position:fixed;top:0;right:-420px;width:420px;height:100vh;background:var(--bg2);z-index:9997;box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;border-left:2px solid var(--gold)}
+.cart-sidebar.open{right:0}
+.cart-header{padding:1.8rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-family:var(--serif);font-size:1.5rem;color:var(--txt)}
+.close-btn{background:none;border:none;font-size:1.4rem;color:var(--muted);cursor:pointer;transition:var(--t)}
+.close-btn:hover{color:var(--gold);transform:rotate(90deg)}
+.cart-items{flex:1;overflow-y:auto;padding:1.5rem}
+.cart-empty{text-align:center;padding:3rem;color:var(--muted)}
+.cart-empty i{font-size:3rem;color:var(--border);margin-bottom:1rem;display:block}
+.cart-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);align-items:center}
+.ci-img{width:68px;height:68px;object-fit:cover;border-radius:4px;border:1px solid var(--border);flex-shrink:0}
+.ci-info{flex:1}
+.ci-name{font-size:.88rem;font-weight:600;color:var(--txt);margin-bottom:.3rem}
+.ci-price{font-size:.95rem;font-weight:700;color:var(--gold)}
+.ci-qty{display:flex;align-items:center;gap:.5rem;margin-top:.4rem}
+.qty-btn{width:24px;height:24px;background:var(--card);border:1px solid var(--border);border-radius:3px;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:var(--t)}
+.qty-btn:hover{background:var(--gold);color:#17121A}
+.ci-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.9rem;padding:.3rem;transition:var(--t)}
+.ci-del:hover{color:#B02020}
+.cart-footer{padding:1.8rem;border-top:1px solid var(--border)}
+.cart-total{display:flex;justify-content:space-between;font-size:1.2rem;font-weight:700;color:var(--txt);margin-bottom:1.5rem}
+.cart-total span:last-child{color:var(--gold)}
+
+/* CHECKOUT MODAL */
+.modal{position:fixed;inset:0;background:rgba(23,18,26,.88);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.modal.open{display:flex}
+.modal-box{background:var(--bg2);border:2px solid var(--gold);border-radius:8px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+.modal-head{padding:1.8rem 2rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg2);z-index:1}
+.modal-head h3{font-family:var(--serif);font-size:1.5rem;color:var(--txt)}
+.modal-body{padding:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+.form-group{margin-bottom:1.2rem}
+.form-label{display:block;font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.55rem}
+.form-input,.form-select,.form-textarea{width:100%;padding:.95rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.9rem;transition:var(--t);border-radius:3px}
+.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(183,110,121,.12)}
+.form-textarea{resize:vertical;min-height:100px}
+.pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.5rem}
+.pay-opt{padding:.75rem;border:1.5px solid var(--border);border-radius:5px;text-align:center;cursor:pointer;transition:var(--t)}
+.pay-opt:hover,.pay-opt.selected{border-color:var(--gold);background:var(--gold-p)}
+.pay-opt i{font-size:1.5rem;color:var(--gold);display:block;margin-bottom:.4rem}
+.pay-opt span{font-size:.75rem;font-weight:600;color:var(--txt)}
+.checkout-summary{background:var(--card);border-radius:6px;padding:1.5rem;margin-bottom:1.5rem}
+.cs-row{display:flex;justify-content:space-between;padding:.4rem 0;font-size:.88rem;color:var(--txt2)}
+.cs-row.total{font-weight:700;font-size:1.05rem;color:var(--txt);border-top:1px solid var(--border);margin-top:.5rem;padding-top:.75rem}
+.form-btn{width:100%;padding:1.3rem;background:var(--gold);color:#17121A;font-size:.82rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:var(--ts);font-family:var(--body);border-radius:3px;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.form-btn:hover{background:var(--gold-h);transform:translateY(-2px);box-shadow:var(--glow)}
+.form-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+/* ORDER SUCCESS */
+.order-success{text-align:center;padding:3rem 2rem}
+.order-success .check{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-size:2rem;color:#17121A;animation:popIn .5s cubic-bezier(.16,1,.3,1)}
+@keyframes popIn{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* WISHLIST SIDEBAR */
+.wishlist-sidebar{position:fixed;top:0;left:-420px;width:420px;height:100vh;background:var(--bg2);z-index:9997;box-shadow:10px 0 40px rgba(0,0,0,.15);transition:left .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;border-right:2px solid var(--gold)}
+.wishlist-sidebar.open{left:0}
+
+/* PRODUCT MODAL */
+.product-modal{position:fixed;inset:0;background:rgba(23,18,26,.9);z-index:9998;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.product-modal.open{display:flex}
+.pm-box{background:var(--bg2);border:2px solid var(--gold);border-radius:8px;max-width:860px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr}
+.pm-img-side{aspect-ratio:1;overflow:hidden;border-radius:6px 0 0 6px}
+.pm-img-side img{width:100%;height:100%;object-fit:cover}
+.pm-info-side{padding:2.5rem;display:flex;flex-direction:column;gap:1.2rem}
+.pm-brand{font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+.pm-name{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:var(--txt);line-height:1.25}
+.pm-price{font-size:1.8rem;font-weight:700;color:var(--txt)}
+.pm-desc{font-size:.9rem;color:var(--muted);line-height:1.78}
+.pm-specs{background:var(--card);border-left:3px solid var(--gold);padding:1rem 1.2rem;border-radius:0 4px 4px 0}
+.pm-spec-row{display:flex;justify-content:space-between;font-size:.85rem;padding:.3rem 0}
+.pm-spec-label{color:var(--muted)}
+.pm-spec-val{font-weight:600;color:var(--txt)}
+.qty-wrap{display:flex;align-items:center;gap:1rem}
+.qty-big{display:flex;align-items:center;gap:.6rem}
+.qty-big button{width:32px;height:32px;background:var(--card);border:1.5px solid var(--border);border-radius:4px;cursor:pointer;font-size:1rem;color:var(--txt);transition:var(--t)}
+.qty-big button:hover{background:var(--gold);color:#17121A;border-color:var(--gold)}
+.qty-big span{font-size:1.1rem;font-weight:600;min-width:28px;text-align:center}
+
+/* QR GRID */
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.2rem}
+.qr-card{background:var(--card);padding:2.2rem;border-radius:8px;text-align:center;border:2px solid var(--gold);box-shadow:0 4px 18px rgba(183,110,121,.1);transition:var(--ts)}
+.qr-card:hover{transform:translateY(-9px);box-shadow:var(--glow)}
+.qr-ico{font-size:2.6rem;color:var(--gold);margin-bottom:1.3rem}
+.qr-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--txt);margin-bottom:.65rem}
+.qr-desc{font-size:.85rem;color:var(--muted);margin-bottom:1.6rem;line-height:1.7}
+.qr-box{display:inline-block;padding:1.3rem;background:#fff;border:1.5px solid var(--gold);border-radius:6px;margin-bottom:1rem}
+.qr-hint{font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:1px}
+
+/* APPOINTMENT */
+.appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.appt-form{background:var(--bg2);padding:3rem;border:2px solid var(--gold);box-shadow:var(--shad);border-radius:6px}
+.appt-list{list-style:none;margin-top:2rem}
+.appt-list li{display:flex;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border);font-size:.93rem;color:var(--txt2)}
+.appt-list li:last-child{border:none}
+.appt-list i{color:var(--gold);font-size:1.05rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.testi-card{background:var(--bg2);border:1.5px solid var(--gold);padding:2.5rem;border-radius:6px;box-shadow:var(--shad)}
+.testi-stars{color:var(--gold);margin-bottom:1.2rem}
+.testi-q{font-family:var(--italic);font-size:1.1rem;font-style:italic;color:var(--txt);line-height:1.72;margin-bottom:1.5rem}
+.testi-avatar{display:flex;align-items:center;gap:.9rem}
+.tav{width:42px;height:42px;border-radius:50%;background:var(--gold-p);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--gold);font-weight:700;font-family:var(--serif)}
+.tname{font-weight:600;color:var(--txt);font-size:.92rem}
+.tloc{font-size:.78rem;color:var(--muted)}
+
+/* INSTAGRAM */
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem}
+.ig-post{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;border-radius:5px;background:var(--card)}
+.ig-post img{width:100%;height:100%;object-fit:cover;transition:var(--ts)}
+.ig-post:hover img{transform:scale(1.16)}
+.ig-ov{position:absolute;inset:0;background:rgba(183,110,121,.9);display:flex;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:var(--t);border-radius:5px}
+.ig-post:hover .ig-ov{opacity:1}
+.ig-stat{display:flex;align-items:center;gap:.4rem;color:#17121A;font-size:1rem;font-weight:700}
+.ig-handle{display:inline-flex;align-items:center;gap:.7rem;font-size:1.1rem;color:var(--gold);text-decoration:none;padding:.78rem 1.8rem;border:1.5px solid var(--gold);border-radius:50px;transition:var(--t);margin-bottom:2.5rem}
+.ig-handle:hover{background:var(--gold);color:#17121A;transform:scale(1.04)}
+
+/* AI CHATBOT */
+.chat-fab{position:fixed;bottom:2rem;right:2rem;width:62px;height:62px;background:var(--gold);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#17121A;box-shadow:0 8px 30px rgba(183,110,121,.55);transition:var(--t);z-index:9990;animation:chatPulse 3s ease-in-out infinite}
+@keyframes chatPulse{0%,100%{box-shadow:0 8px 30px rgba(183,110,121,.55)}50%{box-shadow:0 8px 50px rgba(183,110,121,.85),0 0 0 12px rgba(183,110,121,.1)}}
+.chat-fab:hover{transform:scale(1.12) rotate(5deg);background:var(--gold-h)}
+.chat-window{position:fixed;bottom:6.5rem;right:2rem;width:380px;height:520px;background:var(--bg2);border:2px solid var(--gold);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2);display:none;flex-direction:column;z-index:9989;overflow:hidden}
+.chat-window.open{display:flex}
+.chat-head{background:linear-gradient(135deg,var(--gold-d),var(--gold));padding:1.2rem 1.4rem;display:flex;align-items:center;gap:.9rem;justify-content:space-between}
+.chat-head-info{display:flex;align-items:center;gap:.9rem}
+.chat-avatar{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:2px solid rgba(255,255,255,.4)}
+.chat-head-txt{color:#17121A}
+.chat-head-name{font-weight:700;font-size:.95rem}
+.chat-head-status{font-size:.72rem;opacity:.8;display:flex;align-items:center;gap:.3rem}
+.chat-status-dot{width:7px;height:7px;background:#2A6846;border-radius:50%;box-shadow:0 0 6px #2A6846}
+.chat-close{background:none;border:none;color:#17121A;font-size:1.1rem;cursor:pointer;opacity:.7;transition:var(--t)}
+.chat-close:hover{opacity:1;transform:rotate(90deg)}
+.chat-messages{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:.9rem}
+.msg{max-width:82%;display:flex;flex-direction:column;gap:.22rem}
+.msg.bot{align-self:flex-start}
+.msg.user{align-self:flex-end}
+.msg-bubble{padding:.75rem 1rem;border-radius:12px;font-size:.86rem;line-height:1.6}
+.msg.bot .msg-bubble{background:var(--card);color:var(--txt);border-radius:4px 12px 12px 12px}
+.msg.user .msg-bubble{background:var(--gold);color:#17121A;border-radius:12px 4px 12px 12px;font-weight:500}
+.msg-time{font-size:.65rem;color:var(--muted)}
+.msg.user .msg-time{text-align:right}
+.chat-typing{display:flex;align-items:center;gap:.4rem;padding:.75rem 1rem;background:var(--card);border-radius:4px 12px 12px 12px;max-width:80px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:bounce 1.2s infinite}
+.dot:nth-child(2){animation-delay:.2s}
+.dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.chat-input-area{padding:1rem;border-top:1px solid var(--border);display:flex;gap:.65rem;align-items:flex-end}
+.chat-input{flex:1;padding:.75rem 1rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.88rem;border-radius:20px;resize:none;max-height:90px;outline:none;line-height:1.5;transition:var(--t)}
+.chat-input:focus{border-color:var(--gold)}
+.chat-send{background:var(--gold);border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#17121A;font-size:.95rem;transition:var(--t);flex-shrink:0}
+.chat-send:hover{background:var(--gold-h);transform:scale(1.1)}
+.chat-suggestions{display:flex;gap:.5rem;flex-wrap:wrap;padding:.75rem 1.2rem .2rem;border-top:1px solid var(--border)}
+.sug-btn{padding:.38rem .85rem;background:var(--gold-p);border:1px solid var(--gold);border-radius:20px;font-size:.73rem;color:var(--gold-d);cursor:pointer;font-family:var(--body);font-weight:500;transition:var(--t)}
+.sug-btn:hover{background:var(--gold);color:#17121A}
+
+/* GOLD PRICE TICKER */
+.ticker-sec{background:var(--txt);padding:.7rem 0;overflow:hidden}
+.ticker-inner{display:flex;gap:4rem;animation:tickerScroll 30s linear infinite;white-space:nowrap}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.ticker-item{display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;color:var(--gold-h);letter-spacing:.5px;flex-shrink:0}
+.ticker-item i{color:var(--gold)}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:2.5px solid var(--gold);padding:5rem 2.5rem 2.5rem}
+.fg{max-width:1520px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+.f-name{font-family:var(--serif);font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.4rem;display:block}
+.f-tag{font-size:.88rem;color:var(--muted);line-height:1.87;margin-bottom:2rem}
+.f-h4{font-family:var(--serif);font-size:1.18rem;font-style:italic;color:var(--txt);margin-bottom:1.3rem}
+.f-ul{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.f-ul a{color:var(--muted);text-decoration:none;font-size:.87rem;transition:var(--t);display:inline-block}
+.f-ul a:hover{color:var(--gold);padding-left:6px}
+.f-btm{max-width:1520px;margin:0 auto;padding-top:2.2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8rem;color:var(--muted)}
+.f-btm a{color:var(--gold);text-decoration:none}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--bg2);color:var(--txt);padding:1.1rem 1.8rem;border-left:4px solid var(--gold);box-shadow:var(--shad);z-index:99999;display:flex;align-items:center;gap:.85rem;min-width:260px;max-width:400px;border-radius:5px;transition:transform .4s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.ti{font-size:1.3rem;color:var(--gold)}
+.toast.ok{border-color:#2A6846}.toast.ok .ti{color:#2A6846}
+.toast.er{border-color:#B02020}.toast.er .ti{color:#B02020}
+
+/* LOADER */
+/* LIVE GOLD BADGE */
+#goldLive{transition:all .4s;cursor:default}
+#goldLive:hover{background:var(--gold)!important;color:#17121A!important}
+
+.loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .55s;flex-direction:column;gap:1.5rem}
+.loader.gone{opacity:0;pointer-events:none}
+.ring{width:54px;height:54px;border:3px solid rgba(183,110,121,.2);border-top-color:var(--gold);border-radius:50%;animation:spin 1s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loader-logo{width:80px;height:80px;border-radius:50%;border:2.5px solid var(--gold);animation:logoGlow 2s ease-in-out infinite}
+
+/* LANG */
+.lang-wrap{position:relative}
+.lang-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.33rem .82rem;border-radius:4px;cursor:pointer;font-size:.76rem;font-family:var(--body);display:flex;align-items:center;gap:.38rem;transition:var(--t)}
+.lang-btn:hover{background:var(--gold);color:#17121A}
+.lang-dd{position:absolute;top:105%;right:0;background:var(--bg2);border:1px solid var(--gold);border-radius:4px;box-shadow:var(--shad);display:none;min-width:132px;z-index:999}
+.lang-dd.open{display:block}
+.lopt{padding:.65rem .95rem;cursor:pointer;font-size:.8rem;border-bottom:1px solid var(--border);transition:var(--t)}
+.lopt:last-child{border:none}
+.lopt:hover{background:var(--gold);color:#17121A}
+
+/* OVERLAY */
+.overlay{position:fixed;inset:0;background:rgba(23,18,26,.6);z-index:9996;display:none;backdrop-filter:blur(3px)}
+.overlay.open{display:block}
+
+/* MOBILE NAV */
+.mob-menu{position:fixed;top:0;left:-280px;width:280px;height:100vh;background:var(--bg2);z-index:9997;border-right:2px solid var(--gold);transition:left .38s;padding:2rem 1.5rem;overflow-y:auto}
+.mob-menu.open{left:0}
+.mob-menu ul{list-style:none;margin-top:2rem}
+.mob-menu li a{display:block;padding:.9rem 0;font-size:.9rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);text-decoration:none;border-bottom:1px solid var(--border);transition:var(--t)}
+.mob-menu li a:hover{color:var(--gold);padding-left:6px}
+
+/* RESPONSIVE */
+@media(max-width:1100px){.nav-ul{display:none}.hmb{display:flex}.fg{grid-template-columns:1fr 1fr}.tryon-grid,.appt-grid{grid-template-columns:1fr;gap:3rem}}
+@media(max-width:768px){.topbar,.tb-l,.hero-btns{flex-direction:column;gap:.5rem}.pills{gap:.5rem}.fg{grid-template-columns:1fr}.pm-grid{grid-template-columns:1fr}.pm-img-side{border-radius:6px 6px 0 0}.form-row{grid-template-columns:1fr}.pay-methods{grid-template-columns:1fr 1fr}.chat-window{width:calc(100vw - 2rem);right:1rem}.calc-grid{grid-template-columns:1fr!important}}
+@media(max-width:480px){.pgrid{grid-template-columns:1fr 1fr}.qr-grid,.gs-grid{grid-template-columns:1fr}.cart-sidebar,.wishlist-sidebar{width:100%}}
+
+/* ─── COOKIE CONSENT ─── */
+.cookie-bar{position:fixed;bottom:0;left:0;right:0;background:var(--txt);color:var(--gold-h);padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;z-index:99998;flex-wrap:wrap;box-shadow:0 -4px 20px rgba(0,0,0,.3);transition:transform .4s;border-top:2px solid var(--gold)}
+.cookie-bar.hidden{transform:translateY(100%)}
+.cookie-txt{font-size:.82rem;line-height:1.6;flex:1}
+.cookie-txt a{color:var(--gold);text-decoration:underline}
+.cookie-btns{display:flex;gap:.65rem;flex-shrink:0}
+.cookie-accept{background:var(--gold);color:#17121A;border:none;padding:.55rem 1.4rem;border-radius:4px;cursor:pointer;font-weight:700;font-family:var(--body);font-size:.8rem;transition:all .3s}
+.cookie-accept:hover{background:var(--gold-h);transform:scale(1.04)}
+.cookie-decline{background:transparent;color:var(--muted);border:1px solid var(--muted);padding:.55rem 1.2rem;border-radius:4px;cursor:pointer;font-family:var(--body);font-size:.8rem;transition:all .3s}
+.cookie-decline:hover{border-color:var(--gold);color:var(--gold)}
+
+/* ─── NEWSLETTER POPUP ─── */
+.nl-popup{position:fixed;inset:0;background:rgba(23,18,26,.88);z-index:99997;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.nl-popup.open{display:flex}
+.nl-box{background:var(--bg2);border:2px solid var(--gold);border-radius:10px;max-width:520px;width:100%;overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4);position:relative;animation:popIn .5s cubic-bezier(.16,1,.3,1)}
+.nl-hero{background:linear-gradient(135deg,#17121A,#2F2433);padding:2.5rem 2.5rem 2rem;text-align:center;position:relative;overflow:hidden}
+.nl-hero::before{content:'💎';position:absolute;top:-20px;right:-20px;font-size:8rem;opacity:.08}
+.nl-hero-eye{font-size:.68rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+.nl-hero-title{font-family:var(--serif);font-size:1.9rem;font-weight:700;font-style:italic;color:#FBF7F6;margin-bottom:.5rem;line-height:1.2}
+.nl-hero-sub{font-size:.9rem;color:#EBDDE0;font-weight:300}
+.nl-offer{background:var(--gold);color:#17121A;text-align:center;padding:.6rem;font-size:.82rem;font-weight:700;letter-spacing:1px}
+.nl-body{padding:2rem 2.5rem 2.5rem}
+.nl-perks{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.8rem}
+.nl-perk{display:flex;align-items:center;gap:.75rem;font-size:.88rem;color:var(--txt2)}
+.nl-perk i{color:var(--gold);width:18px;text-align:center}
+.nl-form{display:flex;flex-direction:column;gap:.85rem}
+.nl-input{width:100%;padding:.95rem 1.1rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.9rem;border-radius:4px;transition:all .3s}
+.nl-input:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(183,110,121,.12)}
+.nl-submit{background:var(--gold);color:#17121A;border:none;padding:1.1rem;border-radius:4px;font-family:var(--body);font-size:.85rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:all .4s;display:flex;align-items:center;justify-content:center;gap:.6rem}
+.nl-submit:hover{background:var(--gold-h);transform:translateY(-2px);box-shadow:0 8px 25px rgba(183,110,121,.4)}
+.nl-close{position:absolute;top:1rem;right:1rem;background:rgba(255,255,255,.1);border:none;color:#FBF7F6;width:30px;height:30px;border-radius:50%;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:all .3s;z-index:2}
+.nl-close:hover{background:rgba(255,255,255,.25);transform:rotate(90deg)}
+.nl-skip{text-align:center;margin-top:1rem;font-size:.78rem;color:var(--muted);cursor:pointer;transition:all .3s}
+.nl-skip:hover{color:var(--gold)}
+.nl-success{text-align:center;padding:3rem 2rem}
+.nl-success .check{width:70px;height:70px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 1.5rem;font-size:1.8rem;color:#17121A;animation:popIn .5s cubic-bezier(.16,1,.3,1)}
+
+/* ─── LEAD CAPTURE FLOATING BAR ─── */
+.lead-bar{position:fixed;bottom:5.5rem;left:50%;transform:translateX(-50%) translateY(80px);background:linear-gradient(135deg,var(--gold-d),var(--gold));color:#17121A;padding:.75rem 1.8rem;border-radius:50px;box-shadow:0 8px 30px rgba(183,110,121,.5);z-index:9980;display:flex;align-items:center;gap:.9rem;cursor:pointer;transition:transform .5s cubic-bezier(.16,1,.3,1);white-space:nowrap;border:2px solid var(--gold-h)}
+.lead-bar.show{transform:translateX(-50%) translateY(0)}
+.lead-bar:hover{transform:translateX(-50%) translateY(-4px);box-shadow:0 14px 40px rgba(183,110,121,.65)}
+.lead-bar-ico{font-size:1.2rem;animation:heartbeat 1.5s infinite}
+@keyframes heartbeat{0%,100%{transform:scale(1)}50%{transform:scale(1.2)}}
+.lead-bar-txt{font-size:.82rem;font-weight:700;letter-spacing:.5px}
+
+/* ─── CUSTOMER REGISTER MODAL ─── */
+.crm-modal{position:fixed;inset:0;background:rgba(23,18,26,.88);z-index:99996;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.crm-modal.open{display:flex}
+.crm-box{background:var(--bg2);border:2px solid var(--gold);border-radius:10px;max-width:580px;width:100%;max-height:92vh;overflow-y:auto;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.crm-head{background:linear-gradient(135deg,#17121A,#2F2433);padding:2rem;text-align:center;position:sticky;top:0;z-index:1}
+.crm-head-title{font-family:var(--serif);font-size:1.7rem;font-weight:700;color:var(--gold-h)}
+.crm-head-sub{font-size:.85rem;color:#EBDDE0;margin-top:.4rem}
+.crm-tabs{display:flex;border-bottom:2px solid var(--border)}
+.crm-tab{flex:1;padding:.9rem;text-align:center;cursor:pointer;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--muted);border-bottom:2px solid transparent;margin-bottom:-2px;transition:all .3s;font-family:var(--body)}
+.crm-tab.active{color:var(--gold);border-bottom-color:var(--gold)}
+.crm-panel{padding:2rem;display:none}
+.crm-panel.active{display:block}
+.crm-benefits{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-bottom:2rem}
+.crm-benefit{background:var(--card);padding:1rem;border-radius:6px;border:1px solid var(--border);text-align:center}
+.crm-benefit i{font-size:1.3rem;color:var(--gold);display:block;margin-bottom:.4rem}
+.crm-benefit span{font-size:.78rem;color:var(--txt2);font-weight:500}
+.loyalty-badge{background:linear-gradient(135deg,var(--gold-d),var(--gold));color:#17121A;padding:.5rem 1.2rem;border-radius:20px;font-size:.75rem;font-weight:700;display:inline-block;margin-bottom:1.5rem;letter-spacing:.5px}
+
+/* ─── WHATSAPP LEAD MAGNET ─── */
+.wa-magnet{background:linear-gradient(135deg,#17121A,#1B1520);border:2px solid #25D366;border-radius:10px;padding:2.5rem;text-align:center;margin:3rem 0}
+.wa-magnet-title{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:#FBF7F6;margin-bottom:.75rem}
+.wa-magnet-sub{font-size:.9rem;color:#EBDDE0;margin-bottom:1.5rem;line-height:1.7}
+.wa-magnet-features{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:2rem}
+.wa-feat{display:flex;align-items:center;gap:.5rem;font-size:.85rem;color:#EBDDE0}
+.wa-feat i{color:#25D366}
+.wa-btn-big{display:inline-flex;align-items:center;gap:.75rem;background:#25D366;color:#fff;padding:1.1rem 2.5rem;border-radius:50px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:1px;transition:all .4s;box-shadow:0 8px 25px rgba(37,211,102,.35)}
+.wa-btn-big:hover{background:#20BA5C;transform:translateY(-3px);box-shadow:0 14px 35px rgba(37,211,102,.5)}
+
+/* ─── CUSTOMER SECTION ─── */
+.customer-sec{background:linear-gradient(135deg,var(--bg2),var(--card));border-top:2px solid var(--border);border-bottom:2px solid var(--border)}
+.cust-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+.cust-card{background:var(--bg2);border:1.5px solid var(--border);border-radius:8px;padding:2rem;text-align:center;transition:all .4s;cursor:pointer}
+.cust-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:var(--shad)}
+.cust-ico{width:64px;height:64px;margin:0 auto 1.2rem;background:var(--gold-p);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:var(--gold)}
+.cust-title{font-family:var(--serif);font-size:1.2rem;font-weight:700;color:var(--txt);margin-bottom:.5rem}
+.cust-desc{font-size:.82rem;color:var(--muted);line-height:1.65}
+
+/* ─── REVIEWS WIDGET ─── */
+.review-stars-big{font-size:1.1rem;color:var(--gold);letter-spacing:2px}
+.review-count{font-size:.78rem;color:var(--muted);margin-left:.5rem}
+.rating-bar-row{display:flex;align-items:center;gap:.75rem;margin:.3rem 0}
+.rating-bar-label{font-size:.78rem;width:20px;text-align:right;color:var(--muted)}
+.rating-bar-track{flex:1;height:7px;background:var(--border);border-radius:4px;overflow:hidden}
+.rating-bar-fill{height:100%;background:var(--gold);border-radius:4px}
+.rating-pct{font-size:.75rem;color:var(--muted);width:28px}
+
+/* ─── FOOTER NEWSLETTER ─── */
+.footer-nl{background:linear-gradient(135deg,#17121A,#2F2433);padding:3.5rem 2.5rem;border-top:2px solid var(--gold);border-bottom:1px solid rgba(183,110,121,.2)}
+.footer-nl-inner{max-width:800px;margin:0 auto;text-align:center}
+.footer-nl-title{font-family:var(--serif);font-size:1.9rem;font-weight:700;color:var(--gold-h);margin-bottom:.75rem}
+.footer-nl-sub{font-size:.9rem;color:#EBDDE0;margin-bottom:2rem;line-height:1.7}
+.footer-nl-form{display:flex;gap:.75rem;max-width:480px;margin:0 auto;flex-wrap:wrap}
+.footer-nl-form input{flex:1;min-width:220px;padding:.95rem 1.1rem;background:rgba(255,255,255,.08);border:1.5px solid var(--gold);color:#FBF7F6;font-family:var(--body);font-size:.9rem;border-radius:4px}
+.footer-nl-form input::placeholder{color:rgba(251,247,246,.4)}
+.footer-nl-form input:focus{outline:none;background:rgba(255,255,255,.12)}
+.footer-nl-btn{background:var(--gold);color:#17121A;border:none;padding:.95rem 2rem;border-radius:4px;font-family:var(--body);font-size:.82rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .4s;white-space:nowrap}
+.footer-nl-btn:hover{background:var(--gold-h);transform:translateY(-2px)}
+
+/* ─── REGISTER FLOATING BTN ─── */
+.reg-fab{position:fixed;bottom:8rem;left:1.5rem;background:linear-gradient(135deg,var(--gold-d),var(--gold));color:#17121A;border:none;border-radius:50px;padding:.7rem 1.3rem;font-size:.75rem;font-weight:700;cursor:pointer;box-shadow:0 6px 22px rgba(183,110,121,.45);z-index:9979;display:flex;align-items:center;gap:.5rem;transition:all .4s;letter-spacing:.5px;font-family:var(--body)}
+.reg-fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 12px 35px rgba(183,110,121,.6)}
+
+/* ─── TRUST BADGES ─── */
+.trust-bar{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:1.2rem 2.5rem}
+.trust-inner{max-width:1520px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:3rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:var(--txt2);font-weight:500}
+.trust-item i{color:var(--gold);font-size:1rem}
+
+</style>
+</head>
+
+<!-- ═══ COOKIE CONSENT BAR ═══ -->
+<div class="cookie-bar" id="cookieBar">
+  <div class="cookie-txt">
+    🍪 We use cookies to enhance your experience and remember your cart. By continuing you agree to our
+    <a href="#">Privacy Policy</a>. Dubai gold prices are updated live. 💎
+  </div>
+  <div class="cookie-btns">
+    <button class="cookie-decline" onclick="dismissCookie()">Decline</button>
+    <button class="cookie-accept" onclick="acceptCookie()"><i class="fas fa-check"></i> Accept &amp; Continue</button>
+  </div>
+</div>
+
+<!-- ═══ NEWSLETTER POPUP ═══ -->
+<div class="nl-popup" id="nlPopup">
+  <div class="nl-box">
+    <button class="nl-close" onclick="closeNL()"><i class="fas fa-times"></i></button>
+    <div class="nl-hero">
+      <div class="nl-hero-eye">✦ Exclusive Member Offer ✦</div>
+      <h2 class="nl-hero-title">Get 5% Off<br>Your First Order</h2>
+      <p class="nl-hero-sub">Join Dubai's most loved jewelry community</p>
+    </div>
+    <div class="nl-offer">🎁 FREE delivery + priority WhatsApp access for members</div>
+    <div id="nlBody">
+      <div class="nl-body">
+        <div class="nl-perks">
+          <div class="nl-perk"><i class="fas fa-tag"></i>5% discount on first order</div>
+          <div class="nl-perk"><i class="fas fa-bell"></i>First to know about new arrivals</div>
+          <div class="nl-perk"><i class="fas fa-coins"></i>Daily live gold rate alerts</div>
+          <div class="nl-perk"><i class="fas fa-gift"></i>Birthday &amp; anniversary surprises</div>
+          <div class="nl-perk"><i class="fab fa-whatsapp"></i>Priority WhatsApp consultant access</div>
+        </div>
+        <div class="nl-form">
+          <input type="text" class="nl-input" id="nlName" placeholder="Your name">
+          <input type="email" class="nl-input" id="nlEmail" placeholder="Your email address" required>
+          <input type="tel" class="nl-input" id="nlPhone" placeholder="WhatsApp number (+971...)">
+          <button class="nl-submit" onclick="submitNL()">
+            <i class="fas fa-gem"></i> Claim My 5% Discount
+          </button>
+        </div>
+        <div class="nl-skip" onclick="closeNL()">No thanks, I'll pay full price</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ CUSTOMER REGISTER MODAL ═══ -->
+<div class="crm-modal" id="crmModal">
+  <div class="crm-box">
+    <div class="crm-head">
+      <button class="close-btn" onclick="closeCRM()" style="position:absolute;top:1rem;right:1rem;color:#EBDDE0"><i class="fas fa-times"></i></button>
+      <div class="loyalty-badge">💎 Ryaan VIP Member</div>
+      <div class="crm-head-title">Join Our Family</div>
+      <div class="crm-head-sub">Free membership · Instant benefits · No spam</div>
+    </div>
+    <div class="crm-tabs">
+      <div class="crm-tab active" onclick="switchTab('register')">Create Account</div>
+      <div class="crm-tab" onclick="switchTab('login')">Sign In</div>
+      <div class="crm-tab" onclick="switchTab('benefits')">Benefits</div>
+    </div>
+    <!-- REGISTER TAB -->
+    <div class="crm-panel active" id="tabRegister">
+      <div class="crm-benefits" style="margin-bottom:1.5rem">
+        <div class="crm-benefit"><i class="fas fa-tag"></i><span>5% Off First Order</span></div>
+        <div class="crm-benefit"><i class="fas fa-truck"></i><span>Free Delivery Always</span></div>
+        <div class="crm-benefit"><i class="fas fa-bell"></i><span>Gold Price Alerts</span></div>
+        <div class="crm-benefit"><i class="fas fa-heart"></i><span>Save Wishlist Forever</span></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">First Name *</label><input type="text" class="form-input" id="regFirst" placeholder="First name"></div>
+        <div class="form-group"><label class="form-label">Last Name *</label><input type="text" class="form-input" id="regLast" placeholder="Last name"></div>
+      </div>
+      <div class="form-group"><label class="form-label">Email Address *</label><input type="email" class="form-input" id="regEmail" placeholder="your@email.com"></div>
+      <div class="form-group"><label class="form-label">WhatsApp Number *</label><input type="tel" class="form-input" id="regPhone" placeholder="+971 50 XXX XXXX"></div>
+      <div class="form-group"><label class="form-label">City</label>
+        <select class="form-select" id="regCity">
+          <option value="">Select your city</option>
+          <option>Dubai</option><option>Sharjah</option><option>Abu Dhabi</option>
+          <option>Ajman</option><option>Ras Al Khaimah</option><option>Other UAE</option><option>Outside UAE</option>
+        </select>
+      </div>
+      <div class="form-group"><label class="form-label">Jewelry Interest</label>
+        <select class="form-select" id="regInterest">
+          <option value="">What do you love most?</option>
+          <option>Bracelets &amp; Bangles</option><option>Necklaces &amp; Chains</option>
+          <option>Rings</option><option>Earrings</option><option>Full Sets</option><option>Everything!</option>
+        </select>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:.75rem;margin-bottom:1.5rem">
+        <input type="checkbox" id="regConsent" style="margin-top:.2rem;accent-color:var(--gold)">
+        <label for="regConsent" style="font-size:.8rem;color:var(--muted);line-height:1.6">I agree to receive gold price updates, new arrivals, and exclusive offers via WhatsApp &amp; email. I can unsubscribe anytime.</label>
+      </div>
+      <button class="form-btn" onclick="submitRegister()"><i class="fas fa-user-plus"></i>Create My Account &amp; Get 5% Off</button>
+    </div>
+    <!-- LOGIN TAB -->
+    <div class="crm-panel" id="tabLogin">
+      <p style="font-size:.9rem;color:var(--muted);margin-bottom:1.5rem;text-align:center">Welcome back! Sign in to access your wishlist, order history &amp; exclusive prices.</p>
+      <div class="form-group"><label class="form-label">Email or Phone</label><input type="text" class="form-input" placeholder="Email or WhatsApp number"></div>
+      <div class="form-group"><label class="form-label">Password</label><input type="password" class="form-input" placeholder="Your password"></div>
+      <button class="form-btn" onclick="submitLogin()" style="margin-bottom:1rem"><i class="fas fa-sign-in-alt"></i>Sign In</button>
+      <div style="text-align:center">
+        <a href="https://wa.me/971543746476?text=I+need+help+with+my+account" target="_blank" class="btn btn-dark" style="font-size:.78rem;padding:.65rem 1.5rem"><i class="fab fa-whatsapp"></i>Sign in via WhatsApp</a>
+      </div>
+    </div>
+    <!-- BENEFITS TAB -->
+    <div class="crm-panel" id="tabBenefits">
+      <h3 style="font-family:var(--serif);font-size:1.4rem;color:var(--txt);margin-bottom:1.5rem;text-align:center">Why Join Ryaan VIP? 💎</h3>
+      <div style="display:flex;flex-direction:column;gap:1rem">
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--card);border-radius:6px;border-left:3px solid var(--gold)">
+          <i class="fas fa-tag" style="color:var(--gold);font-size:1.2rem;margin-top:.1rem"></i>
+          <div><strong style="color:var(--txt)">5% Discount on First Order</strong><br><span style="font-size:.82rem;color:var(--muted)">Automatically applied at checkout</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--card);border-radius:6px;border-left:3px solid var(--gold)">
+          <i class="fas fa-coins" style="color:var(--gold);font-size:1.2rem;margin-top:.1rem"></i>
+          <div><strong style="color:var(--txt)">Daily Gold Rate Alerts</strong><br><span style="font-size:.82rem;color:var(--muted)">Receive live Dubai gold prices every morning on WhatsApp</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--card);border-radius:6px;border-left:3px solid var(--gold)">
+          <i class="fas fa-truck" style="color:var(--gold);font-size:1.2rem;margin-top:.1rem"></i>
+          <div><strong style="color:var(--txt)">Free Delivery Always</strong><br><span style="font-size:.82rem;color:var(--muted)">Free home delivery across Dubai on every order</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--card);border-radius:6px;border-left:3px solid var(--gold)">
+          <i class="fas fa-star" style="color:var(--gold);font-size:1.2rem;margin-top:.1rem"></i>
+          <div><strong style="color:var(--txt)">Loyalty Points</strong><br><span style="font-size:.82rem;color:var(--muted)">Earn points on every purchase, redeem for discounts</span></div>
+        </div>
+        <div style="display:flex;align-items:flex-start;gap:1rem;padding:1rem;background:var(--card);border-radius:6px;border-left:3px solid var(--gold)">
+          <i class="fas fa-birthday-cake" style="color:var(--gold);font-size:1.2rem;margin-top:.1rem"></i>
+          <div><strong style="color:var(--txt)">Birthday Surprise</strong><br><span style="font-size:.82rem;color:var(--muted)">Special gift or discount every year on your birthday</span></div>
+        </div>
+      </div>
+      <button class="form-btn" style="margin-top:2rem" onclick="switchTab('register')"><i class="fas fa-gem"></i>Create Free Account Now</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ LEAD MAGNET BAR ═══ -->
+<div class="lead-bar" id="leadBar" onclick="openNL()">
+  <span class="lead-bar-ico">💎</span>
+  <span class="lead-bar-txt">Get 5% Off — Join Free Today!</span>
+  <i class="fas fa-arrow-right"></i>
+</div>
+
+<!-- ═══ REGISTER FAB (left side) ═══ -->
+<button class="reg-fab" onclick="openCRM()">
+  <i class="fas fa-user-plus"></i>Join VIP
+</button>
+
+
+<!-- LOADER -->
+<div class="loader" id="loader">
+  <img class="loader-logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAYAAAB/HSuDAABwZ2NhQlgAAHBnanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAOEBqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3Vybjp1dWlkOjU4MjU1ZDUyLWYzMjctNDNlNy1iZTU0LTcxOTM5NTVhNmY2MQAAAAJWanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAABdmp1bWIAAAApanVtZGNib3IAEQAQgAAAqgA4m3EDYzJwYS5pbmdyZWRpZW50AAAAAUVjYm9ypWhkYzp0aXRsZXgpZmlsZV8wMDAwMDAwMDhiYjQ3MWZiYTZkZjBjNThiMDNkNjgzZC5wbmdpZGM6Zm9ybWF0aWltYWdlL3BuZ2ppbnN0YW5jZUlEeCx4bXA6aWlkOjk4ZmVkMTNjLTlkZDctNDA0Mi1iZjg3LWJkNGI4ZjBhNDczOHB2YWxpZGF0aW9uU3RhdHVzgqNkY29kZW5jbGFpbS5tdWx0aXBsZWN1cmxlSlVNQkZrZXhwbGFuYXRpb254GXVucmVjb2duaXplZCBtYW5pZmVzdCBib3ijZGNvZGVtZ2VuZXJhbC5lcnJvcmN1cmxlYXNzZXRrZXhwbGFuYXRpb254IWVycm9yIGxvYWRpbmcgZmlsZTogQ2xhaW1EZWNvZGluZ2xyZWxhdGlvbnNoaXBocGFyZW50T2YAAACvanVtYgAAAChqdW1kY2JvcgARABCAAACqADibcQNjMnBhLmhhc2guZGF0YQAAAAB/Y2JvcqVqZXhjbHVzaW9uc4GiZXN0YXJ0GCFmbGVuZ3RoGThyZG5hbWVuanVtYmYgbWFuaWZlc3RjYWxnZnNoYTI1NmRoYXNoWCCP/uuYS+VajS6dxcRzzg6CY2ZtIb1C7yvW0LiKdiVbSWNwYWRMAAAAAAAAAAAAAAAAAAACCWp1bWIAAAAkanVtZGMyY2wAEQAQgAAAqgA4m3EDYzJwYS5jbGFpbQAAAAHdY2JvcqhoZGM6dGl0bGV3UnlhYW5KZXdlbGxlcnMgTG9nby5wbmdpZGM6Zm9ybWF0aWltYWdlL3BuZ2ppbnN0YW5jZUlEeCx4bXA6aWlkOjU1OWQxN2I0LTk4MGItNDExMC04NTg1LWZlZDk4YTg0MzRiZW9jbGFpbV9nZW5lcmF0b3J4H0dhbGF4eSBTMjQgVWx0cmEgYzJwYS1ycy8wLjM3LjB0Y2xhaW1fZ2VuZXJhdG9yX2luZm/2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46dXVpZDo1ODI1NWQ1Mi1mMzI3LTQzZTctYmU1NC03MTkzOTU1YTZmNjEvYzJwYS5zaWduYXR1cmVqYXNzZXJ0aW9uc4KiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50ZGhhc2hYILe9+A7GGP+EvLCC6Rkn9gJH4tnrOG+x+FPr94HroPXcomN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYIK4T+laYGDRnNe2XAI+5/wCjgPsM0HRS8xjdPEF2hEz0Y2FsZ2ZzaGEyNTYAADOSanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAADNiY2JvctKEWQhWogEmGCGCWQRHMIIEQzCCA8mgAwIBAgIBATAKBggqhkjOPQQDAjCCAUMxCzAJBgNVBAYTAklOMQ0wCwYDVQQHDARTSUVMMSQwIgYDVQQKDBtTYW1zdW5nIEVsZWN0cm9uaWNzIENvLiBMdGQxJzAlBgNVBAsMHk1vYmlsZSBDb21tdW5pY2F0aW9ucyBEaXZpc2lvbjE1MDMGA1UEAwwsMGZhN0lqY1hacVRyQi1kYXdycnA2VFQ5T19hTHFVVVkzaXV3ekJXbk5Rdz0xGDAWBgoJkiaJk/IsZAEZFghTTS1TOTI4QjGBhDCBgQYKCZImiZPyLGQBAQxzU0FLX1YyOjIwMjQwMjAyMTA1MzI5OjUzODpKWkV4ekNodGVvTVhZOWM0SE5hZ3dWOXVpUEdJWHk0RnAtVU5QeU1CSmxJPTowZmE3SWpjWFpxVHJCLWRhd3JycDZUVDlPX2FMcVVVWTNpdXd6QlduTlF3PTAeFw0yNDAyMDIwNTIzMzRaFw00NDAxMjgwNTIzMzRaMDIxFzAVBgNVBAMMDlNhbXN1bmcgR2FsYXh5MRcwFQYDVQQKDA5TYW1zdW5nIEdhbGF4eTBZMBMGByqGSM49AgEG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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9lhAKSDH3SnxbB8YY0SSbk/exQno2Lv6LyNaI9A1y9awcms5bwfWcdHPMS+xE5qUWT04/MuVNdJLmUScEsRZrd2AcQAAOAFqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3Vybjp1dWlkOjI5YzAzODFkLTI2ZGItNDBlMS1hNGEyLWJiNTM4MTNiZDFhYgAAAAIZanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAABPWp1bWIAAAApanVtZGNib3IAEQAQgAAAqgA4m3EDYzJwYS5pbmdyZWRpZW50AAAAAQxjYm9ypWhkYzp0aXRsZXdSeWFhbkpld2VsbGVycyBMb2dvLnBuZ2lkYzpmb3JtYXRjcG5namluc3RhbmNlSUR4LHhtcDppaWQ6NTkzNTFkMjktMjQzNC00Yjg4LWEyMWYtMGI5MWNlNWFkNTY4bWMycGFfbWFuaWZlc3SjY3VybHg+c2VsZiNqdW1iZj0vYzJwYS91cm46dXVpZDo1ODI1NWQ1Mi1mMzI3LTQzZTctYmU1NC03MTkzOTU1YTZmNjFjYWxnZnNoYTI1NmRoYXNoWCDxNn+AFDKKxko7gXxcxWylKfsLMBd1QJ7M+7tGH17b6GxyZWxhdGlvbnNoaXBocGFyZW50T2YAAACranVtYgAAAChqdW1kY2JvcgARABCAAACqADibcQNjMnBhLmhhc2guZGF0YQAAAAB7Y2JvcqVqZXhjbHVzaW9uc4GiZXN0YXJ0GCFmbGVuZ3RoGXBzZG5hbWVuanVtYmYgbWFuaWZlc3RjYWxnZnNoYTI1NmRoYXNoWCBtAO351GrdWz4DQUg9QKa4FCh5ZluI6tQm9+bR8KEcnGNwYWRIAAAAAAAAAAAAAAIHanVtYgAAACRqdW1kYzJjbAARABCAAACqADibcQNjMnBhLmNsYWltAAAAAdtjYm9yqGhkYzp0aXRsZXgaUnlhYW5KZXdlbGxlcnMgTG9nbygxKS5wbmdpZGM6Zm9ybWF0Y3BuZ2ppbnN0YW5jZUlEeCx4bXA6aWlkOjEwMjBlOTIwLTBiY2UtNDk2Ny1iMTYzLTUxODljNzg2NmI5ZW9jbGFpbV9nZW5lcmF0b3J4H0dhbGF4eSBTMjQgVWx0cmEgYzJwYS1ycy8wLjM3LjB0Y2xhaW1fZ2VuZXJhdG9yX2luZm/2aXNpZ25hdHVyZXhNc2VsZiNqdW1iZj0vYzJwYS91cm46dXVpZDoyOWMwMzgxZC0yNmRiLTQwZTEtYTRhMi1iYjUzODEzYmQxYWIvYzJwYS5zaWduYXR1cmVqYXNzZXJ0aW9uc4KiY3VybHgqc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5pbmdyZWRpZW50ZGhhc2hYIGY1dkC4x3qJewQjD0UrYW4xaSP+SSiTMJ5sW1FENr5comN1cmx4KXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaGFzaC5kYXRhZGhhc2hYINXYZmy3llRgFuKSsK89peJA1mLl/Q3aD/1ocv2S7AD9Y2FsZ2ZzaGEyNTYAADOSanVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAADNiY2JvctKEWQhWogEmGCGCWQRHMIIEQzCCA8mgAwIBAgIBATAKBggqhkjOPQQDAjCCAUMxCzAJBgNVBAYTAklOMQ0wCwYDVQQHDARTSUVMMSQwIgYDVQQKDBtTYW1zdW5nIEVsZWN0cm9uaWNzIENvLiBMdGQxJzAlBgNVBAsMHk1vYmlsZSBDb21tdW5pY2F0aW9ucyBEaXZpc2lvbjE1MDMGA1UEAwwsMGZhN0lqY1hacVRyQi1kYXdycnA2VFQ5T19hTHFVVVkzaXV3ekJXbk5Rdz0xGDAWBgoJkiaJk/IsZAEZFghTTS1TOTI4QjGBhDCBgQYKCZImiZPyLGQBAQxzU0FLX1YyOjIwMjQwMjAyMTA1MzI5OjUzODpKWkV4ekNodGVvTVhZOWM0SE5hZ3dWOXVpUEdJWHk0RnAtVU5QeU1CSmxJPTowZmE3SWpjWFpxVHJCLWRhd3JycDZUVDlPX2FMcVVVWTNpdXd6QlduTlF3PTAeFw0yNDAyMDIwNTIzMzRaFw00NDAxMjgwNTIzMzRaMDIxFzAVBgNVBAMMDlNhbXN1bmcgR2FsYXh5MRcwFQYDVQQKDA5TYW1zdW5nIEdhbGF4eTBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABAWGcMN7uswaMUCGHOkq7GndZGy+baZ7bPqVq60XXTQS7d4QrwI/134QIFFWr5JSYzbP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AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
