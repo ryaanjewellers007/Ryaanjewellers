@@ -1,1699 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Ryaan Jewellers Dubai offers premium 18K gold and diamond jewelry, designer-inspired collections, gold buying/selling, and secure delivery across Dubai."
-    />
-    <meta
-      name="keywords"
-      content="Ryaan Jewellers, Dubai gold jewelry, 18K gold, diamond jewelry, Gold Souk, buy gold Dubai, sell gold Dubai"
-    />
-    <meta name="theme-color" content="#f7f1e3" />
-    <meta property="og:title" content="Ryaan Jewellers Dubai | 18K Gold & Diamond Jewelry" />
-    <meta
-      property="og:description"
-      content="Luxury-inspired 18K gold and diamond jewelry in Dubai. Buy, sell, and trade gold with trusted service and door-to-door convenience."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://ryaanjeweller.com/" />
-    <meta property="og:image" content="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png" />
-    <title>Ryaan Jewellers Dubai | 18K Gold & Diamond Jewelry</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Jost:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-    <style>
-      :root {
-        --bg: #11100f;
-        --bg-2: #1a1816;
-        --card: #171613;
-        --card-soft: #201d1a;
-        --text: #f7f1e3;
-        --muted: #c7c0b2;
-        --gold: #c9a45c;
-        --gold-dark: #9f7a38;
-        --gold-soft: #f0d99a;
-        --line: rgba(255, 255, 255, 0.08);
-        --shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
-        --success: #2a6846;
-        --danger: #e95656;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html {
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        background: var(--bg);
-        color: var(--text);
-        font-family: "Jost", Arial, sans-serif;
-        line-height: 1.6;
-      }
-
-      img {
-        max-width: 100%;
-        display: block;
-      }
-
-      a {
-        color: inherit;
-        text-decoration: none;
-      }
-
-      button,
-      input,
-      select,
-      textarea {
-        font: inherit;
-      }
-
-      h1,
-      h2,
-      h3,
-      h4 {
-        font-family: "Cormorant Garamond", serif;
-        margin: 0 0 0.8rem;
-        line-height: 1.1;
-      }
-
-      p {
-        margin: 0 0 1rem;
-      }
-
-      .container {
-        width: min(1180px, calc(100% - 32px));
-        margin: 0 auto;
-      }
-
-      .section {
-        padding: 88px 0;
-      }
-
-      .eyebrow {
-        display: inline-block;
-        font-size: 0.75rem;
-        letter-spacing: 0.24em;
-        text-transform: uppercase;
-        font-weight: 700;
-        color: var(--gold);
-      }
-
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.7rem;
-        min-height: 48px;
-        border-radius: 999px;
-        border: 1px solid transparent;
-        padding: 0.8rem 1.45rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-      }
-
-      .btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .btn-primary {
-        background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-soft));
-        color: #1b160f;
-        box-shadow: 0 12px 24px rgba(201, 164, 92, 0.3);
-      }
-
-      .btn-secondary {
-        background: transparent;
-        border-color: rgba(255, 255, 255, 0.18);
-        color: var(--text);
-      }
-
-      .btn-whatsapp {
-        background: #1c8c5c;
-        color: #fff;
-      }
-
-      .topbar {
-        background: rgba(17, 16, 15, 0.96);
-        border-bottom: 1px solid var(--line);
-      }
-
-      .topbar-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        min-height: 54px;
-        font-size: 0.8rem;
-        color: var(--muted);
-        flex-wrap: wrap;
-      }
-
-      .topbar-group {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-      }
-
-      .topbar i {
-        color: var(--gold);
-        margin-right: 0.5rem;
-      }
-
-      .socials {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      .socials a {
-        width: 30px;
-        height: 30px;
-        border: 1px solid var(--line);
-        border-radius: 50%;
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        transition: border-color 0.2s ease, color 0.2s ease;
-      }
-
-      .socials a:hover {
-        border-color: rgba(201, 164, 92, 0.7);
-        color: var(--gold-soft);
-      }
-
-      .site-header {
-        position: sticky;
-        top: 0;
-        z-index: 40;
-        background: rgba(17, 16, 15, 0.88);
-        backdrop-filter: blur(18px);
-        border-bottom: 1px solid rgba(201, 164, 92, 0.12);
-      }
-
-      .header-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 20px;
-        min-height: 80px;
-      }
-
-      .brand {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .brand-mark {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: radial-gradient(circle at 30% 30%, #f7dd9d 0%, var(--gold) 35%, #8c6730 100%);
-        border: 2px solid rgba(255, 255, 255, 0.08);
-        display: grid;
-        place-items: center;
-        font-size: 1.2rem;
-        color: #170f05;
-        font-weight: 700;
-      }
-
-      .brand-text {
-        line-height: 1.1;
-      }
-
-      .brand-name {
-        font-size: 1.2rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-      }
-
-      .brand-sub {
-        font-size: 0.72rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: var(--muted);
-      }
-
-      .main-nav {
-        display: flex;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-      }
-
-      .main-nav a {
-        color: var(--muted);
-        font-size: 0.82rem;
-        letter-spacing: 0.04em;
-        position: relative;
-      }
-
-      .main-nav a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        width: 100%;
-        height: 1px;
-        background: var(--gold);
-        transform: scaleX(0);
-        transform-origin: left;
-        transition: transform 0.2s ease;
-      }
-
-      .main-nav a:hover::after,
-      .main-nav a:focus-visible::after {
-        transform: scaleX(1);
-      }
-
-      .header-actions {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .icon-btn {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-      }
-
-      .mobile-toggle {
-        display: none;
-      }
-
-      .hero {
-        background:
-          linear-gradient(135deg, rgba(17, 16, 15, 0.82), rgba(17, 16, 15, 0.56)),
-          url("https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
-        min-height: 700px;
-        display: grid;
-        place-items: center;
-      }
-
-      .hero-inner {
-        display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 44px;
-        align-items: center;
-        width: min(1180px, calc(100% - 32px));
-      }
-
-      .hero-copy {
-        max-width: 700px;
-      }
-
-      .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(201, 164, 92, 0.12);
-        color: var(--gold-soft);
-        border: 1px solid rgba(201, 164, 92, 0.3);
-        border-radius: 999px;
-        padding: 0.55rem 0.9rem;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-      }
-
-      .hero h1 {
-        font-size: clamp(3rem, 5vw, 6rem);
-        letter-spacing: -0.04em;
-      }
-
-      .hero-sub {
-        color: var(--muted);
-        font-size: 1.1rem;
-        max-width: 620px;
-      }
-
-      .hero-actions {
-        display: flex;
-        align-items: center;
-        gap: 14px;
-        flex-wrap: wrap;
-        margin-top: 2rem;
-      }
-
-      .hero-meta {
-        display: flex;
-        gap: 22px;
-        flex-wrap: wrap;
-        padding-top: 1.4rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
-        margin-top: 1.6rem;
-      }
-
-      .meta-card {
-        min-width: 150px;
-      }
-
-      .meta-value {
-        font-size: 1.35rem;
-        font-weight: 700;
-        color: var(--text);
-      }
-
-      .meta-label {
-        color: var(--muted);
-        font-size: 0.76rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      .hero-panel {
-        background: rgba(17, 16, 15, 0.72);
-        border: 1px solid rgba(201, 164, 92, 0.3);
-        border-radius: 20px;
-        padding: 1.4rem;
-        box-shadow: var(--shadow);
-      }
-
-      .spotlight-card {
-        background: linear-gradient(180deg, rgba(201, 164, 92, 0.15), rgba(0, 0, 0, 0.1));
-        border: 1px solid rgba(201, 164, 92, 0.2);
-        border-radius: 16px;
-        overflow: hidden;
-      }
-
-      .spotlight-card img {
-        width: 100%;
-        height: 280px;
-        object-fit: cover;
-      }
-
-      .spotlight-body {
-        padding: 1.2rem;
-      }
-
-      .spotlight-body h3 {
-        font-size: clamp(2rem, 3vw, 2.5rem);
-      }
-
-      .price-strip {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 8px;
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 12px;
-        padding: 0.8rem 0.9rem;
-        margin-top: 1rem;
-        color: var(--muted);
-      }
-
-      .price-strip strong {
-        color: var(--text);
-      }
-
-      .featured-grid,
-      .services-grid,
-      .benefits-grid,
-      .testimonials-grid,
-      .contact-grid,
-      .product-grid {
-        display: grid;
-        gap: 24px;
-      }
-
-      .featured-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .feature-card {
-        position: relative;
-        border-radius: 22px;
-        overflow: hidden;
-        min-height: 510px;
-        background: var(--card);
-        border: 1px solid var(--line);
-        cursor: pointer;
-        transition: transform 0.2s ease, border-color 0.2s ease;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-4px);
-        border-color: rgba(201, 164, 92, 0.5);
-      }
-
-      .feature-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        filter: saturate(1.08);
-      }
-
-      .feature-overlay {
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.78));
-        display: flex;
-        align-items: flex-end;
-        padding: 1.5rem;
-      }
-
-      .feature-info {
-        width: 100%;
-      }
-
-      .feature-tag {
-        color: var(--gold-soft);
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        font-size: 0.7rem;
-        font-weight: 700;
-      }
-
-      .feature-info h3 {
-        font-size: clamp(1.9rem, 3vw, 2.5rem);
-        margin-top: 0.4rem;
-      }
-
-      .feature-price {
-        display: inline-block;
-        font-size: 0.9rem;
-        color: #f4e8c8;
-      }
-
-      .section-heading {
-        margin-bottom: 2rem;
-      }
-
-      .section-heading h2 {
-        font-size: clamp(2.5rem, 4vw, 4rem);
-      }
-
-      .section-heading p {
-        max-width: 700px;
-        color: var(--muted);
-        margin-top: 0.6rem;
-      }
-
-      .about-grid {
-        display: grid;
-        grid-template-columns: 1.15fr 0.85fr;
-        gap: 28px;
-        align-items: center;
-      }
-
-      .about-copy {
-        font-size: 1.05rem;
-        color: var(--muted);
-      }
-
-      .stats {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-        margin-top: 1.4rem;
-      }
-
-      .stat-box {
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid var(--line);
-        border-radius: 16px;
-        padding: 1.2rem;
-      }
-
-      .stat-box strong {
-        display: block;
-        font-size: 2rem;
-        color: var(--gold-soft);
-      }
-
-      .about-visual {
-        min-height: 470px;
-        border-radius: 22px;
-        overflow: hidden;
-        position: relative;
-        border: 1px solid var(--line);
-      }
-
-      .about-visual img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      .services-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .service-card,
-      .benefit-card,
-      .testimonial,
-      .contact-card,
-      .product-card {
-        background: var(--card);
-        border: 1px solid var(--line);
-        border-radius: 22px;
-        overflow: hidden;
-        box-shadow: var(--shadow);
-      }
-
-      .service-card {
-        padding: 1.5rem;
-      }
-
-      .service-icon {
-        width: 58px;
-        height: 58px;
-        border-radius: 14px;
-        background: rgba(201, 164, 92, 0.12);
-        color: var(--gold-soft);
-        display: grid;
-        place-items: center;
-        font-size: 1.4rem;
-        margin-bottom: 1rem;
-      }
-
-      .service-card h3 {
-        font-size: 2rem;
-      }
-
-      .service-card ul {
-        list-style: none;
-        padding: 0;
-        margin: 1rem 0 0;
-        color: var(--muted);
-      }
-
-      .service-card li {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-        padding: 0.45rem 0;
-      }
-
-      .service-card li i {
-        color: var(--gold);
-      }
-
-      .catalog-toolbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin: 2rem 0 1.3rem;
-      }
-
-      .filter-group {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-
-      .filter-pill {
-        background: transparent;
-        color: var(--muted);
-        border: 1px solid var(--line);
-        border-radius: 999px;
-        padding: 0.7rem 1rem;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .filter-pill.active {
-        background: rgba(201, 164, 92, 0.15);
-        color: var(--text);
-        border-color: rgba(201, 164, 92, 0.45);
-      }
-
-      .sort-box {
-        min-width: 210px;
-      }
-
-      .sort-box select {
-        width: 100%;
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 0.8rem 0.9rem;
-      }
-
-      .product-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-
-      .product-card {
-        background: var(--card);
-      }
-
-      .product-image {
-        position: relative;
-        background: #201d1a;
-        height: 290px;
-        overflow: hidden;
-      }
-
-      .product-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      .product-card:hover .product-image img {
-        transform: scale(1.04);
-      }
-
-      .wishlist-btn {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        width: 38px;
-        height: 38px;
-        border-radius: 50%;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(17, 16, 15, 0.6);
-        color: var(--text);
-        display: grid;
-        place-items: center;
-        cursor: pointer;
-      }
-
-      .product-body {
-        padding: 1.1rem;
-      }
-
-      .product-meta {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 0.7rem;
-      }
-
-      .tag {
-        background: rgba(201, 164, 92, 0.15);
-        color: var(--gold-soft);
-        border: 1px solid rgba(201, 164, 92, 0.25);
-        padding: 0.3rem 0.5rem;
-        border-radius: 999px;
-        font-size: 0.7rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      .product-body h3 {
-        font-size: 2rem;
-      }
-
-      .product-price {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding-top: 0.8rem;
-        margin-top: 0.8rem;
-        border-top: 1px solid var(--line);
-      }
-
-      .product-price strong {
-        font-size: 1.5rem;
-        color: var(--gold-soft);
-      }
-
-      .product-actions {
-        display: flex;
-        gap: 10px;
-        margin-top: 1rem;
-      }
-
-      .product-actions .btn {
-        flex: 1;
-        padding-top: 0.7rem;
-        padding-bottom: 0.7rem;
-      }
-
-      .gold-calculator {
-        background: linear-gradient(180deg, rgba(201, 164, 92, 0.08), rgba(255, 255, 255, 0.02));
-        border: 1px solid rgba(201, 164, 92, 0.2);
-        border-radius: 24px;
-        padding: clamp(1.2rem, 3vw, 2rem);
-      }
-
-      .calculator-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 18px;
-      }
-
-      .field {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-      }
-
-      .field label {
-        color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        font-weight: 700;
-      }
-
-      .field input,
-      .field select {
-        width: 100%;
-        background: rgba(255, 255, 255, 0.02);
-        color: var(--text);
-        border: 1px solid var(--line);
-        border-radius: 12px;
-        padding: 0.9rem 1rem;
-      }
-
-      .calculator-result {
-        margin-top: 1.6rem;
-        background: rgba(201, 164, 92, 0.08);
-        border: 1px solid rgba(201, 164, 92, 0.22);
-        border-radius: 16px;
-        padding: 1.4rem;
-      }
-
-      .calculator-result small {
-        color: var(--muted);
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-      }
-
-      .calculator-result h3 {
-        font-size: clamp(2rem, 4vw, 3rem);
-        margin: 0.4rem 0 0.25rem;
-        color: var(--gold-soft);
-      }
-
-      .calculator-note {
-        color: var(--muted);
-        margin-top: 0.8rem;
-      }
-
-      .benefits-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-      }
-
-      .benefit-card {
-        padding: 1.4rem;
-      }
-
-      .benefit-icon {
-        width: 64px;
-        height: 64px;
-        border-radius: 16px;
-        background: rgba(201, 164, 92, 0.1);
-        color: var(--gold-soft);
-        display: grid;
-        place-items: center;
-        font-size: 1.45rem;
-        margin-bottom: 1rem;
-      }
-
-      .benefit-card h3 {
-        font-size: 2rem;
-      }
-
-      .testimonials-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-      }
-
-      .testimonial {
-        padding: 1.5rem;
-        background: var(--card);
-      }
-
-      .stars {
-        color: var(--gold-soft);
-        letter-spacing: 0.2em;
-        margin-bottom: 0.8rem;
-      }
-
-      .testimonial q {
-        display: block;
-        font-size: 1.02rem;
-        color: var(--muted);
-        margin-bottom: 1.25rem;
-      }
-
-      .client {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .avatar {
-        width: 42px;
-        height: 42px;
-        border-radius: 50%;
-        background: linear-gradient(135deg, var(--gold), var(--gold-soft));
-        color: #1b160f;
-        display: grid;
-        place-items: center;
-        font-weight: 700;
-      }
-
-      .client-name {
-        font-weight: 700;
-      }
-
-      .client-location {
-        color: var(--muted);
-        font-size: 0.8rem;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-      }
-
-      .contact-card {
-        padding: 1.6rem;
-      }
-
-      .contact-list {
-        list-style: none;
-        padding: 0;
-        margin: 2rem 0 0;
-      }
-
-      .contact-list li {
-        display: flex;
-        align-items: center;
-        gap: 0.9rem;
-        margin-bottom: 0.9rem;
-        color: var(--muted);
-      }
-
-      .contact-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        background: rgba(201, 164, 92, 0.12);
-        color: var(--gold-soft);
-        display: grid;
-        place-items: center;
-      }
-
-      .form-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-      }
-
-      .field input,
-      .field textarea,
-      .field select {
-        border-radius: 12px;
-      }
-
-      .field textarea {
-        resize: vertical;
-        min-height: 120px;
-      }
-
-      .site-footer {
-        background: #0f0e0d;
-        border-top: 1px solid var(--line);
-        padding: 32px 0 52px;
-      }
-
-      .footer-grid {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 16px;
-        flex-wrap: wrap;
-        color: var(--muted);
-      }
-
-      .footer-links {
-        display: flex;
-        gap: 18px;
-        flex-wrap: wrap;
-      }
-
-      .hidden {
-        display: none !important;
-      }
-
-      @media (max-width: 980px) {
-        .main-nav {
-          display: none;
-        }
-
-        .mobile-toggle {
-          display: inline-grid;
-          place-items: center;
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          border: 1px solid var(--line);
-          background: rgba(255, 255, 255, 0.02);
-          color: var(--text);
-          cursor: pointer;
-        }
-
-        .hero-inner,
-        .about-grid,
-        .contact-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .product-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .benefits-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .featured-grid,
-        .services-grid,
-        .testimonials-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      @media (max-width: 640px) {
-        .topbar-inner {
-          justify-content: center;
-        }
-
-        .header-inner {
-          min-height: 72px;
-        }
-
-        .brand-name {
-          font-size: 0.82rem;
-          letter-spacing: 0.08em;
-        }
-
-        .brand-sub {
-          font-size: 0.6rem;
-        }
-
-        .hero {
-          min-height: 600px;
-        }
-
-        .hero-actions,
-        .header-actions {
-          width: 100%;
-        }
-
-        .btn {
-          width: 100%;
-        }
-
-        .calculator-grid,
-        .form-grid,
-        .stats,
-        .product-grid,
-        .benefits-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .catalog-toolbar {
-          align-items: stretch;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="topbar">
-      <div class="container topbar-inner">
-        <div class="topbar-group">
-          <span><i class="fa-solid fa-phone"></i>+971 54 374 6476</span>
-          <span><i class="fa-solid fa-envelope"></i>info@ryaanjewellers.com</span>
-          <span><i class="fa-solid fa-location-dot"></i>Gold Souk, Deira, Dubai</span>
-        </div>
-
-        <div class="topbar-group">
-          <div class="socials" aria-label="Social media links">
-            <a href="https://instagram.com/ryaanjewellers" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://facebook.com/RyaanJewellers" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="https://wa.me/971543746476" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://tiktok.com/@ryaanjewellers" target="_blank" rel="noopener" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
-          </div>
-        </div>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewellery | Gold Souk Deira</title>
+<meta name="description" content="Designer-inspired 18K gold and diamond jewellery at the Gold Souk, Deira, Dubai. Buy, sell and calculate your gold value with Ryaan Jewellers.">
+<link rel="canonical" href="https://ryaanjewellers.com/">
+<meta property="og:title" content="Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewellery">
+<meta property="og:description" content="Designer-inspired 18K gold and diamond jewellery at the Gold Souk, Deira, Dubai.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f6f1e7">
+<link rel="icon" href="shop/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#f6f1e7; --paper:#fffdf8; --sand:#ece3d2; --ink:#1d1a16; --ink-2:#4a443b; --muted:#7d7566;
+  --champagne:#b8914a; --champagne-2:#d9bb7e; --line:#e2d8c4;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif; --sans:"Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius:4px; --max:1200px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;background:var(--ivory);color:var(--ink);font:400 16px/1.65 var(--sans);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.eyebrow{font:600 12px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--champagne);display:inline-flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--champagne)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.05;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(3.2rem,7vw,6.2rem)} h2{font-size:clamp(2.4rem,4.5vw,3.8rem)} h3{font-size:1.75rem}
+p{margin:0 0 1rem;color:var(--ink-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 26px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font:600 13px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;text-decoration:none;border-radius:var(--radius);transition:background .25s,color .25s,border-color .25s;cursor:pointer}
+.btn:hover{background:var(--champagne);border-color:var(--champagne)}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn.ghost:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+:focus-visible{outline:2px solid var(--champagne);outline-offset:3px}
+
+/* announcement + header */
+.announce{background:var(--ink);color:#efe6d2;text-align:center;font:500 12px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;padding:11px 16px}
+.header{position:sticky;top:0;z-index:30;background:rgba(246,241,231,.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:80px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.mark{width:44px;height:44px;border:1px solid var(--champagne);border-radius:50%;display:grid;place-items:center;font:500 26px/1 var(--serif);color:var(--champagne)}
+.brand b{display:block;font:500 20px/1 var(--serif);letter-spacing:.14em}
+.brand small{display:block;font:600 9px/1 var(--sans);letter-spacing:.28em;color:var(--muted);margin-top:6px}
+.nav{display:flex;gap:30px;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase}
+.nav a{text-decoration:none;color:var(--ink-2)} .nav a:hover{color:var(--champagne)}
+.head-cta{display:flex;gap:10px}
+.head-cta .btn{padding:12px 18px}
+
+/* hero */
+.hero{padding:72px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1 em{color:var(--champagne);font-style:italic}
+.hero .lead{font-size:1.1rem;max-width:520px;margin:26px 0 34px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero-media{position:relative}
+.hero-media img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:var(--radius);background:var(--sand)}
+.hero-card{position:absolute;left:-26px;bottom:34px;background:var(--paper);border:1px solid var(--line);padding:20px 24px;border-radius:var(--radius);box-shadow:0 18px 40px rgba(60,42,12,.12)}
+.hero-card span{display:block;font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.hero-card strong{font:500 2rem/1.1 var(--serif);display:block;margin-top:8px}
+
+/* strip */
+.strip{background:var(--paper);border-block:1px solid var(--line)}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.cell{padding:26px 16px;text-align:center;border-right:1px solid var(--line)}
+.cell:last-child{border-right:0}
+.cell strong{display:block;font:500 1.35rem/1.2 var(--serif)}
+.cell span{font:600 11px/1.4 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+
+section.block{padding:104px 0}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;margin-bottom:48px;flex-wrap:wrap}
+.head p{max-width:440px;margin:0}
+
+/* collections */
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.tile{position:relative;display:flex;flex-direction:column;text-decoration:none;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.tile:hover{transform:translateY(-4px);box-shadow:0 22px 44px rgba(60,42,12,.12)}
+.tile img{width:100%;aspect-ratio:1/1;object-fit:cover;background:var(--sand)}
+.tile .t{padding:24px 26px 28px}
+.tile small{font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--champagne)}
+.tile h3{margin:10px 0 8px}
+.tile .from{font:600 14px/1 var(--sans);color:var(--ink)}
+
+/* services */
+.services{background:var(--sand)}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.svc{background:var(--paper);padding:40px 36px;border-radius:var(--radius);border:1px solid var(--line)}
+.svc .num{font:500 3rem/1 var(--serif);color:var(--champagne-2)}
+.svc h3{margin:16px 0 12px}
+.svc ul{list-style:none;padding:0;margin:22px 0 0;border-top:1px solid var(--line)}
+.svc li{padding:12px 0 12px 22px;border-bottom:1px solid var(--line);position:relative;color:var(--ink-2);font-size:15px}
+.svc li::before{content:"";position:absolute;left:0;top:19px;width:8px;height:1px;background:var(--champagne)}
+
+/* calculator */
+.calc{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.calc-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:36px}
+.field{margin-bottom:20px}
+.field label{display:block;font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.field input,.field select{width:100%;padding:14px 14px;border:1px solid var(--line);background:var(--ivory);font:500 16px var(--sans);color:var(--ink);border-radius:var(--radius)}
+.field input:focus,.field select:focus{outline:none;border-color:var(--champagne)}
+.result{border-top:1px solid var(--line);padding-top:24px;margin-top:8px}
+.result span{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.result strong{display:block;font:500 3.2rem/1.1 var(--serif);margin:10px 0 6px}
+.result small{color:var(--muted);font-size:13px}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.why div{padding:36px 28px 0 0}
+.why h3{font-size:1.5rem;margin-bottom:10px}
+.why p{font-size:15px;margin:0}
+
+/* reviews */
+.reviews{background:var(--ink);color:#efe6d2}
+.reviews h2{color:#f8f0de}
+.reviews .eyebrow{color:var(--champagne-2)} .reviews .eyebrow::before{background:var(--champagne-2)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.quote{border:1px solid #3a342b;padding:34px 30px;border-radius:var(--radius)}
+.stars{color:var(--champagne-2);letter-spacing:4px;font-size:14px}
+.quote blockquote{margin:18px 0 22px;font:italic 500 1.35rem/1.4 var(--serif);color:#f3ead8}
+.quote cite{font:600 13px/1.4 var(--sans);font-style:normal;color:#b9ad97}
+.quote cite span{display:block;font-weight:400;color:#8f8474}
+
+/* visit */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:64px}
+.info dl{margin:32px 0 0;display:grid;gap:24px}
+.info dt{font:600 11px/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.info dd{margin:0;font:500 1.25rem/1.4 var(--serif)}
+.info dd a{text-decoration:none;border-bottom:1px solid var(--line)} .info dd a:hover{border-color:var(--champagne)}
+.enquiry{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:38px}
+.enquiry form{display:grid;gap:18px}
+.enquiry .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.enquiry input,.enquiry textarea,.enquiry select{width:100%;padding:14px;border:1px solid var(--line);background:var(--ivory);font:500 15px var(--sans);color:var(--ink);border-radius:var(--radius)}
+.enquiry textarea{min-height:110px;resize:vertical}
+.enquiry input:focus,.enquiry textarea:focus,.enquiry select:focus{outline:none;border-color:var(--champagne)}
+.enquiry .note{font-size:12px;color:var(--muted);margin:0}
+
+/* footer */
+.footer{background:#14120f;color:#cfc6b4;padding:72px 0 28px}
+.foot{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.footer h4{font:600 11px/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--champagne-2);margin:0 0 18px}
+.footer a{display:block;text-decoration:none;color:#cfc6b4;margin-bottom:10px;font-size:15px}
+.footer a:hover{color:#fff}
+.footer .brand b{color:#f8f0de} .footer .brand small{color:#8f8474}
+.legal{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid #2c2820;margin-top:56px;padding-top:24px;font-size:12px;color:#8f8474}
+
+/* mobile WhatsApp bar */
+.mobile-bar{display:none}
+
+@media (max-width:980px){
+  .nav{display:none}
+  .hero{padding:48px 0 56px}
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-card{left:16px}
+  .tiles,.svc-grid,.quotes{grid-template-columns:1fr}
+  .strip-grid{grid-template-columns:repeat(2,1fr)}
+  .cell:nth-child(2){border-right:0}
+  .cell:nth-child(-n+2){border-bottom:1px solid var(--line)}
+  .calc,.visit{grid-template-columns:1fr;gap:40px}
+  .why{grid-template-columns:repeat(2,1fr)}
+  .why div{padding:28px 20px 0 0}
+  .foot{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{width:calc(100% - 32px)}
+  .head-cta .btn.ghost{display:none}
+  .header .wrap{height:68px}
+  .mark{width:38px;height:38px;font-size:22px}
+  section.block{padding:72px 0}
+  .svc{padding:30px 24px}
+  .enquiry .row{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr}
+  .foot{grid-template-columns:1fr}
+  .hero .actions .btn{flex:1 1 100%}
+  .mobile-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--ink);padding:12px 16px;gap:10px}
+  .mobile-bar a{flex:1;text-align:center;padding:14px;color:var(--paper);text-decoration:none;font:600 12px/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;border:1px solid #4a4339;border-radius:var(--radius)}
+  .mobile-bar a.primary{background:var(--champagne);border-color:var(--champagne);color:#1d1a16}
+  body{padding-bottom:76px}
+  .cell span{font-size:10px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<div class="announce">Designer-inspired 18K gold &amp; diamond · Gold Souk, Deira</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ryaan Jewellers home">
+      <span class="mark">R</span>
+      <span><b>RYAAN JEWELLERS</b><small>GOLD SOUK · DUBAI</small></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#collections">Collections</a>
+      <a href="#services">Buy &amp; sell gold</a>
+      <a href="#calculator">Gold value</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <div class="head-cta">
+      <a class="btn ghost" href="shop/">Online shop</a>
+      <a class="btn" href="https://wa.me/971543746476?text=Hello%20Ryaan%20Jewellers" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Gold Souk · Deira, Dubai</span>
+      <h1 style="margin-top:26px">Elegance <em>born of gold.</em></h1>
+      <p class="lead">Designer-inspired 18K gold and diamond jewellery for everyday luxury. Choose a piece, ask our team a question, or book a private viewing at the Gold Souk.</p>
+      <div class="actions">
+        <a class="btn" href="shop/#pieces">Shop the collection</a>
+        <a class="btn ghost" href="#calculator">Gold value calculator</a>
       </div>
     </div>
-
-    <header class="site-header">
-      <div class="container header-inner">
-        <a href="#top" class="brand" aria-label="Ryaan Jewellers">
-          <div class="brand-mark">RJ</div>
-          <div class="brand-text">
-            <div class="brand-name">RYAAN JEWELLERS</div>
-            <div class="brand-sub">Gold Souk • Dubai</div>
-          </div>
-        </a>
-
-        <nav class="main-nav" aria-label="Main navigation">
-          <a href="#featured">Featured</a>
-          <a href="#collections">Collections</a>
-          <a href="#services">Services</a>
-          <a href="#calculator">Gold Calculator</a>
-          <a href="#testimonials">Reviews</a>
-          <a href="#contact">Contact</a>
-        </nav>
-
-        <div class="header-actions">
-          <button class="icon-btn" type="button" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-          <button class="icon-btn" type="button" aria-label="Wishlist"><i class="fa-solid fa-heart"></i></button>
-          <button class="icon-btn" type="button" aria-label="Cart"><i class="fa-solid fa-bag-shopping"></i></button>
-          <button class="mobile-toggle" type="button" aria-label="Open menu">
-            <i class="fa-solid fa-bars"></i>
-          </button>
-        </div>
+    <div class="hero-media">
+      <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20rose%20uno%20move.jpg" alt="Rose gold Move Uno bangle with diamonds" width="800" height="1000" fetchpriority="high">
+      <div class="hero-card">
+        <span>Starting from</span>
+        <strong>AED 2,450</strong>
       </div>
-    </header>
+    </div>
+  </div>
+</section>
 
-    <main id="top">
-      <section class="hero">
-        <div class="hero-inner">
-          <div class="hero-copy">
-            <div class="hero-badge"><i class="fa-solid fa-star"></i> Gold Souk Deira • Premium Inspired Designs</div>
-            <h1>Elegance <br />Born of Gold</h1>
-            <p class="hero-sub">
-              Designer-inspired 18K gold and diamond jewelry for modern luxury lovers. Elegant,
-              trusted, and crafted for Dubai living.
-            </p>
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div class="cell"><strong>18K</strong><span>Gold purity</span></div>
+    <div class="cell"><strong>10 AM – 10 PM</strong><span>Open daily</span></div>
+    <div class="cell"><strong>Free</strong><span>Purity testing</span></div>
+    <div class="cell"><strong>Gold Souk</strong><span>Deira, Dubai</span></div>
+  </div>
+</div>
 
-            <div class="hero-actions">
-              <a class="btn btn-primary" href="#collections"><i class="fa-solid fa-gem"></i> Shop Collections</a>
-              <a class="btn btn-secondary" href="#calculator"><i class="fa-solid fa-coins"></i> Gold Calculator</a>
-              <a class="btn btn-whatsapp" href="https://wa.me/971543746476?text=Hello%20Ryaan%20Jewellers" target="_blank" rel="noopener">
-                <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
-              </a>
-            </div>
-
-            <div class="hero-meta">
-              <div class="meta-card">
-                <div class="meta-value">18K</div>
-                <div class="meta-label">Gold purity</div>
-              </div>
-              <div class="meta-card">
-                <div class="meta-value">AED 4,550+</div>
-                <div class="meta-label">Starting price</div>
-              </div>
-              <div class="meta-card">
-                <div class="meta-value">10 AM–10 PM</div>
-                <div class="meta-label">Open daily</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-panel">
-            <div class="spotlight-card">
-              <img
-                src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png"
-                alt="Featured gold jewelry collection"
-              />
-              <div class="spotlight-body">
-                <div class="eyebrow">Featured Collection</div>
-                <h3>Alhambra Inspired</h3>
-                <div class="price-strip">
-                  <span>Exclusive design</span>
-                  <strong>AED 4,550</strong>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="featured" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Curated styles</span>
-            <h2>Signature Collections</h2>
-            <p>Handpicked designs inspired by iconic global jewelry forms, reinterpreted in premium gold for everyday elegance.</p>
-          </div>
-
-          <div class="featured-grid">
-            <article class="feature-card" data-filter="clover">
-              <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png" alt="Clover-inspired bracelet" />
-              <div class="feature-overlay">
-                <div class="feature-info">
-                  <div class="feature-tag">Alhambra-inspired</div>
-                  <h3>Clover Collection</h3>
-                  <span class="feature-price">From AED 4,550</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="feature-card" data-filter="move">
-              <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg" alt="Move-inspired bracelet" />
-              <div class="feature-overlay">
-                <div class="feature-info">
-                  <div class="feature-tag">Move-inspired</div>
-                  <h3>Sliding Diamond</h3>
-                  <span class="feature-price">From AED 6,300</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="feature-card" data-filter="flower">
-              <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg" alt="Flower-inspired ring" />
-              <div class="feature-overlay">
-                <div class="feature-info">
-                  <div class="feature-tag">Flower collection</div>
-                  <h3>Floral Designs</h3>
-                  <span class="feature-price">From AED 2,450</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" style="background: var(--bg-2);">
-        <div class="container">
-          <div class="about-grid">
-            <div>
-              <span class="eyebrow">About us</span>
-              <h2 style="font-size: clamp(2.6rem, 4vw, 4rem);">Luxury you can wear every day</h2>
-              <div class="about-copy">
-                <p>
-                  Ryaan Jewellers is a trusted destination for elegant, designer-inspired jewelry in Dubai.
-                  We specialize in solid 18K gold and diamond pieces that balance beauty, craftsmanship, and honest pricing.
-                </p>
-                <p>
-                  From statement bracelets to engagement-worthy rings, every piece is selected to reflect timeless luxury with a modern edge.
-                </p>
-              </div>
-
-              <div class="stats">
-                <div class="stat-box">
-                  <strong>10+</strong>
-                  <span>Years of service</span>
-                </div>
-                <div class="stat-box">
-                  <strong>5,000+</strong>
-                  <span>Happy clients</span>
-                </div>
-                <div class="stat-box">
-                  <strong>18K</strong>
-                  <span>Premium gold</span>
-                </div>
-                <div class="stat-box">
-                  <strong>Same day</strong>
-                  <span>Delivery nearby</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="about-visual">
-              <img
-                src="https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=80"
-                alt="Luxury gold jewelry closeup"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="services" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">What we offer</span>
-            <h2>Trusted services for every gold need</h2>
-          </div>
-
-          <div class="services-grid">
-            <article class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-coins"></i></div>
-              <h3>Buy Gold</h3>
-              <p>Premium jewelry and bullion with transparent guidance and competitive pricing.</p>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> 18K & 22K options</li>
-                <li><i class="fa-solid fa-check"></i> Authenticity checks</li>
-                <li><i class="fa-solid fa-check"></i> Certified craftsmanship</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-gem"></i></div>
-              <h3>Sell Gold</h3>
-              <p>Turn old gold, coins, and broken jewelry into instant cash with honesty and speed.</p>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Free purity testing</li>
-                <li><i class="fa-solid fa-check"></i> Best market rates</li>
-                <li><i class="fa-solid fa-check"></i> Door-to-door pickup</li>
-              </ul>
-            </article>
-
-            <article class="service-card">
-              <div class="service-icon"><i class="fa-solid fa-truck"></i></div>
-              <h3>Home Delivery</h3>
-              <p>From boutique pickups to secure home delivery, we make buying easy and convenient.</p>
-              <ul>
-                <li><i class="fa-solid fa-check"></i> Across Dubai</li>
-                <li><i class="fa-solid fa-check"></i> Secure packaging</li>
-                <li><i class="fa-solid fa-check"></i> Quick order support</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="collections" class="section" style="background: var(--bg-2);">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Our collection</span>
-            <h2>Signature pieces</h2>
-            <p>Beautifully crafted jewelry designed to stand out for gifting, occasions, and everyday elegance.</p>
-          </div>
-
-          <div class="catalog-toolbar">
-            <div class="filter-group" aria-label="Product filters">
-              <button class="filter-pill active" type="button" data-filter="all">All</button>
-              <button class="filter-pill" type="button" data-filter="clover">Clover</button>
-              <button class="filter-pill" type="button" data-filter="move">Move</button>
-              <button class="filter-pill" type="button" data-filter="serpent">Serpent</button>
-              <button class="filter-pill" type="button" data-filter="flower">Flower</button>
-            </div>
-
-            <div class="sort-box">
-              <select id="sortSelect" aria-label="Sort products">
-                <option value="default">Default</option>
-                <option value="price-asc">Price: Low to High</option>
-                <option value="price-desc">Price: High to Low</option>
-                <option value="name-asc">Name: A–Z</option>
-              </select>
-            </div>
-          </div>
-
-          <div id="productGrid" class="product-grid" aria-live="polite"></div>
-        </div>
-      </section>
-
-      <section id="calculator" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Smart tools</span>
-            <h2>Gold value calculator</h2>
-            <p>Estimate the value of your gold using live market-based pricing assumptions.</p>
-          </div>
-
-          <div class="gold-calculator">
-            <div class="calculator-grid">
-              <div class="field">
-                <label for="weight">Weight (grams)</label>
-                <input id="weight" type="number" min="0.1" step="0.1" value="10" />
-              </div>
-
-              <div class="field">
-                <label for="karat">Purity / karat</label>
-                <select id="karat">
-                  <option value="24">24K (999)</option>
-                  <option value="22">22K (916)</option>
-                  <option value="21">21K (875)</option>
-                  <option value="18" selected>18K (750)</option>
-                  <option value="14">14K (585)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="calculator-result">
-              <small>Estimated value</small>
-              <h3 id="estimatedValue">AED 4,508.60</h3>
-              <div id="breakdown">10g × 18K (AED 450.86/g)</div>
-              <div class="calculator-note">
-                Live market rate approximation. Final buyback price may vary after purity testing.
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Why choose us</span>
-            <h2>Luxury, trust, and convenience</h2>
-          </div>
-
-          <div class="benefits-grid">
-            <article class="benefit-card">
-              <div class="benefit-icon"><i class="fa-solid fa-award"></i></div>
-              <h3>Certified quality</h3>
-              <p>Trusted craftsmanship and quality-focused sourcing for every collection.</p>
-            </article>
-
-            <article class="benefit-card">
-              <div class="benefit-icon"><i class="fa-solid fa-circle-dollar-to-slot"></i></div>
-              <h3>Fair rates</h3>
-              <p>Transparent gold pricing and honest guidance before every purchase or sale.</p>
-            </article>
-
-            <article class="benefit-card">
-              <div class="benefit-icon"><i class="fa-solid fa-shield-halved"></i></div>
-              <h3>Secure buying</h3>
-              <p>Protected transactions and secure delivery for peace of mind on every order.</p>
-            </article>
-
-            <article class="benefit-card">
-              <div class="benefit-icon"><i class="fa-brands fa-whatsapp"></i></div>
-              <h3>Fast support</h3>
-              <p>Talk to our team directly on WhatsApp for quick answers and personal guidance.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="testimonials" class="section" style="background: var(--bg-2);">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Client stories</span>
-            <h2>What buyers say</h2>
-          </div>
-
-          <div class="testimonials-grid">
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <q>
-                “The Alhambra bracelet I bought was stunning — and the price was unbeatable compared to other places in Dubai.”
-              </q>
-              <div class="client">
-                <div class="avatar">F</div>
-                <div>
-                  <div class="client-name">Fatima Al-Rashidi</div>
-                  <div class="client-location">Dubai, UAE</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <q>
-                “I sold my old gold here and got the best rate I had been quoted in the Gold Souk. Honest, fast, and professional.”
-              </q>
-              <div class="client">
-                <div class="avatar">A</div>
-                <div>
-                  <div class="client-name">Ahmed Al-Mansoori</div>
-                  <div class="client-location">Dubai, UAE</div>
-                </div>
-              </div>
-            </article>
-
-            <article class="testimonial">
-              <div class="stars">★★★★★</div>
-              <q>
-                “They came to my house for the door-to-door gold buying service. So convenient and professional. Will definitely return.”
-              </q>
-              <div class="client">
-                <div class="avatar">S</div>
-                <div>
-                  <div class="client-name">Sheikha Mohammed</div>
-                  <div class="client-location">Sharjah, UAE</div>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" class="section">
-        <div class="container">
-          <div class="section-heading">
-            <span class="eyebrow">Book a visit</span>
-            <h2>Schedule your private viewing</h2>
-          </div>
-
-          <div class="contact-grid">
-            <div class="contact-card">
-              <div class="eyebrow">Contact</div>
-              <h3 style="font-size: clamp(2rem, 3vw, 3rem);">Visit our Gold Souk boutique</h3>
-              <ul class="contact-list">
-                <li><span class="contact-icon"><i class="fa-solid fa-phone"></i></span> +971 54 374 6476</li>
-                <li><span class="contact-icon"><i class="fa-solid fa-envelope"></i></span> info@ryaanjewellers.com</li>
-                <li><span class="contact-icon"><i class="fa-solid fa-location-dot"></i></span> Gold Souk, Deira, Dubai</li>
-                <li><span class="contact-icon"><i class="fa-solid fa-clock"></i></span> Open daily • 10 AM – 10 PM</li>
-              </ul>
-            </div>
-
-            <div class="contact-card">
-              <form>
-                <div class="form-grid">
-                  <div class="field">
-                    <label for="name">Full name</label>
-                    <input id="name" type="text" placeholder="Your name" />
-                  </div>
-
-                  <div class="field">
-                    <label for="phone">Phone</label>
-                    <input id="phone" type="tel" placeholder="+971 50 XXX XXXX" />
-                  </div>
-
-                  <div class="field" style="grid-column: 1 / -1;">
-                    <label for="date">Preferred date</label>
-                    <input id="date" type="date" />
-                  </div>
-
-                  <div class="field" style="grid-column: 1 / -1;">
-                    <label for="message">Message</label>
-                    <textarea id="message" placeholder="Tell us what you’re looking for..."></textarea>
-                  </div>
-                </div>
-
-                <div style="margin-top: 1rem;">
-                  <button class="btn btn-primary" type="submit"><i class="fa-solid fa-calendar-check"></i> Request Appointment</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>© 2026 Ryaan Jewellers Dubai. All rights reserved.</div>
-        <div class="footer-links">
-          <a href="#collections">Collections</a>
-          <a href="#calculator">Gold Calculator</a>
-          <a href="#contact">Contact</a>
-          <a href="https://wa.me/971543746476" target="_blank" rel="noopener">WhatsApp</a>
-        </div>
+<section class="block" id="collections">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Signature collections</span>
+        <h2 style="margin-top:18px">Handpicked for every day</h2>
       </div>
-    </footer>
+      <p>Designs inspired by iconic jewellery houses, reinterpreted in premium gold.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="shop/#pieces">
+        <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Vancleef%20Bracelet%20Agate.jpg" alt="Alhambra-inspired bracelet with blue agate" loading="lazy">
+        <div class="t"><small>Alhambra-inspired</small><h3>Clover Collection</h3><span class="from">From AED 4,550</span></div>
+      </a>
+      <a class="tile" href="shop/#pieces">
+        <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg" alt="Move Uno bangle in yellow gold" loading="lazy">
+        <div class="t"><small>Move-inspired</small><h3>Sliding Diamond</h3><span class="from">From AED 6,300</span></div>
+      </a>
+      <a class="tile" href="shop/#pieces">
+        <img src="https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg" alt="Butterfly open ring in 18K gold" loading="lazy">
+        <div class="t"><small>Flower collection</small><h3>Floral Designs</h3><span class="from">From AED 2,450</span></div>
+      </a>
+    </div>
+  </div>
+</section>
 
-    <script>
-      const products = [
-        {
-          id: 1,
-          name: "Clover Bracelet",
-          tag: "Clover",
-          category: "clover",
-          price: 4550,
-          image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Oe9fvx4ZRqqgvBniTpcJYA.png"
-        },
-        {
-          id: 2,
-          name: "Sliding Diamond Bangle",
-          tag: "Move",
-          category: "move",
-          price: 6300,
-          image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Messika%20mov%20uno%20.jpg"
-        },
-        {
-          id: 3,
-          name: "Floral Ring",
-          tag: "Flower",
-          category: "flower",
-          price: 2450,
-          image: "https://raw.githubusercontent.com/ryaanjewellers007/Ryaanjewellers/main/Butterfly%20Ring.jpg"
-        },
-        {
-          id: 4,
-          name: "Serpent Necklace",
-          tag: "Serpent",
-          category: "serpent",
-          price: 5750,
-          image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          id: 5,
-          name: "Oval Pearl Drop",
-          tag: "Classic",
-          category: "clover",
-          price: 3890,
-          image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          id: 6,
-          name: "Gold Charm Set",
-          tag: "Update",
-          category: "move",
-          price: 5200,
-          image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          id: 7,
-          name: "Sunburst Studs",
-          tag: "Flower",
-          category: "flower",
-          price: 2980,
-          image: "https://images.unsplash.com/photo-1617038220319-276d3cfab638?auto=format&fit=crop&w=900&q=80"
-        },
-        {
-          id: 8,
-          name: "Diamond Wrap Ring",
-          tag: "Luxury",
-          category: "serpent",
-          price: 7100,
-          image: "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?auto=format&fit=crop&w=900&q=80"
-        }
-      ];
+<section class="block services" id="services">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Gold, handled with care</span>
+        <h2 style="margin-top:18px">Trusted services for every gold need</h2>
+      </div>
+      <p>Buy, sell or have your gold delivered. We explain each step before you decide.</p>
+    </div>
+    <div class="svc-grid">
+      <article class="svc">
+        <div class="num">01</div>
+        <h3>Buy gold</h3>
+        <p>Premium jewellery and bullion with transparent guidance and competitive pricing.</p>
+        <ul><li>18K &amp; 22K options</li><li>Authenticity checks</li><li>Certified craftsmanship</li></ul>
+      </article>
+      <article class="svc">
+        <div class="num">02</div>
+        <h3>Sell gold</h3>
+        <p>Turn old gold, coins and broken jewellery into cash, with honesty and speed.</p>
+        <ul><li>Free purity testing</li><li>Best market rates</li><li>Door-to-door pickup</li></ul>
+      </article>
+      <article class="svc">
+        <div class="num">03</div>
+        <h3>Home delivery</h3>
+        <p>From boutique pickup to secure delivery, buying from us is easy and convenient.</p>
+        <ul><li>Across Dubai</li><li>Secure packaging</li><li>Quick order support</li></ul>
+      </article>
+    </div>
+  </div>
+</section>
 
-      const productGrid = document.getElementById("productGrid");
-      const filterButtons = document.querySelectorAll(".filter-pill");
-      const sortSelect = document.getElementById("sortSelect");
+<section class="block" id="calculator">
+  <div class="wrap calc">
+    <div>
+      <span class="eyebrow">Smart tools</span>
+      <h2 style="margin:18px 0 22px">Understand your gold value</h2>
+      <p>Enter the weight, karat and today's 24K reference rate to estimate what your gold is worth.</p>
+      <p style="font-size:14px;color:var(--muted)">This is an estimate only. The final buying price depends on purity testing and our current rate.</p>
+    </div>
+    <div class="calc-form">
+      <div class="field"><label for="weight">Weight (grams)</label><input id="weight" type="number" min="0" step="0.01" value="10"></div>
+      <div class="field"><label for="karat">Purity</label>
+        <select id="karat">
+          <option value="24">24K (999)</option><option value="22">22K (916)</option><option value="21">21K (875)</option><option value="18" selected>18K (750)</option><option value="14">14K (585)</option>
+        </select>
+      </div>
+      <div class="field"><label for="rate">24K reference rate (AED per gram)</label><input id="rate" type="number" min="0" step="0.01" value="601.14"></div>
+      <div class="result">
+        <span>Estimated value</span>
+        <strong id="calcValue" aria-live="polite">AED 4,508.55</strong>
+        <small id="calcNote">10 g × 18K × AED 601.14 per gram (24K)</small>
+      </div>
+    </div>
+  </div>
+</section>
 
-      let activeFilter = "all";
+<section class="block" style="padding-top:40px">
+  <div class="wrap">
+    <div class="why">
+      <div><h3>Certified quality</h3><p>Trusted craftsmanship and quality-focused sourcing for every collection.</p></div>
+      <div><h3>Fair rates</h3><p>Transparent gold pricing and honest guidance before every purchase or sale.</p></div>
+      <div><h3>Secure buying</h3><p>Protected transactions and secure delivery for peace of mind on every order.</p></div>
+      <div><h3>Personal support</h3><p>Speak to our team directly on WhatsApp for quick answers and guidance.</p></div>
+    </div>
+  </div>
+</section>
 
-      function formatCurrency(value) {
-        return new Intl.NumberFormat("en-AE", {
-          style: "currency",
-          currency: "AED",
-          maximumFractionDigits: 0
-        }).format(value);
-      }
+<section class="block reviews" id="reviews">
+  <div class="wrap">
+    <div class="head">
+      <div>
+        <span class="eyebrow">Client stories</span>
+        <h2 style="margin-top:18px">What our clients say</h2>
+      </div>
+    </div>
+    <div class="quotes">
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote>“The Alhambra bracelet I bought was stunning, and the price was unbeatable compared to other places in Dubai.”</blockquote>
+        <cite>Fatima Al-Rashidi<span>Dubai, UAE</span></cite>
+      </figure>
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote>“I sold my old gold here and got the best rate I had been quoted in the Gold Souk. Honest, fast and professional.”</blockquote>
+        <cite>Ahmed Al-Mansoori<span>Dubai, UAE</span></cite>
+      </figure>
+      <figure class="quote" style="margin:0">
+        <div class="stars" aria-label="5 stars">★★★★★</div>
+        <blockquote>“They came to my house for the door-to-door gold buying service. So convenient and professional. I will return.”</blockquote>
+        <cite>Sheikha Mohammed<span>Sharjah, UAE</span></cite>
+      </figure>
+    </div>
+  </div>
+</section>
 
-      function getVisibleProducts() {
-        let filtered = products.filter((product) => {
-          return activeFilter === "all" ? true : product.category === activeFilter;
-        });
+<section class="block" id="visit">
+  <div class="wrap visit">
+    <div class="info">
+      <span class="eyebrow">Book a visit</span>
+      <h2 style="margin-top:18px">Schedule your private viewing</h2>
+      <dl>
+        <div><dt>Boutique</dt><dd>Gold Souk, Deira, Dubai</dd></div>
+        <div><dt>Hours</dt><dd>Open daily, 10 AM – 10 PM</dd></div>
+        <div><dt>WhatsApp</dt><dd><a href="https://wa.me/971543746476" target="_blank" rel="noopener">+971 54 374 6476</a></dd></div>
+        <div><dt>Email</dt><dd><a href="mailto:info@ryaanjewellers.com">info@ryaanjewellers.com</a></dd></div>
+      </dl>
+    </div>
+    <div class="enquiry">
+      <form id="enquiry">
+        <div class="row">
+          <div><input id="fname" name="name" placeholder="Full name" autocomplete="name" required></div>
+          <div><input id="fphone" name="phone" placeholder="Phone / WhatsApp" autocomplete="tel" required></div>
+        </div>
+        <div><input id="fdate" name="date" type="text" placeholder="Preferred date (optional)"></div>
+        <div><textarea id="fmsg" name="message" placeholder="What are you looking for?"></textarea></div>
+        <button class="btn" type="submit">Request appointment</button>
+        <p class="note">This opens WhatsApp with your details. A booking is confirmed only when our team replies.</p>
+      </form>
+    </div>
+  </div>
+</section>
 
-        const sortValue = sortSelect.value;
-        if (sortValue === "price-asc") {
-          filtered.sort((a, b) => a.price - b.price);
-        } else if (sortValue === "price-desc") {
-          filtered.sort((a, b) => b.price - a.price);
-        } else if (sortValue === "name-asc") {
-          filtered.sort((a, b) => a.name.localeCompare(b.name));
-        }
+</main>
 
-        return filtered;
-      }
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a class="brand" href="#top" style="margin-bottom:18px"><span class="mark">R</span><span><b>RYAAN JEWELLERS</b><small>GOLD SOUK · DUBAI</small></span></a>
+        <p style="color:#cfc6b4;max-width:340px">Considered 18K gold and diamond jewellery for everyday and special moments.</p>
+      </div>
+      <div><h4>Shop</h4><a href="shop/">Online shop</a><a href="#collections">Collections</a><a href="#services">Buy &amp; sell gold</a><a href="#calculator">Gold value</a></div>
+      <div><h4>Visit</h4><a href="#visit">Book a visit</a><a href="https://wa.me/971543746476" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:info@ryaanjewellers.com">Email us</a></div>
+      <div><h4>Follow</h4><a href="https://instagram.com/ryaanjewellers" target="_blank" rel="noopener">Instagram</a><a href="https://facebook.com/RyaanJewellers" target="_blank" rel="noopener">Facebook</a><a href="https://tiktok.com/@ryaanjewellers" target="_blank" rel="noopener">TikTok</a></div>
+    </div>
+    <div class="legal"><span>© <span id="year"></span> Ryaan Jewellers Dubai. All rights reserved.</span><span>Prices and availability are confirmed by our team.</span></div>
+  </div>
+</footer>
 
-      function renderProducts() {
-        const visibleProducts = getVisibleProducts();
+<div class="mobile-bar" role="navigation" aria-label="Quick actions">
+  <a class="primary" href="shop/">Shop</a>
+  <a href="https://wa.me/971543746476?text=Hello%20Ryaan%20Jewellers" target="_blank" rel="noopener">WhatsApp</a>
+</div>
 
-        productGrid.innerHTML = visibleProducts.map((product) => `
-          <article class="product-card">
-            <div class="product-image">
-              <img src="${product.image}" alt="${product.name}" />
-              <button class="wishlist-btn" type="button" aria-label="Add ${product.name} to wishlist">
-                <i class="fa-regular fa-heart"></i>
-              </button>
-            </div>
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var money = function (n) { return 'AED ' + n.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 }); };
 
-            <div class="product-body">
-              <div class="product-meta">
-                <span class="tag">${product.tag}</span>
-                <span style="color: var(--muted); font-size: 0.8rem;">18K</span>
-              </div>
+  function calc() {
+    var w = Math.max(0, parseFloat($('weight').value) || 0);
+    var k = parseFloat($('karat').value);
+    var r = Math.max(0, parseFloat($('rate').value) || 0);
+    var v = w * r * k / 24;
+    $('calcValue').textContent = money(v);
+    $('calcNote').textContent = w.toLocaleString('en-US') + ' g × ' + k + 'K × ' + money(r) + ' per gram (24K)';
+  }
+  ['weight', 'karat', 'rate'].forEach(function (id) { $(id).addEventListener('input', calc); });
+  calc();
 
-              <h3 style="font-size: 2rem;">${product.name}</h3>
+  $('enquiry').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var text = 'Hello Ryaan Jewellers, I would like to book a visit.\n' +
+      'Name: ' + $('fname').value.trim() + '\n' +
+      'Phone: ' + $('fphone').value.trim() + '\n' +
+      'Preferred date: ' + ($('fdate').value.trim() || 'Flexible') + '\n' +
+      'Message: ' + ($('fmsg').value.trim() || 'No message');
+    window.open('https://wa.me/971543746476?text=' + encodeURIComponent(text), '_blank', 'noopener');
+  });
 
-              <div class="product-price">
-                <span style="color: var(--muted);">From</span>
-                <strong>${formatCurrency(product.price)}</strong>
-              </div>
-
-              <div class="product-actions">
-                <button class="btn btn-primary" type="button">Add to cart</button>
-              </div>
-            </div>
-          </article>
-        `).join("");
-      }
-
-      filterButtons.forEach((button) => {
-        button.addEventListener("click", () => {
-          activeFilter = button.dataset.filter;
-          filterButtons.forEach((btn) => btn.classList.toggle("active", btn === button));
-          renderProducts();
-        });
-      });
-
-      sortSelect.addEventListener("change", renderProducts);
-
-      renderProducts();
-
-      const weightInput = document.getElementById("weight");
-      const karatInput = document.getElementById("karat");
-      const estimatedValue = document.getElementById("estimatedValue");
-      const breakdown = document.getElementById("breakdown");
-
-      function calculateGoldValue() {
-        const weight = Number(weightInput.value) || 0;
-        const karat = Number(karatInput.value) || 18;
-        const pricePerGram = {
-          24: 601.14,
-          22: 551.05,
-          21: 523.37,
-          18: 450.86,
-          14: 354.12
-        };
-
-        const rate = pricePerGram[karat];
-        const value = weight * rate;
-        estimatedValue.textContent = `AED ${value.toLocaleString("en-AE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
-        breakdown.textContent = `${weight.toFixed(1)}g × ${karat}K (AED ${rate.toFixed(2)}/g)`;
-      }
-
-      weightInput.addEventListener("input", calculateGoldValue);
-      karatInput.addEventListener("change", calculateGoldValue);
-
-      calculateGoldValue();
-
-      document.querySelector(".mobile-toggle").addEventListener("click", () => {
-        const nav = document.querySelector(".main-nav");
-        nav.style.display = nav.style.display === "flex" ? "none" : "flex";
-        nav.style.position = "absolute";
-        nav.style.top = "100%";
-        nav.style.left = "16px";
-        nav.style.right = "16px";
-        nav.style.flexDirection = "column";
-        nav.style.background = "rgba(17, 16, 15, 0.96)";
-        nav.style.padding = "16px";
-        nav.style.border = "1px solid var(--line)";
-        nav.style.borderRadius = "12px";
-      });
-
-      document.querySelector("form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        alert("Appointment request submitted. Our team will contact you shortly.");
-      });
-    </script>
-  </body>
+  $('year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
 </html>
