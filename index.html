@@ -1,57 +1,581 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#11110f"><meta name="description" content="Discover considered 18K gold and diamond jewellery at Ryaan Jewellers, Gold Souk, Deira, Dubai."><title>Ryaan Jewellers — Modern Heirlooms</title>
-<style>
-:root{color-scheme:light dark;--ink:light-dark(#24231f,#f6f0e4);--muted:light-dark(#79756d,#b5afa3);--paper:light-dark(#fbf8f1,#171714);--panel:light-dark(#fffdf8,#20201b);--line:light-dark(#e7dfd0,#39372f);--gold:#c9a86a;--gold2:#ead5a5;--dark:#11110f;--serif:Georgia,'Times New Roman',serif;--sans:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.5}button,input,select,textarea{font:inherit}button,a{touch-action:manipulation}button{cursor:pointer}a{color:inherit;text-decoration:none}.announcement{background:#181815;color:#f4e9d1;text-align:center;font-size:11px;letter-spacing:.13em;text-transform:uppercase;padding:10px 16px}.announcement b{color:var(--gold2);font-weight:600}.wrap{width:min(1240px,calc(100% - 44px));margin:auto}.header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.headtop{height:78px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:210px}.brandmark{width:42px;height:42px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-family:var(--serif);font-size:24px}.brandlogo{display:block;width:190px;height:auto;max-width:100%;object-fit:contain}.footer .brandlogo{width:190px;filter:brightness(1.12)}.brandname{font-family:var(--serif);font-size:23px;letter-spacing:.08em;line-height:1}.brandname small{display:block;font:9px var(--sans);letter-spacing:.28em;margin-top:6px;color:var(--muted)}.searchbox{display:flex;align-items:center;gap:10px;max-width:350px;flex:1;border-bottom:1px solid var(--line);padding:9px 0;color:var(--muted)}.searchbox input{border:0;outline:0;background:transparent;color:var(--ink);width:100%;font-size:13px}.headactions{display:flex;gap:8px;align-items:center}.iconbtn{position:relative;background:transparent;border:1px solid var(--line);color:var(--ink);width:42px;height:42px;border-radius:50%;display:grid;place-items:center;font-size:18px}.count{position:absolute;top:-4px;right:-3px;background:var(--gold);color:#171510;border-radius:20px;font:10px var(--sans);padding:2px 5px;min-width:16px}.nav{display:flex;justify-content:center;gap:34px;padding:0 0 16px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.nav a:hover{color:var(--gold)}.hero{position:relative;overflow:hidden;min-height:540px;background:radial-gradient(ellipse at 78% 40%,#5b4a2d 0,#26251e 26%,#171714 55%,#11110f 100%);color:#f8f1e4;display:grid;grid-template-columns:1fr 1fr;align-items:center}.hero:after{content:"";position:absolute;inset:0;opacity:.2;background:repeating-linear-gradient(125deg,transparent 0 38px,#b99b61 39px,transparent 40px 84px);mask-image:linear-gradient(90deg,transparent,black)}.hero-copy{position:relative;z-index:2;padding:70px max(24px,calc((100vw - 1240px)/2));padding-right:20px}.eyebrow{font-size:10px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold2);display:flex;gap:12px;align-items:center}.eyebrow:before{content:"";height:1px;width:28px;background:var(--gold)}h1,h2,h3,p{margin-top:0}.hero h1{font:clamp(44px,6vw,78px)/.99 var(--serif);font-weight:400;letter-spacing:-.045em;margin:24px 0}.hero h1 em{color:var(--gold2);font-weight:400}.hero p{max-width:430px;color:#d4ccbd;font-size:14px;line-height:1.9}.buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn{border:1px solid var(--gold);padding:13px 20px;background:var(--gold);color:#171510;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;gap:10px;transition:.2s}.btn:hover{transform:translateY(-2px);background:var(--gold2)}.btn.ghost{background:transparent;color:#f8f1e4;border-color:#85734f}.btn.lightghost{background:transparent;color:var(--ink);border-color:var(--line)}.hero-art{height:100%;min-height:540px;position:relative;z-index:1;display:grid;place-items:center}.orb{position:absolute;width:min(37vw,420px);aspect-ratio:1;border:1px solid #c9a86a66;border-radius:50%;box-shadow:0 0 0 30px #c9a86a0a,0 0 0 70px #c9a86a08}.jewel{position:relative;width:250px;height:330px;filter:drop-shadow(0 24px 28px #0008)}.necklace{position:absolute;top:25px;left:22px;width:206px;height:240px;border:3px solid #d8bb7c;border-top-color:transparent;border-radius:0 0 50% 50%;transform:rotate(0deg);box-shadow:inset 0 -1px 0 #f6e4ac,0 0 3px #f4d992}.pendant{position:absolute;top:228px;left:108px;width:40px;height:40px;transform:rotate(45deg);background:linear-gradient(135deg,#fff6d9,#a77d36 55%,#f9e6ad);border:3px solid #d4b36d;box-shadow:0 0 0 5px #b18c4c44}.pendant:after{content:"";position:absolute;inset:7px;border:1px solid #fff5d5}.artnote{position:absolute;bottom:28px;right:12%;font:italic 14px var(--serif);color:#dfc58e}.trust{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line);background:var(--panel)}.trust div{padding:22px 12px;text-align:center;border-right:1px solid var(--line)}.trust div:last-child{border:0}.trust strong{display:block;font:17px var(--serif);font-weight:400}.trust span{font-size:9px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}section{padding:82px 0}.sectionhead{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:30px}.sectionhead h2{font:clamp(32px,4vw,48px)/1.08 var(--serif);font-weight:400;letter-spacing:-.03em;margin:10px 0 0}.sectionhead p{max-width:400px;color:var(--muted);font-size:13px;margin-bottom:4px}.collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.collection{min-height:270px;padding:25px;position:relative;overflow:hidden;background:linear-gradient(135deg,#d9c6a4,#8c6b43);color:#1d1b16;display:flex;flex-direction:column;justify-content:end}.collection:nth-child(2){background:linear-gradient(145deg,#e6dfd0,#a9a49b)}.collection:nth-child(3){background:linear-gradient(145deg,#d7b8a0,#765043);color:#fff4e9}.collection:before{content:"";position:absolute;width:170px;height:170px;border:2px solid #fff8e055;border-radius:50%;top:-25px;right:-15px;box-shadow:0 0 0 18px #fff7e022,0 0 0 38px #fff7e015}.collection:after{content:"✧";position:absolute;top:22px;right:40px;font-size:90px;color:#fff9e8a6}.collection small{font-size:9px;letter-spacing:.18em;text-transform:uppercase;position:relative;z-index:1}.collection h3{font:32px var(--serif);font-weight:400;margin:8px 0;position:relative;z-index:1}.collection a{font-size:10px;letter-spacing:.13em;text-transform:uppercase;text-decoration:underline;text-underline-offset:5px;position:relative;z-index:1}.products{background:var(--panel)}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}.chip{border:1px solid var(--line);background:transparent;color:var(--muted);padding:9px 14px;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.chip.active,.chip:hover{background:var(--dark);color:#f5ead5;border-color:var(--dark)}.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{min-width:0}.product-art{aspect-ratio:4/4.6;position:relative;background:linear-gradient(145deg,#e8dfce,#b4a080);display:grid;place-items:center;overflow:hidden}.product:nth-child(4n+2) .product-art{background:linear-gradient(145deg,#dedbd3,#a9a9a2)}.product:nth-child(4n+3) .product-art{background:linear-gradient(145deg,#e6d2c3,#b48a70)}.product:nth-child(4n+4) .product-art{background:linear-gradient(145deg,#d7d0bf,#9c927e)}.product-art:before{content:"";position:absolute;inset:10px;border:1px solid #fff8e880;pointer-events:none}.product-photo{width:100%;height:100%;object-fit:contain;padding:20px;background:#fffdf8;position:absolute;inset:0}.product-art .tag,.product-art .heart{z-index:3}.cartthumb img{width:100%;height:100%;object-fit:contain;background:#fffdf8;padding:3px}.jewel-icon{font-size:95px;color:#b08a45;filter:drop-shadow(2px 10px 5px #4d392633);text-shadow:1px 1px 0 #fff2be;z-index:1}.product-art .tag{position:absolute;top:18px;left:18px;background:#fbf7ef;color:#4e4028;padding:6px 8px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;z-index:2}.heart{position:absolute;right:15px;top:14px;border:0;background:#ffffffc9;color:#3c3427;border-radius:50%;width:34px;height:34px;z-index:2}.product-meta{padding:14px 2px}.product-meta small{font-size:9px;color:var(--muted);letter-spacing:.12em;text-transform:uppercase}.product-meta h3{font:19px var(--serif);font-weight:400;margin:5px 0}.price{font-size:13px;font-weight:600}.product-bottom{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:12px}.add{background:transparent;border:1px solid var(--line);padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink)}.add:hover{background:var(--dark);color:#fff}.services{display:grid;grid-template-columns:1fr 1fr;gap:18px}.service{padding:35px;background:var(--panel);border:1px solid var(--line);position:relative;overflow:hidden}.service .service-icon{font-size:27px;color:var(--gold)}.service h3{font:32px var(--serif);font-weight:400;margin:15px 0 8px}.service p{font-size:13px;color:var(--muted);max-width:420px;line-height:1.8}.service ul{padding-left:18px;color:var(--muted);font-size:12px;line-height:2}.calculator{background:#1b1b17;color:#f5efdf}.calc-layout{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.calc-layout h2{font:clamp(34px,4vw,50px) var(--serif);font-weight:400}.calc-layout p{color:#bcb5a7;font-size:13px;line-height:1.8}.calcform{background:#25251f;padding:28px;border:1px solid #4c4638}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}.field label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#c4bda9}.field input,.field select,.field textarea{width:100%;background:#171714;border:1px solid #4a473d;color:#f7f0e3;padding:12px;outline:0}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.calcresult{border-top:1px solid #4a473d;padding-top:18px;margin-top:8px}.calcresult span{display:block;color:#bcb5a7;font-size:10px;letter-spacing:.12em;text-transform:uppercase}.calcresult strong{font:36px var(--serif);color:var(--gold2)}.calcresult small{display:block;color:#bcb5a7;font-size:10px;margin-top:4px}.appointment{background:linear-gradient(110deg,#e6d7bb,#c1a779);color:#211d15}.appointment .wrap{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}.appointment h2{font:clamp(30px,4vw,46px) var(--serif);font-weight:400;margin:8px 0}.appointment p{max-width:600px;font-size:13px;opacity:.78;margin:0}.appointment .btn{background:#211d15;color:#f8edd8;border-color:#211d15}.footer{background:#121210;color:#f5efdf;padding:55px 0 22px}.footgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px}.footer p,.footer a{font-size:12px;color:#b8b1a3;line-height:2}.footer h4{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#e8d4a9;margin:0 0 14px}.footer .brandname{color:#f5efdf}.footbottom{border-top:1px solid #35332c;margin-top:35px;padding-top:18px;display:flex;justify-content:space-between;gap:16px;font-size:10px;color:#a49d90}.overlay{position:fixed;inset:0;background:#0009;z-index:50;display:none}.overlay.show{display:block}.drawer{position:fixed;z-index:51;right:0;top:0;height:100%;width:min(440px,100%);background:var(--paper);color:var(--ink);transform:translateX(105%);transition:transform .28s ease;display:flex;flex-direction:column;box-shadow:-10px 0 50px #0002}.drawer.show{transform:translateX(0)}.drawerhead{padding:22px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between}.drawerhead h3{font:28px var(--serif);font-weight:400;margin:0}.close{border:1px solid var(--line);border-radius:50%;width:36px;height:36px;background:transparent;color:var(--ink)}.drawerbody{padding:18px 22px;overflow:auto;flex:1}.cartrow{display:grid;grid-template-columns:60px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:center}.cartthumb{width:60px;height:65px;background:linear-gradient(145deg,#e8dfce,#b4a080);display:grid;place-items:center;font-size:27px;color:#a5803e}.cartrow h4{font:16px var(--serif);font-weight:400;margin:0 0 4px}.cartrow small{color:var(--muted);font-size:11px}.qty{display:flex;gap:8px;align-items:center;margin-top:8px}.qty button{width:23px;height:23px;background:transparent;border:1px solid var(--line);color:var(--ink)}.drawerfoot{padding:20px 22px;border-top:1px solid var(--line)}.subtotal{display:flex;justify-content:space-between;margin-bottom:14px;font-size:13px}.drawerfoot .btn{width:100%;margin-top:8px}.empty{text-align:center;padding:50px 10px;color:var(--muted)}.toast{position:fixed;bottom:22px;left:50%;transform:translate(-50%,120px);z-index:100;background:#1b1b17;color:#f7eedc;border:1px solid #806a40;padding:12px 18px;font-size:12px;transition:transform .25s}.toast.show{transform:translate(-50%,0)}.modal{display:none;position:fixed;z-index:60;inset:0;background:#0009;align-items:center;justify-content:center;padding:20px}.modal.show{display:flex}.modalcard{width:min(550px,100%);max-height:90vh;overflow:auto;background:var(--paper);padding:28px;border:1px solid var(--line)}.modalhead{display:flex;justify-content:space-between;align-items:center}.modalhead h3{font:30px var(--serif);font-weight:400;margin:0}.modalcard .field input,.modalcard .field select,.modalcard .field textarea{background:var(--panel);color:var(--ink);border-color:var(--line)}.modalcard .field label{color:var(--muted)}.notice{font-size:11px;color:var(--muted);line-height:1.6}.mobilemenu{display:none}
-@media(max-width:850px){.searchbox{display:none}.nav{gap:18px;overflow:auto;justify-content:flex-start;padding:0 22px 14px;white-space:nowrap}.hero{grid-template-columns:1fr;min-height:auto}.hero-copy{padding:65px 26px 15px}.hero-art{min-height:330px}.orb{width:250px}.jewel{transform:scale(.78)}.artnote{right:8%;bottom:12px}.product-grid{grid-template-columns:repeat(2,1fr)}.collection-grid{grid-template-columns:1fr}.collection{min-height:210px}.calc-layout{grid-template-columns:1fr;gap:25px}.footgrid{grid-template-columns:1fr 1fr}.trust{grid-template-columns:repeat(2,1fr)}.trust div:nth-child(2){border-right:0}.trust div:nth-child(-n+2){border-bottom:1px solid var(--line)}.appointment .wrap{grid-template-columns:1fr}.appointment .btn{width:max-content}.sectionhead{align-items:start;flex-direction:column}}
-@media(max-width:520px){.wrap{width:calc(100% - 30px)}.headtop{height:68px}.brand{min-width:0;gap:8px}.brandmark{width:35px;height:35px}.brandname{font-size:19px}.headactions{gap:5px}.iconbtn{width:36px;height:36px}.nav{font-size:9px;gap:16px}.hero h1{font-size:50px}.hero-copy{padding:52px 20px 10px}.hero-art{min-height:300px}.trust strong{font-size:15px}.trust span{font-size:8px}.product-grid{gap:12px}.product-meta h3{font-size:17px}.product-art .tag{top:12px;left:12px}.jewel-icon{font-size:75px}.product-bottom{align-items:flex-start;flex-direction:column}.add{width:100%}section{padding:58px 0}.services{grid-template-columns:1fr}.service{padding:25px}.footgrid{grid-template-columns:1fr 1fr;gap:24px 18px}.footgrid>div:first-child{grid-column:1/-1}.footbottom{flex-direction:column}.calcform{padding:20px}.btn{padding:12px 15px}.appointment .btn{width:100%}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
-</style>
-</head>
-<body>
-<div class="announcement">A considered kind of luxury <b>· personal jewellery enquiries in Dubai</b></div>
-<header class="header"><div class="wrap headtop"><a class="brand" href="#home" aria-label="Ryaan Jewellers home"><img class="brandlogo" src="logo.svg" alt="Ryaan Jewellers logo" width="180" height="52"><span class="brandname">RYAAN JEWELLERS<small>GOLD SOUK · DUBAI</small></span></a><label class="searchbox">⌕ <input id="search" placeholder="Search pieces, collections…" aria-label="Search jewellery"></label><div class="headactions"><button class="iconbtn" id="wishlistOpen" aria-label="Open wishlist">♡<span class="count" id="wishCount">0</span></button><button class="iconbtn" id="cartOpen" aria-label="Open shopping bag">♧<span class="count" id="cartCount">0</span></button><button class="iconbtn" id="bookOpen" aria-label="Book an appointment">↗</button></div></div><nav class="nav"><a href="#collections">Collections</a><a href="#pieces">Shop jewellery</a><a href="#services">Gold services</a><a href="#calculator">Gold calculator</a><a href="#appointment">Visit us</a></nav></header>
-<main id="home"><section class="hero"><div class="hero-copy"><div class="eyebrow">Made to be kept · Dubai</div><h1>Modern heirlooms.<br><em>Timeless you.</em></h1><p>Discover thoughtfully selected 18K gold and diamond jewellery — designed for everyday elegance, meaningful moments, and the stories you carry forward.</p><div class="buttons"><a class="btn" href="#pieces">Explore the collection <span>↗</span></a><a class="btn ghost" href="#appointment">Visit our boutique</a></div></div><div class="hero-art" aria-label="Abstract gold necklace artwork"><div class="orb"></div><div class="jewel"><div class="necklace"></div><div class="pendant"></div></div><div class="artnote">A little gold. A lasting story.</div></div></section>
-<div class="trust"><div><strong>Considered quality</strong><span>Selected with care</span></div><div><strong>Personal guidance</strong><span>Real jewellery experts</span></div><div><strong>Secure delivery</strong><span>UAE delivery options</span></div><div><strong>Gold Souk, Deira</strong><span>Come meet us</span></div></div>
-<section id="collections"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">Find your signature</div><h2>Collections with character</h2></div><p>From understated everyday pieces to expressive designs, find the detail that feels like you.</p></div><div class="collection-grid"><article class="collection"><small>01 · The icons</small><h3>Signature motifs</h3><a href="#pieces" data-filter-link="Van Cleef Style">Explore collection ↗</a></article><article class="collection"><small>02 · Modern movement</small><h3>Everyday brilliance</h3><a href="#pieces" data-filter-link="Messika Style">Explore collection ↗</a></article><article class="collection"><small>03 · Soft statement</small><h3>Floral expressions</h3><a href="#pieces" data-filter-link="Flower Collection">Explore collection ↗</a></article></div></div></section>
-<section class="products" id="pieces"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">The Ryaan edit</div><h2>Pieces to fall for</h2></div><p>Explore our featured edit. Ask our team to confirm current availability, gold weight, and final pricing before purchase.</p></div><div class="filters" id="filters"><button class="chip active" data-filter="All">All pieces</button><button class="chip" data-filter="Van Cleef Style">Signature motifs</button><button class="chip" data-filter="Messika Style">Modern movement</button><button class="chip" data-filter="Bulgari Style">Bold classics</button><button class="chip" data-filter="Flower Collection">Florals</button></div><div class="product-grid" id="productGrid"></div><p class="notice" style="margin-top:20px">Product photographs are for style reference. Please contact our team to confirm exact item, material, gold purity, weight, stock and final price before purchase.</p></div></section>
-<section id="services"><div class="wrap"><div class="sectionhead"><div><div class="eyebrow">More than jewellery</div><h2>Gold, handled with care</h2></div><p>Whether you're refreshing your collection or exploring the value of gold you already own, our team can guide you through the next step.</p></div><div class="services"><article class="service"><div class="service-icon">◈</div><h3>Sell your gold</h3><p>Bring old, broken or unwanted gold for a professional evaluation. We explain the process and available options before you decide.</p><ul><li>Purity assessment appointment</li><li>Transparent evaluation process</li><li>Pickup requests by arrangement</li></ul><button class="btn" data-inquiry="Sell gold">Request an evaluation ↗</button></article><article class="service"><div class="service-icon">✧</div><h3>Buy with confidence</h3><p>Ask about purity, weight, diamond documentation, care and after-sales support before choosing a piece.</p><ul><li>Personal product consultation</li><li>Details confirmed before payment</li><li>Delivery arrangements discussed</li></ul><button class="btn lightghost" data-inquiry="Jewellery consultation">Talk to a jewellery expert ↗</button></article></div></div></section>
-<section class="calculator" id="calculator"><div class="wrap calc-layout"><div><div class="eyebrow">A helpful starting point</div><h2>Understand your gold value.</h2><p>Estimate a reference value from a rate you enter. This calculator does not fetch live gold prices and is not a buyback quote; final value depends on purity testing, deductions, and the current rate offered by the jeweller.</p><a class="btn ghost" href="#services">Ask about selling gold ↗</a></div><div class="calcform"><div class="field"><label for="weight">Gold weight (grams)</label><input id="weight" type="number" min="0" step="0.01" value="10"></div><div class="field"><label for="karat">Purity</label><select id="karat"><option value="24">24K · 999</option><option value="22">22K · 916</option><option value="21">21K · 875</option><option value="18" selected>18K · 750</option><option value="14">14K · 585</option></select></div><div class="field"><label for="rate">Reference 24K rate (AED / gram)</label><input id="rate" type="number" min="0" step="0.01" value="600"></div><div class="calcresult"><span>Estimated metal value</span><strong id="calcValue">AED 4,500.00</strong><small id="calcExplain">10g × 18K purity × entered 24K reference rate</small></div></div></div></section>
-<section class="appointment" id="appointment"><div class="wrap"><div><div class="eyebrow" style="color:#59472a">Your visit, your way</div><h2>Let’s find your forever piece.</h2><p>Visit Ryaan Jewellers at Gold Souk, Deira, Dubai, or arrange a personal consultation with our team.</p></div><button class="btn" id="appointmentCta">Book a consultation ↗</button></div></section>
-</main>
-<section class="appointment" id="paypal-payment"><div class="wrap"><div><div class="eyebrow" style="color:#59472a">Secure online payment</div><h2>Ready to make a payment?</h2><p>For confirmed orders, use our PayPal payment page. Please confirm the final amount and order details with Ryaan Jewellers before paying.</p></div><a class="btn" href="https://www.paypal.com/ncp/payment/L9UPUAKQUYZZ2" target="_blank" rel="noopener noreferrer">Pay securely with PayPal ↗</a></div></section>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<footer class="footer"><div class="wrap"><div class="footgrid"><div><a class="brand" href="#home"><img class="brandlogo" src="logo.svg" alt="Ryaan Jewellers logo" width="180" height="52"><span class="brandname">RYAAN JEWELLERS<small>GOLD SOUK · DUBAI</small></span></a><p>Considered gold and diamond jewellery for life's everyday and extraordinary moments.</p><p>Gold Souk, Deira, Dubai, UAE</p></div><div><h4>Discover</h4><a href="#collections">Collections</a><br><a href="#pieces">Shop jewellery</a><br><a href="#services">Buy & sell gold</a><br><a href="#calculator">Gold calculator</a></div><div><h4>Visit & connect</h4><a href="https://wa.me/971543746476" target="_blank" rel="noopener">WhatsApp: +971 54 374 6476</a><br><a href="mailto:info@ryaanjewellers.com">info@ryaanjewellers.com</a><br><span style="font-size:12px;color:#b8b1a3">Business hours: confirm before visiting</span></div><div><h4>Customer care</h4><a href="#appointment">Book an appointment</a><br><a href="#services">Gold evaluation</a><br><a href="#pieces">Product enquiries</a><p>All orders are confirmed by our team before payment and dispatch.</p></div></div><div class="footbottom"><span>© <span id="year"></span> Ryaan Jewellers. All rights reserved.</span><span>Pricing, product details and availability are confirmed at the point of sale.</span></div></div></footer>
-<div class="overlay" id="overlay"></div><aside class="drawer" id="drawer" aria-label="Shopping bag"><div class="drawerhead"><h3 id="drawerTitle">Your bag</h3><button class="close" id="drawerClose" aria-label="Close">×</button></div><div class="drawerbody" id="drawerBody"></div><div class="drawerfoot" id="drawerFoot"></div></aside>
-<div class="modal" id="modal"><div class="modalcard"><div class="modalhead"><h3 id="modalTitle">Book a consultation</h3><button class="close" id="modalClose" aria-label="Close">×</button></div><p class="notice" id="modalIntro">Share a few details and continue to WhatsApp to send your request.</p><form id="requestForm"><div class="field"><label for="customerName">Your name</label><input id="customerName" required autocomplete="name" placeholder="Full name"></div><div class="field"><label for="customerPhone">Phone / WhatsApp</label><input id="customerPhone" required autocomplete="tel" placeholder="+971 …"></div><div class="field"><label for="requestType">How can we help?</label><select id="requestType"><option>Private jewellery viewing</option><option>Product availability and price</option><option>Sell gold evaluation</option><option>Jewellery consultation</option><option>Delivery question</option></select></div><div class="field"><label for="requestMessage">Message (optional)</label><textarea id="requestMessage" rows="3" placeholder="Preferred date, item, or question"></textarea></div><button class="btn" type="submit" style="width:100%">Continue on WhatsApp ↗</button><p class="notice">This sends a prepared WhatsApp message. It does not create a confirmed appointment or order until our team replies.</p></form></div></div><div class="toast" id="toast" role="status"></div>
-<script>
-const PRODUCTS=[
-{id:1,name:'Alhambra Pendant',collection:'Van Cleef Style',price:4550,tag:'Signature',icon:'✿',metal:'18K Gold',image:'Vancleef%20%20Bracelet%20%20Onyx.jpg'},
-{id:2,name:'Move Bracelet',collection:'Messika Style',price:6300,tag:'Bestseller',icon:'◈',metal:'18K Gold',image:'Messika%20mov%20uno%20.jpg'},
-{id:3,name:'Floral Pendant',collection:'Flower Collection',price:2450,tag:'New edit',icon:'✾',metal:'18K Gold',image:'Butterfly%20Ring.jpg'},
-{id:4,name:'Serpenti-Inspired Ring',collection:'Bulgari Style',price:3850,tag:'Statement',icon:'◉',metal:'18K Gold',image:'Serpenti%20Bvulgari%20Chocker.jpg'},
-{id:5,name:'Alhambra Stud Earrings',collection:'Van Cleef Style',price:3250,tag:'Everyday',icon:'✿',metal:'18K Gold',image:'Vancleef%20Bracelet%20%20Carnelian%20.jpg'},
-{id:6,name:'Modern Link Bracelet',collection:'Messika Style',price:5200,tag:'Modern',icon:'∞',metal:'18K Gold',image:'Messika%20rose%20uno%20move.jpg'},
-{id:7,name:'Petal Drop Earrings',collection:'Flower Collection',price:2950,tag:'Elegant',icon:'✾',metal:'18K Gold',image:'Chopard%20heart%20bangles%20whithe.jpg'},
-{id:8,name:'Classic Gold Band',collection:'Bulgari Style',price:2100,tag:'Essential',icon:'◯',metal:'18K Gold',image:'Chaumet%20Bangles.jpg'}
-];
-const money=n=>'AED '+Number(n).toLocaleString('en-AE',{minimumFractionDigits:2,maximumFractionDigits:2});let filter='All',query='',cart=JSON.parse(localStorage.getItem('ryaan_cart')||'[]'),wishlist=JSON.parse(localStorage.getItem('ryaan_wishlist')||'[]'),drawerMode='cart';
-const $=id=>document.getElementById(id);function toast(msg){$('toast').textContent=msg;$('toast').classList.add('show');setTimeout(()=>$('toast').classList.remove('show'),2400)}
-function save(){localStorage.setItem('ryaan_cart',JSON.stringify(cart));localStorage.setItem('ryaan_wishlist',JSON.stringify(wishlist));renderCounts()}
-function renderCounts(){$('cartCount').textContent=cart.reduce((a,x)=>a+x.qty,0);$('wishCount').textContent=wishlist.length}
-function renderProducts(){const list=PRODUCTS.filter(p=>(filter==='All'||p.collection===filter)&&(p.name+' '+p.collection+' '+p.metal).toLowerCase().includes(query.toLowerCase()));$('productGrid').innerHTML=list.length?list.map(p=>`<article class="product"><div class="product-art"><span class="tag">${p.tag}</span><button class="heart" data-wish="${p.id}" aria-label="Add ${p.name} to wishlist">${wishlist.includes(p.id)?'♥':'♡'}</button><img class="product-photo" src="${p.image}" alt="${p.name}" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'block\'"><span class="jewel-icon" style="display:none">${p.icon}</span></div><div class="product-meta"><small>${p.collection} · ${p.metal}</small><h3>${p.name}</h3><div class="price">From ${money(p.price)}</div><div class="product-bottom"><button class="add" data-add="${p.id}">Add to bag +</button><button class="add" data-ask="${p.id}">Enquire</button></div></div></article>`).join(''):'<p>No pieces match your search. Try another term or collection.</p>'}
-function openDrawer(mode){drawerMode=mode;$('drawerTitle').textContent=mode==='wishlist'?'Your wishlist':'Your bag';$('overlay').classList.add('show');$('drawer').classList.add('show');renderDrawer()}
-function closeDrawer(){$('overlay').classList.remove('show');$('drawer').classList.remove('show')}
-function renderDrawer(){if(drawerMode==='wishlist'){let items=PRODUCTS.filter(p=>wishlist.includes(p.id));$('drawerBody').innerHTML=items.length?items.map(p=>`<div class="cartrow"><div class="cartthumb"><img src="${p.image}" alt="" loading="lazy"></div><div><h4>${p.name}</h4><small>From ${money(p.price)}</small><div class="qty"><button data-unwish="${p.id}">×</button><button data-add="${p.id}">Add to bag</button></div></div></div>`).join(''):'<div class="empty">Your wishlist is waiting for a little sparkle.<br><br><a class="btn" href="#pieces" id="shopFromDrawer">Explore pieces</a></div>';$('drawerFoot').innerHTML='<button class="btn" id="continueShop">Continue exploring</button>';return}let items=cart.map(x=>({...PRODUCTS.find(p=>p.id===x.id),qty:x.qty}));$('drawerBody').innerHTML=items.length?items.map(p=>`<div class="cartrow"><div class="cartthumb">${p.icon}</div><div><h4>${p.name}</h4><small>${money(p.price)} each · price indicative</small><div class="qty"><button data-qty="${p.id}" data-delta="-1">−</button><span>${p.qty}</span><button data-qty="${p.id}" data-delta="1">+</button><button data-remove="${p.id}" aria-label="Remove">×</button></div></div><strong style="font-size:12px">${money(p.price*p.qty)}</strong></div>`).join(''):'<div class="empty">Your bag is empty.<br><br>Find something that feels like you.</div>';let total=items.reduce((a,p)=>a+p.price*p.qty,0);$('drawerFoot').innerHTML=`<div class="subtotal"><span>Indicative subtotal</span><strong>${money(total)}</strong></div><p class="notice">Final price, stock, weight and product specifications will be confirmed by our team.</p><button class="btn" id="checkout">Request order on WhatsApp ↗</button><button class="btn lightghost" id="continueShop">Continue shopping</button>`}
-function add(id){let x=cart.find(x=>x.id===id);x?x.qty++:cart.push({id,qty:1});save();if($('drawer').classList.contains('show'))renderDrawer();toast('Added to your bag')}
-function wish(id){wishlist.includes(id)?wishlist=wishlist.filter(x=>x!==id):wishlist.push(id);save();renderProducts();if($('drawer').classList.contains('show')&&drawerMode==='wishlist')renderDrawer();toast(wishlist.includes(id)?'Saved to wishlist':'Removed from wishlist')}
-function openModal(type='Private jewellery viewing',product=''){ $('modalTitle').textContent=type==='Sell gold'?'Request a gold evaluation':type==='Jewellery consultation'?'Talk to a jewellery expert':type==='Product availability and price'?'Ask about this piece':'Book a consultation';$('requestType').value=type;$('requestMessage').value=product?`I would like to know more about ${product}.`:'';$('overlay').classList.add('show');$('modal').classList.add('show') }
-function closeModal(){$('modal').classList.remove('show');if(!$('drawer').classList.contains('show'))$('overlay').classList.remove('show')}
-function whatsapp(text){window.open('https://wa.me/971543746476?text='+encodeURIComponent(text),'_blank','noopener,noreferrer')}
-document.addEventListener('click',e=>{const el=e.target.closest('button,a');if(!el)return;if(el.dataset.filter){filter=el.dataset.filter;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x===el));renderProducts()}if(el.dataset.filterLink){filter=el.dataset.filterLink;document.querySelectorAll('.chip').forEach(x=>x.classList.toggle('active',x.dataset.filter===filter));renderProducts()}if(el.dataset.add)add(Number(el.dataset.add));if(el.dataset.wish)wish(Number(el.dataset.wish));if(el.dataset.unwish)wish(Number(el.dataset.unwish));if(el.dataset.qty){let x=cart.find(x=>x.id===Number(el.dataset.qty));if(x){x.qty+=Number(el.dataset.delta);if(x.qty<1)cart=cart.filter(y=>y.id!==x.id);save();renderDrawer()}}if(el.dataset.remove){cart=cart.filter(x=>x.id!==Number(el.dataset.remove));save();renderDrawer()}if(el.dataset.ask){const p=PRODUCTS.find(x=>x.id===Number(el.dataset.ask));openModal('Product availability and price',p.name)}if(el.dataset.inquiry)openModal(el.dataset.inquiry);if(el.id==='cartOpen')openDrawer('cart');if(el.id==='wishlistOpen')openDrawer('wishlist');if(el.id==='drawerClose'||el.id==='continueShop'){closeDrawer();closeModal()}if(el.id==='bookOpen'||el.id==='appointmentCta')openModal('Private jewellery viewing');if(el.id==='modalClose')closeModal();if(el.id==='checkout'){let lines=cart.map(x=>{let p=PRODUCTS.find(p=>p.id===x.id);return `${x.qty} × ${p.name} (${money(p.price)} indicative)`}).join('\n');whatsapp(`Hello Ryaan Jewellers, I would like to request an order.\n${lines}\nIndicative subtotal: ${money(cart.reduce((a,x)=>a+PRODUCTS.find(p=>p.id===x.id).price*x.qty,0))}\nPlease confirm availability, final price and delivery.`)}if(el.id==='shopFromDrawer'){closeDrawer()}});
-$('overlay').addEventListener('click',()=>{closeDrawer();closeModal()});$('search').addEventListener('input',e=>{query=e.target.value;renderProducts();document.getElementById('pieces').scrollIntoView({behavior:'smooth',block:'start'})});
-function calculate(){let w=Math.max(0,Number($('weight').value)||0),k=Number($('karat').value),r=Math.max(0,Number($('rate').value)||0),v=w*r*k/24;$('calcValue').textContent=money(v);$('calcExplain').textContent=`${w.toLocaleString()}g × ${k}K purity × ${money(r)} 24K reference rate`}
-['weight','karat','rate'].forEach(id=>$(id).addEventListener('input',calculate));$('requestForm').addEventListener('submit',e=>{e.preventDefault();let msg=`Hello Ryaan Jewellers, I would like to make an enquiry.\nName: ${$('customerName').value}\nPhone: ${$('customerPhone').value}\nRequest: ${$('requestType').value}\nMessage: ${$('requestMessage').value||'No additional message'}\nPlease reply with the next steps.`;closeModal();whatsapp(msg)});
-$('year').textContent=new Date().getFullYear();renderProducts();renderCounts();calculate();
-</script></body></html>
+<!-- ═══ PRIMARY SEO META TAGS ═══ -->
+<title>Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry | Gold Souk Deira</title>
+<meta name="description" content="Ryaan Jewellers — Dubai's Gold Souk premium 18K gold &amp; diamond jewelry store. Van Cleef style, Messika style, Bulgari style bracelets &amp; necklaces. Buy &amp; sell gold door-to-door. WhatsApp +971 54 374 6476.">
+<meta name="keywords" content="Ryaan Jewellers, Ryaan Jewellers Dubai, 18K gold jewelry Dubai, gold souk Dubai jewelry, buy gold Dubai, sell gold Dubai, Van Cleef style bracelet Dubai, Messika bracelet Dubai, Bulgari necklace Dubai, diamond jewelry Dubai, gold bracelet Dubai price, Alhambra bracelet Dubai, Move bangle Dubai, gold jewellery UAE, 18K bracelet UAE, gold souk Deira, luxury jewelry Dubai, gold necklace Dubai, buy sell gold UAE, door to door gold Dubai, inspired jewelry Dubai">
+<meta name="author" content="Ryaan Jewellers Dubai">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta name="googlebot" content="index, follow">
+<meta name="language" content="English">
+<meta name="revisit-after" content="3 days">
+<meta name="geo.region" content="AE-DU">
+<meta name="geo.placename" content="Dubai, United Arab Emirates">
+<meta name="geo.position" content="25.2697;55.3095">
+<meta name="ICBM" content="25.2697, 55.3095">
+<link rel="canonical" href="
+
+">
+
+<!-- ═══ OPEN GRAPH (Facebook / WhatsApp / LinkedIn) ═══ -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="
+
+">
+<meta property="og:title" content="Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry">
+<meta property="og:description" content="Dubai Gold Souk's premium 18K gold jewelry. Van Cleef &amp; Messika inspired designs. Buy &amp; sell gold with door-to-door service. WhatsApp +971 54 374 6476.">
+<meta property="og:image" content="
+
+">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="Ryaan Jewellers">
+<meta property="og:locale" content="en_AE">
+<meta property="og:locale:alternate" content="ar_AE">
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@ryaanjewellers">
+<meta name="twitter:creator" content="@ryaanjewellers">
+<meta name="twitter:title" content="Ryaan Jewellers Dubai | 18K Gold &amp; Diamond Jewelry">
+<meta name="twitter:description" content="Premium 18K gold jewelry at Dubai Gold Souk. Designer-inspired Van Cleef, Messika &amp; Bulgari styles. Best prices. Buy &amp; sell gold.">
+<meta name="twitter:image" content="
+
+">
+
+<!-- ═══ SCHEMA.ORG STRUCTURED DATA (JSON-LD) ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "
+
+",
+  "@graph": [
+    {
+      "@type": "JewelryStore",
+      "@id": "
+",
+      "name": "Ryaan Jewellers",
+      "alternateName": ["Ryaan Jewellers Dubai", "Ryaan Gold & Diamonds"],
+      "url": "
+
+",
+      "logo": "
+
+",
+      "image": "
+
+",
+      "description": "Ryaan Jewellers is Dubai's Gold Souk premium destination for 18K gold and diamond jewelry. Specialising in designer-inspired Van Cleef, Messika and Bulgari style pieces. Buy and sell gold with door-to-door service across Dubai.",
+      "telephone": "+971543746476",
+      "email": "info@ryaanjewellers.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Gold Souk, Deira",
+        "addressLocality": "Dubai",
+        "addressRegion": "Dubai",
+        "addressCountry": "AE",
+        "postalCode": "00000"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 25.2697,
+        "longitude": 55.3095
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "10:00",
+        "closes": "22:00"
+      },
+      "priceRange": "AED 2,450 - AED 15,100",
+      "currenciesAccepted": "AED, USD",
+      "paymentAccepted": "Cash, Credit Card, Apple Pay, PayPal, Bank Transfer",
+      "areaServed": ["Dubai", "Sharjah", "Abu Dhabi", "Ajman", "UAE"],
+      "hasMap": "
+
+",
+      "sameAs": [
+        "
+
+",
+        "
+
+",
+        "
+
+"
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "247",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Fatima Al-Rashidi"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "The Alhambra bracelet was stunning and the price was unbeatable. Fast delivery and beautiful packaging!"
+        },
+        {
+          "@type": "Review",
+          "author": {"@type": "Person", "name": "Ahmed Al-Mansoori"},
+          "reviewRating": {"@type": "Rating", "ratingValue": "5"},
+          "reviewBody": "Best gold rate in the entire Gold Souk. Professional, honest and fast."
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "
+
+",
+      "url": "
+
+",
+      "name": "Ryaan Jewellers Dubai",
+      "description": "Dubai's premier 18K gold and diamond jewelry store at Gold Souk Deira",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "
+
+={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the gold price per gram in Dubai today?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Today's Dubai gold rates: 24K = AED 601.14/g, 22K = AED 551.05/g, 21K = AED 526.00/g, 18K = AED 450.86/g. Prices updated daily."}
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Ryaan Jewellers located?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Ryaan Jewellers is located in the Gold Souk, Deira, Dubai, UAE. We are open daily from 10 AM to 10 PM."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ryaan Jewellers buy old gold?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes! Ryaan Jewellers buys old gold, broken jewelry, and coins at the best market rates with instant cash payment. We offer free purity testing and door-to-door home pickup service across Dubai."}
+        },
+        {
+          "@type": "Question",
+          "name": "What types of jewelry does Ryaan Jewellers sell?",
+          "acceptedAnswer": {"@type": "Answer", "text": "We sell designer-inspired 18K gold jewelry including Van Cleef Alhambra style bracelets, Messika Move style bangles, Bulgari Serpenti style necklaces, Chopard Happy Diamonds earrings, and our exclusive Flower Collection."}
+        },
+        {
+          "@type": "Question",
+          "name": "Does Ryaan Jewellers deliver to home?",
+          "acceptedAnswer": {"@type": "Answer", "text": "Yes! We offer free home delivery across Dubai. We also provide door-to-door gold buying and selling service. WhatsApp us at +971 54 374 6476."}
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ═══ PERFORMANCE & PRELOADS ═══ -->
+<link rel="preconnect" href="
+
+">
+<link rel="preconnect" href="
+
+
+
+
+
+" crossorigin>
+<link rel="preconnect" href="
+
+">
+<link rel="dns-prefetch" href="
+
+">
+<link rel="dns-prefetch" href="
+
+">
+<link rel="preconnect" href="
+
+">
+<link href="
+
+" rel="stylesheet">
+<link rel="stylesheet" href="
+
+">
+<script src="
+
+"></script>
+<style>
+:root{
+  --bg:#FEFCF5;--bg2:#FFFFFF;--card:#F8F4EC;--txt:#1A1108;--txt2:#3A2C18;
+  --muted:#8A7355;--gold:#C8A84B;--gold-h:#EDD070;--gold-d:#97720F;
+  --gold-p:#FDF3D8;--rose:#C1796B;--border:rgba(200,168,75,.22);
+  --glow:0 0 45px rgba(200,168,75,.4);--shad:0 14px 55px rgba(26,17,8,.12);
+  --t:all 0.38s cubic-bezier(.4,0,.2,1);--ts:all 0.75s cubic-bezier(.16,1,.3,1);
+  --serif:'Playfair Display',serif;--italic:'Cormorant Garamond',serif;--body:'Jost',sans-serif;
+}
+body.dark{--bg:#0E0A04;--bg2:#1A1108;--card:#231A0C;--txt:#F8F4EC;--txt2:#E5D6B8;--muted:#A08760;--border:rgba(200,168,75,.18)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--body);background:var(--bg);color:var(--txt);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s;-webkit-font-smoothing:antialiased}
+
+/* ANNOUNCEMENT */
+.ann{background:var(--gold);color:#1A1108;text-align:center;padding:.7rem 1rem;font-size:.79rem;font-weight:600;letter-spacing:1.5px;position:relative;overflow:hidden;cursor:default}
+.ann::after{content:'';position:absolute;top:0;left:-100%;width:55%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.38),transparent);animation:sweep 3.5s infinite}
+@keyframes sweep{to{left:140%}}
+
+/* TOP BAR */
+.topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:.6rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;font-size:.8rem;transition:var(--t)}
+.tb-l{display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap}
+.tbi{display:flex;align-items:center;gap:.4rem;color:var(--muted)}
+.tbi i{color:var(--gold)}
+.tb-r{display:flex;gap:.75rem;align-items:center;flex-wrap:wrap}
+.soc-row{display:flex;gap:.45rem}
+.soc{width:27px;height:27px;border:1px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);text-decoration:none;font-size:.76rem;transition:var(--t)}
+.soc:hover{background:var(--gold);color:#1A1108;transform:translateY(-3px) rotate(360deg);box-shadow:var(--glow)}
+.small-btn{background:var(--card);border:1px solid var(--border);color:var(--txt);padding:.35rem .85rem;border-radius:20px;cursor:pointer;font-size:.76rem;font-family:var(--body);display:flex;align-items:center;gap:.4rem;transition:var(--t)}
+.small-btn:hover{background:var(--gold);color:#1A1108}
+.gold-ticker{background:var(--gold-d);color:var(--gold-h);padding:.35rem 1rem;border-radius:20px;font-size:.74rem;font-weight:600;letter-spacing:.5px;display:flex;align-items:center;gap:.4rem}
+
+/* ANIMATED LOGO */
+@keyframes logoFloat{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-7px) scale(1.04)}}
+@keyframes logoGlow{0%,100%{filter:drop-shadow(0 0 6px rgba(200,168,75,.5)) drop-shadow(0 0 14px rgba(200,168,75,.28))}50%{filter:drop-shadow(0 0 22px rgba(200,168,75,.95)) drop-shadow(0 0 42px rgba(200,168,75,.55))}}
+@keyframes logoEntry{from{transform:rotate(-15deg) scale(.65);opacity:0}to{transform:rotate(0) scale(1);opacity:1}}
+@keyframes logoRotatePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08) rotate(3deg)}}
+.logo-img{width:62px;height:62px;border-radius:50%;border:2.5px solid var(--gold);object-fit:cover;animation:logoEntry .9s cubic-bezier(.16,1,.3,1) forwards,logoFloat 4s ease-in-out 1s infinite,logoGlow 3.2s ease-in-out 1s infinite;cursor:pointer;transition:var(--t)}
+.logo-img:hover{transform:scale(1.18) rotate(8deg)!important;box-shadow:var(--glow)}
+@keyframes goldShimmer{0%{background-position:0%}100%{background-position:300%}}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:999;background:var(--bg2);border-bottom:2px solid var(--gold);box-shadow:0 4px 22px rgba(200,168,75,.13);transition:var(--t)}
+.nav-in{max-width:1520px;margin:0 auto;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center}
+.logo-wrap{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.logo-name{font-family:var(--serif);font-size:1.55rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h),var(--gold));background-size:300% auto;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:3px;animation:goldShimmer 4.5s linear infinite}
+.logo-sub{font-size:.58rem;letter-spacing:2.5px;color:var(--muted);text-transform:uppercase;margin-top:-4px}
+.nav-ul{display:flex;gap:1.7rem;list-style:none}
+.nav-ul a{font-size:.78rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt2);text-decoration:none;position:relative;padding:.4rem 0;transition:var(--t)}
+.nav-ul a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1.5px;background:var(--gold);transition:width .38s}
+.nav-ul a:hover{color:var(--gold)}
+.nav-ul a:hover::after{width:100%}
+.nav-acts{display:flex;gap:1rem;align-items:center}
+.ico{background:none;border:none;color:var(--txt);font-size:1.05rem;cursor:pointer;position:relative;transition:var(--t);padding:.28rem}
+.ico:hover{color:var(--gold);transform:scale(1.22)}
+.bdg{position:absolute;top:-5px;right:-5px;background:#B72525;color:#fff;font-size:.58rem;font-weight:700;padding:1px 5px;border-radius:8px;min-width:16px;text-align:center;pointer-events:none}
+.hmb{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.4rem}
+.hmb span{width:22px;height:2px;background:var(--txt);transition:var(--t);display:block}
+
+/* SEARCH BAR */
+.search-overlay{position:fixed;inset:0;background:rgba(26,17,8,.92);z-index:9998;display:none;align-items:flex-start;justify-content:center;padding-top:8rem;backdrop-filter:blur(8px)}
+.search-overlay.open{display:flex}
+.search-box{width:min(680px,90vw);position:relative}
+.search-box input{width:100%;padding:1.2rem 3.5rem 1.2rem 1.5rem;background:var(--bg2);border:2px solid var(--gold);color:var(--txt);font-family:var(--body);font-size:1.1rem;border-radius:4px}
+.search-box input:focus{outline:none}
+.search-close{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--gold);font-size:1.4rem;cursor:pointer}
+.search-results{background:var(--bg2);border:1px solid var(--border);border-top:none;max-height:350px;overflow-y:auto}
+.sr-item{padding:1rem 1.5rem;display:flex;align-items:center;gap:1rem;cursor:pointer;border-bottom:1px solid var(--border);transition:var(--t)}
+.sr-item:hover{background:var(--gold-p)}
+.sr-item img{width:48px;height:48px;object-fit:cover;border-radius:3px;border:1px solid var(--border)}
+.sr-name{font-weight:500;font-size:.9rem;color:var(--txt)}
+.sr-price{font-size:.82rem;color:var(--gold);font-weight:600}
+
+/* HERO */
+.hero{position:relative;height:100vh;min-height:580px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#080503}
+.hero-bg{position:absolute;inset:0;background:url('
+
+') center/cover;opacity:.3;animation:zbg 22s ease-in-out infinite alternate;filter:blur(2px)}
+@keyframes zbg{0%{transform:scale(1)}100%{transform:scale(1.14)}}
+.hero-ov{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(8,5,3,.05) 0%,rgba(8,5,3,.92) 100%)}
+.hero-c{position:relative;z-index:2;text-align:center;max-width:980px;padding:2rem;animation:rise 1.3s cubic-bezier(.16,1,.3,1)}
+@keyframes rise{from{opacity:0;transform:translateY(55px)}to{opacity:1;transform:translateY(0)}}
+.hero-badge{display:inline-flex;align-items:center;gap:.7rem;padding:.58rem 1.9rem;background:rgba(200,168,75,.12);border:1.5px solid var(--gold);border-radius:50px;font-size:.7rem;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);margin-bottom:1.8rem}
+.hero-title{font-family:var(--serif);font-size:clamp(2.8rem,9vw,7rem);font-weight:700;font-style:italic;color:#FEFCF5;line-height:1.05;margin-bottom:1.2rem;text-shadow:0 18px 45px rgba(0,0,0,.75)}
+.hero-sub{font-family:var(--italic);font-size:clamp(1rem,2.5vw,1.65rem);font-style:italic;color:#E5D6B8;margin-bottom:2.5rem;letter-spacing:1.5px;font-weight:300}
+.pills{display:flex;justify-content:center;gap:.85rem;flex-wrap:wrap;margin:2rem 0}
+.pill{font-family:var(--italic);font-size:.9rem;font-style:italic;color:var(--gold);padding:.55rem 1.4rem;border:1.5px solid var(--gold);border-radius:4px;background:rgba(200,168,75,.04);transition:var(--t);cursor:pointer}
+.pill:hover{background:var(--gold);color:#1A1108;transform:translateY(-4px);box-shadow:var(--glow)}
+.hero-btns{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin-top:2rem}
+
+/* BUTTONS */
+.btn{padding:.92rem 2.3rem;font-family:var(--body);font-size:.79rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:var(--ts);display:inline-flex;align-items:center;gap:.6rem;position:relative;overflow:hidden;border-radius:2px}
+.btn::before{content:'';position:absolute;inset:0;background:linear-gradient(45deg,transparent,rgba(255,255,255,.38),transparent);transform:translateX(-100%);transition:transform .55s}
+.btn:hover::before{transform:translateX(100%)}
+.btn-gold{background:var(--gold);color:#1A1108;box-shadow:0 8px 25px rgba(200,168,75,.38)}
+.btn-gold:hover{background:var(--gold-h);transform:translateY(-3px);box-shadow:var(--glow)}
+.btn-out{background:transparent;color:#FEFCF5;border:1.5px solid var(--gold)}
+.btn-out:hover{background:rgba(200,168,75,.14);transform:translateY(-3px)}
+.btn-dark{background:var(--txt);color:var(--gold-h);border:1.5px solid var(--gold)}
+.btn-dark:hover{background:var(--gold);color:#1A1108;transform:translateY(-3px)}
+
+/* SECTION */
+.sec{padding:6.5rem 2.5rem}
+.sec-in{max-width:1520px;margin:0 auto}
+.sec-head{text-align:center;max-width:760px;margin:0 auto 4rem}
+.eye{font-size:.68rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:1rem;display:block}
+.stitle{font-family:var(--serif);font-size:clamp(1.9rem,5vw,3.8rem);font-weight:700;color:var(--txt);margin-bottom:1.4rem;line-height:1.2}
+.sdesc{font-size:.95rem;font-weight:300;color:var(--muted);line-height:1.95}
+
+/* FILTER BAR */
+.filter-bar{display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:3rem}
+.fb{padding:.52rem 1.55rem;font-size:.73rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;background:var(--card);border:1.5px solid var(--border);color:var(--muted);cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body)}
+.fb:hover,.fb.on{background:var(--gold);border-color:var(--gold);color:#1A1108;box-shadow:0 4px 14px rgba(200,168,75,.28)}
+
+/* SORT & COUNT */
+.pgrid-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.5rem;flex-wrap:wrap;gap:.75rem}
+.pg-count{font-size:.82rem;color:var(--muted)}
+.sort-sel{padding:.45rem 1rem;background:var(--card);border:1px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.79rem;border-radius:3px;cursor:pointer}
+
+/* PRODUCTS GRID */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:1.85rem}
+.pc{background:var(--card);border-radius:5px;overflow:hidden;transition:var(--ts);cursor:pointer;border:1px solid var(--border)}
+.pc:hover{transform:translateY(-9px);box-shadow:var(--shad);border-color:var(--gold)}
+.pi-wrap{position:relative;aspect-ratio:1;overflow:hidden;background:var(--bg2)}
+.pi{width:100%;height:100%;object-fit:cover;transition:var(--ts);position:relative;z-index:1}
+.pc:hover .pi{transform:scale(1.1)}
+.plbl{position:absolute;top:.75rem;left:.75rem;padding:.28rem .75rem;font-size:.62rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;border-radius:3px;z-index:2}
+.lbl-g{background:var(--gold);color:#1A1108}
+.lbl-gr{background:#2A6846;color:#fff}
+.lbl-r{background:#B02020;color:#fff}
+.lbl-ro{background:var(--rose);color:#fff}
+.p-acts{position:absolute;top:.75rem;right:.75rem;display:flex;flex-direction:column;gap:.4rem;opacity:0;transform:translateX(14px);transition:var(--t);z-index:2}
+.pc:hover .p-acts{opacity:1;transform:translateX(0)}
+.pa{width:33px;height:33px;background:rgba(254,252,245,.95);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);cursor:pointer;font-size:.82rem;transition:var(--t);box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.pa:hover{background:var(--gold);color:#1A1108;transform:scale(1.1)}
+.pa.wishlisted{background:var(--gold);color:#1A1108}
+.pfall{display:none;position:absolute;inset:0;background:var(--gold-p);align-items:center;justify-content:center;flex-direction:column;gap:.75rem;z-index:1}
+.pinfo{padding:1.3rem}
+.pbrand{font-size:.62rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem}
+.pname{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--txt);margin-bottom:.42rem;line-height:1.3}
+.pdesc{font-size:.78rem;color:var(--muted);margin-bottom:.85rem;line-height:1.6}
+.pfooter{display:flex;align-items:center;justify-content:space-between;gap:.5rem}
+.pprice{font-size:1.15rem;font-weight:700;color:var(--txt)}
+.pprice span{font-size:.65rem;color:var(--muted);font-weight:400}
+.pcart{background:var(--gold);border:none;color:#1A1108;padding:.42rem .95rem;font-size:.7rem;font-weight:600;letter-spacing:1px;cursor:pointer;border-radius:3px;transition:var(--t);font-family:var(--body);white-space:nowrap}
+.pcart:hover{background:var(--gold-h);transform:scale(1.06)}
+.pcart.added{background:#2A6846;color:#fff}
+
+/* GOLD SERVICES */
+.gold-sec{background:linear-gradient(135deg,var(--gold-d),var(--gold),#DEB84A,var(--gold));position:relative;overflow:hidden}
+.gold-sec::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='70' height='70' xmlns='
+
+ d='M35 0L70 35L35 70L0 35Z' fill='none' stroke='rgba(255,255,255,0.07)' stroke-width='1'/%3E%3C/svg%3E") repeat;opacity:.6}
+.gs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:2.5rem}
+.gs-card{background:rgba(255,255,255,.93);padding:2.4rem;border-radius:10px;text-align:center;transition:var(--ts);box-shadow:0 8px 28px rgba(0,0,0,.14)}
+.gs-card:hover{transform:translateY(-13px);box-shadow:0 28px 65px rgba(0,0,0,.24)}
+.gs-ico{width:82px;height:82px;margin:0 auto 1.7rem;background:linear-gradient(135deg,var(--gold-d),var(--gold));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.3rem;color:#1A1108;box-shadow:0 8px 24px rgba(200,168,75,.45)}
+.gs-title{font-family:var(--serif);font-size:1.6rem;font-weight:700;color:#1A1108;margin-bottom:.75rem}
+.gs-desc{font-size:.9rem;color:#3A2C18;line-height:1.85;margin-bottom:1.4rem}
+.gs-list{list-style:none;text-align:left;margin-bottom:1.9rem}
+.gs-list li{display:flex;align-items:center;gap:.75rem;padding:.55rem 0;border-bottom:1px solid rgba(200,168,75,.2);font-size:.87rem;color:#3A2C18}
+.gs-list li:last-child{border:none}
+.gs-list i{color:var(--gold)}
+
+/* TRYON */
+.tryon-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+.tryon-box{aspect-ratio:4/5;background:var(--card);border-radius:10px;overflow:hidden;border:2px solid var(--gold);box-shadow:var(--shad);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1.5rem;padding:2.5rem;text-align:center;position:relative}
+#tryonCanvas{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#tryonVideo{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.tryon-feats{list-style:none;margin:2rem 0}
+.tryon-feats li{display:flex;align-items:flex-start;gap:.9rem;padding:.85rem 0;border-bottom:1px solid var(--border)}
+.tryon-feats li:last-child{border:none}
+.tryon-feats i{color:var(--gold);font-size:1.05rem;margin-top:.2rem}
+
+/* CART SIDEBAR */
+.cart-sidebar{position:fixed;top:0;right:-420px;width:420px;height:100vh;background:var(--bg2);z-index:9997;box-shadow:-10px 0 40px rgba(0,0,0,.15);transition:right .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;border-left:2px solid var(--gold)}
+.cart-sidebar.open{right:0}
+.cart-header{padding:1.8rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.cart-header h3{font-family:var(--serif);font-size:1.5rem;color:var(--txt)}
+.close-btn{background:none;border:none;font-size:1.4rem;color:var(--muted);cursor:pointer;transition:var(--t)}
+.close-btn:hover{color:var(--gold);transform:rotate(90deg)}
+.cart-items{flex:1;overflow-y:auto;padding:1.5rem}
+.cart-empty{text-align:center;padding:3rem;color:var(--muted)}
+.cart-empty i{font-size:3rem;color:var(--border);margin-bottom:1rem;display:block}
+.cart-item{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border);align-items:center}
+.ci-img{width:68px;height:68px;object-fit:cover;border-radius:4px;border:1px solid var(--border);flex-shrink:0}
+.ci-info{flex:1}
+.ci-name{font-size:.88rem;font-weight:600;color:var(--txt);margin-bottom:.3rem}
+.ci-price{font-size:.95rem;font-weight:700;color:var(--gold)}
+.ci-qty{display:flex;align-items:center;gap:.5rem;margin-top:.4rem}
+.qty-btn{width:24px;height:24px;background:var(--card);border:1px solid var(--border);border-radius:3px;cursor:pointer;font-size:.85rem;display:flex;align-items:center;justify-content:center;transition:var(--t)}
+.qty-btn:hover{background:var(--gold);color:#1A1108}
+.ci-del{background:none;border:none;color:var(--muted);cursor:pointer;font-size:.9rem;padding:.3rem;transition:var(--t)}
+.ci-del:hover{color:#B02020}
+.cart-footer{padding:1.8rem;border-top:1px solid var(--border)}
+.cart-total{display:flex;justify-content:space-between;font-size:1.2rem;font-weight:700;color:var(--txt);margin-bottom:1.5rem}
+.cart-total span:last-child{color:var(--gold)}
+
+/* CHECKOUT MODAL */
+.modal{position:fixed;inset:0;background:rgba(26,17,8,.88);z-index:9999;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.modal.open{display:flex}
+.modal-box{background:var(--bg2);border:2px solid var(--gold);border-radius:8px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+.modal-head{padding:1.8rem 2rem;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;background:var(--bg2);z-index:1}
+.modal-head h3{font-family:var(--serif);font-size:1.5rem;color:var(--txt)}
+.modal-body{padding:2rem}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-bottom:1.2rem}
+.form-group{margin-bottom:1.2rem}
+.form-label{display:block;font-size:.7rem;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:.55rem}
+.form-input,.form-select,.form-textarea{width:100%;padding:.95rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.9rem;transition:var(--t);border-radius:3px}
+.form-input:focus,.form-select:focus,.form-textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(200,168,75,.12)}
+.form-textarea{resize:vertical;min-height:100px}
+.pay-methods{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-bottom:1.5rem}
+.pay-opt{padding:.75rem;border:1.5px solid var(--border);border-radius:5px;text-align:center;cursor:pointer;transition:var(--t)}
+.pay-opt:hover,.pay-opt.selected{border-color:var(--gold);background:var(--gold-p)}
+.pay-opt i{font-size:1.5rem;color:var(--gold);display:block;margin-bottom:.4rem}
+.pay-opt span{font-size:.75rem;font-weight:600;color:var(--txt)}
+.checkout-summary{background:var(--card);border-radius:6px;padding:1.5rem;margin-bottom:1.5rem}
+.cs-row{display:flex;justify-content:space-between;padding:.4rem 0;font-size:.88rem;color:var(--txt2)}
+.cs-row.total{font-weight:700;font-size:1.05rem;color:var(--txt);border-top:1px solid var(--border);margin-top:.5rem;padding-top:.75rem}
+.form-btn{width:100%;padding:1.3rem;background:var(--gold);color:#1A1108;font-size:.82rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;border:none;cursor:pointer;transition:var(--ts);font-family:var(--body);border-radius:3px;display:flex;align-items:center;justify-content:center;gap:.7rem}
+.form-btn:hover{background:var(--gold-h);transform:translateY(-2px);box-shadow:var(--glow)}
+.form-btn:disabled{opacity:.6;cursor:not-allowed;transform:none}
+
+/* ORDER SUCCESS */
+.order-success{text-align:center;padding:3rem 2rem}
+.order-success .check{width:80px;height:80px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 2rem;font-size:2rem;color:#1A1108;animation:popIn .5s cubic-bezier(.16,1,.3,1)}
+@keyframes popIn{from{transform:scale(0)}to{transform:scale(1)}}
+
+/* WISHLIST SIDEBAR */
+.wishlist-sidebar{position:fixed;top:0;left:-420px;width:420px;height:100vh;background:var(--bg2);z-index:9997;box-shadow:10px 0 40px rgba(0,0,0,.15);transition:left .4s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;border-right:2px solid var(--gold)}
+.wishlist-sidebar.open{left:0}
+
+/* PRODUCT MODAL */
+.product-modal{position:fixed;inset:0;background:rgba(26,17,8,.9);z-index:9998;display:none;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(8px)}
+.product-modal.open{display:flex}
+.pm-box{background:var(--bg2);border:2px solid var(--gold);border-radius:8px;max-width:860px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 25px 80px rgba(0,0,0,.4)}
+.pm-grid{display:grid;grid-template-columns:1fr 1fr}
+.pm-img-side{aspect-ratio:1;overflow:hidden;border-radius:6px 0 0 6px}
+.pm-img-side img{width:100%;height:100%;object-fit:cover}
+.pm-info-side{padding:2.5rem;display:flex;flex-direction:column;gap:1.2rem}
+.pm-brand{font-size:.68rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+.pm-name{font-family:var(--serif);font-size:1.65rem;font-weight:700;color:var(--txt);line-height:1.25}
+.pm-price{font-size:1.8rem;font-weight:700;color:var(--txt)}
+.pm-desc{font-size:.9rem;color:var(--muted);line-height:1.78}
+.pm-specs{background:var(--card);border-left:3px solid var(--gold);padding:1rem 1.2rem;border-radius:0 4px 4px 0}
+.pm-spec-row{display:flex;justify-content:space-between;font-size:.85rem;padding:.3rem 0}
+.pm-spec-label{color:var(--muted)}
+.pm-spec-val{font-weight:600;color:var(--txt)}
+.qty-wrap{display:flex;align-items:center;gap:1rem}
+.qty-big{display:flex;align-items:center;gap:.6rem}
+.qty-big button{width:32px;height:32px;background:var(--card);border:1.5px solid var(--border);border-radius:4px;cursor:pointer;font-size:1rem;color:var(--txt);transition:var(--t)}
+.qty-big button:hover{background:var(--gold);color:#1A1108;border-color:var(--gold)}
+.qty-big span{font-size:1.1rem;font-weight:600;min-width:28px;text-align:center}
+
+/* QR GRID */
+.qr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.2rem}
+.qr-card{background:var(--card);padding:2.2rem;border-radius:8px;text-align:center;border:2px solid var(--gold);box-shadow:0 4px 18px rgba(200,168,75,.1);transition:var(--ts)}
+.qr-card:hover{transform:translateY(-9px);box-shadow:var(--glow)}
+.qr-ico{font-size:2.6rem;color:var(--gold);margin-bottom:1.3rem}
+.qr-title{font-family:var(--serif);font-size:1.4rem;font-weight:700;color:var(--txt);margin-bottom:.65rem}
+.qr-desc{font-size:.85rem;color:var(--muted);margin-bottom:1.6rem;line-height:1.7}
+.qr-box{display:inline-block;padding:1.3rem;background:#fff;border:1.5px solid var(--gold);border-radius:6px;margin-bottom:1rem}
+.qr-hint{font-size:.72rem;font-weight:600;color:var(--gold);letter-spacing:1px}
+
+/* APPOINTMENT */
+.appt-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.appt-form{background:var(--bg2);padding:3rem;border:2px solid var(--gold);box-shadow:var(--shad);border-radius:6px}
+.appt-list{list-style:none;margin-top:2rem}
+.appt-list li{display:flex;align-items:center;gap:1rem;padding:.85rem 0;border-bottom:1px solid var(--border);font-size:.93rem;color:var(--txt2)}
+.appt-list li:last-child{border:none}
+.appt-list i{color:var(--gold);font-size:1.05rem}
+
+/* TESTIMONIALS */
+.testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem}
+.testi-card{background:var(--bg2);border:1.5px solid var(--gold);padding:2.5rem;border-radius:6px;box-shadow:var(--shad)}
+.testi-stars{color:var(--gold);margin-bottom:1.2rem}
+.testi-q{font-family:var(--italic);font-size:1.1rem;font-style:italic;color:var(--txt);line-height:1.72;margin-bottom:1.5rem}
+.testi-avatar{display:flex;align-items:center;gap:.9rem}
+.tav{width:42px;height:42px;border-radius:50%;background:var(--gold-p);display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:var(--gold);font-weight:700;font-family:var(--serif)}
+.tname{font-weight:600;color:var(--txt);font-size:.92rem}
+.tloc{font-size:.78rem;color:var(--muted)}
+
+/* INSTAGRAM */
+.ig-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.1rem}
+.ig-post{aspect-ratio:1;overflow:hidden;position:relative;cursor:pointer;border-radius:5px;background:var(--card)}
+.ig-post img{width:100%;height:100%;object-fit:cover;transition:var(--ts)}
+.ig-post:hover img{transform:scale(1.16)}
+.ig-ov{position:absolute;inset:0;background:rgba(200,168,75,.9);display:flex;align-items:center;justify-content:center;gap:2rem;opacity:0;transition:var(--t);border-radius:5px}
+.ig-post:hover .ig-ov{opacity:1}
+.ig-stat{display:flex;align-items:center;gap:.4rem;color:#1A1108;font-size:1rem;font-weight:700}
+.ig-handle{display:inline-flex;align-items:center;gap:.7rem;font-size:1.1rem;color:var(--gold);text-decoration:none;padding:.78rem 1.8rem;border:1.5px solid var(--gold);border-radius:50px;transition:var(--t);margin-bottom:2.5rem}
+.ig-handle:hover{background:var(--gold);color:#1A1108;transform:scale(1.04)}
+
+/* AI CHATBOT */
+.chat-fab{position:fixed;bottom:2rem;right:2rem;width:62px;height:62px;background:var(--gold);border:none;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1.5rem;color:#1A1108;box-shadow:0 8px 30px rgba(200,168,75,.55);transition:var(--t);z-index:9990;animation:chatPulse 3s ease-in-out infinite}
+@keyframes chatPulse{0%,100%{box-shadow:0 8px 30px rgba(200,168,75,.55)}50%{box-shadow:0 8px 50px rgba(200,168,75,.85),0 0 0 12px rgba(200,168,75,.1)}}
+.chat-fab:hover{transform:scale(1.12) rotate(5deg);background:var(--gold-h)}
+.chat-window{position:fixed;bottom:6.5rem;right:2rem;width:380px;height:520px;background:var(--bg2);border:2px solid var(--gold);border-radius:16px;box-shadow:0 20px 60px rgba(0,0,0,.2);display:none;flex-direction:column;z-index:9989;overflow:hidden}
+.chat-window.open{display:flex}
+.chat-head{background:linear-gradient(135deg,var(--gold-d),var(--gold));padding:1.2rem 1.4rem;display:flex;align-items:center;gap:.9rem;justify-content:space-between}
+.chat-head-info{display:flex;align-items:center;gap:.9rem}
+.chat-avatar{width:40px;height:40px;border-radius:50%;background:rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;font-size:1.2rem;border:2px solid rgba(255,255,255,.4)}
+.chat-head-txt{color:#1A1108}
+.chat-head-name{font-weight:700;font-size:.95rem}
+.chat-head-status{font-size:.72rem;opacity:.8;display:flex;align-items:center;gap:.3rem}
+.chat-status-dot{width:7px;height:7px;background:#2A6846;border-radius:50%;box-shadow:0 0 6px #2A6846}
+.chat-close{background:none;border:none;color:#1A1108;font-size:1.1rem;cursor:pointer;opacity:.7;transition:var(--t)}
+.chat-close:hover{opacity:1;transform:rotate(90deg)}
+.chat-messages{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:.9rem}
+.msg{max-width:82%;display:flex;flex-direction:column;gap:.22rem}
+.msg.bot{align-self:flex-start}
+.msg.user{align-self:flex-end}
+.msg-bubble{padding:.75rem 1rem;border-radius:12px;font-size:.86rem;line-height:1.6}
+.msg.bot .msg-bubble{background:var(--card);color:var(--txt);border-radius:4px 12px 12px 12px}
+.msg.user .msg-bubble{background:var(--gold);color:#1A1108;border-radius:12px 4px 12px 12px;font-weight:500}
+.msg-time{font-size:.65rem;color:var(--muted)}
+.msg.user .msg-time{text-align:right}
+.chat-typing{display:flex;align-items:center;gap:.4rem;padding:.75rem 1rem;background:var(--card);border-radius:4px 12px 12px 12px;max-width:80px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--muted);animation:bounce 1.2s infinite}
+.dot:nth-child(2){animation-delay:.2s}
+.dot:nth-child(3){animation-delay:.4s}
+@keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.chat-input-area{padding:1rem;border-top:1px solid var(--border);display:flex;gap:.65rem;align-items:flex-end}
+.chat-input{flex:1;padding:.75rem 1rem;background:var(--card);border:1.5px solid var(--border);color:var(--txt);font-family:var(--body);font-size:.88rem;border-radius:20px;resize:none;max-height:90px;outline:none;line-height:1.5;transition:var(--t)}
+.chat-input:focus{border-color:var(--gold)}
+.chat-send{background:var(--gold);border:none;width:38px;height:38px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#1A1108;font-size:.95rem;transition:var(--t);flex-shrink:0}
+.chat-send:hover{background:var(--gold-h);transform:scale(1.1)}
+.chat-suggestions{display:flex;gap:.5rem;flex-wrap:wrap;padding:.75rem 1.2rem .2rem;border-top:1px solid var(--border)}
+.sug-btn{padding:.38rem .85rem;background:var(--gold-p);border:1px solid var(--gold);border-radius:20px;font-size:.73rem;color:var(--gold-d);cursor:pointer;font-family:var(--body);font-weight:500;transition:var(--t)}
+.sug-btn:hover{background:var(--gold);color:#1A1108}
+
+/* GOLD PRICE TICKER */
+.ticker-sec{background:var(--txt);padding:.7rem 0;overflow:hidden}
+.ticker-inner{display:flex;gap:4rem;animation:tickerScroll 30s linear infinite;white-space:nowrap}
+@keyframes tickerScroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}.ticker-item{display:flex;align-items:center;gap:.6rem;font-size:.78rem;font-weight:600;color:var(--gold-h);letter-spacing:.5px;flex-shrink:0}
+.ticker-item i{color:var(--gold)}
+
+/* FOOTER */
+.footer{background:var(--bg2);border-top:2.5px solid var(--gold);padding:5rem 2.5rem 2.5rem}
+.fg{max-width:1520px;margin:0 auto;display:grid;grid-template-columns:2.2fr 1fr 1fr 1fr;gap:4rem;margin-bottom:4rem}
+.f-name{font-family:var(--serif);font-size:2rem;font-weight:700;background:linear-gradient(135deg,var(--gold-d),var(--gold),var(--gold-h));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:1.4rem;display:block}
+.f-tag{font-size:.88rem;color:var(--muted);line-height:1.87;margin-bottom:2rem}
+.f-h4{font-family:var(--serif);font-size:1.18rem;font-style:italic;color:var(--txt);margin-bottom:1.3rem}
+.f-ul{list-style:none;display:flex;flex-direction:column;gap:.8rem}
+.f-ul a{color:var(--muted);text-decoration:none;font-size:.87rem;transition:var(--t);display:inline-block}
+.f-ul a:hover{color:var(--gold);padding-left:6px}
+.f-btm{max-width:1520px;margin:0 auto;padding-top:2.2rem;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:.8rem;color:var(--muted)}
+.f-btm a{color:var(--gold);text-decoration:none}
+
+/* TOAST */
+.toast{position:fixed;bottom:2rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--bg2);color:var(--txt);padding:1.1rem 1.8rem;border-left:4px solid var(--gold);box-shadow:var(--shad);z-index:99999;display:flex;align-items:center;gap:.85rem;min-width:260px;max-width:400px;border-radius:5px;transition:transform .4s cubic-bezier(.16,1,.3,1);pointer-events:none}
+.toast.show{transform:translateX(-50%) translateY(0)}
+.ti{font-size:1.3rem;color:var(--gold)}
+.toast.ok{border-color:#2A6846}.toast.ok .ti{color:#2A6846}
+.toast.er{border-color:#B02020}.toast.er .ti{color:#B02020}
+
+/* LOADER */
+/* LIVE GOLD BADGE */
+#goldLive{transition:all .4s;cursor:default}
+#goldLive:hover{background:var(--gold)!important;color:#1A1108!important}
+
+.loader{position:fixed;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:99999;transition:opacity .55s;flex-direction:column;gap:1.5rem}
+.loader.gone{opacity:0;pointer-events:none}
+.ring{width:54px;height:54px;border:3px solid rgba(20
