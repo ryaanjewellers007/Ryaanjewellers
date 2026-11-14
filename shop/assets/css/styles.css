@@ -722,3 +722,18 @@ html[dir=rtl] .cmp-tray{direction:rtl}
 .cookie-bar{z-index:9990!important}
 .cookie-bar{background:var(--ink)!important;color:var(--h)!important}
 
+
+/* ── Premium polish pass (Nov 2026) ───────────────────────────────
+   Desktop: keep the cookie notice's buttons clear of the chat launcher
+   and stop nav/logo labels from wrapping onto two lines. */
+@media(min-width:769px){
+  .cookie-bar{padding-right:9.5rem}
+}
+.nav-ul a{white-space:nowrap}
+.logo-name{white-space:nowrap}
+@media(min-width:1101px) and (max-width:1365px){
+  .nav-ul{gap:1.1rem}
+  .nav-ul a{letter-spacing:1px}
+  .logo-name{font-size:1.3rem;letter-spacing:1px}
+  .logo-wrap{margin-right:1.6rem}
+}
